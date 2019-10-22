@@ -102,9 +102,15 @@ nav > ul > li:nth-child(6){
     margin: 0;
     padding: 0;
     background-color: white;
-    opacity: 0;
+    opacity: 1;
 }
 
+#news > article > header > h1 > a{
+    padding: 1em;
+    text-decoration: none;
+    font-family: "Verdana", sans-serif;
+    color:black;
+}
 
 
 
