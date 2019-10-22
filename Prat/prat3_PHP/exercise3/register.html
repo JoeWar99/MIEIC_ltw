@@ -1,24 +1,3 @@
-
-
-<?php
-  $db = new PDO('sqlite:news.db');
-  $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-  $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
-
-    $stmt = $db->prepare('SELECT news.*, users.*, COUNT(comments.id) AS comments
-      FROM news JOIN
-      users USING (username) LEFT JOIN
-      comments ON comments.news_id = news.id
-      GROUP BY news.id, users.username
-      ORDER BY published DESC');
-    
-    $stmt->execute();
-    $articles = $stmt->fetchAll();
-    var_dump($articles);
-?>
-
-
-
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
@@ -36,8 +15,8 @@
       <h1><a href="index.html">Super Legit News</a></h1>
       <h2><a href="index.html">Where fake news are born!</a></h2>
       <div id="signup">
-        <a href="register.html">Register |</a>
-        <a href="login.html"> Login</a>
+        <a href="register.html">Register</a>
+        <a href="login.html">Login</a>
       </div>
     </header>
     <nav id="menu">
@@ -68,28 +47,23 @@
         <p>Proin lectus felis, fringilla nec magna ut, vestibulum volutpat elit. Suspendisse in quam sed tellus fringilla luctus quis non sem. Aenean varius molestie justo, nec tincidunt massa congue vel. Sed tincidunt interdum laoreet. Vivamus vel odio bibendum, tempus metus vel.</p>
       </article>
     </aside>
-    <section id="news">
-
-    <?php foreach($articles as $article){
-
-    ?>
-      <article>
-        <header>
-          <h1><a href="news_item.php"><?=$article['title']?></a>
-        </h1>
-        </header>
-        <img src="http://lorempixel.com/600/300/business/" alt="">
-        <p> <?= $article['introduction'] ?></p>
-        <p> <?= $article['fulltext'] ?></p>
-        <footer>
-          <span class="author"><?=$article['name']?></span> 
-          <span class="tags"><?=$article['tags']?><a href="index.html"></a></span>
-          <span class="date"><?=$article['published']?></span>
-          <a class="comments" href="news_item.php?id=2" > <?=$article['comments']?></a>
-        </footer>
-      </article>
-    
-    <?php } ?>
-
+    <section id="register">
+      <h1>Register</h1>
+      <form>
+        <label>
+          Username <input type="text" name="username">
+        </label>
+        <label>
+          E-mail <input type="email" name="email">
+        </label>
+        <label>
+          Password <input type="password" name="password">
+        </label>
+        <input type="submit" value="Register">
+      </form>
+    </section>
+    <footer>
+      <p>&copy; Fake News, 2017</p>
+    </footer>
   </body>
 </html>
