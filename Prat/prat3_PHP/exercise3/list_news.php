@@ -75,17 +75,17 @@
     ?>
       <article>
         <header>
-          <h1><a href="news_item.php"><?=$article['title']?></a>
+          <h1><a href="news_item.php?id=<?=$article['id']?>"><?=$article['title']?></a>
         </h1>
         </header>
-        <img src="http://lorempixel.com/600/300/business/" alt="">
+        <img src="http://lorempixel.com/600/300/city/" alt="">
         <p> <?= $article['introduction'] ?></p>
         <p> <?= $article['fulltext'] ?></p>
         <footer>
           <span class="author"><?=$article['name']?></span> 
           <span class="tags"><?=$article['tags']?><a href="index.html"></a></span>
           <span class="date"><?=$article['published']?></span>
-          <a class="comments" href="news_item.php?id=2" > <?=$article['comments']?></a>
+          <a class="comments" href="news_item.php?id=<?=$article['id']?>" > <?=$article['comments']?></a>
         </footer>
       </article>
     
