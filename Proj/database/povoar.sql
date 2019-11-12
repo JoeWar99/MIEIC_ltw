@@ -217,146 +217,146 @@ insert into City (Id, Name, CountryId) values (49, 'Minneapolis', 10);
 insert into City (Id, Name, CountryId) values (50, 'Washington', 10);
 
 
-insert into House (id, Name, Rating, Description, Discount, PricePerDay, Adress, PostalCode, OwnerId, CityId) values (1, 'Quisque ut erat.', null, 'Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.
+insert into House (id, Name, Rating, Description, Discount, PricePerDay, Address, PostalCode, OwnerId, CityId) values (1, 'Quisque ut erat.', 0, 'Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.
 
 Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.', 1.0, '€2613,68', 'Upham', '330', 150, 36);
-insert into House (id, Name, Rating, Description, Discount, PricePerDay, Adress, PostalCode, OwnerId, CityId) values (2, 'Etiam vel augue.', null, 'Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.
+insert into House (id, Name, Rating, Description, Discount, PricePerDay, Address, PostalCode, OwnerId, CityId) values (2, 'Etiam vel augue.', 0, 'Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.
 
 Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.', 1.0, '€4783,91', 'Arkansas', '16889', 121, 30);
-insert into House (id, Name, Rating, Description, Discount, PricePerDay, Adress, PostalCode, OwnerId, CityId) values (3, 'Praesent blandit.', null, 'Phasellus in felis. Donec semper sapien a libero. Nam dui.
+insert into House (id, Name, Rating, Description, Discount, PricePerDay, Address, PostalCode, OwnerId, CityId) values (3, 'Praesent blandit.', 0, 'Phasellus in felis. Donec semper sapien a libero. Nam dui.
 
-Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.
+Proin leo odio, porttitor id, consequat in, consequat ut, 0a. Sed accumsan felis. Ut at dolor quis odio consequat varius.
 
 Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.', 1.0, '€3505,21', 'Ludington', '2398', 135, 2);
-insert into House (id, Name, Rating, Description, Discount, PricePerDay, Adress, PostalCode, OwnerId, CityId) values (4, 'Nunc purus.', null, 'Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.
+insert into House (id, Name, Rating, Description, Discount, PricePerDay, Address, PostalCode, OwnerId, CityId) values (4, 'Nunc purus.', 0, 'Nam ultrices, libero non mattis pulvinar, 0a pede ullamcorper augue, a suscipit 0a elit ac 0a. Sed vel enim sit amet nunc viverra dapibus. 0a suscipit ligula in lacus.
 
-Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.', 1.0, '€1070,91', 'Victoria', '996', 121, 5);
-insert into House (id, Name, Rating, Description, Discount, PricePerDay, Adress, PostalCode, OwnerId, CityId) values (5, 'Aenean sit amet justo.', null, 'Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.
+Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet 0a. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.', 1.0, '€1070,91', 'Victoria', '996', 121, 5);
+insert into House (id, Name, Rating, Description, Discount, PricePerDay, Address, PostalCode, OwnerId, CityId) values (5, 'Aenean sit amet justo.', 0, 'Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.
 
-Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.', 1.0, '€4291,82', 'Vidon', '017', 50, 26);
-insert into House (id, Name, Rating, Description, Discount, PricePerDay, Adress, PostalCode, OwnerId, CityId) values (6, 'Suspendisse potenti.', null, 'Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.
+Duis bibendum. Morbi non quam nec dui luctus rutrum. 0a tellus.', 1.0, '€4291,82', 'Vidon', '017', 50, 26);
+insert into House (id, Name, Rating, Description, Discount, PricePerDay, Address, PostalCode, OwnerId, CityId) values (6, 'Suspendisse potenti.', 0, 'Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.
 
-Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.
+Praesent blandit. Nam 0a. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.
 
 Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.', 1.0, '€1782,11', 'Meadow Vale', '32', 82, 48);
-insert into House (id, Name, Rating, Description, Discount, PricePerDay, Adress, PostalCode, OwnerId, CityId) values (7, 'Etiam pretium iaculis justo.', null, 'Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.', 1.0, '€1342,10', 'Schurz', '63033', 7, 8);
-insert into House (id, Name, Rating, Description, Discount, PricePerDay, Adress, PostalCode, OwnerId, CityId) values (8, 'Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam.', null, 'Sed ante. Vivamus tortor. Duis mattis egestas metus.', 1.0, '€3308,18', 'Fairfield', '72574', 26, 49);
-insert into House (id, Name, Rating, Description, Discount, PricePerDay, Adress, PostalCode, OwnerId, CityId) values (9, 'Proin interdum mauris non ligula pellentesque ultrices.', null, 'Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.
+insert into House (id, Name, Rating, Description, Discount, PricePerDay, Address, PostalCode, OwnerId, CityId) values (7, 'Etiam pretium iaculis justo.', 0, 'Praesent blandit. Nam 0a. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.', 1.0, '€1342,10', 'Schurz', '63033', 7, 8);
+insert into House (id, Name, Rating, Description, Discount, PricePerDay, Address, PostalCode, OwnerId, CityId) values (8, 'Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam.', 0, 'Sed ante. Vivamus tortor. Duis mattis egestas metus.', 1.0, '€3308,18', 'Fairfield', '72574', 26, 49);
+insert into House (id, Name, Rating, Description, Discount, PricePerDay, Address, PostalCode, OwnerId, CityId) values (9, 'Proin interdum mauris non ligula pellentesque ultrices.', 0, 'Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; 0a dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.
 
 Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.', 1.0, '€2426,06', 'Fallview', '1712', 123, 47);
-insert into House (id, Name, Rating, Description, Discount, PricePerDay, Adress, PostalCode, OwnerId, CityId) values (10, 'Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci.', null, 'Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.', 1.0, '€1867,06', 'Ridge Oak', '0907', 150, 11);
-insert into House (id, Name, Rating, Description, Discount, PricePerDay, Adress, PostalCode, OwnerId, CityId) values (11, 'Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.', null, 'Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.
+insert into House (id, Name, Rating, Description, Discount, PricePerDay, Address, PostalCode, OwnerId, CityId) values (10, 'Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci.', 0, 'Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.', 1.0, '€1867,06', 'Ridge Oak', '0907', 150, 11);
+insert into House (id, Name, Rating, Description, Discount, PricePerDay, Address, PostalCode, OwnerId, CityId) values (11, '0a neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.', 0, 'Duis bibendum. Morbi non quam nec dui luctus rutrum. 0a tellus.
 
 In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.', 1.0, '€724,18', 'Lake View', '83', 61, 26);
-insert into House (id, Name, Rating, Description, Discount, PricePerDay, Adress, PostalCode, OwnerId, CityId) values (12, 'Maecenas pulvinar lobortis est.', null, 'Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.
+insert into House (id, Name, Rating, Description, Discount, PricePerDay, Address, PostalCode, OwnerId, CityId) values (12, 'Maecenas pulvinar lobortis est.', 0, '0a ut erat id mauris vulputate elementum. 0am varius. 0a facilisi.
 
-Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.', 1.0, '€2325,23', 'Holy Cross', '73', 60, 8);
-insert into House (id, Name, Rating, Description, Discount, PricePerDay, Adress, PostalCode, OwnerId, CityId) values (13, 'Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis.', null, 'Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.
+Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel 0a eget eros elementum pellentesque.', 1.0, '€2325,23', 'Holy Cross', '73', 60, 8);
+insert into House (id, Name, Rating, Description, Discount, PricePerDay, Address, PostalCode, OwnerId, CityId) values (13, 'Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis.', 0, 'Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.
 
 Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.
 
-Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.', 1.0, '€4099,71', 'Gina', '7407', 14, 50);
-insert into House (id, Name, Rating, Description, Discount, PricePerDay, Adress, PostalCode, OwnerId, CityId) values (14, 'Aenean fermentum.', null, 'Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+Praesent blandit. Nam 0a. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.', 1.0, '€4099,71', 'Gina', '7407', 14, 50);
+insert into House (id, Name, Rating, Description, Discount, PricePerDay, Address, PostalCode, OwnerId, CityId) values (14, 'Aenean fermentum.', 0, 'Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
 
 Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.
 
 Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.', 1.0, '€2021,28', 'Havey', '519', 125, 29);
-insert into House (id, Name, Rating, Description, Discount, PricePerDay, Adress, PostalCode, OwnerId, CityId) values (15, 'Donec posuere metus vitae ipsum.', null, 'Sed ante. Vivamus tortor. Duis mattis egestas metus.', 1.0, '€2597,15', 'Pawling', '85855', 93, 9);
-insert into House (id, Name, Rating, Description, Discount, PricePerDay, Adress, PostalCode, OwnerId, CityId) values (16, 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.', null, 'Fusce consequat. Nulla nisl. Nunc nisl.
+insert into House (id, Name, Rating, Description, Discount, PricePerDay, Address, PostalCode, OwnerId, CityId) values (15, 'Donec posuere metus vitae ipsum.', 0, 'Sed ante. Vivamus tortor. Duis mattis egestas metus.', 1.0, '€2597,15', 'Pawling', '85855', 93, 9);
+insert into House (id, Name, Rating, Description, Discount, PricePerDay, Address, PostalCode, OwnerId, CityId) values (16, 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.', 0, 'Fusce consequat. 0a nisl. Nunc nisl.
 
 Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.
 
-In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.', 1.0, '€733,77', 'Kedzie', '9836', 100, 19);
-insert into House (id, Name, Rating, Description, Discount, PricePerDay, Adress, PostalCode, OwnerId, CityId) values (17, 'Maecenas ut massa quis augue luctus tincidunt.', null, 'Sed ante. Vivamus tortor. Duis mattis egestas metus.
+In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. 0a justo.', 1.0, '€733,77', 'Kedzie', '9836', 100, 19);
+insert into House (id, Name, Rating, Description, Discount, PricePerDay, Address, PostalCode, OwnerId, CityId) values (17, 'Maecenas ut massa quis augue luctus tincidunt.', 0, 'Sed ante. Vivamus tortor. Duis mattis egestas metus.
 
-Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.
+Aenean fermentum. Donec ut mauris eget massa tempor convallis. 0a neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.
 
-Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.', 1.0, '€508,81', 'Mayer', '10', 25, 50);
-insert into House (id, Name, Rating, Description, Discount, PricePerDay, Adress, PostalCode, OwnerId, CityId) values (18, 'Suspendisse potenti.', null, 'Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.
+Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; 0a dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.', 1.0, '€508,81', 'Mayer', '10', 25, 50);
+insert into House (id, Name, Rating, Description, Discount, PricePerDay, Address, PostalCode, OwnerId, CityId) values (18, 'Suspendisse potenti.', 0, 'Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.
 
-Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.', 1.0, '€2584,00', 'Norway Maple', '594', 78, 12);
-insert into House (id, Name, Rating, Description, Discount, PricePerDay, Adress, PostalCode, OwnerId, CityId) values (19, 'Maecenas pulvinar lobortis est.', null, 'In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.', 1.0, '€1992,46', 'Armistice', '28', 21, 33);
-insert into House (id, Name, Rating, Description, Discount, PricePerDay, Adress, PostalCode, OwnerId, CityId) values (20, 'Nulla justo.', null, 'Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.
+Duis bibendum. Morbi non quam nec dui luctus rutrum. 0a tellus.', 1.0, '€2584,00', 'Norway Maple', '594', 78, 12);
+insert into House (id, Name, Rating, Description, Discount, PricePerDay, Address, PostalCode, OwnerId, CityId) values (19, 'Maecenas pulvinar lobortis est.', 0, 'In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.', 1.0, '€1992,46', 'Armistice', '28', 21, 33);
+insert into House (id, Name, Rating, Description, Discount, PricePerDay, Address, PostalCode, OwnerId, CityId) values (20, '0a justo.', 0, 'Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.
 
 Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.', 1.0, '€4853,19', 'Holmberg', '255', 110, 33);
-insert into House (id, Name, Rating, Description, Discount, PricePerDay, Adress, PostalCode, OwnerId, CityId) values (21, 'In est risus, auctor sed, tristique in, tempus sit amet, sem.', null, 'In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.', 1.0, '€194,68', 'Kennedy', '3', 2, 20);
-insert into House (id, Name, Rating, Description, Discount, PricePerDay, Adress, PostalCode, OwnerId, CityId) values (22, 'Proin interdum mauris non ligula pellentesque ultrices.', null, 'Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+insert into House (id, Name, Rating, Description, Discount, PricePerDay, Address, PostalCode, OwnerId, CityId) values (21, 'In est risus, auctor sed, tristique in, tempus sit amet, sem.', 0, 'In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.', 1.0, '€194,68', 'Kennedy', '3', 2, 20);
+insert into House (id, Name, Rating, Description, Discount, PricePerDay, Address, PostalCode, OwnerId, CityId) values (22, 'Proin interdum mauris non ligula pellentesque ultrices.', 0, 'Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
 
 Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.', 1.0, '€2506,96', 'Truax', '4956', 64, 48);
-insert into House (id, Name, Rating, Description, Discount, PricePerDay, Adress, PostalCode, OwnerId, CityId) values (23, 'Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.', null, 'Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.
+insert into House (id, Name, Rating, Description, Discount, PricePerDay, Address, PostalCode, OwnerId, CityId) values (23, 'Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.', 0, 'Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.
 
-Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.
+Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. 0am molestie nibh in lectus.
 
-Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.', 1.0, '€4359,75', 'Eliot', '7255', 19, 45);
-insert into House (id, Name, Rating, Description, Discount, PricePerDay, Adress, PostalCode, OwnerId, CityId) values (24, 'Proin eu mi.', null, 'Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.
+Pellentesque at 0a. Suspendisse potenti. Cras in purus eu magna vulputate luctus.', 1.0, '€4359,75', 'Eliot', '7255', 19, 45);
+insert into House (id, Name, Rating, Description, Discount, PricePerDay, Address, PostalCode, OwnerId, CityId) values (24, 'Proin eu mi.', 0, 'Proin leo odio, porttitor id, consequat in, consequat ut, 0a. Sed accumsan felis. Ut at dolor quis odio consequat varius.
 
 Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.', 1.0, '€4140,65', 'Hagan', '15596', 39, 11);
-insert into House (id, Name, Rating, Description, Discount, PricePerDay, Adress, PostalCode, OwnerId, CityId) values (25, 'Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.', null, 'Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.
+insert into House (id, Name, Rating, Description, Discount, PricePerDay, Address, PostalCode, OwnerId, CityId) values (25, 'Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.', 0, 'Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.
 
 Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.
 
-Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.', 1.0, '€1083,59', 'Stang', '81', 101, 32);
-insert into House (id, Name, Rating, Description, Discount, PricePerDay, Adress, PostalCode, OwnerId, CityId) values (26, 'Vivamus vel nulla eget eros elementum pellentesque.', null, 'Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.
+Praesent blandit. Nam 0a. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.', 1.0, '€1083,59', 'Stang', '81', 101, 32);
+insert into House (id, Name, Rating, Description, Discount, PricePerDay, Address, PostalCode, OwnerId, CityId) values (26, 'Vivamus vel 0a eget eros elementum pellentesque.', 0, 'Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.
 
-Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.', 1.0, '€4629,87', 'Sachs', '79649', 21, 2);
-insert into House (id, Name, Rating, Description, Discount, PricePerDay, Adress, PostalCode, OwnerId, CityId) values (27, 'Maecenas pulvinar lobortis est.', null, 'Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.
+0am sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.', 1.0, '€4629,87', 'Sachs', '79649', 21, 2);
+insert into House (id, Name, Rating, Description, Discount, PricePerDay, Address, PostalCode, OwnerId, CityId) values (27, 'Maecenas pulvinar lobortis est.', 0, 'Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.
 
-Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.', 1.0, '€2688,39', 'Harper', '1', 64, 40);
-insert into House (id, Name, Rating, Description, Discount, PricePerDay, Adress, PostalCode, OwnerId, CityId) values (28, 'Duis at velit eu est congue elementum.', null, 'Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.
+0am sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.', 1.0, '€2688,39', 'Harper', '1', 64, 40);
+insert into House (id, Name, Rating, Description, Discount, PricePerDay, Address, PostalCode, OwnerId, CityId) values (28, 'Duis at velit eu est congue elementum.', 0, 'Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.
 
-Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.
+Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. 0am molestie nibh in lectus.
 
-Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.', 1.0, '€2730,40', 'Steensland', '7', 8, 37);
-insert into House (id, Name, Rating, Description, Discount, PricePerDay, Adress, PostalCode, OwnerId, CityId) values (29, 'Suspendisse potenti.', null, 'Phasellus in felis. Donec semper sapien a libero. Nam dui.
+Pellentesque at 0a. Suspendisse potenti. Cras in purus eu magna vulputate luctus.', 1.0, '€2730,40', 'Steensland', '7', 8, 37);
+insert into House (id, Name, Rating, Description, Discount, PricePerDay, Address, PostalCode, OwnerId, CityId) values (29, 'Suspendisse potenti.', 0, 'Phasellus in felis. Donec semper sapien a libero. Nam dui.
 
-Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.', 1.0, '€1372,41', 'Delaware', '745', 9, 25);
-insert into House (id, Name, Rating, Description, Discount, PricePerDay, Adress, PostalCode, OwnerId, CityId) values (30, 'Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo.', null, 'Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.
+Proin leo odio, porttitor id, consequat in, consequat ut, 0a. Sed accumsan felis. Ut at dolor quis odio consequat varius.', 1.0, '€1372,41', 'Delaware', '745', 9, 25);
+insert into House (id, Name, Rating, Description, Discount, PricePerDay, Address, PostalCode, OwnerId, CityId) values (30, 'Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo.', 0, 'Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.
 
-Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.
+Nam ultrices, libero non mattis pulvinar, 0a pede ullamcorper augue, a suscipit 0a elit ac 0a. Sed vel enim sit amet nunc viverra dapibus. 0a suscipit ligula in lacus.
 
-Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.', 1.0, '€4605,86', 'Northport', '203', 38, 18);
-insert into House (id, Name, Rating, Description, Discount, PricePerDay, Adress, PostalCode, OwnerId, CityId) values (31, 'Praesent blandit.', null, 'Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.
+Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet 0a. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.', 1.0, '€4605,86', 'Northport', '203', 38, 18);
+insert into House (id, Name, Rating, Description, Discount, PricePerDay, Address, PostalCode, OwnerId, CityId) values (31, 'Praesent blandit.', 0, 'Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.
 
-Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.', 1.0, '€1723,82', 'Red Cloud', '052', 26, 3);
-insert into House (id, Name, Rating, Description, Discount, PricePerDay, Adress, PostalCode, OwnerId, CityId) values (32, 'Nulla nisl.', null, 'Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.
+0am porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.', 1.0, '€1723,82', 'Red Cloud', '052', 26, 3);
+insert into House (id, Name, Rating, Description, Discount, PricePerDay, Address, PostalCode, OwnerId, CityId) values (32, '0a nisl.', 0, 'Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.
 
-Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.', 1.0, '€4769,35', 'Sullivan', '8', 116, 36);
-insert into House (id, Name, Rating, Description, Discount, PricePerDay, Adress, PostalCode, OwnerId, CityId) values (33, 'Donec posuere metus vitae ipsum.', null, 'Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.
+Phasellus sit amet erat. 0a tempus. Vivamus in felis eu sapien cursus vestibulum.', 1.0, '€4769,35', 'Sullivan', '8', 116, 36);
+insert into House (id, Name, Rating, Description, Discount, PricePerDay, Address, PostalCode, OwnerId, CityId) values (33, 'Donec posuere metus vitae ipsum.', 0, 'Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.
 
 Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.', 1.0, '€4934,50', 'Clarendon', '743', 88, 8);
-insert into House (id, Name, Rating, Description, Discount, PricePerDay, Adress, PostalCode, OwnerId, CityId) values (34, 'Morbi non quam nec dui luctus rutrum.', null, 'Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.', 1.0, '€287,38', 'Del Sol', '30443', 123, 43);
-insert into House (id, Name, Rating, Description, Discount, PricePerDay, Adress, PostalCode, OwnerId, CityId) values (35, 'Donec semper sapien a libero.', null, 'Phasellus in felis. Donec semper sapien a libero. Nam dui.
+insert into House (id, Name, Rating, Description, Discount, PricePerDay, Address, PostalCode, OwnerId, CityId) values (34, 'Morbi non quam nec dui luctus rutrum.', 0, 'Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. 0am orci pede, venenatis non, sodales sed, tincidunt eu, felis.', 1.0, '€287,38', 'Del Sol', '30443', 123, 43);
+insert into House (id, Name, Rating, Description, Discount, PricePerDay, Address, PostalCode, OwnerId, CityId) values (35, 'Donec semper sapien a libero.', 0, 'Phasellus in felis. Donec semper sapien a libero. Nam dui.
 
-Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.', 1.0, '€4471,82', 'Stone Corner', '743', 110, 45);
-insert into House (id, Name, Rating, Description, Discount, PricePerDay, Adress, PostalCode, OwnerId, CityId) values (36, 'Maecenas pulvinar lobortis est.', null, 'Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.
+Proin leo odio, porttitor id, consequat in, consequat ut, 0a. Sed accumsan felis. Ut at dolor quis odio consequat varius.', 1.0, '€4471,82', 'Stone Corner', '743', 110, 45);
+insert into House (id, Name, Rating, Description, Discount, PricePerDay, Address, PostalCode, OwnerId, CityId) values (36, 'Maecenas pulvinar lobortis est.', 0, 'Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.
 
-Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.
+Phasellus sit amet erat. 0a tempus. Vivamus in felis eu sapien cursus vestibulum.
 
-Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.', 1.0, '€2529,09', 'Drewry', '04873', 136, 4);
-insert into House (id, Name, Rating, Description, Discount, PricePerDay, Adress, PostalCode, OwnerId, CityId) values (37, 'Nunc purus.', null, 'Phasellus in felis. Donec semper sapien a libero. Nam dui.
+Proin eu mi. 0a ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.', 1.0, '€2529,09', 'Drewry', '04873', 136, 4);
+insert into House (id, Name, Rating, Description, Discount, PricePerDay, Address, PostalCode, OwnerId, CityId) values (37, 'Nunc purus.', 0, 'Phasellus in felis. Donec semper sapien a libero. Nam dui.
 
-Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.', 1.0, '€3411,85', 'Dawn', '8', 36, 16);
-insert into House (id, Name, Rating, Description, Discount, PricePerDay, Adress, PostalCode, OwnerId, CityId) values (38, 'Aliquam erat volutpat.', null, 'Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.', 1.0, '€2317,99', 'Esch', '0840', 101, 46);
-insert into House (id, Name, Rating, Description, Discount, PricePerDay, Adress, PostalCode, OwnerId, CityId) values (39, 'Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl.', null, 'Fusce consequat. Nulla nisl. Nunc nisl.', 1.0, '€3998,09', 'Lakewood', '993', 89, 27);
-insert into House (id, Name, Rating, Description, Discount, PricePerDay, Adress, PostalCode, OwnerId, CityId) values (40, 'Praesent blandit.', null, 'Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.', 1.0, '€1101,08', 'Melody', '30', 149, 6);
-insert into House (id, Name, Rating, Description, Discount, PricePerDay, Adress, PostalCode, OwnerId, CityId) values (41, 'Aliquam non mauris.', null, 'Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.', 1.0, '€2498,72', 'Crownhardt', '6355', 128, 27);
-insert into House (id, Name, Rating, Description, Discount, PricePerDay, Adress, PostalCode, OwnerId, CityId) values (42, 'Morbi a ipsum.', null, 'Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.', 1.0, '€3913,91', 'John Wall', '2749', 19, 24);
-insert into House (id, Name, Rating, Description, Discount, PricePerDay, Adress, PostalCode, OwnerId, CityId) values (43, 'Nam tristique tortor eu pede.', null, 'Fusce consequat. Nulla nisl. Nunc nisl.', 1.0, '€4146,90', 'Eliot', '6', 102, 48);
-insert into House (id, Name, Rating, Description, Discount, PricePerDay, Adress, PostalCode, OwnerId, CityId) values (44, 'Aliquam non mauris.', null, 'Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.', 1.0, '€3748,67', 'Mitchell', '64', 44, 9);
-insert into House (id, Name, Rating, Description, Discount, PricePerDay, Adress, PostalCode, OwnerId, CityId) values (45, 'Praesent lectus.', null, 'Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.', 1.0, '€4906,16', 'Bay', '2', 127, 19);
-insert into House (id, Name, Rating, Description, Discount, PricePerDay, Adress, PostalCode, OwnerId, CityId) values (46, 'Sed accumsan felis.', null, 'Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.
+Proin leo odio, porttitor id, consequat in, consequat ut, 0a. Sed accumsan felis. Ut at dolor quis odio consequat varius.', 1.0, '€3411,85', 'Dawn', '8', 36, 16);
+insert into House (id, Name, Rating, Description, Discount, PricePerDay, Address, PostalCode, OwnerId, CityId) values (38, 'Aliquam erat volutpat.', 0, 'Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.', 1.0, '€2317,99', 'Esch', '0840', 101, 46);
+insert into House (id, Name, Rating, Description, Discount, PricePerDay, Address, PostalCode, OwnerId, CityId) values (39, 'Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl.', 0, 'Fusce consequat. 0a nisl. Nunc nisl.', 1.0, '€3998,09', 'Lakewood', '993', 89, 27);
+insert into House (id, Name, Rating, Description, Discount, PricePerDay, Address, PostalCode, OwnerId, CityId) values (40, 'Praesent blandit.', 0, 'Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.', 1.0, '€1101,08', 'Melody', '30', 149, 6);
+insert into House (id, Name, Rating, Description, Discount, PricePerDay, Address, PostalCode, OwnerId, CityId) values (41, 'Aliquam non mauris.', 0, 'Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.', 1.0, '€2498,72', 'Crownhardt', '6355', 128, 27);
+insert into House (id, Name, Rating, Description, Discount, PricePerDay, Address, PostalCode, OwnerId, CityId) values (42, 'Morbi a ipsum.', 0, 'Pellentesque at 0a. Suspendisse potenti. Cras in purus eu magna vulputate luctus.', 1.0, '€3913,91', 'John Wall', '2749', 19, 24);
+insert into House (id, Name, Rating, Description, Discount, PricePerDay, Address, PostalCode, OwnerId, CityId) values (43, 'Nam tristique tortor eu pede.', 0, 'Fusce consequat. 0a nisl. Nunc nisl.', 1.0, '€4146,90', 'Eliot', '6', 102, 48);
+insert into House (id, Name, Rating, Description, Discount, PricePerDay, Address, PostalCode, OwnerId, CityId) values (44, 'Aliquam non mauris.', 0, 'Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet 0a. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.', 1.0, '€3748,67', 'Mitchell', '64', 44, 9);
+insert into House (id, Name, Rating, Description, Discount, PricePerDay, Address, PostalCode, OwnerId, CityId) values (45, 'Praesent lectus.', 0, 'Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.', 1.0, '€4906,16', 'Bay', '2', 127, 19);
+insert into House (id, Name, Rating, Description, Discount, PricePerDay, Address, PostalCode, OwnerId, CityId) values (46, 'Sed accumsan felis.', 0, 'Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.
 
-In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.', 1.0, '€1728,48', 'Stuart', '2', 58, 22);
-insert into House (id, Name, Rating, Description, Discount, PricePerDay, Adress, PostalCode, OwnerId, CityId) values (47, 'Vivamus vestibulum sagittis sapien.', null, 'Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.
+In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. 0a justo.', 1.0, '€1728,48', 'Stuart', '2', 58, 22);
+insert into House (id, Name, Rating, Description, Discount, PricePerDay, Address, PostalCode, OwnerId, CityId) values (47, 'Vivamus vestibulum sagittis sapien.', 0, 'Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.
 
 Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.', 1.0, '€1894,30', 'Macpherson', '27374', 14, 15);
-insert into House (id, Name, Rating, Description, Discount, PricePerDay, Adress, PostalCode, OwnerId, CityId) values (48, 'In quis justo.', null, 'Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.
+insert into House (id, Name, Rating, Description, Discount, PricePerDay, Address, PostalCode, OwnerId, CityId) values (48, 'In quis justo.', 0, 'Proin leo odio, porttitor id, consequat in, consequat ut, 0a. Sed accumsan felis. Ut at dolor quis odio consequat varius.
 
 Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.
 
-Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.', 1.0, '€897,43', 'Hermina', '539', 131, 37);
-insert into House (id, Name, Rating, Description, Discount, PricePerDay, Adress, PostalCode, OwnerId, CityId) values (49, 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.', null, 'Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.', 1.0, '€4740,53', 'Atwood', '83512', 110, 27);
-insert into House (id, Name, Rating, Description, Discount, PricePerDay, Adress, PostalCode, OwnerId, CityId) values (50, 'Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci.', null, 'Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.', 1.0, '€293,47', 'Mitchell', '4', 138, 6);
+Nam ultrices, libero non mattis pulvinar, 0a pede ullamcorper augue, a suscipit 0a elit ac 0a. Sed vel enim sit amet nunc viverra dapibus. 0a suscipit ligula in lacus.', 1.0, '€897,43', 'Hermina', '539', 131, 37);
+insert into House (id, Name, Rating, Description, Discount, PricePerDay, Address, PostalCode, OwnerId, CityId) values (49, 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.', 0, 'Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.', 1.0, '€4740,53', 'Atwood', '83512', 110, 27);
+insert into House (id, Name, Rating, Description, Discount, PricePerDay, Address, PostalCode, OwnerId, CityId) values (50, 'Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci.', 0, 'Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet 0a. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.', 1.0, '€293,47', 'Mitchell', '4', 138, 6);
 
 
 insert into Commodity (id, Description, Type, HouseId) values (1, 'Maecenas tincidunt lacus at velit.', 'Donec posuere metus vitae ipsum.', 2);
