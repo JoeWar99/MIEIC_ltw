@@ -19,7 +19,7 @@
             <input name="email" class="w3-input w3-border" type="text" placeholder="Email" required="required"> <br>
             <input name="password" class="w3-input w3-border" type="password" placeholder="Password" required="required"> <br>
             <input name="confirmpassword" class="w3-input w3-border" type="password" placeholder="Confirm Password" required="required"> <br>
-            <button formaction="action_register.php" formmethod="post">Submit</button>
+            <button formaction="actions/action_register.php" formmethod="post">Submit</button>
         </form>
     </div>
 

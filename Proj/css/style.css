@@ -4,37 +4,5 @@ html{
     background-size: cover;
 }
 
-header{ 
-  
-  border: 3px solid green;
-  padding: 10px; 
-}
-
-#loginBox{
-        width: 400px;
-        height: 400px;
-        background-color: red;
-        
-        position: relative;
-        top:0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        margin: auto;
-}
-
-#loginForm{
-    position: relative;
-    top: 200px;
-    left: 100px;
-    margin: auto;
-}
-
-
-body {
-   margin: 0;
-   padding: 0;
-}
-
 
   
