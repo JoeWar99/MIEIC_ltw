@@ -1,0 +1,40 @@
+html{
+    background-image: url("https://images.unsplash.com/photo-1533327325824-76bc4e62d560?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80");
+    background-color: #cccccc;
+    background-size: cover;
+}
+
+header{ 
+  
+  border: 3px solid green;
+  padding: 10px; 
+}
+
+#loginBox{
+        width: 400px;
+        height: 400px;
+        background-color: red;
+        
+        position: relative;
+        top:0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+}
+
+#loginForm{
+    position: relative;
+    top: 200px;
+    left: 100px;
+    margin: auto;
+}
+
+
+body {
+   margin: 0;
+   padding: 0;
+}
+
+
+  
