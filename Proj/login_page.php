@@ -2,8 +2,8 @@
   include('database/db_functions.php');
   include('templates/common/basic.php');
 
-  /*$users = getAllUsers();
-  var_dump($users);*/
+  $users = getAllUsers();
+  var_dump($users);
 
   draw_header('loginPage');
 ?>
@@ -25,7 +25,7 @@
   
   <div>
       <form>
-          <button id = "registerButton" formaction="register_page.php" formmethod="post">Register</button>
+          <button id = "registerButton" formaction="actions/register_page.php" formmethod="post">Register</button>
       </form>
   </div>
   
