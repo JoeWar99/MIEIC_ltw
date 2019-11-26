@@ -4,37 +4,73 @@ html{
     background-size: cover;
 }
 
-header{ 
-  
-  border: 3px solid green;
-  padding: 10px; 
-}
-
-#loginBox{
-        width: 400px;
-        height: 400px;
-        background-color: red;
-        
-        position: relative;
-        top:0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        margin: auto;
-}
-
-#loginForm{
-    position: relative;
-    top: 200px;
-    left: 100px;
-    margin: auto;
-}
-
-
 body {
-   margin: 0;
-   padding: 0;
+  display: grid;
+  grid-template-columns: 1fr, 3fr, 1fr;
+}
+
+#logo {
+  border-radius: 50%;
+  height: 20em;
+}
+
+#loginBox {
+  width: 20em;
+  margin: 2em auto;
+  border: 1px solid var(white);
+}
+
+#loginForm {
+  margin: 0;
+  text-align: center;
+}
+
+#username {
+  margin-bottom: 2em;
+  height: 2em;
+  width: 90%;
+  background-color: white;
+  border: 3px solid;
+  border-color: turquoise;
+}
+
+#loginButton {
+  margin-left: 16em;
+  margin-top: 2em;
+  width: 30%;
+  height: 3em;
+  background-color: white;
+  border: 3px solid;
+  border-color: turquoise;
+}
+
+#loginBox > header > h1 {
+  text-align: center;
+  color: turquoise;
+}
+
+#password {
+  height: 2em;
+  width: 90%;
+  background-color: white;
+  border: 3px solid;
+  border-color: turquoise;
+}
+
+#registerButton{
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin-top: 2em;
+  margin-right: 10em;
+  height: 2em;
+  width: 10%;
+  background-color: white;
+  border: 3px solid;
+  border-color: turquoise;
 }
 
 
-  
+
+
+
