@@ -19,21 +19,10 @@ function createUser($name, $date, $email, $username, $password)
 function checkUserEmailPassword($username_or_email, $password)
 {
     $db = Database::instance()->db();
-    if (!strpos($username_or_email, '@')) {
-
-        $stmt = $db->prepare('SELECT * FROM User WHERE email = ?');
-        $stmt->execute(array($username_or_email));
-        $user = $stmt->fetch();
-        return $user !== false && password_verify($password, $user['password']);
-    }
-    else{
-        $stmt = $db->prepare('SELECT * FROM User WHERE username = ?');
-        $stmt->execute(array($username_or_email));
-        $user = $stmt->fetch();
-        return $user !== false && password_verify($password, $user['password']);
-    }
-
-    return false;
+    $stmt = $db->prepare('SELECT * FROM User WHERE username = ?');
+    $stmt->execute(array($username_or_email));
+    $user = $stmt->fetch();
+    return $user !== false && password_verify($password, $user['Password']);
 }
 
 /* Auxiliar develpment functions to delete before work is finalized */
