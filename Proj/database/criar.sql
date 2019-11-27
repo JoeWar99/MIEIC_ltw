@@ -8,11 +8,10 @@ CREATE TABLE User(
   Email TEXT NOT NULL ON CONFLICT ABORT,
   Username TEXT NOT NULL ON CONFLICT ABORT,
   Password TEXT NOT NULL ON CONFLICT ABORT,
+  CHECK (date('now')-DateOfBirth > 18),
   UNIQUE(Email),
   UNIQUE(Username),
-  
-  PRIMARY KEY(Id),
-  CHECK (date('now')-DateOfBirth > 18)
+  PRIMARY KEY(Id)
 );
 
 
