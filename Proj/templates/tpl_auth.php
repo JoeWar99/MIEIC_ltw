@@ -73,6 +73,24 @@
                 <input name="dateOfBirth" class="InputR" type="date"> <br>
                 <div id="dateOfBirthError" class="valError"> 
             </div>
+        </nav>
+        
+        
+    <div id="registerPage">
+    <div id="registerbox">
+        <header>
+            <h2>Register</h2>
+        </header>
+
+        <form name="registerForm" method="POST" action="../actions/action_register.php" onsubmit="return Validate()">
+            <div> 
+                <input name="name" class="InputR" type="text" placeholder="First and last name"> <br>
+                <div id="nameError" class="valError"> </div>
+            <div>
+            <div>
+                <input name="dateOfBirth" class="InputR" type="date"> <br>
+                <div id="dateOfBirthError" class="valError"> 
+            </div>
 
             <div>
                 <input name="username" class="InputR" type="text" placeholder="Username"> <br>
@@ -100,7 +118,8 @@
                     
         </form>
     </div>
-<?php } ?>
+    </div>
+    <?php } ?>
 
 
 
