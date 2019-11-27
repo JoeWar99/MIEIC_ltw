@@ -21,7 +21,7 @@
             <div id="loginBox">
                 <header>
                     <img id="logo" src="../assets/logo.png" alt="Logo for the airestivo BnB">
-                    <h1>airestivo BnB</h1>
+                    <img id="name" src="../assets/name.png" alt="Airestivo BnB">
                 </header>
                 <form id="loginForm">
                     <input id="username" name="username or email" class="w3-input w3-border" type="text" placeholder="Username or Email" required="required"> <br>
@@ -50,8 +50,7 @@
             <tr>
                 <td>
                     <div id="logoText">
-                        <img src="../assets/logo.png" alt="Logo for the airestivo BnB" width="50" height="50">
-                        <p>airestivo BnB</p>
+                        <img src="../assets/logo2.png" alt="Logo for the airestivo BnB">
                     </div>
                 </td>
                 <td>

@@ -12,6 +12,12 @@ html {
     height: 20em;
 }
 
+#name {
+    margin: 1em;
+    margin-left: 2em;
+    height: 3em;
+}
+
 #loginBox {
     width: 20em;
     margin: 2em auto;
@@ -65,8 +71,8 @@ html {
     top: 0;
     margin-top: 2em;
     margin-right: 10em;
-    height: 2em;
-    width: 10%;
+    height: 3em;
+    width: 10em;
     background-color: white;
     border: 3px solid;
     border-color: turquoise;
@@ -74,6 +80,7 @@ html {
 
 #registerbox {
     width: 30em;
+    border-radius: 5%;
     margin: 2em auto;
     border: 1px solid var(white);
     background-color: turquoise;
@@ -132,22 +139,13 @@ body {
 }
 
 #logoText>img {
-    border-radius: 50%;
     margin-left: 6.5%;
     margin-right: 80%;
 }
 
-#logoText>p {
-    font-family: 'Poppins', sans-serif;
-    color: turquoise;
-    margin-left: 0%;
-    margin-right: 80%;
-    margin-top: 0%;
-    text-align: center;
-}
-
 #loginButtonR {
-    width: 10%;
+    float: right;
+    width: 5em;
     height: 3em;
     background-color: white;
     margin-top: 3em;
