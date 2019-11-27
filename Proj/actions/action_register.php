@@ -33,17 +33,12 @@
   <?php } ?>
 
 
-
-try {
-    createUser($name, $dateOfBirth, $email, $username, $password);
-    $_SESSION['username'] = $username;
-    $_SESSION['messages'][] = array('type' => 'success', 'content' => 'Signed up and logged in!');
-    header('Location: ../pages/homepage.php');
-} 
-catch (PDOException $e){
-    $_SESSION['messages'][] = array('type' => 'error', 'content' => $e->getMessage());
-    header('Location: ../pages/register.php');
-}
+  <?php function draw_footer()
+  {
+    /**
+     * Draws the footer for all pages.
+     */ ?>
+  </body>
 
   </html>
 <?php } ?>

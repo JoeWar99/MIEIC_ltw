@@ -3,13 +3,14 @@
     /**
      * Draws the login section.
      */ ?>
+      <div id="loginPage">
     <section id="login">
 
         <div id="body1">
             <div id="loginBox">
                 <header>
                     <img id="logo" src="../assets/logo.png" alt="Logo for the airestivo BnB">
-                    <h1>airestivo BnB</h1>
+                    <img id="name" src="../assets/name.png" alt="Airestivo BnB">
                 </header>
                 <form id="loginForm">
                     <?php if (isset($_SESSION['message'])) { ?>
@@ -31,6 +32,7 @@
             </div>
         </div>
     </section>
+    </div>
 <?php } ?>
 
 <?php function draw_register()
@@ -43,8 +45,7 @@
             <tr>
                 <td>
                     <div id="logoText">
-                        <img src="../assets/logo.png" alt="Logo for the airestivo BnB" width="50" height="50">
-                        <p>airestivo BnB</p>
+                    <img src="../assets/logo2.png" alt="Logo for the airestivo BnB">
                     </div>
                 </td>
                 <td>
@@ -58,24 +59,6 @@
         </div>
     </nav>
 
-
-    <div id="registerbox">
-        <header>
-            <h2>Register</h2>
-        </header>
-
-        <form name="registerForm" method="POST" action="../actions/action_register.php" onsubmit="return Validate()">
-            <div> 
-                <input name="name" class="InputR" type="text" placeholder="First and last name"> <br>
-                <div id="nameError" class="valError"> </div>
-            <div>
-            <div>
-                <input name="dateOfBirth" class="InputR" type="date"> <br>
-                <div id="dateOfBirthError" class="valError"> 
-            </div>
-        </nav>
-        
-        
     <div id="registerPage">
     <div id="registerbox">
         <header>
@@ -119,7 +102,7 @@
         </form>
     </div>
     </div>
-    <?php } ?>
+<?php } ?>
 
 
 

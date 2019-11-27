@@ -1,15 +1,31 @@
-/* html {
-    background-image: url("https://images.unsplash.com/photo-1533327325824-76bc4e62d560?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80");
+html {
+    background-image: url("https://images.unsplash.com/photo-1533327325824-76bc4e62d560?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80%22");
     background-color: #cccccc;
     background-size: cover;
-} */
+}
 
 
 /* LOGIN */
 
+#loginPage {
+    background-image: url("../assets/background_loginpage.jpg");
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
 #logo {
     border-radius: 50%;
     height: 20em;
+}
+
+#name {
+    margin: 1em;
+    margin-left: 2em;
+    height: 3em;
 }
 
 #loginBox {
@@ -59,6 +75,16 @@
 
 /* REGISTER */
 
+#registerPage {
+    background-image: url("../assets/background_registerpage.jpg");
+    background-size: cover;
+    position: absolute;
+    top: 7em;
+    left: 0;
+    width: 100%;
+    height: 85%;
+}
+
 .valError {
     color: red;
     font-family: 'Poppins', sans-serif;
@@ -72,8 +98,8 @@
     top: 0;
     margin-top: 2em;
     margin-right: 10em;
-    height: 2em;
-    width: 10%;
+    height: 3em;
+    width: 10em;
     background-color: white;
     border: 3px solid;
     border-color: turquoise;
@@ -81,6 +107,7 @@
 
 #registerbox {
     width: 30em;
+    border-radius: 5%;
     margin: 2em auto;
     border: 1px solid var(white);
     background-color: turquoise;
@@ -138,22 +165,13 @@ body {
 }
 
 #logoText>img {
-    border-radius: 50%;
     margin-left: 6.5%;
     margin-right: 80%;
 }
 
-#logoText>p {
-    font-family: 'Poppins', sans-serif;
-    color: turquoise;
-    margin-left: 0%;
-    margin-right: 80%;
-    margin-top: 0%;
-    text-align: center;
-}
-
 #loginButtonR {
-    width: 10%;
+    float: right;
+    width: 5em;
     height: 3em;
     background-color: white;
     margin-top: 3em;
@@ -171,4 +189,139 @@ body {
 #messageLoginFailed {
     background-color: red;
     opacity: 0.7;
+}
+
+
+/* Menus*/
+
+#profileMenu {
+    float: left;
+    overflow: hidden;
+    margin-left: 45em;
+}
+
+#profileMenu #dropdown {
+    font-size: 1.5em;
+    border: none;
+    outline: none;
+    color: black;
+    padding: 0.5em;
+    background-color: white;
+    margin: 0;
+}
+
+#profileMenu:hover #dropdown {
+    background-color: teal;
+}
+
+#dropdownList {
+    display: none;
+    position: absolute;
+    background-color: white;
+}
+
+#dropdownList a {
+    float: none;
+    color: black;
+    padding: 1em;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+#dropdownList a:hover {
+    background-color: teal;
+}
+
+#profileMenu:hover #dropdownList {
+    display: block;
+}
+
+#propertiesMenu #properties {
+    float: left;
+    overflow: hidden;
+    font-size: 1.5em;
+    border: none;
+    outline: none;
+    color: black;
+    padding: 0.5em;
+    background-color: white;
+    margin: 0;
+}
+
+#propertiesMenu:hover #properties:hover {
+    display: block;
+    background-color: teal;
+}
+
+#reservationsMenu #reservations {
+    float: left;
+    overflow: hidden;
+    font-size: 1.5em;
+    border: none;
+    outline: none;
+    color: black;
+    padding: 0.5em;
+    background-color: white;
+    margin: 0;
+}
+
+#reservationsMenu:hover #reservations:hover {
+    display: block;
+    background-color: teal;
+}
+
+
+/* HOME PAGE */
+
+
+/*#homePage {
+    background-image: url("../assets/background_homepage.png");
+    background-size: cover;
+    position: absolute;
+    top:7em;
+    left:0;
+    width: 100%;
+    height: 100%;
+}*/
+
+#howmany {
+    padding-left: 5em;
+    padding-left: 5em;
+    margin-left: 2em;
+}
+
+#searchbox {
+    width: 30em;
+    border-radius: 5%;
+    margin-left: 10em;
+    margin-top: 7em;
+    border: 1px solid var(white);
+    background-color: turquoise;
+}
+
+#searchbox>header {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    margin-left: 2em;
+}
+
+#searchbox>form>input {
+    margin-bottom: 2em;
+    height: 2em;
+    margin-left: 1.5em;
+    width: 90%;
+    background-color: white;
+    border: 3px solid;
+    border-color: turquoise;
+}
+
+#searchbox>form>button {
+    margin-left: 23em;
+    margin-bottom: 1em;
+    width: 30%;
+    height: 3em;
+    background-color: white;
+    border: 3px solid;
+    border-color: turquoise;
 }
