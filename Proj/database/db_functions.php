@@ -1,72 +1,72 @@
 <?php
-include_once('database/connection.php');
+include_once('../includes/database.php');
 
-function getAllUsers(){
-    global $dbh;
-    
+/**
+ * Inserts a user in the database
+ */
+function createUser($name, $date, $email, $username, $password)
+{
+    $db = Database::instance()->db();
+    $options = ['cost' => 12];
+    $stmt = $db->prepare('INSERT INTO User VALUES(?, ?, ?, ?, ?, ?)');
+    $stmt->execute(array(null, $name, $date, $email, $username, password_hash($password, PASSWORD_DEFAULT, $options)));
+}
+
+/**
+ * Verifies if a certain username, password combination
+ * exists in the database. Use the sha1 hashing function.
+ */
+function checkUserEmailPassword($username_or_email, $password)
+{
+    $db = Database::instance()->db();
+    if (!strpos($username_or_email, '@')) {
+
+        $stmt = $db->prepare('SELECT * FROM User WHERE email = ?');
+        $stmt->execute(array($username_or_email));
+        $user = $stmt->fetch();
+        return $user !== false && password_verify($password, $user['password']);
+    }
+    else{
+        $stmt = $db->prepare('SELECT * FROM User WHERE username = ?');
+        $stmt->execute(array($username_or_email));
+        $user = $stmt->fetch();
+        return $user !== false && password_verify($password, $user['password']);
+    }
+
+    return false;
+}
+
+/* Auxiliar develpment functions to delete before work is finalized */
+
+
+/**
+ * Gets all the users from the database
+ */
+function getAllUsers()
+{
+    $dbh = Database::instance()->db();
     $stmt = $dbh->prepare('SELECT * FROM User');
     $stmt->execute();
-
     return $stmt->fetchall();
 }
 
-function createUser($name, $date, $email, $username, $password) {
-    global $dbh;
+
+ /**
+ * getIdFromUsername
+ * @param string $username  username of the user we want to get the id of
+ * @return int returns -1 if it wasnt sucessfull or returns the id of the specified user if sucessfull
+ */
+function getIdFromUsername($username)
+{
+    $dbh = Database::instance()->db();
     try {
-        $stmt = $dbh->prepare("INSERT INTO User (Id, Name, DateOfBirth, Email, Username, Password) VALUES (NULL, '$name', '$date', '$email', '$username', '$password')");
-        $stmt->execute();
-        return 0;
-    }catch(PDOException $e) {
-        return -1;
-    }
-        
-}
-
-
-function getIdFromUsername($username) {
-    global $dbh;
-    try{
         $stmt = $dbh->prepare('SELECT Id FROM User WHERE username = ?');
         $stmt->execute(array($username));
         $user = $stmt->fetch();
-        if($user !== false)
+        if ($user !== false)
             return $user['Id'];
-    }
-    catch(PDOException $e){
+    } catch (PDOException $e) {
         return -1;
     }
 }
 
-function Login($usernameOrEmail, $password) {
-global $dbh;
-
-if(!strpos($usernameOrEmail, '@')){
-    $username = $usernameOrEmail;
-    try {
-    $stmt = $dbh->prepare('SELECT * FROM User WHERE Username = ? AND Password = ?');
-    $stmt->execute(array($username, $password));
-    if($stmt->fetch() !== false) {
-        return getIdFromUsername($username);
-    }
-    else return -1;
-    } 
-    catch(PDOException $e) {
-    return -1;
-    }
-}
-else{
-    $email = $usernameOrEmail;
-    try {
-        $stmt = $dbh->prepare('SELECT * FROM User WHERE Email = ? AND Password = ?');
-        $stmt->execute(array($email, $password));
-        if(($user = $stmt->fetch()) !== false) {
-            return getIdFromUsername($user['Username']);
-        }
-        else return -1;
-        } 
-        catch(PDOException $e) {
-        return -1;
-        }
-    }
-}
-?>

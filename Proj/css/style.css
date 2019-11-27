@@ -1,79 +1,157 @@
-html{
+html {
     background-image: url("https://images.unsplash.com/photo-1533327325824-76bc4e62d560?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80");
     background-color: #cccccc;
     background-size: cover;
 }
 
-<<<<<<< HEAD
-body {
-  display: grid;
-  grid-template-columns: 1fr, 3fr, 1fr;
-}
+
+/* LOGIN */
 
 #logo {
-  border-radius: 50%;
-  height: 20em;
+    border-radius: 50%;
+    height: 20em;
 }
 
 #loginBox {
-  width: 20em;
-  margin: 2em auto;
-  border: 1px solid var(white);
+    width: 20em;
+    margin: 2em auto;
+    border: 1px solid var(white);
 }
 
 #loginForm {
-  margin: 0;
-  text-align: center;
+    margin: 0;
+    text-align: center;
 }
 
 #username {
-  margin-bottom: 2em;
-  height: 2em;
-  width: 90%;
-  background-color: white;
-  border: 3px solid;
-  border-color: turquoise;
+    margin-bottom: 2em;
+    height: 2em;
+    width: 90%;
+    background-color: white;
+    border: 3px solid;
+    border-color: turquoise;
 }
 
 #loginButton {
-  margin-left: 16em;
-  margin-top: 2em;
-  width: 30%;
-  height: 3em;
-  background-color: white;
-  border: 3px solid;
-  border-color: turquoise;
+    margin-left: 16em;
+    margin-top: 2em;
+    width: 30%;
+    height: 3em;
+    background-color: white;
+    border: 3px solid;
+    border-color: turquoise;
 }
 
-#loginBox > header > h1 {
-  text-align: center;
-  color: turquoise;
+#loginBox>header>h1 {
+    text-align: center;
+    color: turquoise;
+    font-family: 'Poppins', sans-serif;
 }
 
 #password {
-  height: 2em;
-  width: 90%;
-  background-color: white;
-  border: 3px solid;
-  border-color: turquoise;
-}
-
-#registerButton{
-  position: absolute;
-  right: 0;
-  top: 0;
-  margin-top: 2em;
-  margin-right: 10em;
-  height: 2em;
-  width: 10%;
-  background-color: white;
-  border: 3px solid;
-  border-color: turquoise;
+    height: 2em;
+    width: 90%;
+    background-color: white;
+    border: 3px solid;
+    border-color: turquoise;
 }
 
 
+/* REGISTER */
+
+#registerButton {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-top: 2em;
+    margin-right: 10em;
+    height: 2em;
+    width: 10%;
+    background-color: white;
+    border: 3px solid;
+    border-color: turquoise;
+}
+
+#registerbox {
+    width: 30em;
+    margin: 2em auto;
+    border: 1px solid var(white);
+    background-color: turquoise;
+}
+
+#registerbox>header {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    margin-left: 2em;
+}
+
+#registerbox>form>input {
+    margin-bottom: 2em;
+    height: 2em;
+    margin-left: 1.5em;
+    width: 90%;
+    background-color: white;
+    border: 3px solid;
+    border-color: turquoise;
+}
+
+#registerbox>form>button {
+    margin-left: 23em;
+    margin-bottom: 1em;
+    width: 30%;
+    height: 3em;
+    background-color: white;
+    border: 3px solid;
+    border-color: turquoise;
+}
 
 
-=======
->>>>>>> 734692e2cc20237c23f1be57a7f3bb201bd61af1
+/* REGISTER NAV */
 
+body {
+    margin: 0em;
+}
+
+#registernav {
+    background-color: white;
+    width: 100%;
+}
+
+#registernav>table {
+    width: 100%;
+}
+
+#barra_verde {
+    background-color: turquoise;
+    height: 0.5em;
+}
+
+#logoText {
+    width: 50%;
+    height: 20%;
+}
+
+#logoText>img {
+    border-radius: 50%;
+    margin-left: 6.5%;
+    margin-right: 80%;
+}
+
+#logoText>p {
+    font-family: 'Poppins', sans-serif;
+    color: turquoise;
+    margin-left: 0%;
+    margin-right: 80%;
+    margin-top: 0%;
+    text-align: center;
+}
+
+#loginButtonR {
+    width: 10%;
+    height: 3em;
+    background-color: white;
+    margin-top: 3em;
+    margin-right: 4em;
+    border: 3px solid;
+    border-color: turquoise;
+}
