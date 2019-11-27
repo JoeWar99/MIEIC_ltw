@@ -3,8 +3,8 @@
     /**
      * Draws the login section.
      */ ?>
+    <div id="loginPage">
     <section id="login">
-
         <div id="body1">
             <div id="loginBox">
                 <header>
@@ -31,6 +31,7 @@
             </div>
         </div>
     </section>
+        </div>
 <?php } ?>
 
 <?php function draw_register()
@@ -55,16 +56,17 @@
             </tr>
         </table>
         <div id="barra_verde">
-        </div>
-    </nav>
-
-
-    <div id="registerbox">
-        <header>
-            <h2>Register</h2>
-        </header>
-
-        <form>
+            </div>
+        </nav>
+        
+        
+        <div id="registerPage">
+        <div id="registerbox">
+            <header>
+                <h2>Register</h2>
+            </header>
+            
+            <form>
             <input name="name" class="w3-input w3-border" type="text" placeholder="First and last name" required="required"> <br>
             
             
@@ -87,6 +89,7 @@
         
         
         </form>
+    </div>
     </div>
 
 
