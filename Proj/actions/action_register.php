@@ -16,14 +16,14 @@ if (!preg_match("/^[a-zA-Z0-9]+$/", $username)) {
     die(header('Location: ../pages/register.php'));
 }
 
+
 try {
     createUser($name, $dateOfBirth, $email, $username, $password);
     $_SESSION['username'] = $username;
     $_SESSION['messages'][] = array('type' => 'success', 'content' => 'Signed up and logged in!');
     header('Location: ../pages/homepage.php');
 } 
-catch (PDOException $e) {
-    die($e->getMessage());
-    $_SESSION['messages'][] = array('type' => 'error', 'content' => 'Failed to signup!');
+catch (PDOException $e){
+    $_SESSION['messages'][] = array('type' => 'error', 'content' => $e->getMessage());
     header('Location: ../pages/register.php');
 }

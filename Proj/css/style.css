@@ -75,6 +75,13 @@ html {
 
 /* REGISTER */
 
+.valError {
+    color: red;
+    font-family: 'Poppins', sans-serif;
+    margin-left: 1.2em;
+    margin-bottom: 2em;
+}
+
 #registerPage {
     background-image: url("../assets/background_registerpage.jpg");
     background-size: cover;
@@ -112,17 +119,15 @@ html {
     margin-left: 2em;
 }
 
-#registerbox>form>input {
-    margin-bottom: 2em;
+.InputR {
+    margin-bottom: 0em;
     height: 2em;
     margin-left: 1.5em;
     width: 90%;
     background-color: white;
-    border: 3px solid;
-    border-color: turquoise;
 }
 
-#registerbox>form>button {
+#btnR {
     margin-left: 23em;
     margin-bottom: 1em;
     width: 30%;

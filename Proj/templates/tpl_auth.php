@@ -36,7 +36,6 @@
 
 <?php function draw_register()
 {
-
     /**
      * Draws the signup section.
      */ ?>
@@ -60,41 +59,54 @@
         </nav>
         
         
-        <div id="registerPage">
-        <div id="registerbox">
-            <header>
-                <h2>Register</h2>
-            </header>
+    <div id="registerPage">
+    <div id="registerbox">
+        <header>
+            <h2>Register</h2>
+        </header>
+
+        <form name="registerForm" method="POST" action="../actions/action_register.php" onsubmit="return Validate()">
+            <div> 
+                <input name="name" class="InputR" type="text" placeholder="First and last name"> <br>
+                <div id="nameError" class="valError"> </div>
+            <div>
+            <div>
+                <input name="dateOfBirth" class="InputR" type="date"> <br>
+                <div id="dateOfBirthError" class="valError"> 
+            </div>
+
+            <div>
+                <input name="username" class="InputR" type="text" placeholder="Username"> <br>
+                <div id="usernameError" class="valError"> 
+            </div>
             
-            <form>
-            <input name="name" class="w3-input w3-border" type="text" placeholder="First and last name" required="required"> <br>
+            <div>
+                <input name="email" class="InputR" type="email" placeholder="Email"> <br>
+                <div id="emailError" class="valError"> 
+            </div>
             
+            <div>
+                <input name="password" class="InputR" type="password" placeholder="Password"> <br>
+                <div class="valError"> 
+            </div>
             
-            <input name="dateofbirth" type="date" required="required"> <br>
-            
-            
-            <input name="username" class="w3-input w3-border" type="text" placeholder="Username" required="required"> <br>
-            
-            
-            <input name="email" class="w3-input w3-border" type="text" placeholder="Email" required="required"> <br>
-            
-            
-            <input name="password" class="w3-input w3-border" type="password" placeholder="Password" required="required"> <br>
-            
-            
-            <input name="confirmpassword" class="w3-input w3-border" type="password" placeholder="Confirm Password" required="required"> <br>
-            
-            
-            <button formaction="../actions/action_register.php" formmethod="post">Submit</button>
-        
-        
+            <div>
+                <input name="passwordConfirmation" class="InputR" type="password" placeholder="Confirm Password"> <br>
+                <div id="passwordError" class="valError"> 
+            </div>
+
+            <div>
+                <input value="Register" name="submitButton" id="btnR" type="submit">
+            </div>
+                    
         </form>
     </div>
     </div>
+    <?php } ?>
 
 
 
-<?php } ?>
 
-<?php function draw_nav_bar()
-{ }
+
+
+
