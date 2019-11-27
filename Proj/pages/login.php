@@ -8,10 +8,6 @@
   if (isset($_SESSION['username']))
     die(header('Location: homepage.php'));
 
-  // verificar as hashes das password só isso
-  $users = getAllUsers();
-  var_dump($users);
-
   draw_header(null);
   draw_login();
   draw_footer();

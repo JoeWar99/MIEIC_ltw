@@ -7,12 +7,12 @@
 
   if (checkUserEmailPassword($username_or_email, $password)) {
     $_SESSION['username'] = $username_or_email;
-    $_SESSION['messages'][] = array('type' => 'success', 'content' => 'Logged in successfully!');
+    $_SESSION['message']= 'Logged in successfully!';
     header('Location: ../pages/homepage.php');
   }
    
   else {
-    $_SESSION['messages'][] = array('type' => 'error', 'content' => 'Login failed! Username or password incorrect');
+    $_SESSION['message'] = 'Login failed! Username or password incorrect';
     header('Location: ../pages/login.php');
   }
 ?>
