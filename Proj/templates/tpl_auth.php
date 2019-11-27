@@ -4,18 +4,6 @@
      * Draws the login section.
      */ ?>
     <section id="login">
-        <!--     
-    <header><h2>Welcome Back</h2></header>
-
-    <form method="post" action="../actions/action_login.php">
-      <input type="text" name="username" placeholder="username" required>
-      <input type="password" name="password" placeholder="password" required>
-      <input type="submit" value="Login">
-    </form>
-
-    <footer>
-      <p>Don't have an account? <a href="signup.php">Signup!</a></p>
-    </footer> -->
 
         <div id="body1">
             <div id="loginBox">
@@ -24,6 +12,12 @@
                     <img id="name" src="../assets/name.png" alt="Airestivo BnB">
                 </header>
                 <form id="loginForm">
+                    <?php if (isset($_SESSION['message'])) { ?>
+                        <div id="messageLoginFailed">
+                        <p> <?php echo($_SESSION['message'])?> </p>
+                        </div>
+                    <?php unset($_SESSION['message']);
+                        } ?>
                     <input id="username" name="username or email" class="w3-input w3-border" type="text" placeholder="Username or Email" required="required"> <br>
                     <input id="password" name="password" class="w3-input w3-border" type="password" placeholder="Password" required="required"> <br>
                     <button id="loginButton" formaction="../actions/action_login.php" formmethod="post">Login</button>
@@ -72,12 +66,26 @@
 
         <form>
             <input name="name" class="w3-input w3-border" type="text" placeholder="First and last name" required="required"> <br>
+            
+            
             <input name="dateofbirth" type="date" required="required"> <br>
+            
+            
             <input name="username" class="w3-input w3-border" type="text" placeholder="Username" required="required"> <br>
+            
+            
             <input name="email" class="w3-input w3-border" type="text" placeholder="Email" required="required"> <br>
+            
+            
             <input name="password" class="w3-input w3-border" type="password" placeholder="Password" required="required"> <br>
+            
+            
             <input name="confirmpassword" class="w3-input w3-border" type="password" placeholder="Confirm Password" required="required"> <br>
+            
+            
             <button formaction="../actions/action_register.php" formmethod="post">Submit</button>
+        
+        
         </form>
     </div>
 

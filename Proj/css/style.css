@@ -117,6 +117,7 @@ html {
 
 body {
     margin: 0em;
+    padding: 0em;
 }
 
 #registernav {
@@ -152,4 +153,15 @@ body {
     margin-right: 4em;
     border: 3px solid;
     border-color: turquoise;
+}
+
+#messageLoginFailed>p {
+    color: white;
+    text-align: center;
+    opacity: 1.0;
+}
+
+#messageLoginFailed {
+    background-color: red;
+    opacity: 0.7;
 }
