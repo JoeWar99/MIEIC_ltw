@@ -4,7 +4,7 @@ include_once('../database/db_functions.php');
 
 
 $name  = $_POST['name'];
-$dateOfBirth = $_POST['dateofbirth'];
+$dateOfBirth = $_POST['dateOfBirth'];
 $email = $_POST['email'];
 $username = $_POST['username'];
 $password = $_POST['password'];
