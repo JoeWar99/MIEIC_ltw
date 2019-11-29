@@ -58,7 +58,7 @@
                 </td>
             </tr>
         </table>
-        <div id="barra_verde">
+        <div id="green_bar">
         </div>
     </nav>
 
@@ -126,42 +126,4 @@
             </form>
         </div>
     </div>
-
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-
-    <?php echo '<pre>' , var_dump($_POST) , '</pre>'; ?>
 <?php } ?>

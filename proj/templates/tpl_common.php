@@ -151,6 +151,13 @@
 } 
 ?>
 
+<?php $fonts = ["https://use.fontawesome.com/releases/v5.3.1/css/all.css",
+                "https://fonts.googleapis.com/css?family=Merriweather|Open+Sans+Condensed:300",
+                "https://fonts.googleapis.com/css?family=Poppins&display=swap"];
+      
+      $main_stylesheet = "../css/style.css";
+?>
+
 <?php function draw_header($username)
 {
   /**
@@ -158,13 +165,9 @@
    * if the user is logged in in order to draw the logout
    * link.
    */
+  global $main_stylesheet, $fonts;
   open_html();
-      draw_head("AirestivoBnB",
-                ["../css/style.css",
-                "https://use.fontawesome.com/releases/v5.3.1/css/all.css",
-                "https://fonts.googleapis.com/css?family=Merriweather|Open+Sans+Condensed:300",
-                "https://fonts.googleapis.com/css?family=Poppins&display=swap"],
-                [["../js/register.js", true]], "utf-8");
+      draw_head("AirestivoBnB", [$main_stylesheet,$fonts[0], $fonts[1], $fonts[2]]);
     
       open_body();
         open_header();

@@ -23,6 +23,6 @@ try {
     header('Location: ../pages/homepage.php');
 } catch (PDOException $e) {
     $_SESSION['messages'][] = array('type' => 'error', 'content' => 'Failed to signup!');
-    header('Location: ../pages/register.php');
+    header('Location: ../pages/register.php#');
 }
 
