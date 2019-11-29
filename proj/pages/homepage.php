@@ -1,4 +1,5 @@
 <?php 
+
   include('../templates/tpl_common.php');
   include('../templates/tpl_pages.php');
   include_once('../includes/session.php');
