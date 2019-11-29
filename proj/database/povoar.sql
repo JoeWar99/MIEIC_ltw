@@ -737,3 +737,16 @@ insert into Comment (Id, Text, Date, ReviewId) values (147, 'In congue. Etiam ju
 insert into Comment (Id, Text, Date, ReviewId) values (148, 'Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.', '4/2/2020', 148);
 insert into Comment (Id, Text, Date, ReviewId) values (149, 'Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.', '3/19/2020', 149);
 insert into Comment (Id, Text, Date, ReviewId) values (150, 'Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.', '10/11/2020', 150);
+
+
+insert into Photo (Id, HouseId, Description, Path) values (1, 1, 'Foto Principal da casa', '../assets/imagesHouses/casa1.jpg');
+insert into Photo (Id, HouseId, Description, Path) values (2, 2, 'Foto Principal da casa', '../assets/imagesHouses/casa2.webp');
+insert into Photo (Id, HouseId, Description, Path) values (3, 3, 'Foto Principal da casa', '../assets/imagesHouses/casa3.webp');
+insert into Photo (Id, HouseId, Description, Path) values (4, 4, 'Foto Principal da casa', '../assets/imagesHouses/casa4.jpg');
+insert into Photo (Id, HouseId, Description, Path) values (5, 5, 'Foto Principal da casa', '../assets/imagesHouses/casa5.webp');
+insert into Photo (Id, HouseId, Description, Path) values (6, 6, 'Foto Principal da casa', '../assets/imagesHouses/casa6.jpg');
+
+
+
+
+
