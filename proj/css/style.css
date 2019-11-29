@@ -1,7 +1,9 @@
 html {
-    background-image: url("https://images.unsplash.com/photo-1533327325824-76bc4e62d560?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80%22");
+    /**background-image: url("https://images.unsplash.com/photo-1533327325824-76bc4e62d560?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80%22");*/
     background-color: #cccccc;
     background-size: cover;
+    height: 100%;
+    width: 100%;
 }
 
 
@@ -141,8 +143,12 @@ html {
 /* REGISTER NAV */
 
 body {
+    background-image: url("https://images.unsplash.com/photo-1533327325824-76bc4e62d560?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80%22");
+    background-repeat: repeat;
     margin: 0em;
     padding: 0em;
+    height: 100%;
+    width: 100%;
 }
 
 #registernav {
@@ -324,4 +330,12 @@ body {
     background-color: white;
     border: 3px solid;
     border-color: turquoise;
+}
+
+/*404*/
+#msg404 {
+    color:white;
+    font-family: 'Poppins', sans-serif;
+    border-color: black;
+    border: 10px;
 }

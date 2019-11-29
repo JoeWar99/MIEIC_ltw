@@ -1,3 +1,24 @@
+<?php function open_head(){
+      echo "<head>";
+}
+?>
+
+<?php function close_head(){
+    echo "</head>";
+}
+?>
+
+<?php function set_title($title){
+    echo "<title>$title</title>";
+}
+?>
+
+<?php function set_charset($charset){
+    echo "<meta charset=\"$charset\">";
+}
+?>
+
+
 <?php function draw_header($username)
 {
   /**
@@ -8,15 +29,16 @@
   <!DOCTYPE html>
   <html>
     
-    <head>
-      <title></title>
-      <meta charset="utf-8">
+    <?php open_head();
+        set_title("AirestivoBnB");
+        set_charset("utf-8");
+    ?>
       <link rel="stylesheet" href="../css/style.css">
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" crossorigin="anonymous">
       <link href="https://fonts.googleapis.com/css?family=Merriweather|Open+Sans+Condensed:300" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
       <script src="../js/register.js" defer></script>
-    </head>
+      <?php close_head(); ?>
     
     <body>
       
@@ -27,7 +49,7 @@
               <tr>
                 <td>
                   <div id="logoText">
-                    <img src="../assets/logo2.png" alt="Logo for the airestivo BnB">
+                    <a href="homepage.php"><img src="../assets/logo2.png" alt="Logo for the airestivo BnB"> </a>
                   </div>
                 </td>
                 <td>
