@@ -18,6 +18,22 @@
 }
 ?>
 
+<?php function link_stylesheets($stylesheet_list){
+    foreach($stylesheet_list as $stylesheet) {
+      echo "<link rel=\"stylesheet\" href=$stylesheet crossorigin=\"anonymous\">";
+    }
+}
+?>
+
+<?php function link_scripts($script_list){
+    foreach($script_list as $script){
+      echo "<script src=$script[0]";
+      if($script[1]) echo " defer";
+      echo "></script>";
+    }
+}
+
+?>
 
 <?php function draw_header($username)
 {
@@ -32,14 +48,13 @@
     <?php open_head();
         set_title("AirestivoBnB");
         set_charset("utf-8");
+        link_stylesheets(["../css/style.css",
+                          "https://use.fontawesome.com/releases/v5.3.1/css/all.css",
+                          "https://fonts.googleapis.com/css?family=Merriweather|Open+Sans+Condensed:300",
+                          "https://fonts.googleapis.com/css?family=Poppins&display=swap"]);
+        link_scripts([["../js/register.js", true]]);
+        close_head();
     ?>
-      <link rel="stylesheet" href="../css/style.css">
-      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" crossorigin="anonymous">
-      <link href="https://fonts.googleapis.com/css?family=Merriweather|Open+Sans+Condensed:300" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
-      <script src="../js/register.js" defer></script>
-      <?php close_head(); ?>
-    
     <body>
       
       <header>
