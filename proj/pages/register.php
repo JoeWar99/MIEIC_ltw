@@ -10,14 +10,10 @@
  //   echo '<pre>' , var_dump($_SESSION) , '</pre>';
 
   global $main_stylesheet, $fonts;
-  //draw_header(null);
-  open_html();
-  draw_head("Register", [$main_stylesheet,$fonts[0], $fonts[1], $fonts[2]], [["../js/register.js", true]]);
-  open_body();
-  open_header();
-  close_header();
+  draw_header(null, "register");
   draw_register();
-  draw_footer();
+  close_body();
+  close_html();
 ?>
 
 

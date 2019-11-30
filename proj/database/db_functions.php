@@ -4,7 +4,7 @@ include_once('../includes/database.php');
 /**
  * Inserts a user in the database
  */
-function createUser($name, $date, $email, $username, $password)
+function create_user($name, $date, $email, $username, $password)
 {
     $db = Database::instance()->db();
     $options = ['cost' => 12];
@@ -16,7 +16,7 @@ function createUser($name, $date, $email, $username, $password)
  * Verifies if a certain username, password combination
  * exists in the database. Use the sha1 hashing function.
  */
-function checkUserEmailPassword($username_or_email, $password)
+function check_usr_pass($username_or_email, $password)
 {
     $db = Database::instance()->db();
     $stmt = $db->prepare('SELECT * FROM User WHERE username = ?');
@@ -25,7 +25,7 @@ function checkUserEmailPassword($username_or_email, $password)
     return $user !== false && password_verify($password, $user['Password']);
 }
 
-function usernameExists($username)
+function username_exists($username)
 {
 
     $db = Database::instance()->db();
@@ -36,7 +36,7 @@ function usernameExists($username)
 
 }
 
-function emailExists($email)
+function email_exists($email)
 {
 
     $db = Database::instance()->db();
@@ -47,7 +47,7 @@ function emailExists($email)
 
 }
 
-function getHousesBestRatings()
+function get_top_rated_houses()
 {
 
     $db = Database::instance()->db();
@@ -57,7 +57,7 @@ function getHousesBestRatings()
     return $result; // returns true if email exists and false otherwise..
 }
 
-function numberOfCommentsPerHouse($idHouse)
+function count_comments($idHouse)
 {
     $db = Database::instance()->db();
     $stmt = $db->prepare("SELECT COUNT(*) as total
@@ -68,7 +68,7 @@ function numberOfCommentsPerHouse($idHouse)
     return $result['total']; // returns true if email exists and false otherwise..
 }
 
-function pathPrincipalImageHouse($idHouse)
+function get_house_top_pic($idHouse)
 {
     $db = Database::instance()->db();
     $stmt = $db->prepare("SELECT Path as path FROM House H join Photo P on H.Id = P.HouseId WHERE H.Id = ?;");
@@ -84,7 +84,7 @@ function pathPrincipalImageHouse($idHouse)
 /**
  * Gets all the users from the database
  */
-function getAllUsers()
+function get_all_users()
 {
     $dbh = Database::instance()->db();
     $stmt = $dbh->prepare('SELECT * FROM User');
@@ -95,11 +95,11 @@ function getAllUsers()
 
 
 /**
- * getIdFromUsername
+ * get_id_from_usr
  * @param string $username  username of the user we want to get the id of
  * @return int returns -1 if it wasnt sucessfull or returns the id of the specified user if sucessfull
  */
-function getIdFromUsername($username)
+function get_id_from_usr($username)
 {
     $dbh = Database::instance()->db();
     try {

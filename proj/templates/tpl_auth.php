@@ -1,5 +1,4 @@
-<?php include_once('../templates/tpl_auth.php'); ?>
-
+<?php include_once("../templates/tpl_common.php"); ?>
 
 <?php function draw_login()
 {
@@ -43,27 +42,6 @@
     /**
      * Draws the signup section.
      */ ?>
-    <nav id="registernav">
-        <table>
-            <tr>
-                <td>
-                    <div id="logoText">
-                        <img src="../assets/logo2.png" alt="Logo for the airestivo BnB">
-                    </div>
-                </td>
-                <td>
-                    <form>
-                        <button id="loginButtonR" formaction="./login.php" formmethod="post">Login</button>
-                    </form>
-                </td>
-            </tr>
-        </table>
-        <div id="green_bar">
-        </div>
-    </nav>
-
-    
-
     <div id="registerPage">
         <div id="registerbox">
 

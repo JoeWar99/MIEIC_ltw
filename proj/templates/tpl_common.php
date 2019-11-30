@@ -156,40 +156,89 @@
                 "https://fonts.googleapis.com/css?family=Poppins&display=swap"];
       
       $main_stylesheet = "../css/style.css";
+
+      $register_sl = [["../js/register.js", true]];
 ?>
 
-<?php function draw_header($username)
+<?php function draw_logged_header($username){
+      open_nav();
+      open_table();
+        open_tr();
+          
+          open_td();
+            draw_logo();
+          close_td();
+
+          open_td();
+            draw_profile_menu($username);
+            draw_properties_menu();
+            draw_reservations_menu();
+          close_td();
+
+        close_tr();
+      close_table();
+      draw_green_bar();    
+      close_nav();
+}; 
+?>
+
+<?php function draw_login_button(){
+      echo "<form>";
+      echo "<button id=\"loginButtonR\" formaction=\"./login.php\" formmethod=\"post\">Login</button>";
+      echo "</form>";
+}
+?>
+
+<?php function draw_not_logged_header(){
+      open_nav();
+      open_table();
+        open_tr();
+          
+          open_td();
+            draw_logo();
+          close_td();
+
+          open_td();
+            draw_login_button();
+          close_td();
+
+        close_tr();
+      close_table();
+      draw_green_bar();
+      close_nav();
+
+}
+?>
+
+<?php function get_title($page){
+      switch ($page){
+        case "register":
+          return "Register";
+        case "login":
+          return "Log In";
+        default:
+          return "AirestivoBnB";
+      }
+}
+?>
+
+<?php function draw_header($username, $page)
 {
   /**
    * Draws the header for all pages. Receives an username
    * if the user is logged in in order to draw the logout
    * link.
    */
-  global $main_stylesheet, $fonts;
+  global $main_stylesheet, $fonts, $register_sl;
   open_html();
-      draw_head("AirestivoBnB", [$main_stylesheet,$fonts[0], $fonts[1], $fonts[2]]);
-    
+      $sl = [];
+      if($page == "register") $sl = $register_sl;
+      draw_head(get_title($page), [$main_stylesheet,$fonts[0], $fonts[1], $fonts[2]], $sl);
       open_body();
         open_header();
-        if ($username != NULL) { 
-          open_nav();
-          open_table();
-            open_tr();
-              
-              open_td();
-                draw_logo();
-              close_td();
-
-              open_td();
-                draw_profile_menu($username);
-                draw_properties_menu();
-                draw_reservations_menu();
-              close_td();
-
-            close_tr();
-          close_table();
-          draw_green_bar();    
-          close_nav();
+        if($page != "login"){
+          if ($username != NULL) draw_logged_header($username);
+          else draw_not_logged_header();
         }
         close_header();
   } 

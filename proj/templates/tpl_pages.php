@@ -34,17 +34,17 @@
         
         <?php 
             
-            $result = getHousesBestRatings();
+            $result = get_top_rated_houses();
             for($i = 0; $i < count($result); $i++){ ?>
             
             <div class="sample_house">
-            <img src=" <?php echo(pathPrincipalImageHouse($result[$i]['Id']));  ?>" width="330" height="230" />
+            <img src=" <?php echo(get_house_top_pic($result[$i]['Id']));  ?>" width="330" height="230" />
             <section name="information">
                 <p> <?php echo ($result[$i]["Name"]); ?> </p>
                 <p> <?php echo ($result[$i]["Address"]); ?> </p>
                 <p> Price: <?php echo ($result[$i]["PricePerDay"]); ?> /night </p>
                 <p> <?php echo ($result[$i]["Rating"]); ?> </p>
-                <?php $numberOfComments = numberOfCommentsPerHouse($result[$i]['Id']); ?>
+                <?php $numberOfComments = count_comments($result[$i]['Id']); ?>
                 <p> <?php echo ($numberOfComments); ?> comments</p>
             </section>
         </div>

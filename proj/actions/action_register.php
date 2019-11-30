@@ -8,17 +8,17 @@ $email = $_POST['email'];
 $username = $_POST['username'];
 $password = $_POST['password'];
 
-if (usernameExists($username)) {
+if (username_exists($username)) {
     $_SESSION['messageErrorUser'] = 'Username already exists';
 }
 
-if (emailExists($email)) {
+if (email_exists($email)) {
     $_SESSION['messageErrorEmail'] = 'Email already exists';
 }
 
 
 try {
-    createUser($name, $dateOfBirth, $email, $username, $password);
+    create_user($name, $dateOfBirth, $email, $username, $password);
     $_SESSION['username'] = $username;
     header('Location: ../pages/homepage.php');
 } catch (PDOException $e) {
