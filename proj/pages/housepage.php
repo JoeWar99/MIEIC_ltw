@@ -10,6 +10,10 @@
     if (!isset($_SESSION['username'])) $usr = null;
     else $usr = $_SESSION['username'];
 
-    draw_header($usr, "house"); 
+    $house_info = get_house_by_id($_GET['house_id']);
+
+    draw_header($usr, "house");
+    var_dump($house_info);
+    draw_footer();
    
 ?>

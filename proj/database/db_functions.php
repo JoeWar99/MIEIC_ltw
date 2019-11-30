@@ -57,27 +57,34 @@ function get_top_rated_houses()
     return $result; // returns true if email exists and false otherwise..
 }
 
-function count_comments($idHouse)
+function count_comments($house_id)
 {
     $db = Database::instance()->db();
     $stmt = $db->prepare("SELECT COUNT(*) as total
     FROM Comment C JOIN Review Re ON C.ReviewId = Re.Id JOIN Rent R ON Re.RentId = R.Id JOIN House H ON R.HouseId = H.Id 
     Where HouseId = ?;");
-    $stmt->execute(array(intval($idHouse)));
+    $stmt->execute(array(intval($house_id)));
     $result = $stmt->fetch();
     return $result['total']; // returns true if email exists and false otherwise..
 }
 
-function get_house_top_pic($idHouse)
+function get_house_top_pic($house_id)
 {
     $db = Database::instance()->db();
     $stmt = $db->prepare("SELECT Path as path FROM House H join Photo P on H.Id = P.HouseId WHERE H.Id = ?;");
-    $stmt->execute(array(intval($idHouse)));
+    $stmt->execute(array(intval($house_id)));
     $result = $stmt->fetch();
     return $result['path']; // returns true if email exists and false otherwise..
 }
 
+function get_house_by_id($house_id){
+    $db = Database::instance()->db();
+    $stmt = $db->prepare("SELECT * FROM House WHERE Id = ?;");
+    $stmt->execute(array(intval($house_id)));
+    $result = $stmt->fetch();
+    return $result;
 
+}
 
 /* Auxiliar develpment functions to delete before work is finalized */
 
