@@ -51,17 +51,103 @@ function draw_trending_houses(){
     }
 }
 
-?>
+function draw_homepage(){  
 
+    echo "<div id=\"homePage\">";
+        draw_searchbox();
+        echo "<p> Trending </p>";
+        draw_trending_houses();
+    echo "</div>";
+}
 
-<?php function draw_homepage()
-{   ?>
+function draw_house_base_info($house_info){
+    echo "<div id=\"baseinfo\">";
+    echo "<ul>";
+        $rating = $house_info['Rating'];
+        echo "<li> $rating stars</li>";
+        $capacity = $house_info['Capacity'];
+        echo "<li>Room for $capacity guests</li>";
+    echo "</ul>";
+    echo "</div>";
+}
 
-    <div id="homePage">
-        <?php draw_searchbox();?>
+function draw_house_description($house_info){
+    echo "<div id=\"description\">";
+        echo "<h2>Description</h2>";
+        $description = $house_info['Description'];
+        echo $description;
+    echo "</div>";
+}
 
-        <p> Trending </p>
+function draw_house_commodities($commodities){
+    echo "<div id=\"Commodities\">";
+        echo "<h2>Commodities</h2>";
+        echo "<ul>";
+        foreach($commodities as $commodity){
+            $type = $commodity['Type'];
+            echo "<li>$type</li>";
         
-        <?php draw_trending_houses();?> 
-    </div>
-<?php } ?>
+        }
+        echo "</ul>";
+    echo "</div>";
+}
+
+function draw_house_owners($owner_info){
+    echo "<div id=\"Owners\">";
+    echo "<h2>Managed by</h2>";
+        echo "<ul>";
+            $name = $owner_info["Name"];
+            $email = $owner_info["Email"];
+            echo "<li>$name</li>";
+            echo "<li>$email</li>";
+        echo "</ul>";
+    echo "</div>";
+}
+
+function draw_house_comments($comments){
+    echo "<div id=\"Comments\">";
+    echo "<h2>Comments</h2>";
+    foreach($comments as $comment){
+        echo "<div id=\"Username\">";
+            echo $comment["Username"];
+        echo "</div>";
+        
+        echo "<div id=\"Date\">";
+            echo $comment["Date"];
+        echo "</div>";
+        
+        echo "<div id=\"Text\">";
+            echo $comment["Text"];
+        echo "</div>";
+    }
+    echo "</div>";
+}
+
+function draw_rent_button(){
+    echo "<button type=\"button\">Rent</button>";
+}
+
+function draw_msg_button(){
+    echo "<button type=\"button\">Message Owner</button>";
+}
+
+function draw_house_pics($picpath){
+    echo "<img src=$picpath alt=\"House_Pic1\" />";
+}
+
+function draw_housepage($house_info, $city_info, $country_info, $commodities, $owner_info, $comments, $picpath){
+    $name = $house_info['Name'];
+    echo "<h1> $name </h1>";
+    $city = $city_info['Name']; $country = $country_info['Name'];
+    echo "<h3> $city, $country</h3>";
+
+    draw_house_base_info($house_info);
+    draw_house_description($house_info);
+    draw_house_commodities($commodities);
+    draw_house_owners($owner_info);
+    draw_house_comments($comments);
+    draw_rent_button();
+    draw_msg_button();
+    draw_house_pics($picpath);
+}
+?>

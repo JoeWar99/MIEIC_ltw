@@ -13,28 +13,13 @@
     $house_info = get_house_by_id($_GET['house_id']);
     $city_info = get_city_by_id($house_info['CityId']);
     $country_info = get_country_by_id($city_info['CountryId']);
-
+    $commodities = get_commodities_by_house_id($_GET['house_id']);
+    $owner_info = get_house_owner($_GET['house_id']);
+    $comments = get_recent_comments($_GET['house_id']);
+    $picpath = get_house_top_pic($_GET['house_id']);
+    
     draw_header($usr, "house");
-    var_dump($house_info);
-    echo "<br>";
-    var_dump($city_info);
-    echo "<br>";
-    var_dump($country_info);
-?>
-    <h1> <?=$house_info['Name'] ?> </h1>
-    <h3> <?= $city_info['Name']?>, <?= $country_info['Name'] ?></h3>
-    <ul>
-        <li><?=$house_info['Rating']?> stars</li>
-        <li><?=$house_info['Rating']?> rooms</li>
-        <li><?=$house_info['Rating']?> beds</li>
-        <li><?=$house_info['Rating']?> loos</li>
-    </ul>
-
-    <div id="description">
-        <h2>Description</h2>
-        <p> <?=$house_info['Description'] ?> </p>
-    </div>
-<?php    
-draw_footer();
+    draw_housepage($house_info, $city_info, $country_info, $commodities, $owner_info, $comments, $picpath);
+    draw_footer();
    
 ?>

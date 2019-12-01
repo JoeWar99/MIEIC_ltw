@@ -86,6 +86,14 @@ function get_house_by_id($house_id){
 
 }
 
+function get_commodities_by_house_id($house_id){
+    $db = Database::instance()->db();
+    $stmt = $db->prepare("SELECT * FROM Commodity WHERE HouseId = ?;");
+    $stmt->execute(array(intval($house_id)));
+    $result = $stmt->fetchall();
+    return $result;
+}
+
 function get_city_by_id($city_id){
     $db = Database::instance()->db();
     $stmt = $db->prepare("SELECT * FROM City WHERE Id = ?;");
@@ -99,6 +107,24 @@ function get_country_by_id($country_id){
     $stmt = $db->prepare("SELECT * FROM Country WHERE Id = ?;");
     $stmt->execute(array(intval($country_id)));
     $result = $stmt->fetch();
+    return $result;
+}
+
+function get_house_owner($house_id){
+    $db = Database::instance()->db();
+    $stmt = $db->prepare("SELECT Name, Email FROM User WHERE Id = (SELECT OwnerId From House WHERE House.Id = ?);");
+    $stmt->execute(array(intval($house_id)));
+    $result = $stmt->fetch();
+    return $result;
+}
+
+function get_recent_comments($house_id){
+    $db = Database::instance()->db();
+    $stmt = $db->prepare("SELECT U.Username, C.Text, C.Date
+    FROM Comment C JOIN Review Re ON C.ReviewId = Re.Id JOIN Rent R ON Re.RentId = R.Id
+    JOIN User U ON R.TouristId = U.Id JOIN House H ON R.HouseId = H.Id Where HouseId = ? ORDER BY C.Date DESC LIMIT 3;");
+    $stmt->execute(array(intval($house_id)));
+    $result = $stmt->fetchall();
     return $result;
 }
 
