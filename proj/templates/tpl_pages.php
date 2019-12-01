@@ -22,33 +22,40 @@ function draw_searchbox(){
                     echo "<option value=\"5\">5 guests</option>";
                     echo "<option value=\"6\">6 guests</option>";
                 echo "</select> <br>";
-                echo "<button formaction=\"\" formmethod=\"post\">Search</button>";
+                echo "<button formaction=\"../actions/action_search_house.php\" formmethod=\"GET\">Search</button>";
             echo "</form>";
         echo "</div>";
+}
+
+function draw_house_list($house_list){
+    foreach($house_list as $house){ 
+        echo "<div class=\"house_preview\">";
+            $pic = get_house_top_pic($house['Id']);
+            echo "<img src=$pic width=\"330\" height=\"230\" />";
+            echo "<section name=\"information\">";
+            $name = $house["Name"];
+            $id = $house['Id'];
+            echo "<p><a href=\"housepage.php?house_id=$id\"> $name </a></p>";
+            $city = get_city_by_id($house["CityId"]);
+            $country = get_country_by_id($city["CountryId"]);
+            echo "<p>". $city["Name"] . ", " . $country["Name"]. "</p>";
+            $price = $house["PricePerDay"];
+            echo "<p> Price: $price /night </p>";
+            $rating = $house["Rating"];
+            echo "<p> $rating </p>";
+            $cnt = count_comments($house['Id']);
+            echo "<p> $cnt comments</p>";
+            echo "</section>";
+        echo "</div>";  
+    }
 }
 
 function draw_trending_houses(){
   
     $result = get_top_rated_houses();
-    for($i = 0; $i < count($result); $i++){ 
-        echo "<div class=\"sample_house\">";
-            $pic = get_house_top_pic($result[$i]['Id']);
-            echo "<img src=$pic width=\"330\" height=\"230\" />";
-            echo "<section name=\"information\">";
-            $name = $result[$i]["Name"];
-            $id = $result[$i]['Id'];
-            echo "<p><a href=\"housepage.php?house_id=$id\"> $name </a></p>";
-            $addr = $result[$i]["Address"];
-            echo "<p> $addr </p>";
-            $price = $result[$i]["PricePerDay"];
-            echo "<p> Price: $price /night </p>";
-            $rating = $result[$i]["Rating"];
-            echo "<p> $rating </p>";
-            $cnt = count_comments($result[$i]['Id']);
-            echo "<p> $cnt comments</p>";
-            echo "</section>";
-        echo "</div>";  
-    }
+    echo "<div class=\"Trending\">";
+    draw_house_list($result);
+    echo "</div>";
 }
 
 function draw_homepage(){  

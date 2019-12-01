@@ -128,6 +128,15 @@ function get_recent_comments($house_id){
     return $result;
 }
 
+function find_me_a_cozy_place($city_id, $start_date, $end_date){
+    $db = Database::instance()->db();
+    $stmt = $db->prepare("SELECT Id, Name, Rating, PricePerDay FROM House
+    WHERE (House.CityId = ? AND House.Id IN (SELECT Id FROM Available WHERE StartDate <= ? AND EndDate >= ?));");
+    $stmt->execute(array(intval($city_id), $start_date, $end_date));
+    $result = $stmt->fetchall();
+    return $result;
+}
+
 /* Auxiliar develpment functions to delete before work is finalized */
 
 /**
@@ -140,8 +149,6 @@ function get_all_users()
     $stmt->execute();
     return $stmt->fetchall();
 }
-
-
 
 /**
  * get_id_from_usr

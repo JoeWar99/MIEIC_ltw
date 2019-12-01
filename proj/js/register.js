@@ -24,7 +24,6 @@ passwordConfirm.addEventListener("input", passwordConfirmVerify, true);
 dateOfBirth.addEventListener("input", dateOfBirthVerify, true);
 
 function Validate() {
-    console.log("entrei aqui");
     let returnValue = true;
     let passwordConfirmOrnot = true;
 
