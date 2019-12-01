@@ -23,8 +23,17 @@
 ?>
     <h1> <?=$house_info['Name'] ?> </h1>
     <h3> <?= $city_info['Name']?>, <?= $country_info['Name'] ?></h3>
-    <h3> <?=$house_info['Rating']?> stars</h3>
-    <p> </p>
+    <ul>
+        <li><?=$house_info['Rating']?> stars</li>
+        <li><?=$house_info['Rating']?> rooms</li>
+        <li><?=$house_info['Rating']?> beds</li>
+        <li><?=$house_info['Rating']?> loos</li>
+    </ul>
+
+    <div id="description">
+        <h2>Description</h2>
+        <p> <?=$house_info['Description'] ?> </p>
+    </div>
 <?php    
 draw_footer();
    
