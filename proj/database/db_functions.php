@@ -51,7 +51,7 @@ function get_top_rated_houses()
 {
 
     $db = Database::instance()->db();
-    $stmt = $db->prepare("SELECT * FROM House ORDER BY Rating ASC LIMIT 0, 6;");
+    $stmt = $db->prepare("SELECT * FROM House ORDER BY Rating DESC LIMIT 0, 6;");
     $stmt->execute(array());
     $result = $stmt->fetchall();
     return $result; // returns true if email exists and false otherwise..
@@ -84,6 +84,22 @@ function get_house_by_id($house_id){
     $result = $stmt->fetch();
     return $result;
 
+}
+
+function get_city_by_id($city_id){
+    $db = Database::instance()->db();
+    $stmt = $db->prepare("SELECT * FROM City WHERE Id = ?;");
+    $stmt->execute(array(intval($city_id)));
+    $result = $stmt->fetch();
+    return $result;
+}
+
+function get_country_by_id($country_id){
+    $db = Database::instance()->db();
+    $stmt = $db->prepare("SELECT * FROM Country WHERE Id = ?;");
+    $stmt->execute(array(intval($country_id)));
+    $result = $stmt->fetch();
+    return $result;
 }
 
 /* Auxiliar develpment functions to delete before work is finalized */

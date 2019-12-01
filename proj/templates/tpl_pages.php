@@ -38,9 +38,9 @@
             for($i = 0; $i < count($result); $i++){ ?>
             
             <div class="sample_house">
-            <img src=" <?php echo(get_house_top_pic($result[$i]['Id']));  ?>" width="330" height="230" />
+            <img src=" <?php echo get_house_top_pic($result[$i]['Id']);  ?>" width="330" height="230" />
             <section name="information">
-                <a href="housepage.php?house_id=<?=$result[$i]['Id']?>"> <?php echo ($result[$i]["Name"]); ?> </a>
+                <p><a href="housepage.php?house_id=<?=$result[$i]['Id']?>"> <?php echo ($result[$i]["Name"]); ?> </a></p>
                 <p> <?php echo ($result[$i]["Address"]); ?> </p>
                 <p> Price: <?php echo ($result[$i]["PricePerDay"]); ?> /night </p>
                 <p> <?php echo ($result[$i]["Rating"]); ?> </p>
