@@ -240,7 +240,7 @@ function draw_my_properties($usr){
             echo "<div class=\"my_properties1\">";
                 draw_house_in_organized_fashion($houses_owned[$i]);
             echo "</div>"; 
-            if($i < count($houses_owned)){
+            if($i+1 < count($houses_owned)){
                 echo "<div class=\"my_properties2\">";
                     draw_house_in_organized_fashion($houses_owned[$i+1]);
                 echo "</div>";   
@@ -270,7 +270,7 @@ function draw_my_reservations($usr){
             echo "<div class=\"my_reservations1\">";
                 draw_house_in_organized_fashion($houses_rented[$i]);
             echo "</div>"; 
-            if($i < count($houses_rented)){
+            if($i+1 < count($houses_rented)){
                 echo "<div class=\"my_reservations2\">";
                     draw_house_in_organized_fashion($houses_rented[$i+1]);
                 echo "</div>";  
