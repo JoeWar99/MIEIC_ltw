@@ -298,7 +298,7 @@ p {
     height: 100%;
 }*/
 
-#howmany {
+#guest_no {
     padding-left: 5em;
     padding-left: 5em;
     margin-left: 2em;
@@ -319,7 +319,7 @@ p {
     margin-left: 2em;
 }
 
-#searchbox>form>input {
+#searchbox>form input {
     margin-bottom: 2em;
     height: 2em;
     margin-left: 1.5em;
@@ -327,6 +327,8 @@ p {
     background-color: white;
     border: 3px solid;
     border-color: turquoise;
+    padding: 0;
+    margin-bottom: 0;
 }
 
 #searchbox>form>button {
@@ -339,6 +341,9 @@ p {
     border-color: turquoise;
 }
 
+#searchbox .valError {
+    margin: 1em;
+}
 
 /*404*/
 #error404page {

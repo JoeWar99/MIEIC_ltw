@@ -7,22 +7,35 @@ function draw_searchbox(){
         echo "<header>";
             echo "<h2>Find me a cozy place...</h2>";
         echo "</header>";
-            echo "<form>";
-                echo "<input name=\"Location\" type=\"text\" placeholder=\"Location\" required=\"required\"> <br>";
+            echo "<form name=\"search_form\">";
                 
-                echo "<input name=\"Start\" type=\"date\" required=\"required\">";
+                echo "<div>";
+                    echo "<input name=\"location\" type=\"text\" placeholder=\"Location\" required=\"required\">";
+                    echo "<div id=\"location_error\" class=\"valError\"> </div>";
+                echo "</div>";
+                
+                echo "<div>";
+                    echo "<input name=\"start\" type=\"date\" required=\"required\">";
+                    echo "<div id=\"start_error\" class=\"valError\"> </div>";
+                echo "</div>";
 
-                echo "<input name=\"End\" type=\"date\" required=\"required\"> <br>";
+                echo "<div>";
+                    echo "<input name=\"end\" type=\"date\" required=\"required\"> <br>";
+                    echo "<div id=\"end_error\" class=\"valError\"> </div>";
+                echo "</div>";
 
-                echo "<select id=\"howmany\" name=\"people\">";
+                echo "<select id=\"guest_no\" name=\"people\">";
                     echo "<option value=\"1\">1 guest</option>";
                     echo "<option value=\"2\">2 guests</option>";
                     echo "<option value=\"3\">3 guests</option>";
                     echo "<option value=\"4\">4 guests</option>";
                     echo "<option value=\"5\">5 guests</option>";
                     echo "<option value=\"6\">6 guests</option>";
+                    echo "<option value=\"7\">7 guests</option>";
+                    echo "<option value=\"8\">8 guests</option>";
+                    echo "<option value=\"9\">9 guests</option>";
                 echo "</select> <br>";
-                echo "<button formaction=\"../actions/action_search_house.php\" formmethod=\"POST\">Search</button>";
+                echo "<button formaction=\"../actions/action_search.php\" formmethod=\"POST\" onsubmit=\"return Validate()\">Search</button>";
             echo "</form>";
         echo "</div>";
 }
