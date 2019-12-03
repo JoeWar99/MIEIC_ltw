@@ -22,7 +22,19 @@ function check_usr_pass($username_or_email, $password)
     $stmt = $db->prepare('SELECT * FROM User WHERE username = ?');
     $stmt->execute(array($username_or_email));
     $user = $stmt->fetch();
-    return $user !== false && password_verify($password, $user['Password']);
+
+    $stmt = $db->prepare('SELECT * FROM User WHERE email = ?');
+    $stmt->execute(array($username_or_email));
+    $email = $stmt->fetch();
+
+    if($user !== false){
+        return password_verify($password, $user['Password']);
+    }
+    else if($email !== false){
+        return password_verify($password, $email['Password']);
+    }
+    else
+        return false;
 }
 
 function username_exists($username)
@@ -127,6 +139,46 @@ function get_recent_comments($house_id){
     $result = $stmt->fetchall();
     return $result;
 }
+
+
+function get_all_properties_for_a_user($usr){
+    $db = Database::instance()->db();
+    $user_id = get_id_from_usr($usr);
+    if($user_id != -1){
+        try{
+            $stmt = $db->prepare("SELECT DISTINCT * 
+            FROM House WHERE House.OwnerId = ? ");
+            $stmt->execute(array($user_id));
+            $result = $stmt->fetchall();
+            return $result;
+        }
+        catch (PDOException $e){
+            return -1;
+        }
+    }
+    else
+        return -1;
+}
+function get_all_reservations_for_a_user($usr){
+    $db = Database::instance()->db();
+    $user_id = get_id_from_usr($usr);
+    if($user_id != -1){
+        try{
+            $stmt = $db->prepare(" SELECT DISTINCT H.Id, H.Name, H.Rating, H.PricePerDay, H.Description, H.Address, H.PostalCode, H.OwnerId, H.CityId, H.Capacity
+            FROM User U JOIN Rent R ON U.Id = R.TouristId JOIN House H ON R.HouseId = H.Id 
+            WHERE U.ID = ? ORDER BY R.StartDate ASC");
+            $stmt->execute(array($user_id));
+            $result = $stmt->fetchall();
+            return $result;
+        }
+        catch (PDOException $e){
+            return -1;
+        }
+    }
+    else
+        return -1;
+}
+
 
 /* Auxiliar develpment functions to delete before work is finalized */
 

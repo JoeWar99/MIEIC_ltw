@@ -341,18 +341,53 @@ p {
 
 
 /*404*/
+
 #error404page {
     font-family: 'Poppins', sans-serif;
     color: white;
     background-image: url("../assets/404image.jpg");
-    height:100%;
+    height: 100%;
     width: 100%;
     background-size: 95%;
     margin: 0;
     padding: 0;
 }
 
-#error404page > * {
+#error404page>* {
     margin: 0;
     padding: 0;
+}
+
+#my_reservations {
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 2fr 0.5fr;
+}
+
+.my_reservations1 {
+    margin-top: 2em;
+    grid-column: 2;
+    margin-left: 10em;
+}
+
+.my_reservations2 {
+    margin-top: 2em;
+    grid-column: 3;
+    margin-left: 10em;
+}
+
+#my_properties {
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 2fr 0.5fr;
+}
+
+.my_properties1 {
+    margin-top: 2em;
+    grid-column: 2;
+    margin-left: 10em;
+}
+
+.my_properties2 {
+    margin-top: 2em;
+    grid-column: 3;
+    margin-left: 10em;
 }

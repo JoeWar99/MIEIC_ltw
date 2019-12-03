@@ -139,14 +139,14 @@
 
 <?php function draw_properties_menu(){
       echo "<div id=\"propertiesMenu\">";
-      echo "<button id=\"properties\">My Properties</button>";
+      echo "<button id= \"properties\" onclick=\"window.location.href = 'myProperties.php';\">My Properties</button>";
       echo "</div>";
 }
 ?>
 
 <?php function draw_reservations_menu(){
       echo "<div id=\"reservationsMenu\">";
-      echo "<button id=\"reservations\">My Reservations</button>";
+      echo "<button id= \"reservations\" onclick=\"window.location.href = 'myReservations.php';\">My Reservations</button>";
       echo "</div>";
 } 
 ?>
