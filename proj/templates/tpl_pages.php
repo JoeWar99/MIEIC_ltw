@@ -49,11 +49,10 @@ function draw_house_in_organized_fashion($house){
     $addr = $house["Address"];
     echo "<p> $addr </p>";
     $price = $house["PricePerDay"];
-    echo "<p> Price: $price /night </p>";
+    echo "<p> Price: $price € /night </p>";
     $rating = $house["Rating"];
-    echo "<p> $rating </p>";
     $cnt = count_comments($house['Id']);
-    echo "<p> $cnt comments</p>";
+    echo "<p> $rating <img src=../assets/star.png width=\"18\" height=\"15\" /> $cnt comments</p>";
     echo "</section>";
 }
 
@@ -77,7 +76,9 @@ function draw_homepage(){
 
     echo "<div id=\"homePage\">";
         draw_searchbox();
+        echo "<div id=\"trending\">";
         echo "<p> Trending </p>";
+        echo "</div>";
         draw_trending_houses();
     echo "</div>";
 }

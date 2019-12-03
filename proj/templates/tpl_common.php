@@ -170,9 +170,11 @@
           close_td();
 
           open_td();
+            echo "<div id=\"flexboxMenu\">";
             draw_profile_menu($username);
             draw_properties_menu();
             draw_reservations_menu();
+            echo "<div>";
           close_td();
 
         close_tr();
