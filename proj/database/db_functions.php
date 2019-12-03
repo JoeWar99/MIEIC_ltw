@@ -150,7 +150,10 @@ function get_all_properties_for_a_user($usr){
             FROM House WHERE House.OwnerId = ? ");
             $stmt->execute(array($user_id));
             $result = $stmt->fetchall();
-            return $result;
+            if(count($result) == 0)
+                return -1;
+            else
+                return $result;
         }
         catch (PDOException $e){
             return -1;
@@ -169,7 +172,10 @@ function get_all_reservations_for_a_user($usr){
             WHERE U.ID = ? ORDER BY R.StartDate ASC");
             $stmt->execute(array($user_id));
             $result = $stmt->fetchall();
-            return $result;
+            if(count($result) == 0)
+                return -1;
+            else
+                return $result;
         }
         catch (PDOException $e){
             return -1;
@@ -204,7 +210,7 @@ function get_id_from_usr($username)
 {
     $dbh = Database::instance()->db();
     try {
-        $stmt = $dbh->prepare('SELECT Id FROM User WHERE username = ');
+        $stmt = $dbh->prepare('SELECT Id FROM User WHERE username = ?');
         $stmt->execute(array($username));
         $user = $stmt->fetch();
         if ($user !== false)

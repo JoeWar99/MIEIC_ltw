@@ -301,6 +301,12 @@ p {
     height: 100%;
 }
 
+#trending {
+    margin-top: 22%;
+    margin-left: 10%;
+    font-size: 200%;
+}
+
 #sample_house {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
