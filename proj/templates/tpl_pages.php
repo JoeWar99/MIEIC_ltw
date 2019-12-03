@@ -22,7 +22,7 @@ function draw_searchbox(){
                     echo "<option value=\"5\">5 guests</option>";
                     echo "<option value=\"6\">6 guests</option>";
                 echo "</select> <br>";
-                echo "<button formaction=\"../actions/action_search_house.php\" formmethod=\"GET\">Search</button>";
+                echo "<button formaction=\"../actions/action_search_house.php\" formmethod=\"POST\">Search</button>";
             echo "</form>";
         echo "</div>";
 }

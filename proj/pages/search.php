@@ -7,11 +7,12 @@
     if (!isset($_SESSION['username'])) $usr = null;
     else $usr = $_SESSION['username'];
 
-    $location  = $_GET['location'];
+    $city_id  = $_GET['city_id'];
+    $country_id  = $_GET['country_id'];
     $start_date = $_GET['sd'];
     $end_date = $_GET['ed'];
 
-    draw_header($usr, "result");
-    var_dump($location, $start_date, $end_date);
+    draw_header($usr, 'search');
+    var_dump($city_id, $country_id, $start_date, $end_date);
     draw_footer();
 ?>

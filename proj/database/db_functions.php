@@ -137,6 +137,15 @@ function find_me_a_cozy_place($city_id, $start_date, $end_date){
     return $result;
 }
 
+
+function get_location_from_names($city_name, $country_name){
+    $db = Database::instance()->db();
+    $stmt = $db->prepare("SELECT City.Id AS CityId, Country.Id AS CountryId FROM City, Country WHERE City.Name = ? AND City.CountryId = Country.Id AND Country.Name = ?;");
+    $stmt->execute(array($city_name, $country_name));
+    $result = $stmt->fetch();
+    return $result;
+}
+
 /* Auxiliar develpment functions to delete before work is finalized */
 
 /**
