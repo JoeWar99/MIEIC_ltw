@@ -204,7 +204,7 @@ function get_id_from_usr($username)
 {
     $dbh = Database::instance()->db();
     try {
-        $stmt = $dbh->prepare('SELECT Id FROM User WHERE username = ?');
+        $stmt = $dbh->prepare('SELECT Id FROM User WHERE username = ');
         $stmt->execute(array($username));
         $user = $stmt->fetch();
         if ($user !== false)

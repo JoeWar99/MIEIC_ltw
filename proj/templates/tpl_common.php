@@ -60,6 +60,7 @@
 ?>
 
 <?php function close_body(){
+      echo "<p id=\"footer_information\">  © 2019 AirestivoBnB, Inc. All rights reserved. </p>";
       echo "</body>";
 }
 ?>

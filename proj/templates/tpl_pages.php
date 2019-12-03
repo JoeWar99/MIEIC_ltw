@@ -63,11 +63,19 @@ function draw_house_in_organized_fashion($house){
 function draw_trending_houses(){
   
     $result = get_top_rated_houses();
-    for($i = 0; $i < count($result); $i++){ 
-        echo "<div class=\"sample_house\">";
+    echo "<div id=\"sample_house\">";
+        for($i = 0; $i < count($result); $i = $i + 3){ 
+        echo "<div class=\"sample_house1\">";
             draw_house_in_organized_fashion($result[$i]);
         echo "</div>";  
-    }
+        echo "<div class=\"sample_house2\">";
+            draw_house_in_organized_fashion($result[$i+1]);
+        echo "</div>";  
+        echo "<div class=\"sample_house3\">";
+            draw_house_in_organized_fashion($result[$i+2]);
+        echo "</div>";  
+        }
+    echo "</div>";
 }
 
 /**
