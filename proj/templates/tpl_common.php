@@ -121,7 +121,7 @@
 
 <?php function draw_logo(){
     echo "<div id=\"logoText\">";
-    echo "<a href=\"homepage.php\"><img src=\"../assets/logo2.png\" alt=\"Logo for the AirestivoBnB\"> </a>";
+    echo "<a href=\"../pages/homepage.php\"><img src=\"../assets/logo2.png\" alt=\"Logo for the AirestivoBnB\"> </a>";
     echo "</div>";
 }
 ?>
