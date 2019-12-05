@@ -224,6 +224,36 @@
 }
 ?>
 
+<?php
+function draw_pic($picpath, $alt){
+  echo "<img src=$picpath alt=$alt />";
+}
+?>
+
+<?php
+function h1($content){
+    echo "<h1> $content </h1>";
+}
+?>
+
+<?php
+function h2($content){
+    echo "<h2> $content </h2>";
+}
+?>
+
+<?php
+function h3($content){
+    echo "<h3> $content </h3>";
+}
+?>
+
+<?php
+function h4($content){
+    echo "<h4> $content </h4>";
+}
+?>
+
 <?php function draw_header($username, $page)
 {
   /**

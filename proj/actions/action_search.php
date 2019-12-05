@@ -16,11 +16,14 @@ $country_name = ltrim($loc_info[1]);
 
 $result = get_location_from_names($city_name, $country_name);
 
-$id = intval($result['id']);
+$id = intval($result['Id']);
+$cid = intval($result['CountryId']);
 
+$start_time = strtotime($start_date);
+$end_time = strtotime($end_date);
 //DATE QUANDO VEM DO FORM VEM EM "YYYY-MM-DD"
 
 
-if($id)  header("Location: ../pages/search.php?lid=$id&sd=$start_date&ed=$end_date&gn=$guest_no");
+if($id && $start_time > time() && $start_time < $end_time)  header("Location: ../pages/search.php?city_id=$id&country_id=$cid&sd=$start_date&ed=$end_date&gn=$guest_no");
 else header("Location: ../pages/homepage.php#");
 ?>

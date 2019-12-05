@@ -31,7 +31,7 @@ function Validate() {
 }
 
 function location_verify(){
-    if (!/[[A-Z]{1}[a-z]*,\s*[[A-Z]{1}[a-z]*\s* /.test(location_text.value)){
+    if (!/[[A-Z][a-z]*,\s*[[A-Z][a-z]*\s* /.test(location_text.value)){
         location_text.style.border = "1px solid red";
         location_error.style.fontSize = "small";
         location_error.style.textAlign = "center";

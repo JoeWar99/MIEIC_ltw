@@ -1,11 +1,14 @@
-<?php include_once('../database/db_functions.php'); ?>
+<?php 
+include_once('../database/db_functions.php');
+include_once('../template/tpl_common.php');
+ ?>
 
 <?php
 
 function draw_searchbox(){
     echo "<div id=\"searchbox\">";
         echo "<header>";
-            echo "<h2>Find me a cozy place...</h2>";
+            h2("Find me a cozy place...");
         echo "</header>";
             echo "<form name=\"search_form\">";
                 
@@ -93,7 +96,7 @@ function draw_house_base_info($house_info){
 
 function draw_house_description($house_info){
     echo "<div id=\"description\">";
-        echo "<h2>Description</h2>";
+        h2("Description");
         $description = $house_info['Description'];
         echo $description;
     echo "</div>";
@@ -101,7 +104,7 @@ function draw_house_description($house_info){
 
 function draw_house_commodities($commodities){
     echo "<div id=\"Commodities\">";
-        echo "<h2>Commodities</h2>";
+        h2("Commodities");
         echo "<ul>";
         foreach($commodities as $commodity){
             $type = $commodity['Type'];
@@ -114,7 +117,7 @@ function draw_house_commodities($commodities){
 
 function draw_house_owners($owner_info){
     echo "<div id=\"Owners\">";
-    echo "<h2>Managed by</h2>";
+        h2("Managed by");
         echo "<ul>";
             $name = $owner_info["Name"];
             $email = $owner_info["Email"];
@@ -126,7 +129,7 @@ function draw_house_owners($owner_info){
 
 function draw_house_comments($comments){
     echo "<div id=\"Comments\">";
-    echo "<h2>Comments</h2>";
+    h2("Comments");
     foreach($comments as $comment){
         echo "<div id=\"Username\">";
             echo $comment["Username"];
@@ -151,15 +154,11 @@ function draw_msg_button(){
     echo "<button type=\"button\">Message Owner</button>";
 }
 
-function draw_house_pics($picpath){
-    echo "<img src=$picpath alt=\"House_Pic1\" />";
-}
-
 function draw_housepage($house_info, $city_info, $country_info, $commodities, $owner_info, $comments, $picpath){
     $name = $house_info['Name'];
-    echo "<h1> $name </h1>";
+    h1($name);
     $city = $city_info['Name']; $country = $country_info['Name'];
-    echo "<h3> $city, $country</h3>";
+    h3($city .", " . $country);
 
     draw_house_base_info($house_info);
     draw_house_description($house_info);
@@ -168,6 +167,10 @@ function draw_housepage($house_info, $city_info, $country_info, $commodities, $o
     draw_house_comments($comments);
     draw_rent_button();
     draw_msg_button();
-    draw_house_pics($picpath);
+    draw_pic($picpath, "House_PIC1");
+}
+
+function draw_search_page($city_id, $start_date, $end_date, $guest_no){
+   
 }
 ?>
