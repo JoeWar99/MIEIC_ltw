@@ -448,27 +448,53 @@ p {
     height: 100%;
     width: 100%;
     margin: 0;
+    padding-bottom: 2em;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 
-#housepage img{
+#housepage > img{
     height: 20em;
     width: 30em;
 }
 
 #housepage > * {
-    margin: 0;
+    margin: 1em;
     padding: 0;
     font-family: 'Poppins', sans-serif;
 }
 
-#housepage > button{
+#housepage ul  {
+    list-style-type: none;
+}
 
-    position: float;
+#housepage > button{
     width: 10em;
     height: 5em;
     background: #47D4B7;
     border-radius: 50px;
     border-style: none;
+}
+
+#rent_button{
+    position: fixed;
+    top: 10em;
+    left: 134em;
+}
+
+#message_button{
+    position: fixed;
+    top: 17em;
+    left: 134em;
+}
+
+#baseinfo ul {
+    display: flex;
+    justify-content: flex-start;
+}
+#baseinfo li {
+    margin-right: 2em;
 }
 
 footer {

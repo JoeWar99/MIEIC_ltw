@@ -73,6 +73,10 @@ function draw_house_list($house_list){
     }
 }
 
+function draw_rating_star(){
+    echo "<img src=../assets/star.png width=\"18\" height=\"15\" />";
+}
+
 /**
  * Outputs all of the information about a house in a organized fashion
  * @param house all the information about a specific house
@@ -90,7 +94,9 @@ function draw_house_in_organized_fashion($house){
     echo "<p> Price: $price € /night </p>";
     $rating = $house["Rating"];
     $cnt = count_comments($house['Id']);
-    echo "<p> $rating <img src=../assets/star.png width=\"18\" height=\"15\" /> $cnt comments</p>";
+    echo "<p> $rating";
+    draw_rating_star(); 
+    echo "$cnt comments</p>";
     echo "</section>";
 }
 
@@ -140,7 +146,9 @@ function draw_house_base_info($house_info){
     echo "<div id=\"baseinfo\">";
     echo "<ul>";
         $rating = $house_info['Rating'];
-        echo "<li> $rating stars</li>";
+        echo "<li> $rating";
+        draw_rating_star();
+        echo "</li>";
         $capacity = $house_info['Capacity'];
         echo "<li>Room for $capacity guests</li>";
     echo "</ul>";
@@ -220,7 +228,7 @@ function draw_house_comments($comments){
  * Draws the rent button in the page for a certain house
  */
 function draw_rent_button(){
-    echo "<button type=\"button\" onclick=\"rent_popup()\">Rent</button>";
+    echo "<button id=\"rent_button\" type=\"button\" onclick=\"rent_popup()\">Rent</button>";
 }
 
 
@@ -228,7 +236,7 @@ function draw_rent_button(){
  * Draws the message the owner button in the page for a certain house
  */
 function draw_msg_button(){
-    echo "<button type=\"button\" onclick=\"message_popup()\">Message Owner</button>";
+    echo "<button id=\"message_button\" type=\"button\" onclick=\"message_popup()\">Message Owner</button>";
 }
 
 /**
