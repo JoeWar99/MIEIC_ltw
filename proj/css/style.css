@@ -333,10 +333,6 @@ p {
     margin-right: 20%;
 }
 
-#footer_information {
-    text-align: end;
-}
-
 #trending {
     margin-top: 22%;
     margin-left: 10%;
@@ -408,6 +404,8 @@ p {
     padding: 0;
 }
 
+/*my_reservations*/
+
 #my_reservations {
     display: grid;
     grid-template-columns: 0.5fr 2fr 2fr 0.5fr;
@@ -425,6 +423,7 @@ p {
     margin-left: 10em;
 }
 
+/*my_properties*/
 #my_properties {
     display: grid;
     grid-template-columns: 0.5fr 2fr 2fr 0.5fr;
@@ -440,4 +439,39 @@ p {
     margin-top: 2em;
     grid-column: 3;
     margin-left: 10em;
+}
+
+/*house page*/
+#housepage{
+    background-color: white;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+#housepage img{
+    height: 20em;
+    width: 30em;
+}
+
+#housepage > * {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+#housepage > button{
+
+    position: float;
+    width: 10em;
+    height: 5em;
+    background: #47D4B7;
+    border-radius: 50px;
+    border-style: none;
+}
+
+footer {
+    background-color: white;
+    text-align: end;    
 }

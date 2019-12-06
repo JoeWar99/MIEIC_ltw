@@ -220,7 +220,7 @@ function draw_house_comments($comments){
  * Draws the rent button in the page for a certain house
  */
 function draw_rent_button(){
-    echo "<button type=\"button\">Rent</button>";
+    echo "<button type=\"button\" onclick=\"rent_popup()\">Rent</button>";
 }
 
 
@@ -228,7 +228,7 @@ function draw_rent_button(){
  * Draws the message the owner button in the page for a certain house
  */
 function draw_msg_button(){
-    echo "<button type=\"button\">Message Owner</button>";
+    echo "<button type=\"button\" onclick=\"message_popup()\">Message Owner</button>";
 }
 
 /**
@@ -250,6 +250,7 @@ function draw_house_pics($picpath){
  * @param picpath the path to the main image for the house
  */
 function draw_housepage($house_info, $city_info, $country_info, $commodities, $owner_info, $comments, $picpath){
+    echo "<div id=\"housepage\">";
     $name = $house_info['Name'];
     h1($name);
     $city = $city_info['Name']; $country = $country_info['Name'];
@@ -263,6 +264,7 @@ function draw_housepage($house_info, $city_info, $country_info, $commodities, $o
     draw_rent_button();
     draw_msg_button();
     draw_pic($picpath, "House_PIC1");
+    echo "</div>";
 }
 
 function draw_search_page($city_id, $start_date, $end_date, $guest_no, $house_list){

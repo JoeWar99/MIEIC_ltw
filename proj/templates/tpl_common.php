@@ -60,7 +60,6 @@
 ?>
 
 <?php function close_body(){
-      echo "<p id=\"footer_information\">  © 2019 AirestivoBnB, Inc. All rights reserved. </p>";
       echo "</body>";
 }
 ?>
@@ -161,6 +160,8 @@
       $register_sl = [["../js/register.js", true]];
 
       $search_sl = [["../js/search.js", true]];
+
+      $house_sl = [["../js/rent.js", true], ["../js/message.js", true]]
 ?>
 
 <?php function draw_logged_header($username){
@@ -264,11 +265,12 @@ function h4($content){
    * if the user is logged in in order to draw the logout
    * link.
    */
-  global $main_stylesheet, $fonts, $register_sl, $search_sl;
+  global $main_stylesheet, $fonts, $register_sl, $search_sl, $house_sl;
   open_html();
       $sl = [];
       if($page == "register") $sl = $register_sl;
       else if ($page == "home") $sl = $search_sl;
+      else if ($page == "house") $sl = $house_sl;
       draw_head(get_title($page), [$main_stylesheet,$fonts[0], $fonts[1], $fonts[2]], $sl);
       open_body();
         open_header();
@@ -280,11 +282,16 @@ function h4($content){
   } 
 ?>
 
+<?php function footer(){
+  echo "<footer>  © 2019 AirestivoBnB, Inc. All rights reserved. </footer>";
+}
+?>
 
 <?php function draw_footer(){
     /**
      * Draws the footer for all pages.
      */ 
+    footer();
     close_body();
     close_html();
 }
