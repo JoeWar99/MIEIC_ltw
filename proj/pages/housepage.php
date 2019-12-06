@@ -5,7 +5,7 @@
     include_once('../database/db_functions.php');
 
     if(!isset($_GET['house_id']) || ($house_id = intval($_GET['house_id'])) === 0)
-        die(header('Location: 404page.php')); 
+        die(header('Location: 404.php')); 
 
     if (!isset($_SESSION['username'])) $usr = null;
     else $usr = $_SESSION['username'];

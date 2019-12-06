@@ -1,4 +1,4 @@
-'use strict'
+"use strict";
 
 // GETTING ALL INPUT TEXT OBJECTS
 let name = document.forms["registerForm"]["name"];
@@ -24,7 +24,6 @@ passwordConfirm.addEventListener("input", passwordConfirmVerify, true);
 dateOfBirth.addEventListener("input", dateOfBirthVerify, true);
 
 function Validate() {
-    console.log("entrei aqui");
     let returnValue = true;
     let passwordConfirmOrnot = true;
 
@@ -64,11 +63,11 @@ function dateOfBirthVerify() {
         dateOfBirth.style.border = "1px solid red";
         dateOfBirthError.style.fontSize = "small";
         dateOfBirthError.style.textAlign = "center";
-        dateOfBirthError.textContent = "dateOfBirth is required";
+        dateOfBirthError.textContent = "D.O.B. is required";
         return false;
     } else {
         dateOfBirth.style.border = "none";
-        dateOfBirthError.innerHTML = ""
+        dateOfBirthError.innerHTML = "";
         return true;
     }
 
@@ -84,7 +83,7 @@ function nameVerify() {
         return false;
     } else {
         name.style.border = "none";
-        nameError.innerHTML = ""
+        nameError.innerHTML = "";
         return true;
     }
 
@@ -118,7 +117,7 @@ function usernameVerify() {
         return false;
     } else {
         username.style.border = "none";
-        usernameError.innerHTML = ""
+        usernameError.innerHTML = "";
         return true;
     }
 }
@@ -140,7 +139,7 @@ function passwordVerify() {
         return false;
     } else {
         password.style.border = "none";
-        passwordError.innerHTML = ""
+        passwordError.innerHTML = "";
         return true;
     }
 

@@ -122,7 +122,7 @@
 
 <?php function draw_logo(){
     echo "<div id=\"logoText\">";
-    echo "<a href=\"homepage.php\"><img src=\"../assets/logo2.png\" alt=\"Logo for the AirestivoBnB\"> </a>";
+    echo "<a href=\"../pages/homepage.php\"><img src=\"../assets/logo2.png\" alt=\"Logo for the AirestivoBnB\"> </a>";
     echo "</div>";
 }
 ?>
@@ -159,6 +159,8 @@
       $main_stylesheet = "../css/style.css";
 
       $register_sl = [["../js/register.js", true]];
+
+      $search_sl = [["../js/search.js", true]];
 ?>
 
 <?php function draw_logged_header($username){
@@ -225,6 +227,36 @@
 }
 ?>
 
+<?php
+function draw_pic($picpath, $alt){
+  echo "<img src=$picpath alt=$alt />";
+}
+?>
+
+<?php
+function h1($content){
+    echo "<h1> $content </h1>";
+}
+?>
+
+<?php
+function h2($content){
+    echo "<h2> $content </h2>";
+}
+?>
+
+<?php
+function h3($content){
+    echo "<h3> $content </h3>";
+}
+?>
+
+<?php
+function h4($content){
+    echo "<h4> $content </h4>";
+}
+?>
+
 <?php function draw_header($username, $page)
 {
   /**
@@ -232,10 +264,11 @@
    * if the user is logged in in order to draw the logout
    * link.
    */
-  global $main_stylesheet, $fonts, $register_sl;
+  global $main_stylesheet, $fonts, $register_sl, $search_sl;
   open_html();
       $sl = [];
       if($page == "register") $sl = $register_sl;
+      else if ($page == "home") $sl = $search_sl;
       draw_head(get_title($page), [$main_stylesheet,$fonts[0], $fonts[1], $fonts[2]], $sl);
       open_body();
         open_header();
