@@ -14,14 +14,12 @@
     $start_date = $_GET['sd'];
     $end_date = $_GET['ed'];
 
+    $house_list = find_me_a_cozy_place($city_id, $start_date, $end_date, $guest_no);
+
     if (!isset($_SESSION['username'])) $usr = null;
     else $usr = $_SESSION['username'];
 
     draw_header($usr, 'search');
-    h2("Showing results for places in: ". get_city_by_id($city_id)['Name'] . ", " . get_country_by_id($country_id)['Name']);
-    $tmp1 = explode("-", $start_date);
-    $tmp2 = explode("-", $end_date);
-    h3($tmp1[2] . "/" . $tmp1[1] . "/" . $tmp1[0] . " - " . $tmp2[2] . "/" . $tmp2[1] . "/" . $tmp2[0]);
-    var_dump($city_id, $country_id, $start_date, $end_date, $guest_no);
+    draw_search_page($city_id, $start_date, $end_date, $guest_no, $house_list);
     draw_footer();
 ?>

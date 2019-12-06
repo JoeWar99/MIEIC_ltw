@@ -170,7 +170,18 @@ function draw_housepage($house_info, $city_info, $country_info, $commodities, $o
     draw_pic($picpath, "House_PIC1");
 }
 
-function draw_search_page($city_id, $start_date, $end_date, $guest_no){
-   
+function draw_search_page($city_id, $start_date, $end_date, $guest_no, $house_list){
+
+    h2("Showing results for places in: ". get_city_by_id($city_id)['Name'] . ", " . get_country_by_id($country_id)['Name']);
+    $tmp1 = explode("-", $start_date);
+    $tmp2 = explode("-", $end_date);
+    h3($tmp1[2] . "/" . $tmp1[1] . "/" . $tmp1[0] . " - " . $tmp2[2] . "/" . $tmp2[1] . "/" . $tmp2[0]);
+    
+    if ($house_list != false) draw_house_list($house_list);
+    else {
+        echo "<p>";
+            echo "No results matched your search, try to broaden your paramenters.";
+        echo "</p>";
+    }
 }
 ?>

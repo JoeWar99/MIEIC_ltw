@@ -128,11 +128,11 @@ function get_recent_comments($house_id){
     return $result;
 }
 
-function find_me_a_cozy_place($city_id, $start_date, $end_date){
+function find_me_a_cozy_place($city_id, $start_date, $end_date, $guest_no){
     $db = Database::instance()->db();
     $stmt = $db->prepare("SELECT Id, Name, Rating, PricePerDay FROM House
-    WHERE (House.CityId = ? AND House.Id IN (SELECT Id FROM Available WHERE StartDate <= ? AND EndDate >= ?));");
-    $stmt->execute(array(intval($city_id), $start_date, $end_date));
+    WHERE (House.CityId = ? AND House.Capacity >= ? AND House.Id IN (SELECT Id FROM Available WHERE StartDate <= ? AND EndDate >= ?));");
+    $stmt->execute(array(intval($city_id), $guest_no, $start_date, $end_date));
     $result = $stmt->fetchall();
     return $result;
 }
