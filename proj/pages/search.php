@@ -18,12 +18,10 @@
     else $usr = $_SESSION['username'];
 
     draw_header($usr, 'search');
-    h2("Showing results for places available: ");
-    h3(get_city_by_id($city_id)['Name'] . ", " . get_country_by_id($country_id)['Name']);
-    $tmp = explode("-", $start_date);
-    h3("From: ". $tmp[2] . "/" . $tmp[1] . "/" . $tmp[0]);
-    $tmp = explode("-", $end_date);
-    h3("To: ".  $tmp[2] . "/" . $tmp[1] . "/" . $tmp[0]);
+    h2("Showing results for places in: ". get_city_by_id($city_id)['Name'] . ", " . get_country_by_id($country_id)['Name']);
+    $tmp1 = explode("-", $start_date);
+    $tmp2 = explode("-", $end_date);
+    h3($tmp1[2] . "/" . $tmp1[1] . "/" . $tmp1[0] . " - " . $tmp2[2] . "/" . $tmp2[1] . "/" . $tmp2[0]);
     var_dump($city_id, $country_id, $start_date, $end_date, $guest_no);
     draw_footer();
 ?>
