@@ -12,6 +12,8 @@ function create_user($name, $date, $email, $username, $password)
     $stmt->execute(array(null, $name, $date, $email, $username, password_hash($password, PASSWORD_DEFAULT, $options)));
 }
 
+//function create_rent()
+
 /**
  * Verifies if a certain username, password combination
  * exists in the database. Use the sha1 hashing function.
