@@ -190,12 +190,11 @@ function get_all_reservations_for_a_user($usr){
 function find_me_a_cozy_place($city_id, $start_date, $end_date, $guest_no){
     $db = Database::instance()->db();
     $stmt = $db->prepare("SELECT Id, Name, Rating, PricePerDay FROM House
-    WHERE (House.CityId = ? AND House.Capacity >= ? AND House.Id IN (SELECT Id FROM Available WHERE StartDate <= ? AND EndDate >= ?));");
+    WHERE (House.CityId = ? AND House.Capacity >= ? AND House.Id NOT IN (SELECT HouseId FROM Occupied WHERE (SELECT MAX(StartDate, ?)) <= (SELECT MIN(EndDate, ?))));");
     $stmt->execute(array(intval($city_id), $guest_no, $start_date, $end_date));
     $result = $stmt->fetchall();
     return $result;
 }
-
 
 function get_location_from_names($city_name, $country_name){
     $db = Database::instance()->db();
