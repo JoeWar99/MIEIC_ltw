@@ -284,7 +284,8 @@ body {
     text-align: center;
 }
 
-p {
+p,
+pre {
     font-family: 'Poppins', sans-serif;
 }
 
@@ -403,36 +404,216 @@ p {
     padding: 0;
 }
 
+
+/* MY RESERVATIONS */
+
 #my_reservations {
     display: grid;
-    grid-template-columns: 0.5fr 2fr 2fr 0.5fr;
+    grid-template-columns: 0.5fr 2fr 2fr 2fr 0.5fr;
 }
 
 .my_reservations1 {
+    text-align: center;
     margin-top: 2em;
+    margin-left: 10%;
+    margin-right: 10%;
     grid-column: 2;
-    margin-left: 10em;
+}
+
+#MyReservationsTitle {
+    font-size: 2em;
+    margin-left: 5em;
 }
 
 .my_reservations2 {
+    text-align: center;
     margin-top: 2em;
     grid-column: 3;
-    margin-left: 10em;
+    margin-left: 10%;
+    margin-right: 10%;
 }
+
+.my_reservations3 {
+    text-align: center;
+    margin-top: 2em;
+    grid-column: 4;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.buttonsReservations_1 {
+    font-size: 1.3em;
+    margin-left: 0.3em;
+    padding: 0.4em;
+}
+
+.buttonsReservations_2 {
+    font-size: 1.3em;
+    margin-left: 0.3em;
+    padding: 0.4em;
+}
+
+
+/* MY PROPERTIES PAGE */
 
 #my_properties {
     display: grid;
-    grid-template-columns: 0.5fr 2fr 2fr 0.5fr;
+    grid-template-columns: 0.5fr 2fr 2fr 2fr 0.5fr;
+}
+
+#MyPropertiesHeader {
+    display: flex;
+}
+
+#MyPropertiesTitle {
+    font-size: 2em;
+    margin-left: 5em;
+}
+
+#addProperty {
+    margin-left: 2.5em;
+    height: 2em;
+    margin-top: 1.5em;
+    font-size: 1.5em;
 }
 
 .my_properties1 {
-    margin-top: 2em;
+    text-align: center;
+    margin-top: 3em;
     grid-column: 2;
-    margin-left: 10em;
+    margin-left: 20%;
+    margin-right: 20%;
 }
 
 .my_properties2 {
-    margin-top: 2em;
+    text-align: center;
+    margin-top: 3em;
     grid-column: 3;
-    margin-left: 10em;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.my_properties3 {
+    text-align: center;
+    margin-top: 3em;
+    grid-column: 4;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+
+/* POP UP ADD PROPERTY */
+
+.bg-modal {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0;
+    display: none;
+    justify-content: center;
+}
+
+.modal-content {
+    margin-top: 5em;
+    width: 40%;
+    height: 150%;
+    background-color: teal;
+    border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.modal-content_Reserv {
+    margin-top: 5em;
+    width: 40%;
+    height: 80%;
+    background-color: teal;
+    border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.bg-modal-1 {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+    display: none;
+    justify-content: center;
+}
+
+.addPictureP1 {
+    margin-top: 5em;
+    width: 60%;
+    height: 40%;
+    background-color: white;
+    border-radius: 1em;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.custom-file-upload {
+    position: relative;
+    top: 1em;
+    left: 1em;
+    width: 1em;
+    font-size: 3em;
+    background-color: grey;
+    padding: 1em;
+}
+
+.addPictureP {
+    width: 50%;
+    height: 20%;
+    background-color: grey;
+    border-radius: 1em;
+}
+
+#addPicture {
+    margin-top: 3em;
+    margin-bottom: 3em;
+}
+
+.inputAddH {
+    margin-bottom: 1em;
+    height: 2em;
+    margin-left: 2em;
+    width: 90%;
+    background-color: white;
+}
+
+.close {
+    position: absolute;
+    top: 0;
+    right: 0.2em;
+    font-size: 4em;
+    transform: rotate(45deg);
+}
+
+.close1 {
+    position: absolute;
+    top: 0;
+    right: 0.2em;
+    font-size: 4em;
+    transform: rotate(45deg);
+}
+
+.buttonsPropertyOwned {
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    font-size: 1.5em;
+    margin-left: 1em;
 }

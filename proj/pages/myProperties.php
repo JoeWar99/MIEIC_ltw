@@ -12,6 +12,7 @@
   draw_header($usr, "myProperties"); 
   draw_my_properties($usr);
   draw_footer();
-
 ?>
+
+
 
