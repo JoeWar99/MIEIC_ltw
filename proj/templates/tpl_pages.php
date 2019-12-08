@@ -228,7 +228,7 @@ function draw_house_comments($comments){
  * Draws the rent button in the page for a certain house
  */
 function draw_rent_button(){
-    echo "<button id=\"rent_button\" type=\"button\" onclick=\"rent_popup()\">Rent</button>";
+    echo "<button id=\"rent_button\" type=\"button\">Rent</button>";
 }
 
 
@@ -236,7 +236,7 @@ function draw_rent_button(){
  * Draws the message the owner button in the page for a certain house
  */
 function draw_msg_button(){
-    echo "<button id=\"message_button\" type=\"button\" onclick=\"message_popup()\">Message Owner</button>";
+    echo "<button id=\"message_button\" type=\"button\">Message Owner</button>";
 }
 
 /**
