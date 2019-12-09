@@ -39,6 +39,7 @@
 <?php function link_scripts($script_list){
     foreach($script_list as $script){
       echo "<script src=$script[0]";
+      if($script[0][strlen($script[0])-3] == 'm') echo " type=\"module\""; //Check if its a module
       if($script[1]) echo " defer";
       echo "></script>";
     }
