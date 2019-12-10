@@ -266,32 +266,12 @@ function draw_my_properties($usr)
     <?php unset($_SESSION['message']);
         } ?>
 
-    <p> lololollllllllllllllllllllllllllllll </p>
 
     <?php
 
     echo "<button id= \"addProperty\" action=\"javascript:void(0)\">Add Property</button>";
     echo "</div>";
     echo "<div id=\"my_properties\">";
-    if ($houses_owned != -1) {
-        for ($i = 0; $i < count($houses_owned); $i = $i + 2) {
-            echo "<div class=\"my_properties1\">";
-            draw_house_in_organized_fashion_Properties($houses_owned[$i]);
-            echo "</div>";
-            if ($i + 1 < count($houses_owned)) {
-                echo "<div class=\"my_properties2\">";
-                draw_house_in_organized_fashion_Properties($houses_owned[$i + 1]);
-                echo "</div>";
-            }
-            if ($i + 2 < count($houses_owned)) {
-                echo "<div class=\"my_properties3\">";
-                draw_house_in_organized_fashion_Properties($houses_owned[$i + 2]);
-                echo "</div>";
-            }
-        }
-    } else {
-        die(header('Location: 404page.php'));
-    }
     echo "</div>";
 
     /* POP UP FOR THE ADD PROPERTY BUTTON */
@@ -355,11 +335,8 @@ function draw_house_in_organized_fashion_Properties($house)
     ?>
 
     <button class="buttonsPropertyOwned" method="POST" action="../actions/action_register.php">Edit</button>
+    <button class="buttonsPropertyOwned" onClick="pressed_delete_Button( <?php echo " $houseId " ?>)">Delete</button>
 
-    <form name="deleteHouseForm" method="POST" action="../actions/action_deleteHouse.php">
-        <input type="hidden" name="houseId" value=<?php echo "$houseId" ?>>
-        <input class="buttonsPropertyOwned" type="submit" value="Delete">
-    </form>
 <?php
 
 }

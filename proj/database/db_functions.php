@@ -196,7 +196,7 @@ function delete_house($house_id)
         $stmt->execute(array($house_id));
         return true;
     } catch (PDOException $e) {
-        return $e;
+        return false;
     }
 
 }

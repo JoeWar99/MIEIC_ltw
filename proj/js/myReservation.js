@@ -12,8 +12,6 @@ document.querySelector('.close').addEventListener('click',
     });
 
 
-
 function pressed_Message_Button(house_id) {
     document.querySelector('.bg-modal').style.display = 'flex';
-
 }

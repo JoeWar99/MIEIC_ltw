@@ -7,8 +7,8 @@ $username = $_SESSION['username'];
 $houseId = $_POST['houseId'];
 
 
- $e = delete_house($houseId);
-    $_SESSION['message'] = $e->getMessage();
-
-header('Location: ../pages/myProperties.php');
+ if(!delete_house($houseId))
+    echo json_encode(-1);
+ else
+   echo json_encode(0);
 ?>

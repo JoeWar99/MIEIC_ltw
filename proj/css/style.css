@@ -477,30 +477,6 @@ pre {
     font-size: 1.5em;
 }
 
-.my_properties1 {
-    text-align: center;
-    margin-top: 3em;
-    grid-column: 2;
-    margin-left: 20%;
-    margin-right: 20%;
-}
-
-.my_properties2 {
-    text-align: center;
-    margin-top: 3em;
-    grid-column: 3;
-    margin-left: 20%;
-    margin-right: 20%;
-}
-
-.my_properties3 {
-    text-align: center;
-    margin-top: 3em;
-    grid-column: 4;
-    margin-left: 20%;
-    margin-right: 20%;
-}
-
 
 /* POP UP ADD PROPERTY */
 
