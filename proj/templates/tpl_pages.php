@@ -258,16 +258,6 @@ function draw_my_properties($usr)
     echo "<div id=\"MyPropertiesHeader\">";
     echo "<p id=\"MyPropertiesTitle\"> My Properties </p>";
 
-    ?>
-
-    <?php if (isset($_SESSION['message'])) { ?>
-        <p> <?php echo ($_SESSION['message']) ?> </p>
-        <p> lololol </p>
-    <?php unset($_SESSION['message']);
-        } ?>
-
-
-    <?php
 
     echo "<button id= \"addProperty\" action=\"javascript:void(0)\">Add Property</button>";
     echo "</div>";
@@ -311,78 +301,20 @@ function draw_my_properties($usr)
 <?php
 }
 
-function draw_house_in_organized_fashion_Reservation($house)
-{
-
-    $houseId = $house['Id'];
-
-    draw_house_in_organized_fashion($house);
-    ?>
-    <button class="buttonsReservations_2" onClick="pressed_Message_Button( <?php echo " $houseId " ?>)">Message Owner</button>
-    <button class="buttonsReservations_1">Review</button>
-    <button class="buttonsReservations_1">Cancel</button>
-
-
-<?php
-}
-
-function draw_house_in_organized_fashion_Properties($house)
-{
-
-    $houseId = $house['Id'];
-
-    draw_house_in_organized_fashion($house);
-    ?>
-
-    <button class="buttonsPropertyOwned" method="POST" action="../actions/action_register.php">Edit</button>
-    <button class="buttonsPropertyOwned" onClick="pressed_delete_Button( <?php echo " $houseId " ?>)">Delete</button>
-
-<?php
-
-}
-
-
-
-
 /**
  * Draws the my reservations page for a certain user
  * @param usr the user we want to draw the reservations for
  */
 function draw_my_reservations($usr)
 {
-    $id_for_messages = null;
 
-    $houses_rented = get_all_reservations_for_a_user($usr);
 
     echo "<p id=\"MyReservationsTitle\"> My Reservations </p>";
     echo "<div id=\"my_reservations\">";
 
-
-    if ($houses_rented != -1) {
-        for ($i = 0; $i < count($houses_rented); $i = $i + 3) {
-
-            echo "<div class=\"my_reservations1\">";
-            draw_house_in_organized_fashion_Reservation($houses_rented[$i]);
-            echo "</div>";
-            if ($i + 1 < count($houses_rented)) {
-                echo "<div class=\"my_reservations2\">";
-                draw_house_in_organized_fashion_Reservation($houses_rented[$i + 1]);
-                echo "</div>";
-            }
-            if ($i + 2 < count($houses_rented)) {
-                echo "<div class=\"my_reservations3\">";
-                draw_house_in_organized_fashion_Reservation($houses_rented[$i + 2]);
-                echo "</div>";
-            }
-        }
-    } else {
-        die(header('Location: 404page.php'));
-    }
     echo "</div>";
 
     ?>
-
-
 
     <div class="bg-modal">
         <div class="modal-content_Reserv">

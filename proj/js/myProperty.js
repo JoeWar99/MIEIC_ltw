@@ -36,8 +36,18 @@ function pressed_delete_Button(house_id) {
     let ourRequest = new XMLHttpRequest();
     ourRequest.open("POST", "../actions/api_deleteHouse.php", true);
     ourRequest.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-    ourRequest.onload = reloadHtmlRequest;
+    ourRequest.onload = delete_house;
     ourRequest.send(encodeForAjax({ houseId: house_id }));
+}
+
+function delete_house() {
+    let ourData = JSON.parse(this.responseText);
+    console.log(ourData);
+    if (ourData == -1)
+        alert("Cant Delete That house there's reservation in progress or in the future");
+    else
+        reloadHtmlRequest();
+
 }
 
 reloadHtmlRequest();
@@ -53,33 +63,52 @@ function reloadHtmlRequest() {
 
 function reloadHtml() {
     let ourData = JSON.parse(this.responseText);
-    console.log(ourData);
     let div_to_hold_houses = document.getElementById("my_properties");
-    let article = document.createElement('houses')
-    article.setAttribute('class', 'post')
+    if (ourData == -1) {
 
-    console.log(document)
+        let div_to_hold_houses = document.getElementById("my_properties");
+        let article = document.createElement('houses')
+        article.setAttribute('class', 'post')
+        console.log(document)
 
-    let houses = return_html_in_string_form(ourData);
+        let houses = '<p id="error-no-properties"> No Properties added yet </p>';
 
-    article.innerHTML = houses;
+        article.innerHTML = houses;
 
-    console.log(article);
+        console.log(article);
 
-    div_to_hold_houses.innerHTML = article.innerHTML;
+        div_to_hold_houses.innerHTML = article.innerHTML;
 
-    let my_properties1 = document.getElementsByClassName("myproperties1");
-    let my_properties2 = document.getElementsByClassName("myproperties2");
-    let my_properties3 = document.getElementsByClassName("myproperties3");
 
-    for (let i = 0; i < my_properties1.length; i++) {
-        my_properties1[i].setAttribute("style", "text-align: center; margin-top: 3em; grid-column: 2; margin-left: 20%; margin-right: 20%;");
-    }
-    for (let i = 0; i < my_properties2.length; i++) {
-        my_properties2[i].setAttribute("style", "text-align: center; margin-top: 3em; grid-column: 3; margin-left: 20%; margin-right: 20%;");
-    }
-    for (let i = 0; i < my_properties3.length; i++) {
-        my_properties3[i].setAttribute("style", "text-align: center; margin-top: 3em; grid-column: 4; margin-left: 20%; margin-right: 20%;");
+
+    } else {
+
+        div_to_hold_houses.setAttribute("style", " display: grid; grid-template-columns: 0.5 fr 2 fr 2 fr 2 fr 0.5 fr;");
+        let article = document.createElement('houses')
+        article.setAttribute('class', 'post')
+        console.log(document)
+
+        let houses = return_html_in_string_form(ourData);
+
+        article.innerHTML = houses;
+
+        console.log(article);
+
+        div_to_hold_houses.innerHTML = article.innerHTML;
+
+        let my_properties1 = document.getElementsByClassName("myproperties1");
+        let my_properties2 = document.getElementsByClassName("myproperties2");
+        let my_properties3 = document.getElementsByClassName("myproperties3");
+
+        for (let i = 0; i < my_properties1.length; i++) {
+            my_properties1[i].setAttribute("style", "text-align: center; margin-top: 3em; grid-column: 2; margin-left: 20%; margin-right: 20%;");
+        }
+        for (let i = 0; i < my_properties2.length; i++) {
+            my_properties2[i].setAttribute("style", "text-align: center; margin-top: 3em; grid-column: 3; margin-left: 20%; margin-right: 20%;");
+        }
+        for (let i = 0; i < my_properties3.length; i++) {
+            my_properties3[i].setAttribute("style", "text-align: center; margin-top: 3em; grid-column: 4; margin-left: 20%; margin-right: 20%;");
+        }
     }
 
 }
@@ -133,8 +162,13 @@ function draw_house_in_organized_fashion(house_data) {
     let return_html_in_string_form;
 
     let pic = house_data["pic"];
-    return_html_in_string_form = '<img src=' + pic + 'width="330" height="230" />';
-    return_html_in_string_form = '<section name="information">';
+    if (pic == null) {
+        pic = '../assets/imagesHouses/noHouseImage.png';
+    }
+    console.log('pic?');
+    console.log(pic);
+    return_html_in_string_form = '<img src=' + pic + ' width="330" height="230" />';
+    return_html_in_string_form += '<section name="information">';
     let name = house_data["Name"];
     let id = house_data['Id'];
     return_html_in_string_form += '<p> <a href="housepage.php?house_id=' + id + '">' + name + '</a></p>';
@@ -151,23 +185,3 @@ function draw_house_in_organized_fashion(house_data) {
 
 
 }
-
-
-// if ($houses_owned != -1) {
-//     for ($i = 0; $i < count($houses_owned); $i = $i + 2) {
-//         echo "<div class=\"my_properties1\">";
-//         draw_house_in_organized_fashion_Properties($houses_owned[$i]);
-//         echo "</div>";
-//         if ($i + 1 < count($houses_owned)) {
-//             echo "<div class=\"my_properties2\">";
-//             draw_house_in_organized_fashion_Properties($houses_owned[$i + 1]);
-//             echo "</div>";
-//         }
-//         if ($i + 2 < count($houses_owned)) {
-//             echo "<div class=\"my_properties3\">";
-//             draw_house_in_organized_fashion_Properties($houses_owned[$i + 2]);
-//             echo "</div>";
-//         }
-//     }
-// } else {
-//     die(header('Location: 404page.php'));
