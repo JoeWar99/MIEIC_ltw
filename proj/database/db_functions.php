@@ -27,13 +27,11 @@ function check_usr_pass($username_or_email, $password)
     $stmt->execute(array($username_or_email));
     $email = $stmt->fetch();
 
-    if($user !== false){
+    if ($user !== false) {
         return password_verify($password, $user['Password']);
-    }
-    else if($email !== false){
+    } else if ($email !== false) {
         return password_verify($password, $email['Password']);
-    }
-    else
+    } else
         return false;
 }
 
@@ -89,16 +87,17 @@ function get_house_top_pic($house_id)
     return $result['path']; // returns true if email exists and false otherwise..
 }
 
-function get_house_by_id($house_id){
+function get_house_by_id($house_id)
+{
     $db = Database::instance()->db();
     $stmt = $db->prepare("SELECT * FROM House WHERE Id = ?;");
     $stmt->execute(array(intval($house_id)));
     $result = $stmt->fetch();
     return $result;
-
 }
 
-function get_commodities_by_house_id($house_id){
+function get_commodities_by_house_id($house_id)
+{
     $db = Database::instance()->db();
     $stmt = $db->prepare("SELECT * FROM Commodity WHERE HouseId = ?;");
     $stmt->execute(array(intval($house_id)));
@@ -106,7 +105,8 @@ function get_commodities_by_house_id($house_id){
     return $result;
 }
 
-function get_city_by_id($city_id){
+function get_city_by_id($city_id)
+{
     $db = Database::instance()->db();
     $stmt = $db->prepare("SELECT * FROM City WHERE Id = ?;");
     $stmt->execute(array(intval($city_id)));
@@ -114,7 +114,8 @@ function get_city_by_id($city_id){
     return $result;
 }
 
-function get_country_by_id($country_id){
+function get_country_by_id($country_id)
+{
     $db = Database::instance()->db();
     $stmt = $db->prepare("SELECT * FROM Country WHERE Id = ?;");
     $stmt->execute(array(intval($country_id)));
@@ -122,7 +123,8 @@ function get_country_by_id($country_id){
     return $result;
 }
 
-function get_house_owner($house_id){
+function get_house_owner($house_id)
+{
     $db = Database::instance()->db();
     $stmt = $db->prepare("SELECT Name, Email FROM User WHERE Id = (SELECT OwnerId From House WHERE House.Id = ?);");
     $stmt->execute(array(intval($house_id)));
@@ -130,7 +132,8 @@ function get_house_owner($house_id){
     return $result;
 }
 
-function get_recent_comments($house_id){
+function get_recent_comments($house_id)
+{
     $db = Database::instance()->db();
     $stmt = $db->prepare("SELECT U.Username, C.Text, C.Date
     FROM Comment C JOIN Review Re ON C.ReviewId = Re.Id JOIN Rent R ON Re.RentId = R.Id
@@ -141,48 +144,61 @@ function get_recent_comments($house_id){
 }
 
 
-function get_all_properties_for_a_user($usr){
+function get_all_properties_for_a_user($usr)
+{
     $db = Database::instance()->db();
     $user_id = get_id_from_usr($usr);
-    if($user_id != -1){
-        try{
+    if ($user_id != -1) {
+        try {
             $stmt = $db->prepare("SELECT DISTINCT * 
             FROM House WHERE House.OwnerId = ? ");
             $stmt->execute(array($user_id));
             $result = $stmt->fetchall();
-            if(count($result) == 0)
+            if (count($result) == 0)
                 return -1;
             else
                 return $result;
-        }
-        catch (PDOException $e){
+        } catch (PDOException $e) {
             return -1;
         }
-    }
-    else
+    } else
         return -1;
 }
-function get_all_reservations_for_a_user($usr){
+function get_all_reservations_for_a_user($usr)
+{
     $db = Database::instance()->db();
     $user_id = get_id_from_usr($usr);
-    if($user_id != -1){
-        try{
+    if ($user_id != -1) {
+        try {
             $stmt = $db->prepare(" SELECT DISTINCT H.Id, H.Name, H.Rating, H.PricePerDay, H.Description, H.Address, H.PostalCode, H.OwnerId, H.CityId, H.Capacity
             FROM User U JOIN Rent R ON U.Id = R.TouristId JOIN House H ON R.HouseId = H.Id 
             WHERE U.ID = ? ORDER BY R.StartDate ASC");
             $stmt->execute(array($user_id));
             $result = $stmt->fetchall();
-            if(count($result) == 0)
+            if (count($result) == 0)
                 return -1;
             else
                 return $result;
-        }
-        catch (PDOException $e){
+        } catch (PDOException $e) {
             return -1;
         }
-    }
-    else
+    } else
         return -1;
+}
+
+
+function delete_house($house_id)
+{
+
+    $db = Database::instance()->db();
+    try {
+        $stmt = $db->prepare("DELETE FROM House WHERE House.Id=?");
+        $stmt->execute(array($house_id));
+        return true;
+    } catch (PDOException $e) {
+        return $e;
+    }
+
 }
 
 

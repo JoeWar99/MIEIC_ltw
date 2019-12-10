@@ -257,28 +257,35 @@ function draw_my_properties($usr)
     $houses_owned = get_all_properties_for_a_user($usr);
     echo "<div id=\"MyPropertiesHeader\">";
     echo "<p id=\"MyPropertiesTitle\"> My Properties </p>";
+
+    ?>
+
+    <?php if (isset($_SESSION['message'])) { ?>
+        <p> <?php echo ($_SESSION['message']) ?> </p>
+        <p> lololol </p>
+    <?php unset($_SESSION['message']);
+        } ?>
+
+    <p> lololollllllllllllllllllllllllllllll </p>
+
+    <?php
+
     echo "<button id= \"addProperty\" action=\"javascript:void(0)\">Add Property</button>";
     echo "</div>";
     echo "<div id=\"my_properties\">";
     if ($houses_owned != -1) {
         for ($i = 0; $i < count($houses_owned); $i = $i + 2) {
             echo "<div class=\"my_properties1\">";
-            draw_house_in_organized_fashion($houses_owned[$i]);
-            echo "<button class=\"buttonsPropertyOwned\" action=\"javascript:void(0)\">Edit</button>";
-            echo "<button class=\"buttonsPropertyOwned\" action=\"javascript:void(0)\">Delete</button>";
+            draw_house_in_organized_fashion_Properties($houses_owned[$i]);
             echo "</div>";
             if ($i + 1 < count($houses_owned)) {
                 echo "<div class=\"my_properties2\">";
-                draw_house_in_organized_fashion($houses_owned[$i + 1]);
-                echo "<button class=\"buttonsPropertyOwned\" action=\"javascript:void(0)\">Edit</button>";
-                echo "<button class=\"buttonsPropertyOwned\" action=\"javascript:void(0)\">Delete</button>";
+                draw_house_in_organized_fashion_Properties($houses_owned[$i + 1]);
                 echo "</div>";
             }
             if ($i + 2 < count($houses_owned)) {
                 echo "<div class=\"my_properties3\">";
-                draw_house_in_organized_fashion($houses_owned[$i + 2]);
-                echo "<button class=\"buttonsPropertyOwned\" action=\"javascript:void(0)\">Edit</button>";
-                echo "<button class=\"buttonsPropertyOwned\" action=\"javascript:void(0)\">Delete</button>";
+                draw_house_in_organized_fashion_Properties($houses_owned[$i + 2]);
                 echo "</div>";
             }
         }
@@ -317,12 +324,48 @@ function draw_my_properties($usr)
                 <input class="inputAddH" type="text" placeholder="address">
                 <input class="inputAddH" type="text" placeholder="description">
                 <p> Commodities </p>
-                <input  value="Submit" class="inputAddH" name="submitButton" type="submit">
+                <input value="Submit" class="inputAddH" name="submitButton" type="submit">
             </form>
         </div>
     </div>
 <?php
 }
+
+function draw_house_in_organized_fashion_Reservation($house)
+{
+
+    $houseId = $house['Id'];
+
+    draw_house_in_organized_fashion($house);
+    ?>
+    <button class="buttonsReservations_2" onClick="pressed_Message_Button( <?php echo " $houseId " ?>)">Message Owner</button>
+    <button class="buttonsReservations_1">Review</button>
+    <button class="buttonsReservations_1">Cancel</button>
+
+
+<?php
+}
+
+function draw_house_in_organized_fashion_Properties($house)
+{
+
+    $houseId = $house['Id'];
+
+    draw_house_in_organized_fashion($house);
+    ?>
+
+    <button class="buttonsPropertyOwned" method="POST" action="../actions/action_register.php">Edit</button>
+
+    <form name="deleteHouseForm" method="POST" action="../actions/action_deleteHouse.php">
+        <input type="hidden" name="houseId" value=<?php echo "$houseId" ?>>
+        <input class="buttonsPropertyOwned" type="submit" value="Delete">
+    </form>
+<?php
+
+}
+
+
+
 
 /**
  * Draws the my reservations page for a certain user
@@ -330,35 +373,28 @@ function draw_my_properties($usr)
  */
 function draw_my_reservations($usr)
 {
+    $id_for_messages = null;
 
     $houses_rented = get_all_reservations_for_a_user($usr);
 
     echo "<p id=\"MyReservationsTitle\"> My Reservations </p>";
     echo "<div id=\"my_reservations\">";
 
+
     if ($houses_rented != -1) {
         for ($i = 0; $i < count($houses_rented); $i = $i + 3) {
 
             echo "<div class=\"my_reservations1\">";
-            draw_house_in_organized_fashion($houses_rented[$i]);
-            echo "<button class=\"buttonsReservations_2\" action=\"javascript:void(0)\">Message Owner</button>";
-            echo "<button class=\"buttonsReservations_1\" action=\"javascript:void(0)\">Review</button>";
-            echo "<button class=\"buttonsReservations_1\" action=\"javascript:void(0)\">Cancel</button>";
+            draw_house_in_organized_fashion_Reservation($houses_rented[$i]);
             echo "</div>";
             if ($i + 1 < count($houses_rented)) {
                 echo "<div class=\"my_reservations2\">";
-                draw_house_in_organized_fashion($houses_rented[$i + 1]);
-                echo "<button class=\"buttonsReservations_2\" action=\"javascript:void(0)\">Message Owner</button>";
-                echo "<button class=\"buttonsReservations_1\" action=\"javascript:void(0)\">Review</button>";
-                echo "<button class=\"buttonsReservations_1\" action=\"javascript:void(0)\">Cancel</button>";
+                draw_house_in_organized_fashion_Reservation($houses_rented[$i + 1]);
                 echo "</div>";
             }
             if ($i + 2 < count($houses_rented)) {
                 echo "<div class=\"my_reservations3\">";
-                draw_house_in_organized_fashion($houses_rented[$i + 2]);
-                echo "<button class=\"buttonsReservations_2\" action=\"javascript:void(0)\">Message Owner</button>";
-                echo "<button class=\"buttonsReservations_1\" action=\"javascript:void(0)\">Review</button>";
-                echo "<button class=\"buttonsReservations_1\" action=\"javascript:void(0)\">Cancel</button>";
+                draw_house_in_organized_fashion_Reservation($houses_rented[$i + 2]);
                 echo "</div>";
             }
         }
@@ -369,9 +405,13 @@ function draw_my_reservations($usr)
 
     ?>
 
+
+
     <div class="bg-modal">
         <div class="modal-content_Reserv">
             <p> Messaging Owner </p>
+            <div id="modal-content">
+            </div>
             <div class="close">+</div>
         </div>
     </div>
