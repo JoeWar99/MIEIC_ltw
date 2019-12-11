@@ -13,9 +13,11 @@
   open_html(); 
   draw_head(get_title("login"), [$main_stylesheet,$fonts[0], $fonts[1], $fonts[2]]);
   open_body();
+  open_overlay();
   draw_header(null, "login");
   draw_login();
   footer();
+  close_overlay();
   close_body(); 
   close_html();
 ?>

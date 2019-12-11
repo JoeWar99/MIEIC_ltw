@@ -1,7 +1,11 @@
 html {
-    /**background-image: url("https://images.unsplash.com/photo-1533327325824-76bc4e62d560?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80%22");*/
     background-color: #cccccc;
     background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+
+#overlay{
     height: 100%;
     width: 100%;
 }

@@ -13,9 +13,11 @@
   open_html();
   draw_head(get_title("home"), [$main_stylesheet,$fonts[0], $fonts[1], $fonts[2]], $search_sl);
   open_body();
+  open_overlay();
   draw_header($usr, "home"); 
   draw_homepage();
   footer();
+  close_overlay();
   close_body(); 
   close_html();
 ?>

@@ -261,6 +261,16 @@ function h4($content){
 }
 ?>
 
+<?php
+function open_overlay(){
+    echo "<div id=\"overlay\">";
+}
+
+function close_overlay(){
+    echo "</div>";
+}
+?>
+
 <?php function draw_header($username, $page)
 {
         open_header();
