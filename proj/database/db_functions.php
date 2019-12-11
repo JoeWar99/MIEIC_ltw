@@ -170,7 +170,7 @@ function get_all_reservations_for_a_user($usr)
     $user_id = get_id_from_usr($usr);
     if ($user_id != -1) {
         try {
-            $stmt = $db->prepare(" SELECT DISTINCT H.Id, H.Name, H.Rating, H.PricePerDay, H.Description, H.Address, H.PostalCode, H.OwnerId, H.CityId, H.Capacity
+            $stmt = $db->prepare(" SELECT DISTINCT H.Id, H.Name, H.Rating, H.PricePerDay, H.Description, H.Address, H.PostalCode, H.OwnerId, H.CityId, H.Capacity, R.Id as RentId, R.StartDate, R.EndDate
             FROM User U JOIN Rent R ON U.Id = R.TouristId JOIN House H ON R.HouseId = H.Id 
             WHERE U.ID = ? ORDER BY R.StartDate ASC");
             $stmt->execute(array($user_id));
@@ -199,6 +199,28 @@ function delete_house($house_id)
         return false;
     }
 
+}
+
+function cancel_reservation($rent_id){
+    $db = Database::instance()->db();
+    try {
+        $stmt = $db->prepare("SELECT * FROM Rent WHERE Rent.Id=?");
+        $stmt->execute(array($rent_id));
+        $ret = $stmt->fetch();
+
+        $date = date('Y/m/d', time());
+
+        if($date > $ret['StartDate'] && $date < $ret['EndDate']){
+            return -1;
+        }
+        else{
+            $stmt = $db->prepare("DELETE FROM Rent WHERE Rent.Id=?");
+            $stmt->execute(array($rent_id));
+            return true;
+        }
+    } catch (PDOException $e) {
+        return false;
+    }
 }
 
 

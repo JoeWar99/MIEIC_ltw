@@ -42,7 +42,6 @@ function pressed_delete_Button(house_id) {
 
 function delete_house() {
     let ourData = JSON.parse(this.responseText);
-    console.log(ourData);
     if (ourData == -1)
         alert("Cant Delete That house there's reservation in progress or in the future");
     else
@@ -69,13 +68,11 @@ function reloadHtml() {
         let div_to_hold_houses = document.getElementById("my_properties");
         let article = document.createElement('houses')
         article.setAttribute('class', 'post')
-        console.log(document)
 
         let houses = '<p id="error-no-properties"> No Properties added yet </p>';
 
         article.innerHTML = houses;
 
-        console.log(article);
 
         div_to_hold_houses.innerHTML = article.innerHTML;
 

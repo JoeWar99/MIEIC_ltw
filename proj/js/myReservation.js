@@ -1,8 +1,8 @@
-/*document.querySelector('.buttonsReservations_2').addEventListener('click',
-    function() {
-        document.querySelector('.bg-modal').style.display = 'flex';
-        document.querySelector
-    });*/
+function encodeForAjax(data) {
+    return Object.keys(data).map(function(k) {
+        return encodeURIComponent(k) + '=' + encodeURIComponent(data[k])
+    }).join('&')
+}
 
 let messages = document.getElementById("modal-content");
 
@@ -17,27 +17,31 @@ function pressed_Message_Button(house_id) {
 }
 
 
-function pressed_delete_Button(house_id) {
-
+function pressed_cancel_Button(rent_id) {
     let ourRequest = new XMLHttpRequest();
-    ourRequest.open("POST", "../actions/api_deleteHouse.php", true);
+    console.log(rent_id);
+    ourRequest.open("POST", "../actions/api_cancel_reservation.php", true);
     ourRequest.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-    ourRequest.onload = delete_house;
-    ourRequest.send(encodeForAjax({ houseId: house_id }));
+    ourRequest.onload = cancel_reservation;
+    ourRequest.send(encodeForAjax({ rent_id: rent_id }));
 }
 
-function delete_house() {
+
+function cancel_reservation() {
+
     let ourData = JSON.parse(this.responseText);
+    console.log("repsonse");
     console.log(ourData);
     if (ourData == -1)
-        alert("Cant Delete That house there's reservation in progress or in the future");
-    else
+        alert("Can't cancel that reservation because the occupation period already started");
+    else if (ourData == true) {
+        console.log('entrei aqui');
         reloadHtmlRequest();
-
+    } else
+        alert("Can't cancel that reservation");
 }
 
 reloadHtmlRequest();
-
 
 function reloadHtmlRequest() {
     let requestShowHouses = new XMLHttpRequest();
@@ -54,13 +58,13 @@ function reloadHtml() {
 
         let article = document.createElement('houses')
         article.setAttribute('class', 'post')
-        console.log(document)
+
 
         let houses = '<p id="error-no-properties"> No Reservations yet </p>';
 
         article.innerHTML = houses;
 
-        console.log(article);
+
 
         div_to_hold_houses.innerHTML = article.innerHTML;
 
@@ -69,13 +73,13 @@ function reloadHtml() {
         div_to_hold_houses.setAttribute("style", " display: grid; grid-template-columns: 0.5 fr 2 fr 2 fr 2 fr 0.5 fr;");
         let article = document.createElement('houses')
         article.setAttribute('class', 'post')
-        console.log(document)
+
 
         let houses = return_html_in_string_form(ourData);
 
         article.innerHTML = houses;
 
-        console.log(article);
+
 
         div_to_hold_houses.innerHTML = article.innerHTML;
 
@@ -105,6 +109,28 @@ function reloadHtml() {
         for (let i = 0; i < my_properties3.length; i++) {
             my_properties3[i].setAttribute("style", "text-align: center; margin-top: 3em; grid-column: 4; margin-left: 10%; margin-right: 10%;");
         }
+
+
+        // for (let i = 0; i < my_properties1.length; i++) {
+        //     if (i == 0)
+        //         my_properties1[i].setAttribute("style", "text-align: center; padding: 1em;  grid-column: 2; margin-left: 10%; margin-right: 10%; background-color: turquoise; border-radius: 2em");
+        //     else
+        //         my_properties1[i].setAttribute("style", "text-align: center; padding: 1em; margin-top: 3em; grid-column: 2; margin-left: 10%; margin-right: 10%; background-color: turquoise; border-radius: 2em");
+
+        // }
+        // for (let i = 0; i < my_properties2.length; i++) {
+        //     if (i == 0)
+        //         my_properties2[i].setAttribute("style", "text-align: center; padding: 1em; grid-column: 3; margin-left: 10%; margin-right: 10%;");
+        //     else
+        //         my_properties2[i].setAttribute("style", "text-align: center; padding: 1em; margin-top: 3em; grid-column: 3; margin-left: 10%; margin-right: 10%;");
+        // }
+        // for (let i = 0; i < my_properties3.length; i++) {
+        //     if (i == 0)
+        //         my_properties3[i].setAttribute("style", "text-align: center; padding: 1em;  grid-column: 4; margin-left: 10%; margin-right: 10%;");
+        //     else
+        //         my_properties3[i].setAttribute("style", "text-align: center; padding: 1em; margin-top: 3em; grid-column: 4; margin-left: 10%; margin-right: 10%;");
+
+        // }
     }
 
 }
@@ -114,7 +140,6 @@ function return_html_in_string_form(ourData) {
 
     let house = "";
 
-    console.log(ourData.length);
 
     for (let i = 0; i < ourData.length; i += 3) {
 
@@ -141,13 +166,14 @@ function return_html_in_string_form(ourData) {
 function draw_house_in_organized_fashion_Properties(house_data) {
 
     let house_id = house_data['Id'];
+    let rent_id = house_data['RentId'];
     let return_html_in_string_form;
 
     return_html_in_string_form = draw_house_in_organized_fashion(house_data);
 
     return_html_in_string_form += '<button class="buttonsReservations_2" onClick="pressed_Message_Button(' + house_id + ')">Message Owner</button>';
     return_html_in_string_form += '<button class = "buttonsReservations_1" > Review </button>';
-    return_html_in_string_form += '<button class = "buttonsReservations_1" > Cancel </button>';
+    return_html_in_string_form += '<button class = "buttonsReservations_1" onClick="pressed_cancel_Button(' + rent_id + ')"> Cancel </button>';
 
     return return_html_in_string_form;
 }
@@ -161,8 +187,6 @@ function draw_house_in_organized_fashion(house_data) {
     if (pic == null) {
         pic = '../assets/imagesHouses/noHouseImage.png';
     }
-    console.log('pic?');
-    console.log(pic);
     return_html_in_string_form = '<img src=' + pic + ' width="330" height="230" />';
     return_html_in_string_form += '<section name="information">';
     let name = house_data["Name"];
@@ -176,8 +200,8 @@ function draw_house_in_organized_fashion(house_data) {
     let cnt = house_data["cnt"];
     return_html_in_string_form += '<pre><img src=../assets/star.png width="18" height="15" />' + rating + '       ' + cnt + 'comments </pre>';
     return_html_in_string_form += '</section>';
+    return_html_in_string_form += '<p> Reservation Period: ' + house_data['StartDate'] + ' <-> ' + house_data['EndDate'] + '<p>';
+
 
     return return_html_in_string_form;
-
-
 }

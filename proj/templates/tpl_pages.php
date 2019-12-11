@@ -253,8 +253,9 @@ function draw_housepage($house_info, $city_info, $country_info, $commodities, $o
  */
 function draw_my_properties($usr)
 {
+    // $timezone = date_default_timezone_get();
+    // echo "The current server timezone is: " . $timezone;
 
-    $houses_owned = get_all_properties_for_a_user($usr);
     echo "<div id=\"MyPropertiesHeader\">";
     echo "<p id=\"MyPropertiesTitle\"> My Properties </p>";
 
@@ -314,8 +315,8 @@ function draw_my_reservations($usr)
 
     echo "</div>";
 
+    /* POP UP PARA AS MENSAGENS COM O OWNER */
     ?>
-
     <div class="bg-modal">
         <div class="modal-content_Reserv">
             <p> Messaging Owner </p>
