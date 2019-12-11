@@ -2,7 +2,7 @@
   include_once('../includes/session.php');
   include_once('../database/db_functions.php');
 
-  $username_or_email = $_POST['username_or_email'];
+  $username_or_email = trim(strip_tags($_POST['username_or_email']));
   $password = $_POST['password'];
 
   if (check_usr_pass($username_or_email, $password)) {
@@ -13,7 +13,7 @@
    
   else {
     $_SESSION['message'] = 'Login failed! Username or password incorrect';
-    header('Location: ../pages/login.php');
+    die(header('Location: ' . $_SERVER['HTTP_REFERER']));
   }
   
 ?>

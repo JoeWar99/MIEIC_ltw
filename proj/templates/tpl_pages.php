@@ -308,8 +308,6 @@ function draw_my_properties($usr)
  */
 function draw_my_reservations($usr)
 {
-
-
     echo "<p id=\"MyReservationsTitle\"> My Reservations </p>";
     echo "<div id=\"my_reservations\">";
 
@@ -326,6 +324,76 @@ function draw_my_reservations($usr)
         </div>
     </div>
 
+<?php
+
+
+}
+
+
+
+function draw_add_property($usr)
+{
+    ?>
+    <form action="upload.php" method="post" enctype="multipart/form-data">
+        Select image to upload:
+        <label class="custom-file-upload">
+            <input type="file" />
+            +
+        </label>
+
+        <div>
+                    <input name="name" class="InputR" type="text" placeholder="First and last name"> <br>
+                    <div id="nameError" class="valError"> </div>
+                </div>
+
+                <div>
+                    <input name="dateOfBirth" class="InputR" type="date"> <br>
+                    <div id="dateOfBirthError" class="valError">
+                    </div>
+                </div>
+
+                <div>
+                    <input name="username" class="InputR" type="text" placeholder="Username"> <br>
+                    <div id="usernameError" class="valError">
+                        <?php if (isset($_SESSION['messageErrorUser'])) { ?>
+                            <div id="messageLoginFailed2">
+                                <p> <?php echo ($_SESSION['messageErrorUser']) ?> </p>
+                            </div>
+                        <?php unset($_SESSION['messageErrorUser']);
+                            } ?>
+
+                    </div>
+                </div>
+
+                <div>
+                    <input name="email" class="InputR" type="email" placeholder="Email"> <br>
+                    <div id="emailError" class="valError">
+                        
+                    <?php if (isset($_SESSION['messageErrorEmail'])) { ?>
+                            <div id="messageLoginFailed2">
+                                <p> <?php echo ($_SESSION['messageErrorEmail']) ?> </p>
+                            </div>
+                        <?php unset($_SESSION['messageErrorEmail']);
+                            } ?></div>
+                </div>
+
+                <div>
+                    <input name="password" class="InputR" type="password" placeholder="Password"> <br>
+                    <div class="valError"> </div>
+                </div>
+
+                <div>
+                    <input name="passwordConfirmation" class="InputR" type="password" placeholder="Confirm Password"> <br>
+                    <div id="passwordError" class="valError"> </div>
+                </div>
+
+                <div>
+                    <input value="Add Property" name="submitButton" id="btnR" type="submit">
+                </div>
+
+
+
+    </form>
 <?php
 
 

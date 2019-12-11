@@ -508,13 +508,11 @@ input[type="file"] {
 }
 
 .custom-file-upload {
-    position: relative;
-    top: 1em;
-    left: 1em;
     width: 1em;
+    height: 1em;
+    margin: 2em;
     font-size: 3em;
     background-color: grey;
-    padding: 1em;
 }
 
 .addPictureP {
