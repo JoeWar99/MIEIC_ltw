@@ -19,7 +19,13 @@
     if (!isset($_SESSION['username'])) $usr = null;
     else $usr = $_SESSION['username'];
 
+    global $main_stylesheet, $fonts, $search_sl;
+    open_html(); 
+    draw_head(get_title("search"), [$main_stylesheet,$fonts[0], $fonts[1], $fonts[2]], $search_sl);
+    open_body();
     draw_header($usr, 'search');
     draw_search_page($city_id, $start_date, $end_date, $guest_no, $house_list);
-    draw_footer();
+    footer();
+    close_body(); 
+    close_html();
 ?>
