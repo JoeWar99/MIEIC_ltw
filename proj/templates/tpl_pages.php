@@ -227,8 +227,8 @@ function draw_house_comments($comments){
 /** 
  * Draws the rent button in the page for a certain house
  */
-function draw_rent_button(){
-    echo "<button id=\"rent_button\" type=\"button\" \">Rent</button>";
+function draw_rent_button($capacity){
+    echo "<button id=\"rent_button\" type=\"button\" onclick=\"rent_popup($capacity)\" >Rent</button>";
 }
 
 
@@ -269,7 +269,7 @@ function draw_housepage($house_info, $city_info, $country_info, $commodities, $o
     draw_house_commodities($commodities);
     draw_house_owners($owner_info);
     draw_house_comments($comments);
-    draw_rent_button();
+    draw_rent_button($house_info['Capacity']);
     draw_msg_button();
     draw_pic($picpath, "House_PIC1");
     echo "</div>";
