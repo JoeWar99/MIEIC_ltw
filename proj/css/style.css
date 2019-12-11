@@ -112,7 +112,7 @@ html {
     border-radius: 5%;
     margin: 2em auto;
     border: 1px solid var(white);
-    background-color: turquoise;
+    background-color: white;
 }
 
 #registerbox>header {
@@ -445,112 +445,6 @@ pre {
     font-size: 2em;
 }
 
-
-/* POP UP ADD PROPERTY */
-
-.bg-modal {
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    position: absolute;
-    top: 0;
-    display: none;
-    justify-content: center;
-}
-
-.modal-content {
-    margin-top: 5em;
-    width: 40%;
-    height: 150%;
-    background-color: teal;
-    border-radius: 1em;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-}
-
-.modal-content_Reserv {
-    margin-top: 5em;
-    width: 40%;
-    height: 80%;
-    background-color: teal;
-    border-radius: 1em;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-}
-
-.bg-modal-1 {
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    position: fixed;
-    top: 0;
-    display: none;
-    justify-content: center;
-}
-
-.addPictureP1 {
-    margin-top: 5em;
-    width: 60%;
-    height: 40%;
-    background-color: white;
-    border-radius: 1em;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-}
-
-input[type="file"] {
-    display: none;
-}
-
-.custom-file-upload {
-    width: 1em;
-    height: 1em;
-    margin: 2em;
-    font-size: 3em;
-    background-color: grey;
-}
-
-.addPictureP {
-    width: 50%;
-    height: 20%;
-    background-color: grey;
-    border-radius: 1em;
-}
-
-#addPicture {
-    margin-top: 3em;
-    margin-bottom: 3em;
-}
-
-.inputAddH {
-    margin-bottom: 1em;
-    height: 2em;
-    margin-left: 2em;
-    width: 90%;
-    background-color: white;
-}
-
-.close {
-    position: absolute;
-    top: 0;
-    right: 0.2em;
-    font-size: 4em;
-    transform: rotate(45deg);
-}
-
-.close1 {
-    position: absolute;
-    top: 0;
-    right: 0.2em;
-    font-size: 4em;
-    transform: rotate(45deg);
-}
-
 .buttonsPropertyOwned {
     padding-left: 1em;
     padding-right: 1em;
@@ -558,4 +452,80 @@ input[type="file"] {
     padding-bottom: 0.2em;
     font-size: 1.5em;
     margin-left: 1em;
+}
+
+
+/* CSS For the add property page */
+
+.InputAddProperty {
+    margin-bottom: 0em;
+    height: 3em;
+    margin-top: 1em;
+    width: 80%;
+    background-color: white;
+}
+
+.InputAddPropertyD {
+    width: 80%;
+    height: 6em;
+    background-color: white;
+    margin-bottom: 2em;
+}
+
+#btnR2 {
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 0em;
+    font-size: 1.5em;
+    margin-top: 1em;
+    width: 30%;
+    height: 2em;
+    text-align: center;
+    background-color: white;
+    border: 3px solid;
+    border-color: turquoise;
+}
+
+#add-property-content {
+    display: grid;
+    text-align: center;
+    grid-template-columns: 0.5fr 2.5fr 2.5fr 0.5fr;
+    grid-template-rows: 1fr;
+}
+
+#add-property-form-text {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+#add-property-form-images {
+    grid-column: 3;
+    grid-row: 1;
+}
+
+.valErrorP {
+    color: red;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 2em;
+}
+
+#my-info {
+    font-size: 2em;
+}
+
+#my-images {
+    font-size: 2em;
+}
+
+#add-propertyForm {
+    text-align: center;
+}
+
+#add-property-form-text>input {
+    font-size: 1em;
+    font-family: 'Poppins', sans-serif;
+}
+
+#add-property-form-text>textarea {
+    font-size: 1em;
+    font-family: 'Poppins', sans-serif;
 }

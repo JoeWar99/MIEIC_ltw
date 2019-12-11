@@ -264,42 +264,6 @@ function draw_my_properties($usr)
     echo "</div>";
     echo "<div id=\"my_properties\">";
     echo "</div>";
-
-    /* POP UP FOR THE ADD PROPERTY BUTTON */
-    ?>
-
-    <div class="bg-modal">
-        <div class="modal-content">
-            <div class="close">+</div>
-            <p> Adding New Property</p>
-            <div class="addPictureP">
-            </div>
-            <button id="addPicture" action="javascript:void(0)">Add/Remove Picture</button>
-            <div class="bg-modal-1">
-                <div class="addPictureP1">
-                    <form method="post">
-                        <label class="custom-file-upload">
-                            <input type="file" />
-                            +
-                        </label>
-                    </form>
-                    <div class="close1">+</div>
-                </div>
-            </div>
-
-
-            <form action="">
-                <input class="inputAddH" type="text" placeholder="title">
-                <input class="inputAddH" type="text" placeholder="price per">
-                <input class="inputAddH" type="text" placeholder="guest number">
-                <input class="inputAddH" type="text" placeholder="address">
-                <input class="inputAddH" type="text" placeholder="description">
-                <p> Commodities </p>
-                <input value="Submit" class="inputAddH" name="submitButton" type="submit">
-            </form>
-        </div>
-    </div>
-<?php
 }
 
 /**
@@ -310,88 +274,77 @@ function draw_my_reservations($usr)
 {
     echo "<p id=\"MyReservationsTitle\"> My Reservations </p>";
     echo "<div id=\"my_reservations\">";
-
     echo "</div>";
-
-    /* POP UP PARA AS MENSAGENS COM O OWNER */
-    ?>
-    <div class="bg-modal">
-        <div class="modal-content_Reserv">
-            <p> Messaging Owner </p>
-            <div id="modal-content">
-            </div>
-            <div class="close">+</div>
-        </div>
-    </div>
-
-<?php
-
-
 }
 
 
 
 function draw_add_property($usr)
 {
+    echo "<div id=\"MyPropertiesHeader\">";
+    echo "<p id=\"MyPropertiesTitle\"> Add Property </p> ";
+    echo "</div>";
+
     ?>
-    <form action="upload.php" method="post" enctype="multipart/form-data">
-        Select image to upload:
-        <label class="custom-file-upload">
-            <input type="file" />
-            +
-        </label>
 
-        <div>
-                    <input name="name" class="InputR" type="text" placeholder="First and last name"> <br>
-                    <div id="nameError" class="valError"> </div>
+    <form id="add-propertyForm" name="addPropertyForm" action="../actions/action_upload.php" method="post" enctype="multipart/form-data" onsubmit="return Validate()">
+        <div id="add-property-content">
+            
+            <div id="add-property-form-images">
+                <p id="my-images"> Images </p>
+                
+                <input id="file-input0" name="image0" multiple class="InputAddProperty" type="file" placeholder="House Name">
+                <div id="preview0">
+                
+                </div>
+                
+                <input id="file-input1" name="image1" multiple class="InputAddProperty" type="file" placeholder="House Name">
+                <div id="preview1">
                 </div>
 
-                <div>
-                    <input name="dateOfBirth" class="InputR" type="date"> <br>
-                    <div id="dateOfBirthError" class="valError">
-                    </div>
+                <input id="file-input2" name="image2" multiple class="InputAddProperty" type="file" placeholder="House Name">
+                <div id="preview2">
                 </div>
 
-                <div>
-                    <input name="username" class="InputR" type="text" placeholder="Username"> <br>
-                    <div id="usernameError" class="valError">
-                        <?php if (isset($_SESSION['messageErrorUser'])) { ?>
-                            <div id="messageLoginFailed2">
-                                <p> <?php echo ($_SESSION['messageErrorUser']) ?> </p>
-                            </div>
-                        <?php unset($_SESSION['messageErrorUser']);
-                            } ?>
-
-                    </div>
+                <input id="file-input3" name="image3" multiple class="InputAddProperty" type="file" placeholder="House Name">
+                <div id="preview3">
                 </div>
 
-                <div>
-                    <input name="email" class="InputR" type="email" placeholder="Email"> <br>
-                    <div id="emailError" class="valError">
-                        
-                    <?php if (isset($_SESSION['messageErrorEmail'])) { ?>
-                            <div id="messageLoginFailed2">
-                                <p> <?php echo ($_SESSION['messageErrorEmail']) ?> </p>
-                            </div>
-                        <?php unset($_SESSION['messageErrorEmail']);
-                            } ?></div>
+                <input id="file-input4" name="image4" multiple class="InputAddProperty" type="file" placeholder="House Name">
+                <div id="preview4">
                 </div>
+            </div>
 
-                <div>
-                    <input name="password" class="InputR" type="password" placeholder="Password"> <br>
-                    <div class="valError"> </div>
-                </div>
+            <div id="add-property-form-text">
+                
+                <p id="my-info"> Info </p>
 
-                <div>
-                    <input name="passwordConfirmation" class="InputR" type="password" placeholder="Confirm Password"> <br>
-                    <div id="passwordError" class="valError"> </div>
-                </div>
+                <input id="house-name" name="HouseName" class="InputAddProperty" type="text" placeholder="House Name">
+                <div id="HouseNameError" class="valErrorP"> </div> <br>
 
-                <div>
-                    <input value="Add Property" name="submitButton" id="btnR" type="submit">
-                </div>
+                <input id="price-per-day" name="PricePerDay" class="InputAddProperty" type="number" placeholder="Price Per Day">
+                <div id="PricePerDayError" class="valErrorP"> </div> <br>
 
+                <input id="adress" name="Adress" class="InputAddProperty" type="text" placeholder="Adress">
+                <div id="AdressError" class="valErrorP"> </div> <br>
 
+                <textarea class="InputAddPropertyD" name="description" rows="4" cols="50" placeholder="Description"></textarea>
+
+                <input id="postal-code" name="PostalCode" class="InputAddProperty" type="text" placeholder="Postal Code">
+                <div id="PostalCodeError" class="valErrorP"> </div> <br>
+
+                <input id="city" name="City" class="InputAddProperty" type="text" placeholder="City">
+                <div id="CityError" class="valErrorP"> </div> <br>
+
+                <input id="country" name="Country" class="InputAddProperty" type="text" placeholder="Country">
+                <div id="CountryError" class="valErrorP"> </div> <br>
+
+                <input id="capacity" name="Capacity" class="InputAddProperty" type="number" placeholder="Capacity">
+                <div id="CapacityError" class="valErrorP"> </div> <br>
+
+            </div>
+        </div>
+            <input value="Add Property" name="submitButton" id="btnR2" type="submit">
 
     </form>
 <?php

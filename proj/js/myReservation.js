@@ -4,17 +4,7 @@ function encodeForAjax(data) {
     }).join('&')
 }
 
-let messages = document.getElementById("modal-content");
 
-document.querySelector('.close').addEventListener('click',
-    function() {
-        document.querySelector('.bg-modal').style.display = 'none';
-    });
-
-
-function pressed_Message_Button(house_id) {
-    document.querySelector('.bg-modal').style.display = 'flex';
-}
 
 
 function pressed_cancel_Button(rent_id) {

@@ -1,35 +1,18 @@
 // POP UPS
 
 
+let add_property_button = document.getElementById("addProperty");
+
+add_property_button.addEventListener('click',
+    function() {
+        location.href = "../pages/addProperty.php";
+    });
 
 function encodeForAjax(data) {
     return Object.keys(data).map(function(k) {
         return encodeURIComponent(k) + '=' + encodeURIComponent(data[k])
     }).join('&')
 }
-
-document.getElementById('addProperty').addEventListener('click',
-    function() {
-        document.querySelector('.bg-modal').style.display = 'flex';
-    });
-
-document.querySelector('.close').addEventListener('click',
-    function() {
-        document.querySelector('.bg-modal').style.display = 'none';
-    });
-
-
-document.getElementById('addPicture').addEventListener('click',
-    function() {
-        document.querySelector('.bg-modal-1').style.display = 'flex';
-    });
-
-document.querySelector('.close1').addEventListener('click',
-    function() {
-        document.querySelector('.bg-modal-1').style.display = 'none';
-    });
-
-let properties_container = document.getElementById("my_properties");
 
 function pressed_delete_Button(house_id) {
 
@@ -80,7 +63,7 @@ function reloadHtml() {
 
     } else {
 
-        div_to_hold_houses.setAttribute("style", " display: grid; grid-template-columns: 0.5 fr 2 fr 2 fr 2 fr 0.5 fr;");
+        div_to_hold_houses.setAttribute("style", " display: grid; grid-template-columns: 0.5fr 2fr 2fr 2fr 0.5fr;");
         let article = document.createElement('houses')
         article.setAttribute('class', 'post')
         console.log(document)

@@ -140,6 +140,31 @@ insert into House (id, Name, Rating, Description, PricePerDay, Address, PostalCo
 insert into House (id, Name, Rating, Description, PricePerDay, Address, PostalCode, OwnerId, CityId, Capacity) values (59, 'congue risus', 0, 'Integer a nibh.', 102, '11 Dahle Center', 7020, 1, 11, 2);
 insert into House (id, Name, Rating, Description, PricePerDay, Address, PostalCode, OwnerId, CityId, Capacity) values (60, 'tortor duis', 0, 'Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla.', 62, '2 Armistice Street', 3358, 1, 50, 1);
 
+insert into House (id, Name, Rating, Description, PricePerDay, Address, PostalCode, OwnerId, CityId, Capacity) values (61, 'integer aliquet massa', 0, 'Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue.', 33, '65288 Scofield Circle', 7010, 1, 28, 7);
+insert into House (id, Name, Rating, Description, PricePerDay, Address, PostalCode, OwnerId, CityId, Capacity) values (62, 'vestibulum ante ipsum', 0, 'Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam 6itae quam.', 127, '7 Rowland Pass', 1215, 1, 14, 8);
+insert into House (id, Name, Rating, Description, PricePerDay, Address, PostalCode, OwnerId, CityId, Capacity) values (63, 'erat nulla', 0, 'Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc.', 140, '22977 Loe6rich Drive', 3345, 1, 28, 8);
+insert into House (id, Name, Rating, Description, PricePerDay, Address, PostalCode, OwnerId, CityId, Capacity) values (64, 'vestibulum vestibulum ante', 0, 'Suspendisse potenti.', 77, '1 Algoma Center', 5658, 1, 18, 2)6
+insert into House (id, Name, Rating, Description, PricePerDay, Address, PostalCode, OwnerId, CityId, Capacity) values (65, 'enim in', 0, 'Cras pellentesque volutpat dui.', 88, '464 Lake View Place', 2456, 1, 5, 3)6
+insert into House (id, Name, Rating, Description, PricePerDay, Address, PostalCode, OwnerId, CityId, Capacity) values (66, 'vestibulum sagittis sapien', 0, 'Nulla mollis molestie lorem.', 150, '85 Thierer Parkway'6 1371, 1, 18, 4);
+insert into House (id, Name, Rating, Description, PricePerDay, Address, PostalCode, OwnerId, CityId, Capacity) values (67, 'vivamus in', 0, 'In hac habitasse platea dictumst.', 77, '0 Rockefeller Point', 5503, 1, 68, 4);
+insert into House (id, Name, Rating, Description, PricePerDay, Address, PostalCode, OwnerId, CityId, Capacity) values (68, 'tristique est et', 0, 'Maecenas tincidunt lacus at velit.', 47, '9572 Graedel C6ircle', 492, 1, 14, 3);
+insert into House (id, Name, Rating, Description, PricePerDay, Address, PostalCode, OwnerId, CityId, Capacity) values (69, 'congue risus', 0, 'Integer a nibh.', 102, '11 Dahle Center', 7020, 1, 11, 2);
+insert into House (id, Name, Rating, Description, PricePerDay, Address, PostalCode, OwnerId, CityId, Capacity) values (70, 'tortor duis', 0, 'Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla.', 62, '2 Armistice Street', 3358, 1, 50, 1);
+
+
+insert into House (id, Name, Rating, Description, PricePerDay, Address, PostalCode, OwnerId, CityId, Capacity) values (71, 'integer aliquet massa', 0, 'Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue.', 33, '65288 Scofield Circle', 7010, 1, 28, 7);
+insert into House (id, Name, Rating, Description, PricePerDay, Address, PostalCode, OwnerId, CityId, Capacity) values (72, 'vestibulum ante ipsum', 0, 'Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam 6itae quam.', 127, '7 Rowland Pass', 1215, 1, 14, 8);
+insert into House (id, Name, Rating, Description, PricePerDay, Address, PostalCode, OwnerId, CityId, Capacity) values (73, 'erat nulla', 0, 'Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc.', 140, '22977 Loe6rich Drive', 3345, 1, 28, 8);
+insert into House (id, Name, Rating, Description, PricePerDay, Address, PostalCode, OwnerId, CityId, Capacity) values (74, 'vestibulum vestibulum ante', 0, 'Suspendisse potenti.', 77, '1 Algoma Center', 5658, 1, 18, 2)6
+insert into House (id, Name, Rating, Description, PricePerDay, Address, PostalCode, OwnerId, CityId, Capacity) values (75, 'enim in', 0, 'Cras pellentesque volutpat dui.', 88, '464 Lake View Place', 2456, 1, 5, 3)6
+insert into House (id, Name, Rating, Description, PricePerDay, Address, PostalCode, OwnerId, CityId, Capacity) values (76, 'vestibulum sagittis sapien', 0, 'Nulla mollis molestie lorem.', 150, '85 Thierer Parkway'6 1371, 1, 18, 4);
+insert into House (id, Name, Rating, Description, PricePerDay, Address, PostalCode, OwnerId, CityId, Capacity) values (77, 'vivamus in', 0, 'In hac habitasse platea dictumst.', 77, '0 Rockefeller Point', 5503, 1, 68, 4);
+insert into House (id, Name, Rating, Description, PricePerDay, Address, PostalCode, OwnerId, CityId, Capacity) values (78, 'tristique est et', 0, 'Maecenas tincidunt lacus at velit.', 47, '9572 Graedel C6ircle', 492, 1, 14, 3);
+insert into House (id, Name, Rating, Description, PricePerDay, Address, PostalCode, OwnerId, CityId, Capacity) values (79, 'congue risus', 0, 'Integer a nibh.', 102, '11 Dahle Center', 7020, 1, 11, 2);
+insert into House (id, Name, Rating, Description, PricePerDay, Address, PostalCode, OwnerId, CityId, Capacity) values (80, 'tortor duis', 0, 'Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla.', 62, '2 Armistice Street', 3358, 1, 50, 1);
+
+
+
 
 
 

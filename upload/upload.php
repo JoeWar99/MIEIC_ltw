@@ -5,6 +5,8 @@
   $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
   // Insert image data into database
+  var_dump($_FILES);
+
   $stmt = $dbh->prepare("INSERT INTO images VALUES(NULL, ?)");
   $stmt->execute(array($_POST['title']));
 
@@ -17,7 +19,11 @@
   $mediumFileName = "images/thumbs_medium/$id.jpg";
 
   // Move the uploaded file to its final destination
-  move_uploaded_file($_FILES['image']['tmp_name'], $originalFileName);
+  move_uploaded_file($_FILES['image0']['tmp_name'], $originalFileName);
+  move_uploaded_file($_FILES['image1']['tmp_name'], $originalFileName);
+  move_uploaded_file($_FILES['image2']['tmp_name'], $originalFileName);
+  move_uploaded_file($_FILES['image3']['tmp_name'], $originalFileName);
+  move_uploaded_file($_FILES['image4']['tmp_name'], $originalFileName);
 
   // Crete an image representation of the original image
   $original = imagecreatefromjpeg($originalFileName);
@@ -44,5 +50,4 @@
   imagecopyresized($medium, $original, 0, 0, 0, 0, $mediumwidth, $mediumheight, $width, $height);
   imagejpeg($medium, $mediumFileName);
 
-  header("Location: index.php");
 ?>

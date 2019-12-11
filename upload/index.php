@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="style.css"> 
   </head>
   <body>
+    <?php var_dump($_FILES); ?>
     <header>
       <h1><a href="index.php">Images</a></h1>
     </header>
