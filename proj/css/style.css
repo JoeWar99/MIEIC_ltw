@@ -409,6 +409,23 @@ p {
     padding: 0;
 }
 
+#error403page {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    background-image: url("../assets/403image.jpg");
+    height: 100%;
+    width: 100%;
+    background-size:  100%;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+}
+
+#error403page>* {
+    margin: 0;
+    padding: 0;
+}
+
 /*my_reservations*/
 
 #my_reservations {

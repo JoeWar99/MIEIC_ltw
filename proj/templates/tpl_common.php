@@ -225,6 +225,10 @@
           return "Register";
         case "login":
           return "Log In";
+        case "404":
+          return "Error 404";
+        case "403":
+          return "Error 403";
         default:
           return "AirestivoBnB";
       }
