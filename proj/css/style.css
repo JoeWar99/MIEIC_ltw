@@ -460,7 +460,7 @@ pre {
 .InputAddProperty {
     margin-bottom: 0em;
     height: 3em;
-    margin-top: 1em;
+    margin-top: 0.2em;
     width: 80%;
     background-color: white;
 }
@@ -528,4 +528,16 @@ pre {
 #add-property-form-text>textarea {
     font-size: 1em;
     font-family: 'Poppins', sans-serif;
+}
+
+.file-input-box {
+    border: 2px solid turquoise;
+}
+
+#file-input-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1em;
+    row-gap: 1em;
+    grid-template-rows: 1fr 1fr 1fr;
 }

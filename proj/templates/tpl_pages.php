@@ -289,34 +289,67 @@ function draw_add_property($usr)
 
     <form id="add-propertyForm" name="addPropertyForm" action="../actions/action_upload.php" method="post" enctype="multipart/form-data" onsubmit="return Validate()">
         <div id="add-property-content">
-            
+
             <div id="add-property-form-images">
                 <p id="my-images"> Images </p>
-                
-                <input id="file-input0" name="image0" multiple class="InputAddProperty" type="file" placeholder="House Name">
-                <div id="preview0">
-                
-                </div>
-                
-                <input id="file-input1" name="image1" multiple class="InputAddProperty" type="file" placeholder="House Name">
-                <div id="preview1">
-                </div>
 
-                <input id="file-input2" name="image2" multiple class="InputAddProperty" type="file" placeholder="House Name">
-                <div id="preview2">
-                </div>
+                <div id="file-input-grid">
 
-                <input id="file-input3" name="image3" multiple class="InputAddProperty" type="file" placeholder="House Name">
-                <div id="preview3">
-                </div>
+                    <div class="file-input-box">
+                        <p> Image 1 </p>
+                        <input id="file-input0" name="image0" multiple class="InputAddProperty" type="file" placeholder="House Name">
+                        <div id="preview0">
+                            
+                            <img src="../assets/imagesHouses/noHouseImage.png" alt="no image" width="200" height="150">
+                        </div>
+                    </div>
 
-                <input id="file-input4" name="image4" multiple class="InputAddProperty" type="file" placeholder="House Name">
-                <div id="preview4">
+
+                    <div class="file-input-box">
+                        <p> Image 2 </p>
+                        <input id="file-input1" name="image1" multiple class="InputAddProperty" type="file" placeholder="House Name">
+                        <div id="preview1">
+                            <img src="../assets/imagesHouses/noHouseImage.png" alt="no image" width="200" height="150">
+                        </div>
+                    </div>
+
+                    <div class="file-input-box">
+                        <p> Image 3 </p>
+                        <input id="file-input2" name="image2" multiple class="InputAddProperty" type="file" placeholder="House Name">
+                        <div id="preview2">
+                            <img src="../assets/imagesHouses/noHouseImage.png" alt="no image" width="200" height="150">
+                        </div>
+                    </div>
+
+                    <div class="file-input-box">
+                        <p> Image 4 </p>
+                        <input id="file-input3" name="image3" multiple class="InputAddProperty" type="file" placeholder="House Name">
+                        <div id="preview3">
+                            <img src="../assets/imagesHouses/noHouseImage.png" alt="no image" width="200" height="150">
+                        </div>
+                    </div>
+
+                    <div class="file-input-box">
+                        <p> Image 5 </p>
+                        <input id="file-input4" name="image4" multiple class="InputAddProperty" type="file" placeholder="House Name">
+                        <div id="preview4">
+                            <img src="../assets/imagesHouses/noHouseImage.png" alt="no image" width="200" height="150">
+                        </div>
+                    </div>
+
+                    <div class="file-input-box">
+                        <p> Image 6 </p>
+                        <input id="file-input5" name="image5" multiple class="InputAddProperty" type="file" placeholder="House Name">
+                        <div id="preview5">
+                            <img src="../assets/imagesHouses/noHouseImage.png" alt="no image" width="200" height="150">
+                        </div>
+                    </div>
+
                 </div>
             </div>
 
             <div id="add-property-form-text">
-                
+
                 <p id="my-info"> Info </p>
 
                 <input id="house-name" name="HouseName" class="InputAddProperty" type="text" placeholder="House Name">
@@ -344,7 +377,7 @@ function draw_add_property($usr)
 
             </div>
         </div>
-            <input value="Add Property" name="submitButton" id="btnR2" type="submit">
+        <input value="Add Property" name="submitButton" id="btnR2" type="submit">
 
     </form>
 <?php

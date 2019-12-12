@@ -225,6 +225,20 @@ document.querySelector('#file-input4').addEventListener("change", function() {
     previewImages(this);
 }, true);
 
+document.querySelector('#file-input5').addEventListener("change", function() {
+    number = 5;
+    previewImages(this);
+}, true);
+
+
+
+function button_delete(aux_number) {
+    var preview = document.querySelector('#preview' + aux_number);
+
+    preview.innerHTML = '<img src="../assets/imagesHouses/noHouseImage.png" alt="no image" width="200" height="150">';
+
+
+}
 
 
 function previewImages(object) {
@@ -250,13 +264,14 @@ function readAndPreview(file) {
 
 
         let image = new Image();
-        image.height = 200;
+        image.height = 150;
         image.title = file.name;
         image.src = this.result;
 
 
         let button = document.createElement('button');
-        button.onClick = 'pressed_delete_button(' + number + ')';
+        button.setAttribute('onclick', 'button_delete(' + number + ')');
+        button.type = "button";
         button.innerHTML = "Delete Image";
 
         preview.innerHTML = "";
