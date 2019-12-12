@@ -287,7 +287,7 @@ function draw_add_property($usr)
 
     ?>
 
-    <form id="add-propertyForm" name="addPropertyForm" action="../actions/action_upload.php" method="post" enctype="multipart/form-data" onsubmit="return Validate()">
+    <form id="add-propertyForm" name="addPropertyForm" action="#" method="post" enctype="multipart/form-data">
         <div id="add-property-content">
 
             <div id="add-property-form-images">
@@ -377,7 +377,7 @@ function draw_add_property($usr)
 
             </div>
         </div>
-        <input value="Add Property" name="submitButton" id="btnR2" type="submit">
+        <input value="Add Property" name="submitButton" id="btnR2" type="button" onclick="Validate();">
 
     </form>
 <?php

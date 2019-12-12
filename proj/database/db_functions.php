@@ -237,7 +237,6 @@ function insert_new_property($house_name, $price_per_day, $adress, $description,
 
 
 
-
 /* Auxiliar develpment functions to delete before work is finalized */
 
 /**

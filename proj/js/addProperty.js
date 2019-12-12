@@ -10,6 +10,7 @@ let capacity = document.getElementById("capacity");
 let postal_code = document.getElementById("postal-code");
 
 
+
 // GETTING ALL ERROR DISPLAY OBJECTS
 let house_name_error = document.getElementById("HouseNameError");
 let price_per_day_error = document.getElementById("PricePerDayError");
@@ -28,11 +29,16 @@ country.addEventListener("input", country_verify, true);
 capacity.addEventListener("input", capacity_verify, true);
 postal_code.addEventListener("input", postal_code_verify, true);
 
+function encodeForAjax(data) {
+    return Object.keys(data).map(function(k) {
+        return encodeURIComponent(k) + '=' + encodeURIComponent(data[k])
+    }).join('&')
+}
 
 function Validate() {
 
-    let returnValue = false;
-    return true;
+    let returnValue = true;
+    //return true;
     if (!house_name_verify()) {
         returnValue = false;
     }
@@ -50,6 +56,7 @@ function Validate() {
     }
 
     if (!country_verify()) {
+
         returnValue = false;
     }
 
@@ -60,7 +67,37 @@ function Validate() {
     if (!postal_code_verify()) {
         returnValue = false;
     }
-    return returnValue;
+
+    if (returnValue == false)
+        return false;
+    else {
+        let form = document.getElementById('add-propertyForm');
+        let formData = new FormData(form);
+
+        let ourRequest = new XMLHttpRequest();
+        ourRequest.open("POST", "../actions/api_upload.php", true);
+        ourRequest.onload = receive_add_property_response;
+        formData.append('File0', array_of_images[0]);
+        formData.append('File1', array_of_images[1]);
+        formData.append('File2', array_of_images[2]);
+        formData.append('File3', array_of_images[3]);
+        formData.append('File4', array_of_images[4]);
+        formData.append('File5', array_of_images[5]);
+        formData.append('File6', array_of_images[6]);
+
+        ourRequest.send(formData);
+        return true;
+    }
+}
+
+function receive_add_property_response() {
+    console.log('o api correu bem');
+    let ourData = JSON.parse(this.responseText);
+    if (ourData == -1)
+        alert("Some error ocurred");
+    else {
+        window.location = '../pages/myProperties.php';
+    }
 }
 
 let border_style = capacity.style.border;
@@ -173,9 +210,6 @@ function house_name_verify() {
 
 function price_per_day_verify() {
 
-    console.log(price_per_day.value);
-
-
     if (price_per_day.value == "") {
         price_per_day.style.border = "1px solid red";
         price_per_day_error.style.fontSize = "small";
@@ -231,17 +265,16 @@ document.querySelector('#file-input5').addEventListener("change", function() {
 }, true);
 
 
+let array_of_images = [false, false, false, false, false, false];
 
 function button_delete(aux_number) {
     var preview = document.querySelector('#preview' + aux_number);
-
+    array_of_images[aux_number] = false;
     preview.innerHTML = '<img src="../assets/imagesHouses/noHouseImage.png" alt="no image" width="200" height="150">';
-
-
 }
 
-
 function previewImages(object) {
+    console.log(object.files);
     if (object.files) {
         [].forEach.call(object.files, readAndPreview);
     }
@@ -261,14 +294,14 @@ function readAndPreview(file) {
     reader.addEventListener("load", function() {
 
         var preview = document.querySelector('#preview' + number);
-
+        console.log(this);
 
         let image = new Image();
         image.height = 150;
         image.title = file.name;
         image.src = this.result;
 
-
+        array_of_images[number] = true;
         let button = document.createElement('button');
         button.setAttribute('onclick', 'button_delete(' + number + ')');
         button.type = "button";
