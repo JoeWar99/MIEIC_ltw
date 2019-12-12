@@ -7,8 +7,14 @@
     if(!isset($_GET['house_id']) || ($house_id = intval($_GET['house_id'])) === 0)
         die(header('Location: 404.php')); 
 
-    if (!isset($_SESSION['username'])) $usr = null;
-    else $usr = $_SESSION['username'];
+    if (!isset($_SESSION['username'])){
+         $usr = null;
+         $usrid = null;
+    }
+    else {
+        $usr = $_SESSION['username'];
+        $usrid = get_id_from_usr($usr);
+    }
 
     $house_info = get_house_by_id($_GET['house_id']);
     $city_info = get_city_by_id($house_info['CityId']);
@@ -27,7 +33,7 @@
     open_body();
     open_overlay();
     draw_header($usr, "house");
-    draw_housepage($house_info, $city_info, $country_info, $commodities, $owner_info, $comments, $picpath);
+    draw_housepage($house_info, $city_info, $country_info, $commodities, $owner_info, $comments, $picpath, $usrid);
     footer();
     close_overlay();
     close_body(); 

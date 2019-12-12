@@ -521,7 +521,9 @@ p {
 
 footer {
     background-color: white;
-    text-align: end;    
+    text-align: end;
+    color: black;    
+    position: float;
 }
 
 .blur   {
