@@ -9,6 +9,8 @@ let sub_btn;
 let div = document.createElement("DIV");
 div.id = "rent_popup";
 
+let price;
+
 let overlay = document.getElementById("overlay");
 
 let checkin, checkout;
@@ -44,7 +46,8 @@ function create_popup_form(capacity){
     "<input type=\"date\" name=\"end_date\" id=\"end_date\"><br>" +
     "<label for =\"guest_no\"> No. of Guests </label><br>" +
     "<select id=\"guest_no\" name= \"guest_no\">" + opt_str + "</select>" + "<br>" +
-    "<input type=\"submit\" value=\"Rent\" id=\"sub_btn\">" + "</form>";
+    "<input type=\"submit\" value=\"Rent\" id=\"sub_btn\">" + "</form><br>";/* +
+    "Total Price: ";*/
     div.innerHTML = htmlstr;
 }
 
@@ -54,7 +57,23 @@ function on_date_input(){
     if(!seconddate && event.target == checkout) seconddate = true;
 
     if(firstdate && seconddate) {
-        console.log(checkout.value);
+        let now = new Date();
+        let d1 = new Date(checkin.value);
+        let d2 = new Date(checkout.value);
+        if(d1 > now && d2 > d1){
+            let request = new XMLHttpRequest();
+            request.open('POST', "../actions/action_calc_price.php", true);
+            request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            let req_str = encodeURIComponent("start_date=" + checkin.value) + "&" + encodeURIComponent("end_date=" + checkout.value) + "&" + encodeURIComponent("ppd=" + price);
+            request.onreadystatechange = function(){
+                if (this.readyState == 4 && this.status == 200){
+                    div.innerHTML += "<p> Total Price: " + this.responseText + "</p>";
+                }
+            };
+
+            request.send(req_str);
+        //console.log(checkout.value);
+        }
     }
 }
 
@@ -74,7 +93,7 @@ function rent_popup(hid, tid, ppd, capacity){
     div.style.top = "45%";
     div.innerHTML += "<p>" + "var: " +  hid  + " type: " + typeof hid + "</p>";
     div.innerHTML += "<p>" + "var: " +  tid  + " type: " + typeof tid + "</p>";
-    div.innerHTML += "<p>" + "var: " +  ppd  + " type: " + typeof ppd + "</p>";
+    price = ppd;
     overlay.insertAdjacentElement("afterend", div);
     
     sub_btn = document.getElementById('sub_btn');

@@ -6,6 +6,10 @@ if(isset($_POST['start_date']) && isset($_POST['end_date']) && isset($_POST['ppd
     $ppd = intval($_POST['ppd']);
 
     $difference = $sd->diff($ed);
-    echo $ppd * $difference['days'];
+    echo "AAAA" . $ppd * $difference['days'];
+}
+
+else{
+     var_dump( $_POST);
 }
 ?>
