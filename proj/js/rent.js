@@ -25,32 +25,42 @@ function rent_popdown(){
         div.innerHTML = "";
 }
 
-function rent_popup(capacity){
+function create_popup_form(capacity){
     let opt_str = "";
+    div.innerHTML += "<form>";
+
+        div.innerHTML += "<label for =\"start_date\"> Check-in </label>"
+        div.innerHTML += "<br>";
+        div.innerHTML += "<input type=\"date\" name=\"start_date\"> ";
+        div.innerHTML += "<br>";
+        div.innerHTML += "<label for =\"end_date\"> Check-out </label>";
+        div.innerHTML += "<br>";
+        div.innerHTML += "<input type=\"date\" name=\"end_date\"> ";
+        div.innerHTML += "<br>";
+        div.innerHTML += "<label for =\"guest_no\"> No. of Guests </label>";
+        div.innerHTML += "<br>";
+        for(let i = 1; i <= capacity; i++) opt_str+= "<option value=\"" + i + "\">" + i + " guests</option>";
+        div.innerHTML += "<select id=\"guest_no\" name= \"guest_no\">" + opt_str + "</select>";
+        div.innerHTML += "<br>";
+        div.innerHTML += "<input type=\"submit\" value=\"Rent\">";
+    
+    div.innerHTML += "</form>";
+}
+
+function rent_popup(capacity){
+
     event.stopImmediatePropagation();
+
     blurin();
+
     btn.disabled = true;
     btn2.disabled = true;
-    div.innerHTML += "<form>";
-    div.innerHTML += "<label for =\"start_date\"> Check-in </label>"
-    div.innerHTML += "<br>";
-    div.innerHTML += "<input type=\"date\" name=\"start_date\"> ";
-    div.innerHTML += "<br>";
-    div.innerHTML += "<label for =\"end_date\"> Check-out </label>"
-    div.innerHTML += "<br>";
-    div.innerHTML += "<input type=\"date\" name=\"end_date\"> ";
-    div.innerHTML += "<br>";
-    div.innerHTML += "<label for =\"guest_no\"> No. of Guests </label>";
-    div.innerHTML += "<br>";
-    for(let i = 1; i <= capacity; i++) {
-        opt_str+= "<option value=\"" + i + "\">" + i + " guests</option>";
-    }
-    div.innerHTML += "<select id=\"guest_no\" name= \"guest_no\">" + opt_str + "</select>";
-    div.innerHTML += "<br>";
-    div.innerHTML += "<input type=\"submit\" value=\"Rent\">";
-    div.innerHTML += "</form>";
-    console.log(capacity);
+
+    create_popup_form(capacity);
+
     div.style.position = "absolute";
+    div.style.left = "45%";
+    div.style.top = "45%";
     overlay.insertAdjacentElement("afterend", div);
     
 }

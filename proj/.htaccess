@@ -1,2 +1,12 @@
-
 ErrorDocument 404  /pages/404.php
+Options All -Indexes
+
+<FilesMatch "^\.">
+Order allow,deny
+Deny from all
+</FilesMatch>
+
+<FilesMatch "\.(?:db|sql)$">
+Order allow,deny
+Deny from all
+</FilesMatch>
