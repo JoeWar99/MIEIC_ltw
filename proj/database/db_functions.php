@@ -223,6 +223,20 @@ function cancel_reservation($rent_id){
     }
 }
 
+function insert_new_property($house_name, $price_per_day, $adress, $description, $postal_code, $city, $country, $capacity, $username){
+    $db = Database::instance()->db();
+    try{
+        $onwer_id = get_id_from_usr($username);
+        $stmt = $db->prepare("INSERT INTO House (id, Name, Rating, Description, PricePerDay, Address, PostalCode, OwnerId, CityId, Capacity) values (?,?,?,?,?,?,?,?,?,?);");
+        $stmt->execute(array(null, $house_name, 0, $description, $price_per_day, $adress, $postal_code, $onwer_id, 1, $capacity));
+        return true;
+    } catch (PDOException $e) {
+        return false;
+    }
+}
+
+
+
 
 /* Auxiliar develpment functions to delete before work is finalized */
 

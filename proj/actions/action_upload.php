@@ -1,7 +1,24 @@
 <?php
 include_once('../includes/session.php');
+include_once('../database/db_functions.php');
 // Get image ID
 
+$house_name = $_POST["HouseName"];
+ $price_per_day = $_POST["PricePerDay"];
+ $adress =$_POST["Adress"];
+ $description = $_POST["description"];
+ $postal_code = $_POST["PostalCode"];
+ $city = $_POST["City"];
+ $country = $_POST["Country"];
+ $capacity = $_POST["Capacity"];
+ $username = $_SESSION['username'];
+
+
+
+if(!insert_new_property($house_name, $price_per_day, $adress, $description, $postal_code, $city, $country, $capacity, $username)){
+
+}
+else{
 
 $id = 1;
 
@@ -35,6 +52,7 @@ foreach ($temp_array as $val) {
     move_uploaded_file($val['tmp_name'], $originalFileName_string);
 
   $i++;
+  }
+
+  header("Location: ../pages/myProperties.php");
 }
-
-
