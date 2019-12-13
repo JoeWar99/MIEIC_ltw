@@ -51,6 +51,12 @@ function create_popup_form(capacity){
     div.innerHTML = htmlstr;
 }
 
+function encodeForAjax(data) {
+    return Object.keys(data).map(function(k){
+      return encodeURIComponent(k) + '=' + encodeURIComponent(data[k]);
+    }).join('&');
+  }
+
 function on_date_input(){
     if(!firstdate && event.target == checkin) firstdate = true;
 
@@ -64,7 +70,7 @@ function on_date_input(){
             let request = new XMLHttpRequest();
             request.open('POST', "../actions/action_calc_price.php", true);
             request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-            let req_str = encodeURIComponent("start_date=" + checkin.value) + "&" + encodeURIComponent("end_date=" + checkout.value) + "&" + encodeURIComponent("ppd=" + price);
+            let req_str = encodeForAjax({start_date:checkin.value, end_date:checkout.value, ppd:price}); //encodeURIComponent("start_date=" + checkin.value) + "&" + encodeURIComponent("end_date=" + checkout.value) + "&" + encodeURIComponent("ppd=" + price);
             request.onreadystatechange = function(){
                 if (this.readyState == 4 && this.status == 200){
                     div.innerHTML += "<p> Total Price: " + this.responseText + "</p>";
