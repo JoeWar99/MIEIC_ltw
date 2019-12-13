@@ -127,10 +127,13 @@
 ?>
 
 <?php function draw_profile_menu($username){
+  $photo = get_photo_from_usr($username);
+  if($photo == NULL) $photo = "..\assets\profile.jpg";
+      echo "<img id=\"profile_img\" src=$photo alt=\"profile_picture\" height=\"50\" width=\"50\"><br>"; 
       echo "<div id=\"profileMenu\">";
       echo "<button id=\"dropdown\"> $username </button>";
       echo "<div id=\"dropdownList\">";
-          echo "<a href=\"#\">Edit</a>";
+          echo "<button id= \"edit\" onclick=\"window.location.href = 'editprofile.php';\">Edit</button>";
           echo "<a href=\"../actions/action_logout.php\">Logout</a>";
       echo "</div>";
       echo "</div>";
@@ -161,7 +164,9 @@
 
       $search_sl = [["../js/search.js", true]];
 
-      $house_sl = [["../js/rent.js", true], ["../js/message.js", true]]
+      $house_sl = [["../js/rent.js", true], ["../js/message.js", true]];
+
+      $edit_sl = [["../js/edit.js", true]];
 ?>
 
 <?php function draw_logged_header($username){
@@ -265,12 +270,13 @@ function h4($content){
    * if the user is logged in in order to draw the logout
    * link.
    */
-  global $main_stylesheet, $fonts, $register_sl, $search_sl, $house_sl;
+  global $main_stylesheet, $fonts, $register_sl, $search_sl, $house_sl, $edit_sl;
   open_html();
       $sl = [];
       if($page == "register") $sl = $register_sl;
       else if ($page == "home") $sl = $search_sl;
       else if ($page == "house") $sl = $house_sl;
+      else if($page == "edit") $sl = $edit_sl;
       draw_head(get_title($page), [$main_stylesheet,$fonts[0], $fonts[1], $fonts[2]], $sl);
       open_body();
         open_header();

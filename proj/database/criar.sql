@@ -10,6 +10,8 @@ CREATE TABLE User(
   Email TEXT NOT NULL ON CONFLICT ABORT,
   Username TEXT NOT NULL ON CONFLICT ABORT,
   Password TEXT NOT NULL ON CONFLICT ABORT,
+  Description TEXT DEFAULT(NULL),
+  Photo TEXT DEFAULT(NULL),
   CHECK (date('now')-DateOfBirth > 18),
   UNIQUE(Email),
   UNIQUE(Username),

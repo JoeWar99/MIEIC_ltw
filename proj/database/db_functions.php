@@ -8,7 +8,7 @@ function create_user($name, $date, $email, $username, $password)
 {
     $db = Database::instance()->db();
     $options = ['cost' => 12];
-    $stmt = $db->prepare('INSERT INTO User VALUES(?, ?, ?, ?, ?, ?)');
+    $stmt = $db->prepare('INSERT INTO User VALUES(?, ?, ?, ?, ?, ?, NULL, NULL)');
     $stmt->execute(array(null, $name, $date, $email, $username, password_hash($password, PASSWORD_DEFAULT, $options)));
 }
 
@@ -227,7 +227,7 @@ function get_id_from_usr($username)
 {
     $dbh = Database::instance()->db();
     try {
-        $stmt = $dbh->prepare('SELECT Id FROM User WHERE username = ?');
+        $stmt = $dbh->prepare('SELECT Id FROM User WHERE Username = ?');
         $stmt->execute(array($username));
         $user = $stmt->fetch();
         if ($user !== false)
@@ -236,3 +236,128 @@ function get_id_from_usr($username)
         return -1;
     }
 }
+
+function get_name_from_usr($username)
+{
+    $dbh = Database::instance()->db();
+    try {
+        $stmt = $dbh->prepare('SELECT Name FROM User WHERE Username = ?');
+        $stmt->execute(array($username));
+        $user = $stmt->fetch();
+        if ($user !== false)
+            return $user['Name'];
+    } catch (PDOException $e) {
+        return -1;
+    }
+}
+
+function get_email_from_usr($username)
+{
+    $dbh = Database::instance()->db();
+    try {
+        $stmt = $dbh->prepare('SELECT Email FROM User WHERE Username = ?');
+        $stmt->execute(array($username));
+        $user = $stmt->fetch();
+        if ($user !== false)
+            return $user['Email'];
+    } catch (PDOException $e) {
+        return -1;
+    }
+}
+
+function get_date_from_usr($username)
+{
+    $dbh = Database::instance()->db();
+    try {
+        $stmt = $dbh->prepare('SELECT DateOfBirth FROM User WHERE Username = ?');
+        $stmt->execute(array($username));
+        $user = $stmt->fetch();
+        if ($user !== false)
+            return $user['DateOfBirth'];
+    } catch (PDOException $e) {
+        return -1;
+    }
+}
+
+function get_description_from_usr($username)
+{
+    $dbh = Database::instance()->db();
+    try {
+        $stmt = $dbh->prepare('SELECT Description FROM User WHERE Username = ?');
+        $stmt->execute(array($username));
+        $user = $stmt->fetch();
+        if ($user !== false)
+            return $user['Description'];
+    } catch (PDOException $e) {
+        return NULL;
+    }
+}
+
+function get_photo_from_usr($username)
+{
+    $dbh = Database::instance()->db();
+    try {
+        $stmt = $dbh->prepare('SELECT Photo FROM User WHERE Username = ?');
+        $stmt->execute(array($username));
+        $user = $stmt->fetch();
+        if ($user !== false)
+            return $user['Photo'];
+    } catch (PDOException $e) {
+        return NULL;
+    }
+}
+
+function new_username($old_username, $new_username)
+{
+    try {
+        $db = Database::instance()->db();
+        $id = get_id_from_usr($old_username);
+        $query = "UPDATE User SET Username = '" . $new_username . "' WHERE Id = " . $id;
+        $res = $db->query($query);
+        return 0;
+    } catch(PDOException $e) {
+        return -1;
+    }
+}
+
+function new_password($username, $new_password)
+{
+    try {
+        $db = Database::instance()->db();
+        $id = get_id_from_usr($username);
+        $options = ['cost' => 12];
+        $password = password_hash($new_password, PASSWORD_DEFAULT, $options);
+        $query = "UPDATE User SET Password = '" . $password . "' WHERE Id = " . $id;
+        $res = $db->query($query);
+        return 0;
+    } catch(PDOException $e) {
+        return -1;
+    }
+}
+
+function new_description($username, $description)
+{
+    try {
+        $db = Database::instance()->db();
+        $id = get_id_from_usr($username);
+        $query = "UPDATE User SET Description = '" . $description . "' WHERE Id = " . $id;
+        $res = $db->query($query);
+        return 0;
+    } catch(PDOException $e) {
+        return -1;
+    }
+}
+
+function new_photo($username, $photo)
+{
+    try {
+        $db = Database::instance()->db();
+        $id = get_id_from_usr($username);
+        $query = "UPDATE User SET Photo = '" . $photo . "' WHERE Id = " . $id;
+        $res = $db->query($query);
+        return 0;
+    } catch(PDOException $e) {
+        return -1;
+    }
+}
+

@@ -1,6 +1,6 @@
 <?php 
 include_once('../database/db_functions.php');
-include_once('../template/tpl_common.php');
+include_once('tpl_common.php');
  ?>
 
 <?php
@@ -351,6 +351,58 @@ function draw_my_reservations($usr){
         die(header('Location: 404page.php')); 
     }
     echo "</div>";  
+}
+
+/* START OF FUNCTIONS TO DRAW THE EDIT PROFILE PAGE */
+
+function draw_editpage($usr){
+    $name = get_name_from_usr($usr);
+    $email = get_email_from_usr($usr);
+    $date = get_date_from_usr($usr);
+    $description = get_description_from_usr($usr);
+    if($description == NULL) $description = "Description";
+    $photo = get_photo_from_usr($usr);
+    if($photo == NULL) $photo = "..\assets\profile.jpg";
+    echo "<p> My Profile </p>";
+    echo "<div id=\"edit_profile\">";
+        echo "<div id=\"image_div\">";
+        echo "<img id=\"profile_img\" src=$photo alt=\"profile_picture\" height=\"400\" width=\"400\"><br>"; 
+        echo "<form action=\"../actions/change_photo.php\" method=\"post\" enctype=\"multipart/form-data\">";
+        echo "<label> <input type=\"file\" id=\"choose_photo\" name=\"choose_photo\"></input> Choose Image</label>";
+        echo "<input type=\"submit\" id=\"change_photo\" value=\"Change\"></input> <br>";
+        echo "</form>";
+        echo "</div>"; 
+        echo "<div id=\"profile_info\">";
+        echo "<span>Name: $name</span><br>";
+        echo "<span>Username: $usr</span><br>";
+        echo "<span>Email: $email</span><br>";
+        echo "<span>Date of birth: $date</span><br>";
+        echo "<button id=\"edit_pro\">Edit Profile</button><br>";
+        echo "</div>";
+            echo "<div id=\"popup\">";
+                echo "<div id=\"popup_content\">";
+                echo "<span id=\"close\">&times;</span>";
+                echo "<form>";
+                    echo "New Username: <br>";
+                    echo "<input type=\"text\" id=\"new_username\" name=\"new_username\" placeholder=\"New Username\">";
+                    echo "<button id=\"change_username\" type=\"button\">Change Username</button><br>";
+                    echo "<span id=\"error_change_username\">  New Username not valid</span>";
+                    echo "<span id=\"error_username_size\">  New Username must have at least 6 characters and no special characters</span><br>";
+                    echo "New Password: <br>";
+                    echo "<input type=\"password\" id=\"new_password\" name=\"new_password\" placeholder=\"New Password\"><br>";
+                    echo "<input type=\"password\" id=\"new_password2\" name=\"new_password\" placeholder=\"Confirm Password\">";
+                    echo "<button id=\"change_password\" type=\"button\">Change Password</button><br>";
+                    echo "<span id=\"error_pass\" >  Password must have a minimum of six characters and contain at least one uppercase letter, one lowercase letter and one number</span>";
+                    echo "<span id=\"error_pass2\" >  Passwords don't match</span>";
+                    echo "</form>";
+            echo "</div>";
+        echo "</div>";
+        echo "<div id=\"description_div\">";
+        echo "<input type=\"text\" id=\"description\" name=\"description\" placeholder=\"$description\"><br>";
+        echo "<button id=\"edit_des\" type=\"button\">Change Description</button><br>";
+        echo "</div>";
+        echo "</div>";
+
 }
 
 ?>
