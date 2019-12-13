@@ -247,16 +247,21 @@ function draw_house_pics($picpath){
     echo "<img src=$picpath alt=\"House_Pic1\" />";
 }
 
-function draw_rent_form($ppd){
+function draw_rent_form($hid, $ppd){
     echo "<form id=\"rent_form\" style=\"visibility:hidden;\">";
+    echo "<div id=\"checkin\">";
     h4("Checkin: ");
     echo "<input id=\"start_date\" type=\"date\">";
+    echo "<div id=\"checkin_error\">";
+    echo "</div>";
+    echo "</div>";
     h4("Checkout");
     echo "<input id=\"end_date\" type=\"date\">";
     echo "<br>";
     echo "<input id=\"sub_btn\" type=\"button\" value=\"Rent\">";
     echo "<br>";
     echo "<input id=\"ppd\" value=\"" . $ppd . "\" readonly style=\"visibility:hidden\">";
+    echo "<input id=\"hid\" value=\"" . $hid . "\" readonly style=\"visibility:hidden\">";
     echo "</form>";
 }
 

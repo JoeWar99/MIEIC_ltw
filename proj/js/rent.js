@@ -10,6 +10,12 @@ function blurout() {
     overlay.setAttribute('class', null);
 }
 
+function encodeForAjax(data) {
+    return Object.keys(data).map(function (k) {
+        return encodeURIComponent(k) + '=' + encodeURIComponent(data[k]);
+    }).join('&');
+}
+
 let rent_button = document.getElementById("rent_button");
 let rent_form = document.getElementById("rent_form");
 
@@ -19,6 +25,7 @@ let end_date_f = document.getElementById("end_date");
 let i1 = false, i2 = false;
 
 let ppd = parseInt(document.getElementById("ppd").value);
+let hid = parseInt(document.getElementById("hid").value);
 
 rent_button.addEventListener("click", function(){
     blurin();
@@ -34,9 +41,55 @@ overlay.addEventListener("click", function(){
 let price = 0;
 
 function on_date_input(){
-    if(!i1 && event.target == start_date_f) i1 = true;
+    if(event.target == start_date_f){
+        if(!i1) i1 = true;
+        let req = new XMLHttpRequest();
+        req.open("GET", "../actions/action_check_date.php?" + encodeForAjax({date:start_date_f.value, id:hid}), true);
+        req.onload = function(){
+            if(req.status >= 200 && req.status < 400){ // Se o SRV retornar bem
+                //tf.insertAdjacentHTML("afterend", "<p>" + this.responseText + "</p>");
+                if(this.responseText == "true"){
+                    let error = document.getElementById("checkin_error");
+                    error.innerHTML = "date unavailable";
+                }
+
+                else console.log("Pintou");
+            }
+            else {
+                console.log("Server Error");
+            }
+        };
+        
+        req.onerror = function (){ //SE não ligar ao srv
+            console.log("Connection Error");
+        };
+        req.send();
+    }
     
-    if(!i2 && event.target == end_date_f) i2 = true;
+    if(event.target == end_date_f){
+        if(!i2) i2 = true;
+        let req = new XMLHttpRequest();
+        req.open("GET", "../actions/action_check_date.php?" + encodeForAjax({date:end_date_f.value, id:hid}), true);
+        req.onload = function(){
+            if(req.status >= 200 && req.status < 400){ // Se o SRV retornar bem
+                //tf.insertAdjacentHTML("afterend", "<p>" + this.responseText + "</p>");
+                if(this.responseText == "true"){
+                    let error = document.getElementById("checkin_error");
+                    error.innerHTML = "date unavailable";
+                }
+
+                else console.log(this.responseText);
+            }
+            else {
+                console.log("Server Error");
+            }
+        };
+        
+        req.onerror = function (){ //SE não ligar ao srv
+            console.log("Connection Error");
+        };
+        req.send();
+    }
 
     if(i1 && i2) {
         let date1 = new Date(start_date_f.value); 
