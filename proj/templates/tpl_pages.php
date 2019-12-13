@@ -247,6 +247,19 @@ function draw_house_pics($picpath){
     echo "<img src=$picpath alt=\"House_Pic1\" />";
 }
 
+function draw_rent_form($ppd){
+    echo "<form id=\"rent_form\" style=\"visibility:hidden;\">";
+    h4("Checkin: ");
+    echo "<input id=\"start_date\" type=\"date\">";
+    h4("Checkout");
+    echo "<input id=\"end_date\" type=\"date\">";
+    echo "<br>";
+    echo "<input id=\"sub_btn\" type=\"button\" value=\"Rent\">";
+    echo "<br>";
+    echo "<input id=\"ppd\" value=\"" . $ppd . "\" readonly style=\"visibility:hidden\">";
+    echo "</form>";
+}
+
 /**
  * Draws the page for a certain page
  * @param  house_info an array basic information about the house

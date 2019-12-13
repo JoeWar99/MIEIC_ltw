@@ -34,8 +34,9 @@
     open_overlay();
     draw_header($usr, "house");
     draw_housepage($house_info, $city_info, $country_info, $commodities, $owner_info, $comments, $picpath, $usrid);
-    footer();
     close_overlay();
+    draw_rent_form($house_info['PricePerDay']);
+    footer();
     close_body(); 
     close_html();
    

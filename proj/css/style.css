@@ -605,3 +605,57 @@ footer {
 input[type="file"] {
     display:none;
 }
+
+/*house page*/
+#housepage{
+    background-color: white;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding-bottom: 2em;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+#housepage > img{
+    height: 20em;
+    width: 30em;
+}
+
+#housepage > * {
+    margin: 1em;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+#housepage ul  {
+    list-style-type: none;
+}
+
+#housepage > button{
+    width: 10em;
+    height: 5em;
+    background: #47D4B7;
+    border-radius: 50px;
+    border-style: none;
+}
+
+#rent_button{
+    position: fixed;
+    top: 10em;
+    left: 134em;
+}
+
+#message_button{
+    position: fixed;
+    top: 17em;
+    left: 134em;
+}
+
+#rent_form {
+    position: absolute;
+    top: 45%;
+    left: 45%;
+}
