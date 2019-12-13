@@ -227,8 +227,8 @@ function draw_house_comments($comments){
 /** 
  * Draws the rent button in the page for a certain house
  */
-function draw_rent_button(){
-    echo "<button id=\"rent_button\" type=\"button\" onclick=\"rent_popup()\">Rent</button>";
+function draw_rent_button($hid, $tid, $ppd, $capacity){
+    echo "<button id=\"rent_button\" type=\"button\" >Rent</button>";
 }
 
 
@@ -236,7 +236,7 @@ function draw_rent_button(){
  * Draws the message the owner button in the page for a certain house
  */
 function draw_msg_button(){
-    echo "<button id=\"message_button\" type=\"button\" onclick=\"message_popup()\">Message Owner</button>";
+    echo "<button id=\"message_button\" type=\"button\">Message Owner</button>";
 }
 
 /**
@@ -257,7 +257,7 @@ function draw_house_pics($picpath){
  * @param comments an array containing the most recent comments for the house
  * @param picpath the path to the main image for the house
  */
-function draw_housepage($house_info, $city_info, $country_info, $commodities, $owner_info, $comments, $picpath){
+function draw_housepage($house_info, $city_info, $country_info, $commodities, $owner_info, $comments, $picpath, $usrid){
     echo "<div id=\"housepage\">";
     $name = $house_info['Name'];
     h1($name);
@@ -269,7 +269,7 @@ function draw_housepage($house_info, $city_info, $country_info, $commodities, $o
     draw_house_commodities($commodities);
     draw_house_owners($owner_info);
     draw_house_comments($comments);
-    draw_rent_button();
+    draw_rent_button($house_info['Id'], $usrid, $house_info['PricePerDay'], $house_info['Capacity']);
     draw_msg_button();
     draw_pic($picpath, "House_PIC1");
     echo "</div>";

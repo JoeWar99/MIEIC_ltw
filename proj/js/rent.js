@@ -1,5 +1,10 @@
-"use strict";
 
-function rent_popup(){
-    alert("Bananas");
+/*
+function blurin() {
+    overlay.setAttribute('class', 'blur');
 }
+
+function blurout() {
+    overlay.setAttribute('class', null);
+}
+*/

@@ -12,6 +12,21 @@ function create_user($name, $date, $email, $username, $password)
     $stmt->execute(array(null, $name, $date, $email, $username, password_hash($password, PASSWORD_DEFAULT, $options)));
 }
 
+function is_house_available($hid, $start_date, $end_date){
+    $db = Database::instance()->db();
+    $stmt = $db->prepare('SELECT * FROM Occupied WHERE MAX(StartDate, ?) <= MIN(EndDate, ?) AND HouseId = ?');
+    $stmt->execute(array($start_date, $end_date, $hid));
+    $results = $stmt->fetchAll();
+    if(!$results) return true;
+    else return false;
+}
+
+function create_rent($start_date, $end_date, $price, $hid, $tid){
+    $db = Database::instance()->db();
+    $stmt = $db->prepare('INSERT INTO Rent (StartDate, EndDate, Price, HouseId, TouristId) VALUES (?, ?, ?, ?, ?)');
+    $stmt->execute(array($start_date, $end_date, $price, $hid, $tid));
+}
+
 /**
  * Verifies if a certain username, password combination
  * exists in the database. Use the sha1 hashing function.

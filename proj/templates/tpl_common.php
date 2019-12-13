@@ -39,6 +39,7 @@
 <?php function link_scripts($script_list){
     foreach($script_list as $script){
       echo "<script src=$script[0]";
+      if($script[0][strlen($script[0])-3] == 'm') echo " type=\"module\""; //Check if its a module
       if($script[1]) echo " defer";
       echo "></script>";
     }
@@ -164,9 +165,10 @@
 
       $search_sl = [["../js/search.js", true]];
 
-      $house_sl = [["../js/rent.js", true], ["../js/message.js", true]];
-
       $edit_sl = [["../js/edit.js", true]];
+      $logged_house_sl = [["../js/rent.js", true], ["../js/message.js", true]];
+
+      $not_logged_house_sl = [["../js/not_logged_buttons.js", true]];
 ?>
 
 <?php function draw_logged_header($username){
@@ -227,6 +229,10 @@
           return "Register";
         case "login":
           return "Log In";
+        case "404":
+          return "Error 404";
+        case "403":
+          return "Error 403";
         default:
           return "AirestivoBnB";
       }
@@ -263,22 +269,18 @@ function h4($content){
 }
 ?>
 
+<?php
+function open_overlay(){
+    echo "<div id=\"overlay\">";
+}
+
+function close_overlay(){
+    echo "</div>";
+}
+?>
+
 <?php function draw_header($username, $page)
 {
-  /**
-   * Draws the header for all pages. Receives an username
-   * if the user is logged in in order to draw the logout
-   * link.
-   */
-  global $main_stylesheet, $fonts, $register_sl, $search_sl, $house_sl, $edit_sl;
-  open_html();
-      $sl = [];
-      if($page == "register") $sl = $register_sl;
-      else if ($page == "home") $sl = $search_sl;
-      else if ($page == "house") $sl = $house_sl;
-      else if($page == "edit") $sl = $edit_sl;
-      draw_head(get_title($page), [$main_stylesheet,$fonts[0], $fonts[1], $fonts[2]], $sl);
-      open_body();
         open_header();
         if($page != "login"){
           if ($username != NULL) draw_logged_header($username);
@@ -290,15 +292,5 @@ function h4($content){
 
 <?php function footer(){
   echo "<footer>  © 2019 AirestivoBnB, Inc. All rights reserved. </footer>";
-}
-?>
-
-<?php function draw_footer(){
-    /**
-     * Draws the footer for all pages.
-     */ 
-    footer();
-    close_body();
-    close_html();
 }
 ?>

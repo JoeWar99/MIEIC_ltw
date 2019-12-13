@@ -1,7 +1,11 @@
 html {
-    /**background-image: url("https://images.unsplash.com/photo-1533327325824-76bc4e62d560?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80%22");*/
     background-color: #cccccc;
     background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+
+#overlay{
     height: 100%;
     width: 100%;
 }
@@ -226,6 +230,7 @@ body {
     display: none;
     position: absolute;
     background-color: white;
+    z-index: 10;
 }
 
 
@@ -423,6 +428,25 @@ p {
     padding: 0;
 }
 
+#error403page {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    background-image: url("../assets/403image.jpg");
+    height: 100%;
+    width: 100%;
+    background-size:  100%;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+}
+
+#error403page>* {
+    margin: 0;
+    padding: 0;
+}
+
+/*my_reservations*/
+
 #my_reservations {
     display: grid;
     grid-template-columns: 0.5fr 2fr 2fr 0.5fr;
@@ -562,6 +586,20 @@ p {
 
 #edit_des{
     margin-left: 10em;
+}
+footer {
+    background-color: white;
+    text-align: end;
+    color: black;    
+    position: float;
+}
+
+.blur   {
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
 }
 
 input[type="file"] {
