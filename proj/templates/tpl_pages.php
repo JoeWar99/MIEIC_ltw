@@ -228,7 +228,7 @@ function draw_house_comments($comments){
  * Draws the rent button in the page for a certain house
  */
 function draw_rent_button($hid, $tid, $ppd, $capacity){
-    echo "<button id=\"rent_button\" type=\"button\" onclick=\"rent_popup($hid, $tid, $ppd, $capacity)\" >Rent</button>";
+    echo "<button id=\"rent_button\" type=\"button\" >Rent</button>";
 }
 
 

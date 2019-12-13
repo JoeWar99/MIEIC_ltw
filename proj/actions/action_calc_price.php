@@ -1,14 +1,14 @@
 <?php
+include_once("../includes/calc_price_days.php");
 
-if(isset($_POST['start_date']) && isset($_POST['end_date']) && isset($_POST['ppd'])){
+if(isset($_GET['start_date']) && isset($_GET['end_date']) && isset($_GET['ppd'])){
 
-    $sd = strtotime($_POST['start_date']);
-    $ed = strtotime($_POST['end_date']);
-    $ppd = intval($_POST['ppd']);
+    $sd = $_GET['start_date'];
+    $ed = $_GET['end_date'];
+    $ppd = intval($_GET['ppd']);
 
-    $datediff = $ed - $sd;
-    $daydiff = round($datediff / (60 * 60 * 24));
-    echo "" . $daydiff . " days * " . $ppd . "€/day = " . $daydiff * $ppd . "€";
+    $daydiff = calc_days($sd, $ed);
+    echo "" . $daydiff . " days * " . $ppd . "€/day = " . calc_price($sd, $ed, $ppd) . "€";
 }
 
 ?>
