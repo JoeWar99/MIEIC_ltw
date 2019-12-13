@@ -541,3 +541,14 @@ pre {
     row-gap: 1em;
     grid-template-rows: 1fr 1fr 1fr;
 }
+
+input[type="file"] {
+    display: none;
+}
+
+.btn-upload-image {
+    margin-right: 20%;
+    margin-left: 20%;
+    border: 3px solid;
+    border-color: turquoise;
+}

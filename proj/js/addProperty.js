@@ -38,7 +38,7 @@ function encodeForAjax(data) {
 function Validate() {
 
     let returnValue = true;
-    //return true;
+
     if (!house_name_verify()) {
         returnValue = false;
     }
@@ -84,20 +84,17 @@ function Validate() {
         formData.append('File4', array_of_images[4]);
         formData.append('File5', array_of_images[5]);
         formData.append('File6', array_of_images[6]);
-
         ourRequest.send(formData);
         return true;
     }
 }
 
 function receive_add_property_response() {
-    console.log('o api correu bem');
     let ourData = JSON.parse(this.responseText);
     if (ourData == -1)
         alert("Some error ocurred");
-    else {
-        window.location = '../pages/myProperties.php';
-    }
+    else
+        window.location = "../pages/myProperties.php";
 }
 
 let border_style = capacity.style.border;
@@ -264,12 +261,39 @@ document.querySelector('#file-input5').addEventListener("change", function() {
     previewImages(this);
 }, true);
 
-
 let array_of_images = [false, false, false, false, false, false];
 
 function button_delete(aux_number) {
-    var preview = document.querySelector('#preview' + aux_number);
+    let preview = document.querySelector('#preview' + aux_number);
     array_of_images[aux_number] = false;
+    let element_input = document.getElementById("input-" + aux_number);
+    element_input.innerHTML = "";
+    element_input.style.display = "";
+
+    console.log('entrei aqui shit');
+
+    let label = document.createElement('label');
+
+    let p = document.createElement('p');
+    p.innerHTML = "upload Image";
+    p.setAttribute("class", 'btn-upload-image');
+
+    let input = document.createElement('input');
+    input.setAttribute('id', 'file-input' + aux_number);
+    input.setAttribute('name', 'image' + aux_number);
+    input.setAttribute('class', 'InputAddProperty');
+    input.setAttribute('type', 'file');
+
+    input.addEventListener("change", function() {
+        number = aux_number;
+        previewImages(this);
+    }, true);
+
+    label.appendChild(input);
+    label.appendChild(p);
+
+    element_input.appendChild(label);
+
     preview.innerHTML = '<img src="../assets/imagesHouses/noHouseImage.png" alt="no image" width="200" height="150">';
 }
 
@@ -296,19 +320,28 @@ function readAndPreview(file) {
         var preview = document.querySelector('#preview' + number);
         console.log(this);
 
+        // preview.setAttribute("style", " display: grid; grid-template-rows: 1fr 0.5fr;");
+
         let image = new Image();
         image.height = 150;
         image.title = file.name;
         image.src = this.result;
+
+        let element_input = document.getElementById("input-" + number);
+        element_input.style.display = "none";
 
         array_of_images[number] = true;
         let button = document.createElement('button');
         button.setAttribute('onclick', 'button_delete(' + number + ')');
         button.type = "button";
         button.innerHTML = "Delete Image";
+        button.setAttribute('style', 'margin-top: 5%; width:40%; height = 10%;');
+
+        let br = document.createElement('br');
 
         preview.innerHTML = "";
         preview.appendChild(image);
+        preview.appendChild(br);
         preview.appendChild(button);
 
     });

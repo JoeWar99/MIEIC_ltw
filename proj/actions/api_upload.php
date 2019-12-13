@@ -48,24 +48,29 @@ if (!insert_new_property($house_name, $price_per_day, $adress, $description, $po
   $i = 0;
 
   file_put_contents('somefilename.txt', print_r($id, true), FILE_APPEND);
+  file_put_contents('somefilename.txt', print_r($_FILES, true), FILE_APPEND);
 
   // Move the uploaded file to its final destination
   foreach ($_FILES as $val) {
-    file_put_contents('somefilename.txt', print_r('ciclo for', true), FILE_APPEND);
-    file_put_contents('somefilename.txt', print_r($Files_bool[$i], true), FILE_APPEND);
+   
     if ($Files_bool[$i] == 'true') {
-      file_put_contents('somefilename.txt', print_r('entrei nesta condicao', true), FILE_APPEND);
-      file_put_contents('somefilename.txt', print_r($Files_bool[$i], true), FILE_APPEND);
       $originalFileName_string = "../assets/imagesHouses/houseImage_" . $id . "_" . $i . ".jpg";
 
       if (file_exists($originalFileName_string)) {
-        echo "entrei aqui";
         chmod($originalFileName_string, 0755); //Change the file permissions if allowed
         unlink($originalFileName_string); //remove the file
       }
 
-      if ($val['name'] != '')
+      //if ($val['name'] != ''){
+        file_put_contents('somefilename.txt', print_r('adicionar o path', true), FILE_APPEND);
         move_uploaded_file($val['tmp_name'], $originalFileName_string);
+        if(!add_photo_path_to_house($id, $originalFileName_string)){
+          echo json_encode(-1);
+         // exit;
+        }
+     // }
+      
+
     }
     $i++;
   }

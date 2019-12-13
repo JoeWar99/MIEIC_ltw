@@ -84,7 +84,7 @@ function get_house_top_pic($house_id)
     $stmt = $db->prepare("SELECT Path as path FROM House H join Photo P on H.Id = P.HouseId WHERE H.Id = ?;");
     $stmt->execute(array(intval($house_id)));
     $result = $stmt->fetch();
-    return $result['path']; // returns true if email exists and false otherwise..
+    return $result['path']; 
 }
 
 function get_house_by_id($house_id)
@@ -151,7 +151,7 @@ function get_all_properties_for_a_user($usr)
     if ($user_id != -1) {
         try {
             $stmt = $db->prepare("SELECT DISTINCT * 
-            FROM House WHERE House.OwnerId = ? ");
+            FROM House WHERE House.OwnerId = ? ORDER BY House.Id DESC");
             $stmt->execute(array($user_id));
             $result = $stmt->fetchall();
             if (count($result) == 0)
@@ -172,7 +172,7 @@ function get_all_reservations_for_a_user($usr)
         try {
             $stmt = $db->prepare(" SELECT DISTINCT H.Id, H.Name, H.Rating, H.PricePerDay, H.Description, H.Address, H.PostalCode, H.OwnerId, H.CityId, H.Capacity, R.Id as RentId, R.StartDate, R.EndDate
             FROM User U JOIN Rent R ON U.Id = R.TouristId JOIN House H ON R.HouseId = H.Id 
-            WHERE U.ID = ? ORDER BY R.StartDate ASC");
+            WHERE U.ID = ? ORDER BY R.StartDate DESC");
             $stmt->execute(array($user_id));
             $result = $stmt->fetchall();
             if (count($result) == 0)
@@ -187,19 +187,61 @@ function get_all_reservations_for_a_user($usr)
 }
 
 
+/**
+ * Executes the process of deleting an house from the database
+ * @param house_id the id in the database of the house we want to delete
+ */
 function delete_house($house_id)
 {
 
     $db = Database::instance()->db();
     try {
+
+        // check if there's a rent that is going on or not , or if there are future rents
+        $stmt = $db->prepare("SELECT * FROM Rent WHERE HouseId = ?");
+        $stmt->execute(array($house_id));
+        $rents = $stmt->fetchAll();
+
+        $date = date('Y/m/d', time());
+
+        // checks to see if in all the rents associated with that house there's at least one that happening right now
+        // or will happen in the future
+        for($i = 0; $i < count($rents); $i++){
+            if($date > $rents[$i]['StartDate'] && $date < $rents[$i]['EndDate']){
+                return false;
+            }
+            else if($date < $rents[$i]['StartDate']){
+                return false;
+            }
+        }
+
+    
+        // deleting all images for a certain house before deleting the entry of the house from the database
+        $stmt = $db->prepare("SELECT * FROM Photo WHERE HouseId = ?");
+        $stmt->execute(array($house_id));
+        $photos = $stmt->fetchAll();
+
+        for($i = 0; $i < count($photos); $i++){
+            if (file_exists($photos[$i]['Path'])) { //checking to see if the file even exists
+                chmod($photos[$i]['Path'], 0755); //Change the file permissions if allowed
+                unlink($photos[$i]['Path']); //remove the file
+            }
+        }
+
+        // deleting the entry for the house in the database and consequently deleting all
+        // the entry's of the tables rents, reviews, photo, commodities, available
         $stmt = $db->prepare("DELETE FROM House WHERE House.Id=?");
         $stmt->execute(array($house_id));
+
+        // if everthing went correctly then return true
         return true;
     } catch (PDOException $e) {
+        // if an exception is thrown means someting went wrong so returning false
         return false;
     }
 
 }
+
 
 function cancel_reservation($rent_id){
     $db = Database::instance()->db();
@@ -211,6 +253,9 @@ function cancel_reservation($rent_id){
         $date = date('Y/m/d', time());
 
         if($date > $ret['StartDate'] && $date < $ret['EndDate']){
+            return -1;
+        }
+        else if($date <$ret['StartDate']){
             return -1;
         }
         else{
@@ -229,6 +274,17 @@ function insert_new_property($house_name, $price_per_day, $adress, $description,
         $onwer_id = get_id_from_usr($username);
         $stmt = $db->prepare("INSERT INTO House (id, Name, Rating, Description, PricePerDay, Address, PostalCode, OwnerId, CityId, Capacity) values (?,?,?,?,?,?,?,?,?,?);");
         $stmt->execute(array(null, $house_name, 0, $description, $price_per_day, $adress, $postal_code, $onwer_id, 1, $capacity));
+        return true;
+    } catch (PDOException $e) {
+        return false;
+    }
+}
+
+function add_photo_path_to_house($id, $originalFileName_string){
+    $db = Database::instance()->db();
+    try{
+        $stmt = $db->prepare("INSERT INTO Photo (Id, HouseId, Description, Path) values (? , ?, 'Foto Principal da casa',  ?);");
+        $stmt->execute(array(null, $id, $originalFileName_string));
         return true;
     } catch (PDOException $e) {
         return false;

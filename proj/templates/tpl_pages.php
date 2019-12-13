@@ -296,53 +296,94 @@ function draw_add_property($usr)
                 <div id="file-input-grid">
 
                     <div class="file-input-box">
-                        <p> Image 1 </p>
-                        <input id="file-input0" name="image0" multiple class="InputAddProperty" type="file" placeholder="House Name">
+                        <p> Main Image </p>
+
                         <div id="preview0">
-                            
                             <img src="../assets/imagesHouses/noHouseImage.png" alt="no image" width="200" height="150">
+                        </div>
+                        <div id="input-0">
+                            <label>
+                                <input id="file-input0" name="image0" class="InputAddProperty" type="file" placeholder="House Name">
+                                <p class="btn-upload-image"> upload Image </p>
+                            </label>
                         </div>
                     </div>
 
 
                     <div class="file-input-box">
-                        <p> Image 2 </p>
-                        <input id="file-input1" name="image1" multiple class="InputAddProperty" type="file" placeholder="House Name">
+                        <p> Image 1 </p>
+
                         <div id="preview1">
                             <img src="../assets/imagesHouses/noHouseImage.png" alt="no image" width="200" height="150">
+                        </div>
+                        <div id="input-1">
+                            <label>
+                                <input id="file-input1" name="image1" class="InputAddProperty" type="file" placeholder="House Name">
+                                <p class="btn-upload-image"> upload Image </p>
+                            </label>
+
+                        </div>
+
+                    </div>
+
+                    <div class="file-input-box">
+                        <p> Image 2 </p>
+
+                        <div id="preview2">
+                            <img src="../assets/imagesHouses/noHouseImage.png" alt="no image" width="200" height="150">
+                        </div>
+                        <div id="input-2">
+                            <label>
+                                <input id="file-input2" name="image2" class="InputAddProperty" type="file" placeholder="House Name">
+                                <p class="btn-upload-image"> upload Image </p>
+                            </label>
                         </div>
                     </div>
 
                     <div class="file-input-box">
                         <p> Image 3 </p>
-                        <input id="file-input2" name="image2" multiple class="InputAddProperty" type="file" placeholder="House Name">
-                        <div id="preview2">
+
+                        <div id="preview3">
                             <img src="../assets/imagesHouses/noHouseImage.png" alt="no image" width="200" height="150">
                         </div>
+                        <div id="input-3">
+                            <label>
+                                <input id="file-input3" name="image3" class="InputAddProperty" type="file" placeholder="House Name">
+                                <p class="btn-upload-image"> upload Image </p>
+                            </label>
+                        </div>
+
                     </div>
 
                     <div class="file-input-box">
                         <p> Image 4 </p>
-                        <input id="file-input3" name="image3" multiple class="InputAddProperty" type="file" placeholder="House Name">
-                        <div id="preview3">
-                            <img src="../assets/imagesHouses/noHouseImage.png" alt="no image" width="200" height="150">
-                        </div>
-                    </div>
-
-                    <div class="file-input-box">
-                        <p> Image 5 </p>
-                        <input id="file-input4" name="image4" multiple class="InputAddProperty" type="file" placeholder="House Name">
+                        
                         <div id="preview4">
                             <img src="../assets/imagesHouses/noHouseImage.png" alt="no image" width="200" height="150">
                         </div>
+                        <div id="input-4">
+                            <label>
+                                <input id="file-input4" name="image4" class="InputAddProperty" type="file" placeholder="House Name">
+                                <p class="btn-upload-image"> upload Image </p>
+                            </label>
+
+                        </div>
                     </div>
 
                     <div class="file-input-box">
-                        <p> Image 6 </p>
-                        <input id="file-input5" name="image5" multiple class="InputAddProperty" type="file" placeholder="House Name">
+                        
+                    <p> Image 5 </p>
+
                         <div id="preview5">
                             <img src="../assets/imagesHouses/noHouseImage.png" alt="no image" width="200" height="150">
                         </div>
+                        <div id="input-5">
+                            <label>
+                                <input id="file-input5" name="image5" class="InputAddProperty" type="file" placeholder="House Name">
+                                <p class="btn-upload-image"> upload Image </p>
+                            </label>
+                        </div>
+
                     </div>
 
                 </div>

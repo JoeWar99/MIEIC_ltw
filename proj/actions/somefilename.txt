@@ -1,0 +1,1009 @@
+67Array
+(
+    [image2] => Array
+        (
+            [name] => 
+            [type] => 
+            [tmp_name] => 
+            [error] => 4
+            [size] => 0
+        )
+
+    [image3] => Array
+        (
+            [name] => 
+            [type] => 
+            [tmp_name] => 
+            [error] => 4
+            [size] => 0
+        )
+
+    [image4] => Array
+        (
+            [name] => 
+            [type] => 
+            [tmp_name] => 
+            [error] => 4
+            [size] => 0
+        )
+
+    [image5] => Array
+        (
+            [name] => 
+            [type] => 
+            [tmp_name] => 
+            [error] => 4
+            [size] => 0
+        )
+
+)
+adicionar o pathadicionar o pathLOL268Array
+(
+    [image0] => Array
+        (
+            [name] => IMG_20170615_151910[1]_Easy-Resize.com.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\php53ED.tmp
+            [error] => 0
+            [size] => 222452
+        )
+
+    [image1] => Array
+        (
+            [name] => 
+            [type] => 
+            [tmp_name] => 
+            [error] => 4
+            [size] => 0
+        )
+
+    [image2] => Array
+        (
+            [name] => 
+            [type] => 
+            [tmp_name] => 
+            [error] => 4
+            [size] => 0
+        )
+
+    [image3] => Array
+        (
+            [name] => 
+            [type] => 
+            [tmp_name] => 
+            [error] => 4
+            [size] => 0
+        )
+
+    [image4] => Array
+        (
+            [name] => 
+            [type] => 
+            [tmp_name] => 
+            [error] => 4
+            [size] => 0
+        )
+
+    [image5] => Array
+        (
+            [name] => 
+            [type] => 
+            [tmp_name] => 
+            [error] => 4
+            [size] => 0
+        )
+
+)
+adicionar o pathLOL269Array
+(
+    [image0] => Array
+        (
+            [name] => RKyaEDwp8J7JKeZWQPuOVWvkUjGQfpCx_cover_580.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\phpBD23.tmp
+            [error] => 0
+            [size] => 122980
+        )
+
+    [image1] => Array
+        (
+            [name] => 
+            [type] => 
+            [tmp_name] => 
+            [error] => 4
+            [size] => 0
+        )
+
+    [image2] => Array
+        (
+            [name] => 
+            [type] => 
+            [tmp_name] => 
+            [error] => 4
+            [size] => 0
+        )
+
+    [image3] => Array
+        (
+            [name] => 
+            [type] => 
+            [tmp_name] => 
+            [error] => 4
+            [size] => 0
+        )
+
+    [image4] => Array
+        (
+            [name] => 
+            [type] => 
+            [tmp_name] => 
+            [error] => 4
+            [size] => 0
+        )
+
+    [image5] => Array
+        (
+            [name] => 
+            [type] => 
+            [tmp_name] => 
+            [error] => 4
+            [size] => 0
+        )
+
+)
+adicionar o pathLOL270Array
+(
+    [image0] => Array
+        (
+            [name] => RKyaEDwp8J7JKeZWQPuOVWvkUjGQfpCx_cover_580.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\phpC14B.tmp
+            [error] => 0
+            [size] => 122980
+        )
+
+    [image1] => Array
+        (
+            [name] => semirreta.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\phpC14C.tmp
+            [error] => 0
+            [size] => 21525
+        )
+
+    [image2] => Array
+        (
+            [name] => IMG_20170615_150916[1]_Easy-Resize.com (3).jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\phpC15D.tmp
+            [error] => 0
+            [size] => 174051
+        )
+
+    [image3] => Array
+        (
+            [name] => 
+            [type] => 
+            [tmp_name] => 
+            [error] => 4
+            [size] => 0
+        )
+
+    [image4] => Array
+        (
+            [name] => 
+            [type] => 
+            [tmp_name] => 
+            [error] => 4
+            [size] => 0
+        )
+
+    [image5] => Array
+        (
+            [name] => 
+            [type] => 
+            [tmp_name] => 
+            [error] => 4
+            [size] => 0
+        )
+
+)
+adicionar o pathadicionar o pathadicionar o pathLOL271Array
+(
+    [image0] => Array
+        (
+            [name] => IMG_20170615_150916[1]_Easy-Resize.com (3).jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\php2AC6.tmp
+            [error] => 0
+            [size] => 174051
+        )
+
+    [image1] => Array
+        (
+            [name] => 
+            [type] => 
+            [tmp_name] => 
+            [error] => 4
+            [size] => 0
+        )
+
+    [image2] => Array
+        (
+            [name] => 
+            [type] => 
+            [tmp_name] => 
+            [error] => 4
+            [size] => 0
+        )
+
+    [image3] => Array
+        (
+            [name] => 
+            [type] => 
+            [tmp_name] => 
+            [error] => 4
+            [size] => 0
+        )
+
+    [image4] => Array
+        (
+            [name] => 
+            [type] => 
+            [tmp_name] => 
+            [error] => 4
+            [size] => 0
+        )
+
+    [image5] => Array
+        (
+            [name] => 
+            [type] => 
+            [tmp_name] => 
+            [error] => 4
+            [size] => 0
+        )
+
+)
+adicionar o pathLOL272Array
+(
+    [image0] => Array
+        (
+            [name] => RKyaEDwp8J7JKeZWQPuOVWvkUjGQfpCx_cover_580.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\php17DC.tmp
+            [error] => 0
+            [size] => 122980
+        )
+
+    [image1] => Array
+        (
+            [name] => 79093530_734024437090652_8531377716555939840_n.png
+            [type] => image/png
+            [tmp_name] => C:\xampp\tmp\php17DD.tmp
+            [error] => 0
+            [size] => 573181
+        )
+
+    [image2] => Array
+        (
+            [name] => 
+            [type] => 
+            [tmp_name] => 
+            [error] => 4
+            [size] => 0
+        )
+
+    [image3] => Array
+        (
+            [name] => 
+            [type] => 
+            [tmp_name] => 
+            [error] => 4
+            [size] => 0
+        )
+
+    [image4] => Array
+        (
+            [name] => 
+            [type] => 
+            [tmp_name] => 
+            [error] => 4
+            [size] => 0
+        )
+
+    [image5] => Array
+        (
+            [name] => 
+            [type] => 
+            [tmp_name] => 
+            [error] => 4
+            [size] => 0
+        )
+
+)
+adicionar o pathadicionar o pathLOL273Array
+(
+    [image0] => Array
+        (
+            [name] => 79093530_734024437090652_8531377716555939840_n.png
+            [type] => image/png
+            [tmp_name] => C:\xampp\tmp\phpC187.tmp
+            [error] => 0
+            [size] => 573181
+        )
+
+    [image1] => Array
+        (
+            [name] => IMG_20170615_151910[1]_Easy-Resize.com.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\phpC198.tmp
+            [error] => 0
+            [size] => 222452
+        )
+
+    [image2] => Array
+        (
+            [name] => 
+            [type] => 
+            [tmp_name] => 
+            [error] => 4
+            [size] => 0
+        )
+
+    [image3] => Array
+        (
+            [name] => 
+            [type] => 
+            [tmp_name] => 
+            [error] => 4
+            [size] => 0
+        )
+
+    [image4] => Array
+        (
+            [name] => 
+            [type] => 
+            [tmp_name] => 
+            [error] => 4
+            [size] => 0
+        )
+
+    [image5] => Array
+        (
+            [name] => 
+            [type] => 
+            [tmp_name] => 
+            [error] => 4
+            [size] => 0
+        )
+
+)
+adicionar o pathadicionar o pathLOL251Array
+(
+    [image0] => Array
+        (
+            [name] => RKyaEDwp8J7JKeZWQPuOVWvkUjGQfpCx_cover_580.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\phpA19A.tmp
+            [error] => 0
+            [size] => 122980
+        )
+
+    [image1] => Array
+        (
+            [name] => IMG_20170615_150916[1]_Easy-Resize.com (3).jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\phpA19B.tmp
+            [error] => 0
+            [size] => 174051
+        )
+
+    [image2] => Array
+        (
+            [name] => 
+            [type] => 
+            [tmp_name] => 
+            [error] => 4
+            [size] => 0
+        )
+
+    [image3] => Array
+        (
+            [name] => 
+            [type] => 
+            [tmp_name] => 
+            [error] => 4
+            [size] => 0
+        )
+
+    [image4] => Array
+        (
+            [name] => 
+            [type] => 
+            [tmp_name] => 
+            [error] => 4
+            [size] => 0
+        )
+
+    [image5] => Array
+        (
+            [name] => 
+            [type] => 
+            [tmp_name] => 
+            [error] => 4
+            [size] => 0
+        )
+
+)
+adicionar o pathadicionar o pathLOL252Array
+(
+    [image0] => Array
+        (
+            [name] => IMG_20170615_150916[1]_Easy-Resize.com (3).jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\phpB205.tmp
+            [error] => 0
+            [size] => 174051
+        )
+
+    [image1] => Array
+        (
+            [name] => 
+            [type] => 
+            [tmp_name] => 
+            [error] => 4
+            [size] => 0
+        )
+
+    [image2] => Array
+        (
+            [name] => 
+            [type] => 
+            [tmp_name] => 
+            [error] => 4
+            [size] => 0
+        )
+
+    [image3] => Array
+        (
+            [name] => 
+            [type] => 
+            [tmp_name] => 
+            [error] => 4
+            [size] => 0
+        )
+
+    [image4] => Array
+        (
+            [name] => 
+            [type] => 
+            [tmp_name] => 
+            [error] => 4
+            [size] => 0
+        )
+
+    [image5] => Array
+        (
+            [name] => 
+            [type] => 
+            [tmp_name] => 
+            [error] => 4
+            [size] => 0
+        )
+
+)
+adicionar o pathLOL253Array
+(
+    [image0] => Array
+        (
+            [name] => beachBuoy1.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\php1184.tmp
+            [error] => 0
+            [size] => 136167
+        )
+
+    [image1] => Array
+        (
+            [name] => beachBall.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\php1185.tmp
+            [error] => 0
+            [size] => 7736
+        )
+
+    [image2] => Array
+        (
+            [name] => dirt.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\php1195.tmp
+            [error] => 0
+            [size] => 610339
+        )
+
+    [image3] => Array
+        (
+            [name] => door.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\php1196.tmp
+            [error] => 0
+            [size] => 100092
+        )
+
+    [image4] => Array
+        (
+            [name] => 
+            [type] => 
+            [tmp_name] => 
+            [error] => 4
+            [size] => 0
+        )
+
+    [image5] => Array
+        (
+            [name] => 
+            [type] => 
+            [tmp_name] => 
+            [error] => 4
+            [size] => 0
+        )
+
+)
+adicionar o pathadicionar o pathadicionar o pathadicionar o pathLOL251Array
+(
+    [image0] => Array
+        (
+            [name] => bank.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\phpEC6D.tmp
+            [error] => 0
+            [size] => 18707
+        )
+
+    [image1] => Array
+        (
+            [name] => beachBall.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\phpEC6E.tmp
+            [error] => 0
+            [size] => 7736
+        )
+
+    [image2] => Array
+        (
+            [name] => beachBallTex.png
+            [type] => image/png
+            [tmp_name] => C:\xampp\tmp\phpEC6F.tmp
+            [error] => 0
+            [size] => 2423
+        )
+
+    [image3] => Array
+        (
+            [name] => door.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\phpEC70.tmp
+            [error] => 0
+            [size] => 100092
+        )
+
+    [image4] => Array
+        (
+            [name] => esperguicadeira.png
+            [type] => image/png
+            [tmp_name] => C:\xampp\tmp\phpEC71.tmp
+            [error] => 0
+            [size] => 105919
+        )
+
+    [image5] => Array
+        (
+            [name] => door.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\phpEC82.tmp
+            [error] => 0
+            [size] => 100092
+        )
+
+)
+adicionar o pathadicionar o pathadicionar o pathadicionar o pathadicionar o pathadicionar o pathLOL251Array
+(
+    [image0] => Array
+        (
+            [name] => pool_tiles.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\php90E1.tmp
+            [error] => 0
+            [size] => 72932
+        )
+
+    [image1] => Array
+        (
+            [name] => gold.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\php90F2.tmp
+            [error] => 0
+            [size] => 34133
+        )
+
+    [image2] => Array
+        (
+            [name] => door.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\php90F3.tmp
+            [error] => 0
+            [size] => 100092
+        )
+
+    [image3] => Array
+        (
+            [name] => dirt.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\php9103.tmp
+            [error] => 0
+            [size] => 610339
+        )
+
+    [image4] => Array
+        (
+            [name] => door.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\php9104.tmp
+            [error] => 0
+            [size] => 100092
+        )
+
+    [image5] => Array
+        (
+            [name] => colmo.png
+            [type] => image/png
+            [tmp_name] => C:\xampp\tmp\php9115.tmp
+            [error] => 0
+            [size] => 207731
+        )
+
+)
+adicionar o pathadicionar o pathadicionar o pathadicionar o pathadicionar o pathadicionar o pathLOL252Array
+(
+    [image0] => Array
+        (
+            [name] => pool_tiles.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\php584E.tmp
+            [error] => 0
+            [size] => 72932
+        )
+
+    [image1] => Array
+        (
+            [name] => dirt.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\php585E.tmp
+            [error] => 0
+            [size] => 610339
+        )
+
+    [image2] => Array
+        (
+            [name] => 
+            [type] => 
+            [tmp_name] => 
+            [error] => 4
+            [size] => 0
+        )
+
+    [image3] => Array
+        (
+            [name] => 
+            [type] => 
+            [tmp_name] => 
+            [error] => 4
+            [size] => 0
+        )
+
+    [image4] => Array
+        (
+            [name] => 
+            [type] => 
+            [tmp_name] => 
+            [error] => 4
+            [size] => 0
+        )
+
+    [image5] => Array
+        (
+            [name] => 
+            [type] => 
+            [tmp_name] => 
+            [error] => 4
+            [size] => 0
+        )
+
+)
+adicionar o pathadicionar o pathLOL253Array
+(
+    [image0] => Array
+        (
+            [name] => dirt.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\php9346.tmp
+            [error] => 0
+            [size] => 610339
+        )
+
+    [image1] => Array
+        (
+            [name] => door.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\php9356.tmp
+            [error] => 0
+            [size] => 100092
+        )
+
+    [image2] => Array
+        (
+            [name] => 
+            [type] => 
+            [tmp_name] => 
+            [error] => 4
+            [size] => 0
+        )
+
+    [image3] => Array
+        (
+            [name] => 
+            [type] => 
+            [tmp_name] => 
+            [error] => 4
+            [size] => 0
+        )
+
+    [image4] => Array
+        (
+            [name] => 
+            [type] => 
+            [tmp_name] => 
+            [error] => 4
+            [size] => 0
+        )
+
+    [image5] => Array
+        (
+            [name] => 
+            [type] => 
+            [tmp_name] => 
+            [error] => 4
+            [size] => 0
+        )
+
+)
+adicionar o pathadicionar o pathLOL251Array
+(
+    [image0] => Array
+        (
+            [name] => dirt.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\phpD98A.tmp
+            [error] => 0
+            [size] => 610339
+        )
+
+    [image1] => Array
+        (
+            [name] => door.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\phpD99B.tmp
+            [error] => 0
+            [size] => 100092
+        )
+
+    [image2] => Array
+        (
+            [name] => beachBall.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\phpD99C.tmp
+            [error] => 0
+            [size] => 7736
+        )
+
+    [image3] => Array
+        (
+            [name] => bank.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\phpD99D.tmp
+            [error] => 0
+            [size] => 18707
+        )
+
+    [image4] => Array
+        (
+            [name] => beachBuoy1.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\phpD9AD.tmp
+            [error] => 0
+            [size] => 136167
+        )
+
+    [image5] => Array
+        (
+            [name] => colmo.png
+            [type] => image/png
+            [tmp_name] => C:\xampp\tmp\phpD9AE.tmp
+            [error] => 0
+            [size] => 207731
+        )
+
+)
+adicionar o pathadicionar o pathadicionar o pathadicionar o pathadicionar o pathadicionar o pathLOL251Array
+(
+    [image0] => Array
+        (
+            [name] => beachBall.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\php4886.tmp
+            [error] => 0
+            [size] => 7736
+        )
+
+    [image1] => Array
+        (
+            [name] => beachBallTex.png
+            [type] => image/png
+            [tmp_name] => C:\xampp\tmp\php4887.tmp
+            [error] => 0
+            [size] => 2423
+        )
+
+    [image2] => Array
+        (
+            [name] => 
+            [type] => 
+            [tmp_name] => 
+            [error] => 4
+            [size] => 0
+        )
+
+    [image3] => Array
+        (
+            [name] => 
+            [type] => 
+            [tmp_name] => 
+            [error] => 4
+            [size] => 0
+        )
+
+    [image4] => Array
+        (
+            [name] => 
+            [type] => 
+            [tmp_name] => 
+            [error] => 4
+            [size] => 0
+        )
+
+    [image5] => Array
+        (
+            [name] => 
+            [type] => 
+            [tmp_name] => 
+            [error] => 4
+            [size] => 0
+        )
+
+)
+adicionar o pathadicionar o pathLOL252Array
+(
+    [image0] => Array
+        (
+            [name] => flagFabricSideA.png
+            [type] => image/png
+            [tmp_name] => C:\xampp\tmp\phpA710.tmp
+            [error] => 0
+            [size] => 7775
+        )
+
+    [image1] => Array
+        (
+            [name] => flagPole.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\phpA711.tmp
+            [error] => 0
+            [size] => 26022
+        )
+
+    [image2] => Array
+        (
+            [name] => grass.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\phpA722.tmp
+            [error] => 0
+            [size] => 340980
+        )
+
+    [image3] => Array
+        (
+            [name] => metal.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\phpA723.tmp
+            [error] => 0
+            [size] => 11983
+        )
+
+    [image4] => Array
+        (
+            [name] => 
+            [type] => 
+            [tmp_name] => 
+            [error] => 4
+            [size] => 0
+        )
+
+    [image5] => Array
+        (
+            [name] => 
+            [type] => 
+            [tmp_name] => 
+            [error] => 4
+            [size] => 0
+        )
+
+)
+adicionar o pathadicionar o pathadicionar o pathadicionar o pathLOL251Array
+(
+    [image0] => Array
+        (
+            [name] => bank.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\phpC45D.tmp
+            [error] => 0
+            [size] => 18707
+        )
+
+    [image1] => Array
+        (
+            [name] => beachBall.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\phpC45E.tmp
+            [error] => 0
+            [size] => 7736
+        )
+
+    [image2] => Array
+        (
+            [name] => beachBallTex.png
+            [type] => image/png
+            [tmp_name] => C:\xampp\tmp\phpC45F.tmp
+            [error] => 0
+            [size] => 2423
+        )
+
+    [image3] => Array
+        (
+            [name] => 
+            [type] => 
+            [tmp_name] => 
+            [error] => 4
+            [size] => 0
+        )
+
+    [image4] => Array
+        (
+            [name] => 
+            [type] => 
+            [tmp_name] => 
+            [error] => 4
+            [size] => 0
+        )
+
+    [image5] => Array
+        (
+            [name] => 
+            [type] => 
+            [tmp_name] => 
+            [error] => 4
+            [size] => 0
+        )
+
+)
+adicionar o pathadicionar o pathadicionar o pathLOL2
