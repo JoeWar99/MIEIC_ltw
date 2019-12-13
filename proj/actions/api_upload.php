@@ -43,6 +43,7 @@ if (!insert_new_property($house_name, $price_per_day, $adress, $description, $po
   //   }
   //   $i++;
   // }
+  
   $db = Database::instance()->db();
   $id = $db->lastInsertId();
   $i = 0;
@@ -52,7 +53,7 @@ if (!insert_new_property($house_name, $price_per_day, $adress, $description, $po
 
   // Move the uploaded file to its final destination
   foreach ($_FILES as $val) {
-   
+
     if ($Files_bool[$i] == 'true') {
       $originalFileName_string = "../assets/imagesHouses/houseImage_" . $id . "_" . $i . ".jpg";
 
@@ -61,16 +62,14 @@ if (!insert_new_property($house_name, $price_per_day, $adress, $description, $po
         unlink($originalFileName_string); //remove the file
       }
 
-      //if ($val['name'] != ''){
+      if ($val['name'] != '') {
         file_put_contents('somefilename.txt', print_r('adicionar o path', true), FILE_APPEND);
         move_uploaded_file($val['tmp_name'], $originalFileName_string);
-        if(!add_photo_path_to_house($id, $originalFileName_string)){
+        if (!add_photo_path_to_house($id, $originalFileName_string)) {
           echo json_encode(-1);
-         // exit;
+          exit;
         }
-     // }
-      
-
+      }
     }
     $i++;
   }

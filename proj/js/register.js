@@ -109,7 +109,6 @@ function emailVerify() {
 }
 
 
-
 function usernameVerify() {
 
     if (!/^[0-9a-zA-Z]{6,}$/.test(username.value)) {

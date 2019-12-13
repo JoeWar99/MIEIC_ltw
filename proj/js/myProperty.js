@@ -129,8 +129,12 @@ function draw_house_in_organized_fashion_Properties(house_data) {
 
     return_html_in_string_form = draw_house_in_organized_fashion(house_data);
 
-    return_html_in_string_form += '<button class="buttonsPropertyOwned" method="POST" action="../actions/action_register.php">Edit</button>';
-
+    //  return_html_in_string_form += '<form action="../pages/editProperty.php" method="post"> <input type="hidden" name="HouseId" value= "' + house_id + '"/> <input type = "submit" name = "edit" value = "Edit" /> </form>
+    //  return_html_in_string_form += '<button class="buttonsPropertyOwned" method="POST" action="../actions/action_register.php">Edit</button>';
+    return_html_in_string_form += '<form action="../pages/editProperty.php" method="post">';
+    return_html_in_string_form += '<input type="hidden" name="HouseId" value=' + house_id + '/>';
+    return_html_in_string_form += '<input class="buttonsPropertyOwned" type = "submit" name = "edit" value = "Edit" />';
+    return_html_in_string_form += '</form>'
     return_html_in_string_form += '<button class="buttonsPropertyOwned" onClick="pressed_delete_Button(' + house_id + ')">Delete</button>';
 
     return return_html_in_string_form;

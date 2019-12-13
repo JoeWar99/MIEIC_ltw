@@ -426,4 +426,163 @@ function draw_add_property($usr)
 
 }
 
+
+function draw_edit_property($usr, $house_id)
+{   
+    $house_id = intval($house_id);
+    var_dump($house_id);
+    echo "<div id=\"MyPropertiesHeader\">";
+    echo "<p id=\"MyPropertiesTitle\"> Add Property </p> ";
+    echo "</div>";
+
+    $house_information = get_house_information($house_id);
+
+    if($house_information == false){
+
+    }
+
+    else{
+        var_dump($house_information);
+    ?>
+
+    <form id="add-propertyForm" name="addPropertyForm" action="#" method="post" enctype="multipart/form-data">
+        <div id="add-property-content">
+
+            <div id="add-property-form-images">
+                <p id="my-images"> Images </p>
+
+                <div id="file-input-grid">
+
+                    <div class="file-input-box">
+                        <p> Main Image </p>
+
+                        <div id="preview0">
+                            <img src="../assets/imagesHouses/noHouseImage.png" alt="no image" width="200" height="150">
+                        </div>
+                        <div id="input-0">
+                            <label>
+                                <input id="file-input0" name="image0" class="InputAddProperty" type="file" placeholder="House Name">
+                                <p class="btn-upload-image"> upload Image </p>
+                            </label>
+                        </div>
+                    </div>
+
+
+                    <div class="file-input-box">
+                        <p> Image 1 </p>
+
+                        <div id="preview1">
+                            <img src="../assets/imagesHouses/noHouseImage.png" alt="no image" width="200" height="150">
+                        </div>
+                        <div id="input-1">
+                            <label>
+                                <input id="file-input1" name="image1" class="InputAddProperty" type="file" placeholder="House Name">
+                                <p class="btn-upload-image"> upload Image </p>
+                            </label>
+
+                        </div>
+
+                    </div>
+
+                    <div class="file-input-box">
+                        <p> Image 2 </p>
+
+                        <div id="preview2">
+                            <img src="../assets/imagesHouses/noHouseImage.png" alt="no image" width="200" height="150">
+                        </div>
+                        <div id="input-2">
+                            <label>
+                                <input id="file-input2" name="image2" class="InputAddProperty" type="file" placeholder="House Name">
+                                <p class="btn-upload-image"> upload Image </p>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="file-input-box">
+                        <p> Image 3 </p>
+
+                        <div id="preview3">
+                            <img src="../assets/imagesHouses/noHouseImage.png" alt="no image" width="200" height="150">
+                        </div>
+                        <div id="input-3">
+                            <label>
+                                <input id="file-input3" name="image3" class="InputAddProperty" type="file" placeholder="House Name">
+                                <p class="btn-upload-image"> upload Image </p>
+                            </label>
+                        </div>
+
+                    </div>
+
+                    <div class="file-input-box">
+                        <p> Image 4 </p>
+                        
+                        <div id="preview4">
+                            <img src="../assets/imagesHouses/noHouseImage.png" alt="no image" width="200" height="150">
+                        </div>
+                        <div id="input-4">
+                            <label>
+                                <input id="file-input4" name="image4" class="InputAddProperty" type="file" placeholder="House Name">
+                                <p class="btn-upload-image"> upload Image </p>
+                            </label>
+
+                        </div>
+                    </div>
+
+                    <div class="file-input-box">
+                        
+                    <p> Image 5 </p>
+
+                        <div id="preview5">
+                            <img src="../assets/imagesHouses/noHouseImage.png" alt="no image" width="200" height="150">
+                        </div>
+                        <div id="input-5">
+                            <label>
+                                <input id="file-input5" name="image5" class="InputAddProperty" type="file" placeholder="House Name">
+                                <p class="btn-upload-image"> upload Image </p>
+                            </label>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="add-property-form-text">
+
+                <p id="my-info"> Info </p>
+
+                <input id="house-name" name="HouseName" class="InputAddProperty" type="text" value="<?php echo $house_information['Name'] ?>"  placeholder="House Name">
+                <div id="HouseNameError" class="valErrorP"> </div> <br>
+
+                <input id="price-per-day" name="PricePerDay" class="InputAddProperty" type="number" value="<?php echo $house_information['PricePerDay'] ?>" placeholder="Price Per Day">
+                <div id="PricePerDayError" class="valErrorP"> </div> <br>
+
+                <input id="adress" name="Adress" class="InputAddProperty" type="text" value="<?php echo $house_information['Address'] ?>" placeholder="Adress">
+                <div id="AdressError" class="valErrorP"> </div> <br>
+
+                <textarea class="InputAddPropertyD" name="description" rows="4" cols="50" value="<?php echo $house_information['Description'] ?>" placeholder="Description"></textarea>
+
+                <input id="postal-code" name="PostalCode" class="InputAddProperty" type="text" value="<?php echo $house_information['PostalCode'] ?>" placeholder="Postal Code">
+                <div id="PostalCodeError" class="valErrorP"> </div> <br>
+
+                <input id="city" name="City" class="InputAddProperty" type="text"  placeholder="City">
+                <div id="CityError" class="valErrorP"> </div> <br>
+
+                <input id="country" name="Country" class="InputAddProperty" type="text" placeholder="Country">
+                <div id="CountryError" class="valErrorP"> </div> <br>
+
+                <input id="capacity" name="Capacity" class="InputAddProperty" type="number" value="<?php echo $house_information['Capacity'] ?>" placeholder="Capacity">
+                <div id="CapacityError" class="valErrorP"> </div> <br>
+
+            </div>
+        </div>
+        <input value="Add Property" name="submitButton" id="btnR2" type="button" onclick="Validate();">
+
+    </form>
+<?php
+    }
+
+
+}
+
 ?>

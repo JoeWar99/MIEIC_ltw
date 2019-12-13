@@ -292,6 +292,22 @@ function add_photo_path_to_house($id, $originalFileName_string){
 }
 
 
+function get_house_information($house_id){
+    $db = Database::instance()->db();
+    try{
+        $stmt = $db->prepare("SELECT * FROM House WHERE House.Id = ?;");
+        $stmt->execute(array($house_id));
+        $result = $stmt->fetch();
+        $stmt = $db->prepare("SELECT * FROM City JOIN COUNTRY WHERE House.Id = ?;");
+        $stmt->execute(array($house_id));
+
+        return $result;
+    } catch (PDOException $e) {
+        return false;
+    }
+}
+
+
 
 /* Auxiliar develpment functions to delete before work is finalized */
 
