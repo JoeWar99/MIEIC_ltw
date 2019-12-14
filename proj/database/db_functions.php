@@ -84,7 +84,7 @@ function get_house_top_pic($house_id)
     $stmt = $db->prepare("SELECT Path as path FROM House H join Photo P on H.Id = P.HouseId WHERE H.Id = ?;");
     $stmt->execute(array(intval($house_id)));
     $result = $stmt->fetch();
-    return $result['path']; 
+    return $result['path'];
 }
 
 function get_house_by_id($house_id)
@@ -206,22 +206,21 @@ function delete_house($house_id)
 
         // checks to see if in all the rents associated with that house there's at least one that happening right now
         // or will happen in the future
-        for($i = 0; $i < count($rents); $i++){
-            if($date > $rents[$i]['StartDate'] && $date < $rents[$i]['EndDate']){
+        for ($i = 0; $i < count($rents); $i++) {
+            if ($date > $rents[$i]['StartDate'] && $date < $rents[$i]['EndDate']) {
                 return false;
-            }
-            else if($date < $rents[$i]['StartDate']){
+            } else if ($date < $rents[$i]['StartDate']) {
                 return false;
             }
         }
 
-    
+
         // deleting all images for a certain house before deleting the entry of the house from the database
         $stmt = $db->prepare("SELECT * FROM Photo WHERE HouseId = ?");
         $stmt->execute(array($house_id));
         $photos = $stmt->fetchAll();
 
-        for($i = 0; $i < count($photos); $i++){
+        for ($i = 0; $i < count($photos); $i++) {
             if (file_exists($photos[$i]['Path'])) { //checking to see if the file even exists
                 chmod($photos[$i]['Path'], 0755); //Change the file permissions if allowed
                 unlink($photos[$i]['Path']); //remove the file
@@ -239,11 +238,70 @@ function delete_house($house_id)
         // if an exception is thrown means someting went wrong so returning false
         return false;
     }
-
 }
 
 
-function cancel_reservation($rent_id){
+function update_property($house_id, $house_name, $price_per_day, $adress, $description, $postal_code, $city, $country, $capacity, $username)
+{
+    $db = Database::instance()->db();
+    try {
+        file_put_contents('somefilename.txt', print_r('merda1', true), FILE_APPEND);
+
+        //     $sql = "UPDATE House " . "SET Name = \"2asdss\"," . "Description = :description," . "PricePerDay = :price_per_day,"
+        //         . "Address = :adress,"
+        //         . "PostalCode = :postal_code,"
+        //         . "Capacity = :capacity"
+        //         . "WHERE House.Id = :house_id";
+
+        //     //   UPDATE House SET Name = "merda", Description = "merda", PricePerDay = "10000", Adress = "sdasdasassadsa", PostalCode = "34234Q", Capacity = "33" WHERE House.Id = 82;
+
+        //     file_put_contents('somefilename.txt', print_r('merda2', true), FILE_APPEND);
+        //     // passing values to the parameters
+
+        //     $stmt = $db->prepare($sql);
+        //    // $stmt->bindValue(':house_name', $house_name);
+        //     $stmt->bindValue(':description', $description);
+        //     $stmt->bindValue(':price_per_day', $price_per_day);
+        //     $stmt->bindValue(':adress', $adress);
+        //     $stmt->bindValue(':postal_code', $postal_code);
+        //     $stmt->bindValue(':capacity', $capacity);
+        //     $stmt->bindValue(':house_id', $house_id);
+
+        $sql = "UPDATE House " . "SET Name = '" . $house_name . "'," . "Description ='". $description . "'," . "PricePerDay =" . $price_per_day . ","
+            . "Address ='" . $adress  . " ',"
+            . "PostalCode ='" .$postal_code . "',"
+            . "Capacity =" .$capacity 
+            . " WHERE House.Id =" . $house_id . ";";
+
+        //   UPDATE House SET Name = "merda", Description = "merda", PricePerDay = "10000", Adress = "sdasdasassadsa", PostalCode = "34234Q", Capacity = "33" WHERE House.Id = 82;
+
+        file_put_contents('somefilename.txt', print_r('merda2', true), FILE_APPEND);
+        // passing values to the parameters
+
+        $stmt = $db->prepare($sql);
+        $stmt->execute();
+        return true;
+    } catch (PDOException $e) {
+        file_put_contents('somefilename.txt', print_r($e, true), FILE_APPEND);
+        return false;
+    }
+}
+
+function get_houses_photos($house_id)
+{
+    try {
+        $db = Database::instance()->db();
+        $stmt = $db->prepare("SELECT Path as path FROM House H join Photo P on H.Id = P.HouseId WHERE H.Id = ?;");
+        $stmt->execute(array(intval($house_id)));
+        $result = $stmt->fetchall();
+        return $result;
+    } catch (PDOException $e) {
+        return -1;
+    }
+}
+
+function cancel_reservation($rent_id)
+{
     $db = Database::instance()->db();
     try {
         $stmt = $db->prepare("SELECT * FROM Rent WHERE Rent.Id=?");
@@ -252,13 +310,11 @@ function cancel_reservation($rent_id){
 
         $date = date('Y/m/d', time());
 
-        if($date > $ret['StartDate'] && $date < $ret['EndDate']){
+        if ($date > $ret['StartDate'] && $date < $ret['EndDate']) {
             return -1;
-        }
-        else if($date <$ret['StartDate']){
+        } else if ($date < $ret['StartDate']) {
             return -1;
-        }
-        else{
+        } else {
             $stmt = $db->prepare("DELETE FROM Rent WHERE Rent.Id=?");
             $stmt->execute(array($rent_id));
             return true;
@@ -268,9 +324,10 @@ function cancel_reservation($rent_id){
     }
 }
 
-function insert_new_property($house_name, $price_per_day, $adress, $description, $postal_code, $city, $country, $capacity, $username){
+function insert_new_property($house_name, $price_per_day, $adress, $description, $postal_code, $city, $country, $capacity, $username)
+{
     $db = Database::instance()->db();
-    try{
+    try {
         $onwer_id = get_id_from_usr($username);
         $stmt = $db->prepare("INSERT INTO House (id, Name, Rating, Description, PricePerDay, Address, PostalCode, OwnerId, CityId, Capacity) values (?,?,?,?,?,?,?,?,?,?);");
         $stmt->execute(array(null, $house_name, 0, $description, $price_per_day, $adress, $postal_code, $onwer_id, 1, $capacity));
@@ -280,9 +337,11 @@ function insert_new_property($house_name, $price_per_day, $adress, $description,
     }
 }
 
-function add_photo_path_to_house($id, $originalFileName_string){
+function add_photo_path_to_house($id, $originalFileName_string)
+{
     $db = Database::instance()->db();
-    try{
+    try {
+
         $stmt = $db->prepare("INSERT INTO Photo (Id, HouseId, Description, Path) values (? , ?, 'Foto Principal da casa',  ?);");
         $stmt->execute(array(null, $id, $originalFileName_string));
         return true;
@@ -292,14 +351,13 @@ function add_photo_path_to_house($id, $originalFileName_string){
 }
 
 
-function get_house_information($house_id){
+function get_house_information($house_id)
+{
     $db = Database::instance()->db();
-    try{
+    try {
         $stmt = $db->prepare("SELECT * FROM House WHERE House.Id = ?;");
         $stmt->execute(array($house_id));
         $result = $stmt->fetch();
-        $stmt = $db->prepare("SELECT * FROM City JOIN COUNTRY WHERE House.Id = ?;");
-        $stmt->execute(array($house_id));
 
         return $result;
     } catch (PDOException $e) {

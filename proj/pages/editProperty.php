@@ -11,7 +11,7 @@
 
   $house_id = $_POST['HouseId'];
 
-  draw_header($usr, "addProperty"); 
+  draw_header($usr, "editProperty"); 
   draw_edit_property($usr, $house_id);
   draw_footer();
 

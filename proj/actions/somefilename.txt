@@ -1,51 +1,636 @@
-67Array
+Array
 (
-    [image2] => Array
+    [houseId] => 85
+)
+Array
+(
+    [HouseName] => rmerdaaaaaaaaaa
+    [PricePerDay] => 222
+    [Adress] => dasdas
+    [description] => asdddsdas
+    [PostalCode] => 50050-002
+    [City] => sdassd
+    [Country] => asdsdsda
+    [Capacity] => 33
+    [houseId] => 85
+    [File0] => 2
+    [File1] => 2
+    [File2] => 0
+    [File3] => 0
+    [File4] => 0
+    [File5] => 0
+)
+Array
+(
+    [0] => 2
+    [1] => 2
+    [2] => 0
+    [3] => 0
+    [4] => 0
+    [5] => 0
+)
+Array
+(
+    [houseId] => 85
+)
+Array
+(
+    [houseId] => 85
+)
+Array
+(
+    [HouseName] => merdaaSsaSSSsAS
+    [PricePerDay] => 222
+    [Adress] => dasdas
+    [description] => SAsASa
+    [PostalCode] => 50050-002
+    [City] => sSasAS
+    [Country] => asASs
+    [Capacity] => 33
+    [houseId] => 85
+    [File0] => 2
+    [File1] => 2
+    [File2] => 0
+    [File3] => 0
+    [File4] => 0
+    [File5] => 0
+)
+Array
+(
+    [0] => 2
+    [1] => 2
+    [2] => 0
+    [3] => 0
+    [4] => 0
+    [5] => 0
+)
+Array
+(
+    [houseId] => 85
+)
+Array
+(
+    [HouseName] => merdAAAAAAAAAAAAAAAAA
+    [PricePerDay] => 222
+    [Adress] => dasdas
+    [description] => asdadadsds
+    [PostalCode] => 50050-002
+    [City] => asdasdad
+    [Country] => asdasdas
+    [Capacity] => 33
+    [houseId] => 85
+    [File0] => 2
+    [File1] => 2
+    [File2] => 0
+    [File3] => 0
+    [File4] => 0
+    [File5] => 0
+)
+Array
+(
+    [0] => 2
+    [1] => 2
+    [2] => 0
+    [3] => 0
+    [4] => 0
+    [5] => 0
+)
+shitArray
+(
+    [houseId] => 85
+)
+Array
+(
+    [houseId] => 85
+)
+Array
+(
+    [houseId] => 85
+)
+Array
+(
+    [HouseName] => merdaaaaaaa
+    [PricePerDay] => 222
+    [Adress] => dasdassadasdasd
+    [description] => asdasdasdasd
+    [PostalCode] => 50050-002
+    [City] => asdasdasd
+    [Country] => asdasdasd
+    [Capacity] => 33
+    [houseId] => 85
+    [File0] => 2
+    [File1] => 2
+    [File2] => 0
+    [File3] => 0
+    [File4] => 0
+    [File5] => 0
+)
+Array
+(
+    [0] => 2
+    [1] => 2
+    [2] => 0
+    [3] => 0
+    [4] => 0
+    [5] => 0
+)
+merda1merda2shitArray
+(
+    [houseId] => 85
+)
+Array
+(
+    [HouseName] => merdaaaaaaa
+    [PricePerDay] => 222
+    [Adress] => dasdas
+    [description] => dasadasd
+    [PostalCode] => 50050-002
+    [City] => asdasdasd
+    [Country] => dasdasdasd
+    [Capacity] => 33
+    [houseId] => 85
+    [File0] => 2
+    [File1] => 2
+    [File2] => 0
+    [File3] => 0
+    [File4] => 0
+    [File5] => 0
+)
+Array
+(
+    [0] => 2
+    [1] => 2
+    [2] => 0
+    [3] => 0
+    [4] => 0
+    [5] => 0
+)
+merda1merda2shitArray
+(
+    [HouseName] => merdaaaaaaa
+    [PricePerDay] => 222
+    [Adress] => dasdas
+    [description] => dasadasd
+    [PostalCode] => 50050-002
+    [City] => asdasdasd
+    [Country] => dasdasdasd
+    [Capacity] => 33
+    [houseId] => 85
+    [File0] => 2
+    [File1] => 2
+    [File2] => 0
+    [File3] => 0
+    [File4] => 0
+    [File5] => 0
+)
+Array
+(
+    [0] => 2
+    [1] => 2
+    [2] => 0
+    [3] => 0
+    [4] => 0
+    [5] => 0
+)
+merda1merda2PDOException Object
+(
+    [message:protected] => SQLSTATE[HY000]: General error: 1 near "House": syntax error
+    [string:Exception:private] => 
+    [code:protected] => HY000
+    [file:protected] => C:\xampp\htdocs\MIEIC_ltw\proj\database\db_functions.php
+    [line:protected] => 263
+    [trace:Exception:private] => Array
         (
-            [name] => 
-            [type] => 
-            [tmp_name] => 
-            [error] => 4
-            [size] => 0
+            [0] => Array
+                (
+                    [file] => C:\xampp\htdocs\MIEIC_ltw\proj\database\db_functions.php
+                    [line] => 263
+                    [function] => prepare
+                    [class] => PDO
+                    [type] => ->
+                    [args] => Array
+                        (
+                            [0] => UPDATE House SET Name = :house_name,Description = :description,PricePerDay = :price_per_day,Adress = :adress,PostalCode = :postal_code,Capacity = :capacityWHERE House.Id = :house_id
+                        )
+
+                )
+
+            [1] => Array
+                (
+                    [file] => C:\xampp\htdocs\MIEIC_ltw\proj\actions\api_update_house.php
+                    [line] => 30
+                    [function] => update_property
+                    [args] => Array
+                        (
+                            [0] => 85
+                            [1] => merdaaaaaaa
+                            [2] => 222
+                            [3] => dasdas
+                            [4] => dasadasd
+                            [5] => 50050-002
+                            [6] => asdasdasd
+                            [7] => dasdasdasd
+                            [8] => 33
+                            [9] => pniblett0
+                        )
+
+                )
+
         )
 
-    [image3] => Array
+    [previous:Exception:private] => 
+    [errorInfo] => Array
         (
-            [name] => 
-            [type] => 
-            [tmp_name] => 
-            [error] => 4
-            [size] => 0
-        )
-
-    [image4] => Array
-        (
-            [name] => 
-            [type] => 
-            [tmp_name] => 
-            [error] => 4
-            [size] => 0
-        )
-
-    [image5] => Array
-        (
-            [name] => 
-            [type] => 
-            [tmp_name] => 
-            [error] => 4
-            [size] => 0
+            [0] => HY000
+            [1] => 1
+            [2] => near "House": syntax error
         )
 
 )
-adicionar o pathadicionar o pathLOL268Array
+shitArray
+(
+    [houseId] => 85
+)
+Array
+(
+    [houseId] => 85
+)
+Array
+(
+    [HouseName] => lololololol
+    [PricePerDay] => 222
+    [Adress] => dasdas
+    [description] => asdasd
+    [PostalCode] => 50050-002
+    [City] => dasd
+    [Country] => adasdasd
+    [Capacity] => 33
+    [houseId] => 85
+    [File0] => 2
+    [File1] => 2
+    [File2] => 0
+    [File3] => 0
+    [File4] => 0
+    [File5] => 0
+)
+Array
+(
+    [0] => 2
+    [1] => 2
+    [2] => 0
+    [3] => 0
+    [4] => 0
+    [5] => 0
+)
+merda1merda2PDOException Object
+(
+    [message:protected] => SQLSTATE[HY000]: General error: 1 near "House": syntax error
+    [string:Exception:private] => 
+    [code:protected] => HY000
+    [file:protected] => C:\xampp\htdocs\MIEIC_ltw\proj\database\db_functions.php
+    [line:protected] => 263
+    [trace:Exception:private] => Array
+        (
+            [0] => Array
+                (
+                    [file] => C:\xampp\htdocs\MIEIC_ltw\proj\database\db_functions.php
+                    [line] => 263
+                    [function] => prepare
+                    [class] => PDO
+                    [type] => ->
+                    [args] => Array
+                        (
+                            [0] => UPDATE House SET Name = :house_name,Description = :description,PricePerDay = :price_per_day,Address = :adress,PostalCode = :postal_code,Capacity = :capacityWHERE House.Id = :house_id
+                        )
+
+                )
+
+            [1] => Array
+                (
+                    [file] => C:\xampp\htdocs\MIEIC_ltw\proj\actions\api_update_house.php
+                    [line] => 30
+                    [function] => update_property
+                    [args] => Array
+                        (
+                            [0] => 85
+                            [1] => lololololol
+                            [2] => 222
+                            [3] => dasdas
+                            [4] => asdasd
+                            [5] => 50050-002
+                            [6] => dasd
+                            [7] => adasdasd
+                            [8] => 33
+                            [9] => pniblett0
+                        )
+
+                )
+
+        )
+
+    [previous:Exception:private] => 
+    [errorInfo] => Array
+        (
+            [0] => HY000
+            [1] => 1
+            [2] => near "House": syntax error
+        )
+
+)
+shitArray
+(
+    [houseId] => 85
+)
+Array
+(
+    [HouseName] => rdsdadasdasnnnnnnn
+    [PricePerDay] => 222
+    [Adress] => dasdadasdasds
+    [description] => asdasdasd
+    [PostalCode] => 50050-002
+    [City] => dasdasd
+    [Country] => asdasdasd
+    [Capacity] => 33
+    [houseId] => 85
+    [File0] => 2
+    [File1] => 2
+    [File2] => 0
+    [File3] => 0
+    [File4] => 0
+    [File5] => 0
+)
+Array
+(
+    [0] => 2
+    [1] => 2
+    [2] => 0
+    [3] => 0
+    [4] => 0
+    [5] => 0
+)
+merda1merda2PDOException Object
+(
+    [message:protected] => SQLSTATE[HY000]: General error: 1 near "House": syntax error
+    [string:Exception:private] => 
+    [code:protected] => HY000
+    [file:protected] => C:\xampp\htdocs\MIEIC_ltw\proj\database\db_functions.php
+    [line:protected] => 260
+    [trace:Exception:private] => Array
+        (
+            [0] => Array
+                (
+                    [file] => C:\xampp\htdocs\MIEIC_ltw\proj\database\db_functions.php
+                    [line] => 260
+                    [function] => prepare
+                    [class] => PDO
+                    [type] => ->
+                    [args] => Array
+                        (
+                            [0] => UPDATE House SET Name = :house_name,Description = :description,PricePerDay = :price_per_day,Address = :adress,PostalCode = :postal_code,Capacity = :capacityWHERE House.Id = :house_id
+                        )
+
+                )
+
+            [1] => Array
+                (
+                    [file] => C:\xampp\htdocs\MIEIC_ltw\proj\actions\api_update_house.php
+                    [line] => 30
+                    [function] => update_property
+                    [args] => Array
+                        (
+                            [0] => 85
+                            [1] => rdsdadasdasnnnnnnn
+                            [2] => 222
+                            [3] => dasdadasdasds
+                            [4] => asdasdasd
+                            [5] => 50050-002
+                            [6] => dasdasd
+                            [7] => asdasdasd
+                            [8] => 33
+                            [9] => pniblett0
+                        )
+
+                )
+
+        )
+
+    [previous:Exception:private] => 
+    [errorInfo] => Array
+        (
+            [0] => HY000
+            [1] => 1
+            [2] => near "House": syntax error
+        )
+
+)
+shitArray
+(
+    [HouseName] => rdsdadasdasnnnnnnn
+    [PricePerDay] => 222
+    [Adress] => dasdadasdasds
+    [description] => asdasdasd
+    [PostalCode] => 50050-002
+    [City] => dasdasd
+    [Country] => asdasdasd
+    [Capacity] => 33
+    [houseId] => 85
+    [File0] => 2
+    [File1] => 2
+    [File2] => 0
+    [File3] => 0
+    [File4] => 0
+    [File5] => 0
+)
+Array
+(
+    [0] => 2
+    [1] => 2
+    [2] => 0
+    [3] => 0
+    [4] => 0
+    [5] => 0
+)
+merda1merda2PDOException Object
+(
+    [message:protected] => SQLSTATE[HY000]: General error: 1 near "House": syntax error
+    [string:Exception:private] => 
+    [code:protected] => HY000
+    [file:protected] => C:\xampp\htdocs\MIEIC_ltw\proj\database\db_functions.php
+    [line:protected] => 261
+    [trace:Exception:private] => Array
+        (
+            [0] => Array
+                (
+                    [file] => C:\xampp\htdocs\MIEIC_ltw\proj\database\db_functions.php
+                    [line] => 261
+                    [function] => prepare
+                    [class] => PDO
+                    [type] => ->
+                    [args] => Array
+                        (
+                            [0] => UPDATE House SET Name = "2asdss",Description = :description,PricePerDay = :price_per_day,Address = :adress,PostalCode = :postal_code,Capacity = :capacityWHERE House.Id = :house_id
+                        )
+
+                )
+
+            [1] => Array
+                (
+                    [file] => C:\xampp\htdocs\MIEIC_ltw\proj\actions\api_update_house.php
+                    [line] => 30
+                    [function] => update_property
+                    [args] => Array
+                        (
+                            [0] => 85
+                            [1] => rdsdadasdasnnnnnnn
+                            [2] => 222
+                            [3] => dasdadasdasds
+                            [4] => asdasdasd
+                            [5] => 50050-002
+                            [6] => dasdasd
+                            [7] => asdasdasd
+                            [8] => 33
+                            [9] => pniblett0
+                        )
+
+                )
+
+        )
+
+    [previous:Exception:private] => 
+    [errorInfo] => Array
+        (
+            [0] => HY000
+            [1] => 1
+            [2] => near "House": syntax error
+        )
+
+)
+shitArray
+(
+    [houseId] => 85
+)
+Array
+(
+    [HouseName] => dasdadasssssssssssssssssssssssssssnnnnnnnnnnnnnnnnnnnnnnnnnn
+    [PricePerDay] => 222
+    [Adress] => dasdasddddasdas
+    [description] => ssssasdddd
+    [PostalCode] => 50050-002
+    [City] => asddasdasd
+    [Country] => dasdasdasdas
+    [Capacity] => 33
+    [houseId] => 85
+    [File0] => 2
+    [File1] => 2
+    [File2] => 0
+    [File3] => 0
+    [File4] => 0
+    [File5] => 0
+)
+Array
+(
+    [0] => 2
+    [1] => 2
+    [2] => 0
+    [3] => 0
+    [4] => 0
+    [5] => 0
+)
+merda1merda2PDOException Object
+(
+    [message:protected] => SQLSTATE[HY000]: General error: 1 near "House": syntax error
+    [string:Exception:private] => 
+    [code:protected] => HY000
+    [file:protected] => C:\xampp\htdocs\MIEIC_ltw\proj\database\db_functions.php
+    [line:protected] => 261
+    [trace:Exception:private] => Array
+        (
+            [0] => Array
+                (
+                    [file] => C:\xampp\htdocs\MIEIC_ltw\proj\database\db_functions.php
+                    [line] => 261
+                    [function] => prepare
+                    [class] => PDO
+                    [type] => ->
+                    [args] => Array
+                        (
+                            [0] => UPDATE House SET Name = "2asdss",Description = :description,PricePerDay = :price_per_day,Address = :adress,PostalCode = :postal_code,Capacity = :capacityWHERE House.Id = :house_id
+                        )
+
+                )
+
+            [1] => Array
+                (
+                    [file] => C:\xampp\htdocs\MIEIC_ltw\proj\actions\api_update_house.php
+                    [line] => 30
+                    [function] => update_property
+                    [args] => Array
+                        (
+                            [0] => 85
+                            [1] => dasdadasssssssssssssssssssssssssssnnnnnnnnnnnnnnnnnnnnnnnnnn
+                            [2] => 222
+                            [3] => dasdasddddasdas
+                            [4] => ssssasdddd
+                            [5] => 50050-002
+                            [6] => asddasdasd
+                            [7] => dasdasdasdas
+                            [8] => 33
+                            [9] => pniblett0
+                        )
+
+                )
+
+        )
+
+    [previous:Exception:private] => 
+    [errorInfo] => Array
+        (
+            [0] => HY000
+            [1] => 1
+            [2] => near "House": syntax error
+        )
+
+)
+shitArray
+(
+    [houseId] => 85
+)
+Array
+(
+    [HouseName] => rua dos assdnnnnnnnnn
+    [PricePerDay] => 222
+    [Adress] => dasdas
+    [description] => sdadas
+    [PostalCode] => 50050-002
+    [City] => asdasd
+    [Country] => asdasd
+    [Capacity] => 33
+    [houseId] => 85
+    [File0] => 2
+    [File1] => 2
+    [File2] => 0
+    [File3] => 0
+    [File4] => 0
+    [File5] => 0
+)
+Array
+(
+    [0] => 2
+    [1] => 2
+    [2] => 0
+    [3] => 0
+    [4] => 0
+    [5] => 0
+)
+merda1merda20Array
 (
     [image0] => Array
         (
-            [name] => IMG_20170615_151910[1]_Easy-Resize.com.jpg
-            [type] => image/jpeg
-            [tmp_name] => C:\xampp\tmp\php53ED.tmp
-            [error] => 0
-            [size] => 222452
+            [name] => 
+            [type] => 
+            [tmp_name] => 
+            [error] => 4
+            [size] => 0
         )
 
     [image1] => Array
@@ -94,15 +679,46 @@ adicionar o pathadicionar o pathLOL268Array
         )
 
 )
-adicionar o pathLOL269Array
+220000LOL2Array
+(
+    [houseId] => 85
+)
+Array
+(
+    [HouseName] => rua dos assdnnnnnnnnndasdadadaddasasdasdasdasdassssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+    [PricePerDay] => 222
+    [Adress] => dasdas 
+    [description] => asdasddddddddddddd
+    [PostalCode] => 50050-002
+    [City] => asddssadsdadas
+    [Country] => asdsadssad
+    [Capacity] => 33
+    [houseId] => 85
+    [File0] => 2
+    [File1] => 2
+    [File2] => 0
+    [File3] => 0
+    [File4] => 0
+    [File5] => 0
+)
+Array
+(
+    [0] => 2
+    [1] => 2
+    [2] => 0
+    [3] => 0
+    [4] => 0
+    [5] => 0
+)
+merda1merda20Array
 (
     [image0] => Array
         (
-            [name] => RKyaEDwp8J7JKeZWQPuOVWvkUjGQfpCx_cover_580.jpg
-            [type] => image/jpeg
-            [tmp_name] => C:\xampp\tmp\phpBD23.tmp
-            [error] => 0
-            [size] => 122980
+            [name] => 
+            [type] => 
+            [tmp_name] => 
+            [error] => 4
+            [size] => 0
         )
 
     [image1] => Array
@@ -151,72 +767,46 @@ adicionar o pathLOL269Array
         )
 
 )
-adicionar o pathLOL270Array
+220000LOL2Array
 (
-    [image0] => Array
-        (
-            [name] => RKyaEDwp8J7JKeZWQPuOVWvkUjGQfpCx_cover_580.jpg
-            [type] => image/jpeg
-            [tmp_name] => C:\xampp\tmp\phpC14B.tmp
-            [error] => 0
-            [size] => 122980
-        )
-
-    [image1] => Array
-        (
-            [name] => semirreta.jpg
-            [type] => image/jpeg
-            [tmp_name] => C:\xampp\tmp\phpC14C.tmp
-            [error] => 0
-            [size] => 21525
-        )
-
-    [image2] => Array
-        (
-            [name] => IMG_20170615_150916[1]_Easy-Resize.com (3).jpg
-            [type] => image/jpeg
-            [tmp_name] => C:\xampp\tmp\phpC15D.tmp
-            [error] => 0
-            [size] => 174051
-        )
-
-    [image3] => Array
-        (
-            [name] => 
-            [type] => 
-            [tmp_name] => 
-            [error] => 4
-            [size] => 0
-        )
-
-    [image4] => Array
-        (
-            [name] => 
-            [type] => 
-            [tmp_name] => 
-            [error] => 4
-            [size] => 0
-        )
-
-    [image5] => Array
-        (
-            [name] => 
-            [type] => 
-            [tmp_name] => 
-            [error] => 4
-            [size] => 0
-        )
-
+    [houseId] => 83
 )
-adicionar o pathadicionar o pathadicionar o pathLOL271Array
+Array
+(
+    [HouseName] => rua dos ruassss
+    [PricePerDay] => 222
+    [Adress] => dasdas
+    [description] => sdadd
+    [PostalCode] => 50050-002
+    [City] => adasd
+    [Country] => asdasdad
+    [Capacity] => 33
+    [houseId] => 83
+    [File0] => 2
+    [File1] => 2
+    [File2] => 0
+    [File3] => 0
+    [File4] => 0
+    [File5] => 0
+)
+Array
+(
+    [0] => 2
+    [1] => 2
+    [2] => 0
+    [3] => 0
+    [4] => 0
+    [5] => 0
+)
+merda1merda20Array
 (
     [image0] => Array
         (
-            [name] => IMG_20170615_150916[1]_Easy-Resize.com (3).jpg
-            [type] => image/jpeg
-            [tmp_name] => C:\xampp\tmp\php2AC6.tmp
-            [error] => 0
-            [size] => 174051
+            [name] => 
+            [type] => 
+            [tmp_name] => 
+            [error] => 4
+            [size] => 0
         )
 
     [image1] => Array
@@ -265,186 +855,46 @@ adicionar o pathadicionar o pathadicionar o pathLOL271Array
         )
 
 )
-adicionar o pathLOL272Array
+220000LOL2Array
 (
-    [image0] => Array
-        (
-            [name] => RKyaEDwp8J7JKeZWQPuOVWvkUjGQfpCx_cover_580.jpg
-            [type] => image/jpeg
-            [tmp_name] => C:\xampp\tmp\php17DC.tmp
-            [error] => 0
-            [size] => 122980
-        )
-
-    [image1] => Array
-        (
-            [name] => 79093530_734024437090652_8531377716555939840_n.png
-            [type] => image/png
-            [tmp_name] => C:\xampp\tmp\php17DD.tmp
-            [error] => 0
-            [size] => 573181
-        )
-
-    [image2] => Array
-        (
-            [name] => 
-            [type] => 
-            [tmp_name] => 
-            [error] => 4
-            [size] => 0
-        )
-
-    [image3] => Array
-        (
-            [name] => 
-            [type] => 
-            [tmp_name] => 
-            [error] => 4
-            [size] => 0
-        )
-
-    [image4] => Array
-        (
-            [name] => 
-            [type] => 
-            [tmp_name] => 
-            [error] => 4
-            [size] => 0
-        )
-
-    [image5] => Array
-        (
-            [name] => 
-            [type] => 
-            [tmp_name] => 
-            [error] => 4
-            [size] => 0
-        )
-
+    [houseId] => 83
 )
-adicionar o pathadicionar o pathLOL273Array
+Array
 (
-    [image0] => Array
-        (
-            [name] => 79093530_734024437090652_8531377716555939840_n.png
-            [type] => image/png
-            [tmp_name] => C:\xampp\tmp\phpC187.tmp
-            [error] => 0
-            [size] => 573181
-        )
-
-    [image1] => Array
-        (
-            [name] => IMG_20170615_151910[1]_Easy-Resize.com.jpg
-            [type] => image/jpeg
-            [tmp_name] => C:\xampp\tmp\phpC198.tmp
-            [error] => 0
-            [size] => 222452
-        )
-
-    [image2] => Array
-        (
-            [name] => 
-            [type] => 
-            [tmp_name] => 
-            [error] => 4
-            [size] => 0
-        )
-
-    [image3] => Array
-        (
-            [name] => 
-            [type] => 
-            [tmp_name] => 
-            [error] => 4
-            [size] => 0
-        )
-
-    [image4] => Array
-        (
-            [name] => 
-            [type] => 
-            [tmp_name] => 
-            [error] => 4
-            [size] => 0
-        )
-
-    [image5] => Array
-        (
-            [name] => 
-            [type] => 
-            [tmp_name] => 
-            [error] => 4
-            [size] => 0
-        )
-
+    [HouseName] => rua dos ruassss
+    [PricePerDay] => 222
+    [Adress] => dasdas 
+    [description] => 
+    [PostalCode] => 50050-002
+    [City] => zxzx
+    [Country] => swqd
+    [Capacity] => 33
+    [houseId] => 83
+    [File0] => 1
+    [File1] => 2
+    [File2] => 0
+    [File3] => 0
+    [File4] => 0
+    [File5] => 0
 )
-adicionar o pathadicionar o pathLOL251Array
+Array
 (
-    [image0] => Array
-        (
-            [name] => RKyaEDwp8J7JKeZWQPuOVWvkUjGQfpCx_cover_580.jpg
-            [type] => image/jpeg
-            [tmp_name] => C:\xampp\tmp\phpA19A.tmp
-            [error] => 0
-            [size] => 122980
-        )
-
-    [image1] => Array
-        (
-            [name] => IMG_20170615_150916[1]_Easy-Resize.com (3).jpg
-            [type] => image/jpeg
-            [tmp_name] => C:\xampp\tmp\phpA19B.tmp
-            [error] => 0
-            [size] => 174051
-        )
-
-    [image2] => Array
-        (
-            [name] => 
-            [type] => 
-            [tmp_name] => 
-            [error] => 4
-            [size] => 0
-        )
-
-    [image3] => Array
-        (
-            [name] => 
-            [type] => 
-            [tmp_name] => 
-            [error] => 4
-            [size] => 0
-        )
-
-    [image4] => Array
-        (
-            [name] => 
-            [type] => 
-            [tmp_name] => 
-            [error] => 4
-            [size] => 0
-        )
-
-    [image5] => Array
-        (
-            [name] => 
-            [type] => 
-            [tmp_name] => 
-            [error] => 4
-            [size] => 0
-        )
-
+    [0] => 1
+    [1] => 2
+    [2] => 0
+    [3] => 0
+    [4] => 0
+    [5] => 0
 )
-adicionar o pathadicionar o pathLOL252Array
+merda1merda20Array
 (
     [image0] => Array
         (
-            [name] => IMG_20170615_150916[1]_Easy-Resize.com (3).jpg
+            [name] => inverso.jpg
             [type] => image/jpeg
-            [tmp_name] => C:\xampp\tmp\phpB205.tmp
+            [tmp_name] => C:\xampp\tmp\php47BC.tmp
             [error] => 0
-            [size] => 174051
+            [size] => 29718
         )
 
     [image1] => Array
@@ -493,195 +943,51 @@ adicionar o pathadicionar o pathLOL252Array
         )
 
 )
-adicionar o pathLOL253Array
+1adicionar o pathArray
+(
+    [HouseName] => rua dos ruassss
+    [PricePerDay] => 222
+    [Adress] => dasdas 
+    [description] => dfsfdsdf
+    [PostalCode] => 50050-002
+    [City] => zxzx
+    [Country] => swqd
+    [Capacity] => 33
+    [houseId] => 83
+    [File0] => 1
+    [File1] => 2
+    [File2] => 0
+    [File3] => 0
+    [File4] => 0
+    [File5] => 0
+)
+Array
+(
+    [0] => 1
+    [1] => 2
+    [2] => 0
+    [3] => 0
+    [4] => 0
+    [5] => 0
+)
+merda1merda20Array
 (
     [image0] => Array
         (
-            [name] => beachBuoy1.jpg
+            [name] => inverso.jpg
             [type] => image/jpeg
-            [tmp_name] => C:\xampp\tmp\php1184.tmp
+            [tmp_name] => C:\xampp\tmp\php60C3.tmp
             [error] => 0
-            [size] => 136167
+            [size] => 29718
         )
 
     [image1] => Array
-        (
-            [name] => beachBall.jpg
-            [type] => image/jpeg
-            [tmp_name] => C:\xampp\tmp\php1185.tmp
-            [error] => 0
-            [size] => 7736
-        )
-
-    [image2] => Array
-        (
-            [name] => dirt.jpg
-            [type] => image/jpeg
-            [tmp_name] => C:\xampp\tmp\php1195.tmp
-            [error] => 0
-            [size] => 610339
-        )
-
-    [image3] => Array
-        (
-            [name] => door.jpg
-            [type] => image/jpeg
-            [tmp_name] => C:\xampp\tmp\php1196.tmp
-            [error] => 0
-            [size] => 100092
-        )
-
-    [image4] => Array
         (
             [name] => 
             [type] => 
             [tmp_name] => 
             [error] => 4
             [size] => 0
-        )
-
-    [image5] => Array
-        (
-            [name] => 
-            [type] => 
-            [tmp_name] => 
-            [error] => 4
-            [size] => 0
-        )
-
-)
-adicionar o pathadicionar o pathadicionar o pathadicionar o pathLOL251Array
-(
-    [image0] => Array
-        (
-            [name] => bank.jpg
-            [type] => image/jpeg
-            [tmp_name] => C:\xampp\tmp\phpEC6D.tmp
-            [error] => 0
-            [size] => 18707
-        )
-
-    [image1] => Array
-        (
-            [name] => beachBall.jpg
-            [type] => image/jpeg
-            [tmp_name] => C:\xampp\tmp\phpEC6E.tmp
-            [error] => 0
-            [size] => 7736
-        )
-
-    [image2] => Array
-        (
-            [name] => beachBallTex.png
-            [type] => image/png
-            [tmp_name] => C:\xampp\tmp\phpEC6F.tmp
-            [error] => 0
-            [size] => 2423
-        )
-
-    [image3] => Array
-        (
-            [name] => door.jpg
-            [type] => image/jpeg
-            [tmp_name] => C:\xampp\tmp\phpEC70.tmp
-            [error] => 0
-            [size] => 100092
-        )
-
-    [image4] => Array
-        (
-            [name] => esperguicadeira.png
-            [type] => image/png
-            [tmp_name] => C:\xampp\tmp\phpEC71.tmp
-            [error] => 0
-            [size] => 105919
-        )
-
-    [image5] => Array
-        (
-            [name] => door.jpg
-            [type] => image/jpeg
-            [tmp_name] => C:\xampp\tmp\phpEC82.tmp
-            [error] => 0
-            [size] => 100092
-        )
-
-)
-adicionar o pathadicionar o pathadicionar o pathadicionar o pathadicionar o pathadicionar o pathLOL251Array
-(
-    [image0] => Array
-        (
-            [name] => pool_tiles.jpg
-            [type] => image/jpeg
-            [tmp_name] => C:\xampp\tmp\php90E1.tmp
-            [error] => 0
-            [size] => 72932
-        )
-
-    [image1] => Array
-        (
-            [name] => gold.jpg
-            [type] => image/jpeg
-            [tmp_name] => C:\xampp\tmp\php90F2.tmp
-            [error] => 0
-            [size] => 34133
-        )
-
-    [image2] => Array
-        (
-            [name] => door.jpg
-            [type] => image/jpeg
-            [tmp_name] => C:\xampp\tmp\php90F3.tmp
-            [error] => 0
-            [size] => 100092
-        )
-
-    [image3] => Array
-        (
-            [name] => dirt.jpg
-            [type] => image/jpeg
-            [tmp_name] => C:\xampp\tmp\php9103.tmp
-            [error] => 0
-            [size] => 610339
-        )
-
-    [image4] => Array
-        (
-            [name] => door.jpg
-            [type] => image/jpeg
-            [tmp_name] => C:\xampp\tmp\php9104.tmp
-            [error] => 0
-            [size] => 100092
-        )
-
-    [image5] => Array
-        (
-            [name] => colmo.png
-            [type] => image/png
-            [tmp_name] => C:\xampp\tmp\php9115.tmp
-            [error] => 0
-            [size] => 207731
-        )
-
-)
-adicionar o pathadicionar o pathadicionar o pathadicionar o pathadicionar o pathadicionar o pathLOL252Array
-(
-    [image0] => Array
-        (
-            [name] => pool_tiles.jpg
-            [type] => image/jpeg
-            [tmp_name] => C:\xampp\tmp\php584E.tmp
-            [error] => 0
-            [size] => 72932
-        )
-
-    [image1] => Array
-        (
-            [name] => dirt.jpg
-            [type] => image/jpeg
-            [tmp_name] => C:\xampp\tmp\php585E.tmp
-            [error] => 0
-            [size] => 610339
         )
 
     [image2] => Array
@@ -721,24 +1027,51 @@ adicionar o pathadicionar o pathadicionar o pathadicionar o pathadicionar o path
         )
 
 )
-adicionar o pathadicionar o pathLOL253Array
+1adicionar o pathArray
+(
+    [HouseName] => rua dos ruassss
+    [PricePerDay] => 222
+    [Adress] => dasdas 
+    [description] => dfsfdsdf
+    [PostalCode] => 50050-002
+    [City] => zxzx
+    [Country] => swqd
+    [Capacity] => 33
+    [houseId] => 83
+    [File0] => 0
+    [File1] => 2
+    [File2] => 0
+    [File3] => 0
+    [File4] => 0
+    [File5] => 0
+)
+Array
+(
+    [0] => 0
+    [1] => 2
+    [2] => 0
+    [3] => 0
+    [4] => 0
+    [5] => 0
+)
+merda1merda20Array
 (
     [image0] => Array
         (
-            [name] => dirt.jpg
-            [type] => image/jpeg
-            [tmp_name] => C:\xampp\tmp\php9346.tmp
-            [error] => 0
-            [size] => 610339
+            [name] => 
+            [type] => 
+            [tmp_name] => 
+            [error] => 4
+            [size] => 0
         )
 
     [image1] => Array
         (
-            [name] => door.jpg
-            [type] => image/jpeg
-            [tmp_name] => C:\xampp\tmp\php9356.tmp
-            [error] => 0
-            [size] => 100092
+            [name] => 
+            [type] => 
+            [tmp_name] => 
+            [error] => 4
+            [size] => 0
         )
 
     [image2] => Array
@@ -778,81 +1111,55 @@ adicionar o pathadicionar o pathLOL253Array
         )
 
 )
-adicionar o pathadicionar o pathLOL251Array
+020000LOL2Array
 (
-    [image0] => Array
-        (
-            [name] => dirt.jpg
-            [type] => image/jpeg
-            [tmp_name] => C:\xampp\tmp\phpD98A.tmp
-            [error] => 0
-            [size] => 610339
-        )
-
-    [image1] => Array
-        (
-            [name] => door.jpg
-            [type] => image/jpeg
-            [tmp_name] => C:\xampp\tmp\phpD99B.tmp
-            [error] => 0
-            [size] => 100092
-        )
-
-    [image2] => Array
-        (
-            [name] => beachBall.jpg
-            [type] => image/jpeg
-            [tmp_name] => C:\xampp\tmp\phpD99C.tmp
-            [error] => 0
-            [size] => 7736
-        )
-
-    [image3] => Array
-        (
-            [name] => bank.jpg
-            [type] => image/jpeg
-            [tmp_name] => C:\xampp\tmp\phpD99D.tmp
-            [error] => 0
-            [size] => 18707
-        )
-
-    [image4] => Array
-        (
-            [name] => beachBuoy1.jpg
-            [type] => image/jpeg
-            [tmp_name] => C:\xampp\tmp\phpD9AD.tmp
-            [error] => 0
-            [size] => 136167
-        )
-
-    [image5] => Array
-        (
-            [name] => colmo.png
-            [type] => image/png
-            [tmp_name] => C:\xampp\tmp\phpD9AE.tmp
-            [error] => 0
-            [size] => 207731
-        )
-
+    [houseId] => 83
 )
-adicionar o pathadicionar o pathadicionar o pathadicionar o pathadicionar o pathadicionar o pathLOL251Array
+Array
+(
+    [HouseName] => rua dos ruassss
+    [PricePerDay] => 222
+    [Adress] => dasdas  
+    [description] => dffffgdg
+    [PostalCode] => 50050-002
+    [City] => fdgdfgdf
+    [Country] => dfgdfg
+    [Capacity] => 33
+    [houseId] => 83
+    [File0] => 0
+    [File1] => 2
+    [File2] => 0
+    [File3] => 0
+    [File4] => 0
+    [File5] => 0
+)
+Array
+(
+    [0] => 0
+    [1] => 2
+    [2] => 0
+    [3] => 0
+    [4] => 0
+    [5] => 0
+)
+merda1merda20Array
 (
     [image0] => Array
         (
-            [name] => beachBall.jpg
-            [type] => image/jpeg
-            [tmp_name] => C:\xampp\tmp\php4886.tmp
-            [error] => 0
-            [size] => 7736
+            [name] => 
+            [type] => 
+            [tmp_name] => 
+            [error] => 4
+            [size] => 0
         )
 
     [image1] => Array
         (
-            [name] => beachBallTex.png
-            [type] => image/png
-            [tmp_name] => C:\xampp\tmp\php4887.tmp
-            [error] => 0
-            [size] => 2423
+            [name] => 
+            [type] => 
+            [tmp_name] => 
+            [error] => 4
+            [size] => 0
         )
 
     [image2] => Array
@@ -892,118 +1199,4 @@ adicionar o pathadicionar o pathadicionar o pathadicionar o pathadicionar o path
         )
 
 )
-adicionar o pathadicionar o pathLOL252Array
-(
-    [image0] => Array
-        (
-            [name] => flagFabricSideA.png
-            [type] => image/png
-            [tmp_name] => C:\xampp\tmp\phpA710.tmp
-            [error] => 0
-            [size] => 7775
-        )
-
-    [image1] => Array
-        (
-            [name] => flagPole.jpg
-            [type] => image/jpeg
-            [tmp_name] => C:\xampp\tmp\phpA711.tmp
-            [error] => 0
-            [size] => 26022
-        )
-
-    [image2] => Array
-        (
-            [name] => grass.jpg
-            [type] => image/jpeg
-            [tmp_name] => C:\xampp\tmp\phpA722.tmp
-            [error] => 0
-            [size] => 340980
-        )
-
-    [image3] => Array
-        (
-            [name] => metal.jpg
-            [type] => image/jpeg
-            [tmp_name] => C:\xampp\tmp\phpA723.tmp
-            [error] => 0
-            [size] => 11983
-        )
-
-    [image4] => Array
-        (
-            [name] => 
-            [type] => 
-            [tmp_name] => 
-            [error] => 4
-            [size] => 0
-        )
-
-    [image5] => Array
-        (
-            [name] => 
-            [type] => 
-            [tmp_name] => 
-            [error] => 4
-            [size] => 0
-        )
-
-)
-adicionar o pathadicionar o pathadicionar o pathadicionar o pathLOL251Array
-(
-    [image0] => Array
-        (
-            [name] => bank.jpg
-            [type] => image/jpeg
-            [tmp_name] => C:\xampp\tmp\phpC45D.tmp
-            [error] => 0
-            [size] => 18707
-        )
-
-    [image1] => Array
-        (
-            [name] => beachBall.jpg
-            [type] => image/jpeg
-            [tmp_name] => C:\xampp\tmp\phpC45E.tmp
-            [error] => 0
-            [size] => 7736
-        )
-
-    [image2] => Array
-        (
-            [name] => beachBallTex.png
-            [type] => image/png
-            [tmp_name] => C:\xampp\tmp\phpC45F.tmp
-            [error] => 0
-            [size] => 2423
-        )
-
-    [image3] => Array
-        (
-            [name] => 
-            [type] => 
-            [tmp_name] => 
-            [error] => 4
-            [size] => 0
-        )
-
-    [image4] => Array
-        (
-            [name] => 
-            [type] => 
-            [tmp_name] => 
-            [error] => 4
-            [size] => 0
-        )
-
-    [image5] => Array
-        (
-            [name] => 
-            [type] => 
-            [tmp_name] => 
-            [error] => 4
-            [size] => 0
-        )
-
-)
-adicionar o pathadicionar o pathadicionar o pathLOL2
+020000LOL2

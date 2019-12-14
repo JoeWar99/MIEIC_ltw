@@ -11,6 +11,7 @@ let postal_code = document.getElementById("postal-code");
 
 
 
+
 // GETTING ALL ERROR DISPLAY OBJECTS
 let house_name_error = document.getElementById("HouseNameError");
 let price_per_day_error = document.getElementById("PricePerDayError");
@@ -28,6 +29,8 @@ city.addEventListener("input", city_verify, true);
 country.addEventListener("input", country_verify, true);
 capacity.addEventListener("input", capacity_verify, true);
 postal_code.addEventListener("input", postal_code_verify, true);
+
+
 
 function encodeForAjax(data) {
     return Object.keys(data).map(function(k) {
@@ -83,7 +86,6 @@ function Validate() {
         formData.append('File3', array_of_images[3]);
         formData.append('File4', array_of_images[4]);
         formData.append('File5', array_of_images[5]);
-        formData.append('File6', array_of_images[6]);
         ourRequest.send(formData);
         return true;
     }
@@ -261,11 +263,11 @@ document.querySelector('#file-input5').addEventListener("change", function() {
     previewImages(this);
 }, true);
 
-let array_of_images = [false, false, false, false, false, false];
+let array_of_images = [0, 0, 0, 0, 0, 0];
 
 function button_delete(aux_number) {
     let preview = document.querySelector('#preview' + aux_number);
-    array_of_images[aux_number] = false;
+    array_of_images[aux_number] = 0;
     let element_input = document.getElementById("input-" + aux_number);
     element_input.innerHTML = "";
     element_input.style.display = "";
@@ -330,7 +332,7 @@ function readAndPreview(file) {
         let element_input = document.getElementById("input-" + number);
         element_input.style.display = "none";
 
-        array_of_images[number] = true;
+        array_of_images[number] = 1;
         let button = document.createElement('button');
         button.setAttribute('onclick', 'button_delete(' + number + ')');
         button.type = "button";

@@ -25,6 +25,7 @@ function pressed_delete_Button(house_id) {
 
 function delete_house() {
     let ourData = JSON.parse(this.responseText);
+    console.log(ourData);
     if (ourData == -1)
         alert("Cant Delete That house there's reservation in progress or in the future");
     else

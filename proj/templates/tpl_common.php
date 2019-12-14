@@ -226,6 +226,7 @@
 
 <?php function draw_header($username, $page)
 {
+  
   $register_sl = [["../js/register.js", true]];
 
   $myProperties_sl = [["../js/myProperty.js", true]];
@@ -233,6 +234,9 @@
   $myReservations_sl = [["../js/myReservation.js", true]];
 
   $addProperty_sl = [["../js/addProperty.js", true]];
+
+  $editProperty_sl = [["../js/editProperty.js", true]];
+
   /**
    * Draws the header for all pages. Receives an username
    * if the user is logged in in order to draw the logout
@@ -245,6 +249,7 @@
       else if($page == "myProperties") $sl = $myProperties_sl;
       else if($page == "myReservations") $sl = $myReservations_sl;
       else if($page == "addProperty") $sl = $addProperty_sl;
+      else if($page == "editProperty") $sl = $editProperty_sl;
       draw_head(get_title($page), [$main_stylesheet,$fonts[0], $fonts[1], $fonts[2]], $sl);
       open_body();
         open_header();

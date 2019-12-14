@@ -20,6 +20,90 @@ let city_error = document.getElementById("CityError");
 let country_error = document.getElementById("CountryError");
 let capacity_error = document.getElementById("CapacityError");
 
+on_load_page_place_images();
+
+
+console.log('merda');
+
+function on_load_page_place_images() {
+
+    let house_id = document.getElementById("house_id").value;
+
+    let ourRequest = new XMLHttpRequest();
+    ourRequest.open("POST", "../actions/api_edit_photos.php", true);
+    ourRequest.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+    ourRequest.onload = function() {
+        on_response(this, house_id);
+    };
+    ourRequest.send(encodeForAjax({ houseId: house_id }));
+
+
+}
+
+let array_of_images = [0, 0, 0, 0, 0, 0];
+
+
+function on_response(object, house_id) {
+
+    let ourData = JSON.parse(object.responseText);
+    console.log(ourData);
+
+    let number = 0;
+
+
+    for (let i = 0; i < ourData.length; i++) {
+        if (ourData[i]['path'].includes('../assets/imagesHouses/houseImage_' + house_id + '_0')) {
+            number = 0;
+        } else if (ourData[i]['path'].includes('../assets/imagesHouses/houseImage_' + house_id + '_1')) {
+            number = 1;
+        } else if (ourData[i]['path'].includes('../assets/imagesHouses/houseImage_' + house_id + '_2')) {
+            number = 2;
+        } else if (ourData[i]['path'].includes('../assets/imagesHouses/houseImage_' + house_id + '_3')) {
+            number = 3;
+        } else if (ourData[i]['path'].includes('../assets/imagesHouses/houseImage_' + house_id + '_4')) {
+            number = 4;
+        } else if (ourData[i]['path'].includes('../assets/imagesHouses/houseImage_' + house_id + '_5')) {
+            number = 5;
+        }
+
+        var preview = document.querySelector('#preview' + number);
+        console.log(this);
+
+        // preview.setAttribute("style", " display: grid; grid-template-rows: 1fr 0.5fr;");
+
+        let image = new Image();
+        image.height = 150;
+        image.src = ourData[i]['path'];
+
+        let element_input = document.getElementById("input-" + number);
+        element_input.style.display = "none";
+
+        array_of_images[number] = 2;
+        let button = document.createElement('button');
+        button.setAttribute('onclick', 'button_delete(' + number + ')');
+        button.type = "button";
+        button.innerHTML = "Delete Image";
+        button.setAttribute('style', 'margin-top: 5%; width:40%; height = 10%;');
+
+        let br = document.createElement('br');
+
+        preview.innerHTML = "";
+        preview.appendChild(image);
+        preview.appendChild(br);
+        preview.appendChild(button);
+
+    }
+
+
+
+
+
+
+}
+
+
+
+
 
 house_name.addEventListener("input", house_name_verify, true);
 price_per_day.addEventListener("input", price_per_day_verify, true);
@@ -35,7 +119,7 @@ function encodeForAjax(data) {
     }).join('&')
 }
 
-function Validate() {
+function Validate($house_id) {
 
     let returnValue = true;
 
@@ -73,9 +157,10 @@ function Validate() {
     else {
         let form = document.getElementById('add-propertyForm');
         let formData = new FormData(form);
+        formData.append('houseId', $house_id);
 
         let ourRequest = new XMLHttpRequest();
-        ourRequest.open("POST", "../actions/api_upload.php", true);
+        ourRequest.open("POST", "../actions/api_update_house.php", true);
         ourRequest.onload = receive_add_property_response;
         formData.append('File0', array_of_images[0]);
         formData.append('File1', array_of_images[1]);
@@ -83,7 +168,6 @@ function Validate() {
         formData.append('File3', array_of_images[3]);
         formData.append('File4', array_of_images[4]);
         formData.append('File5', array_of_images[5]);
-        formData.append('File6', array_of_images[6]);
         ourRequest.send(formData);
         return true;
     }
@@ -261,11 +345,10 @@ document.querySelector('#file-input5').addEventListener("change", function() {
     previewImages(this);
 }, true);
 
-let array_of_images = [false, false, false, false, false, false];
 
 function button_delete(aux_number) {
     let preview = document.querySelector('#preview' + aux_number);
-    array_of_images[aux_number] = false;
+    array_of_images[aux_number] = 0;
     let element_input = document.getElementById("input-" + aux_number);
     element_input.innerHTML = "";
     element_input.style.display = "";
@@ -330,7 +413,7 @@ function readAndPreview(file) {
         let element_input = document.getElementById("input-" + number);
         element_input.style.display = "none";
 
-        array_of_images[number] = true;
+        array_of_images[number] = 1;
         let button = document.createElement('button');
         button.setAttribute('onclick', 'button_delete(' + number + ')');
         button.type = "button";
@@ -348,4 +431,4 @@ function readAndPreview(file) {
 
     reader.readAsDataURL(file);
 
-};
+}

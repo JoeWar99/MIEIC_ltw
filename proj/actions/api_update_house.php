@@ -4,6 +4,7 @@ include_once('../database/db_functions.php');
 // Get image ID
 file_put_contents('somefilename.txt', print_r($_POST, true), FILE_APPEND);
 
+$house_id = $_POST["houseId"];
 $house_name = $_POST["HouseName"];
 $price_per_day = $_POST["PricePerDay"];
 $adress = $_POST["Adress"];
@@ -26,7 +27,7 @@ $Files_bool = array();
 array_push($Files_bool, $File0, $File1, $File2, $File3, $File4, $File5);
 file_put_contents('somefilename.txt', print_r($Files_bool, true), FILE_APPEND);
 
-if (!insert_new_property($house_name, $price_per_day, $adress, $description, $postal_code, $city, $country, $capacity, $username)) {
+if (!update_property($house_id, $house_name, $price_per_day, $adress, $description, $postal_code, $city, $country, $capacity, $username)) {
   echo json_encode(-1);
   file_put_contents('somefilename.txt', print_r('shit', true), FILE_APPEND);
 } else {

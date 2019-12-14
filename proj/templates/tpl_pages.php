@@ -437,13 +437,19 @@ function draw_edit_property($usr, $house_id)
 
     $house_information = get_house_information($house_id);
 
-    if($house_information == false){
 
+
+    if($house_information == false){
+        var_dump('deu mal');
     }
 
     else{
         var_dump($house_information);
     ?>
+
+<form>
+<input id="house_id" type="hidden" name="HouseId" value= <?php echo $house_id ?> />
+</form>
 
     <form id="add-propertyForm" name="addPropertyForm" action="#" method="post" enctype="multipart/form-data">
         <div id="add-property-content">
@@ -576,7 +582,7 @@ function draw_edit_property($usr, $house_id)
 
             </div>
         </div>
-        <input value="Add Property" name="submitButton" id="btnR2" type="button" onclick="Validate();">
+        <input value="Add Property" name="submitButton" id="btnR2" type="button" onclick="Validate(<?php echo $house_id ?>);">
 
     </form>
 <?php
