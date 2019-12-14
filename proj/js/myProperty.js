@@ -161,7 +161,7 @@ function draw_house_in_organized_fashion(house_data) {
     return_html_in_string_form += '<p>' + addr + '</p>';
     let price = house_data["PricePerDay"];
     return_html_in_string_form += '<p> Price: ' + price + '€ /night </p>';
-    let rating = house_data["Rating"];
+    let rating = (Math.round(house_data["Rating"] * 100) / 100).toFixed(1);
     let cnt = house_data["cnt"];
     return_html_in_string_form += '<pre><img src=../assets/star.png width="18" height="15" />' + rating + '       ' + cnt + 'comments </pre>';
     return_html_in_string_form += '</section>';

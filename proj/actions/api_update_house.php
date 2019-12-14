@@ -23,7 +23,6 @@ $File5 =  $_POST['File5'];
 
 $Files_bool = array();
 
-
 array_push($Files_bool, $File0, $File1, $File2, $File3, $File4, $File5);
 file_put_contents('somefilename.txt', print_r($Files_bool, true), FILE_APPEND);
 
@@ -50,7 +49,7 @@ if (!update_property($house_id, $house_name, $price_per_day, $adress, $descripti
   // }
   
   $db = Database::instance()->db();
-  $id = $db->lastInsertId();
+  $id = $house_id;
   $i = 0;
 
   file_put_contents('somefilename.txt', print_r($id, true), FILE_APPEND);
@@ -77,8 +76,14 @@ if (!update_property($house_id, $house_name, $price_per_day, $adress, $descripti
       }
     }
     else if($Files_bool[$i] == 0){
+
+
       $originalFileName_string = "../assets/imagesHouses/houseImage_" . $id . "_" . $i . ".jpg";
       if (file_exists($originalFileName_string)) {
+        if (!remove_photo_path_to_house($id, $originalFileName_string)) {
+          echo json_encode(-1);
+          exit;
+        }
         chmod($originalFileName_string, 0755); //Change the file permissions if allowed
         unlink($originalFileName_string); //remove the file
       }

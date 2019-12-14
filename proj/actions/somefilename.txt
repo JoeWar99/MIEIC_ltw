@@ -1,877 +1,40 @@
-Array
+../assets/imagesHouses/houseImage_84_0%../assets/imagesHouses/houseImage_82_0%../assets/imagesHouses/houseImage_69_0%../assets/imagesHouses/houseImage_68_0%../assets/imagesHouses/houseImage_65_0%../assets/imagesHouses/houseImage_64_0%../assets/imagesHouses/houseImage_63_0%../assets/imagesHouses/houseImage_62_0%../assets/imagesHouses/houseImage_61_0%../assets/imagesHouses/houseImage_60_0%../assets/imagesHouses/houseImage_59_0%../assets/imagesHouses/houseImage_58_0%../assets/imagesHouses/houseImage_57_0%../assets/imagesHouses/houseImage_56_0%../assets/imagesHouses/houseImage_55_0%../assets/imagesHouses/houseImage_54_0%../assets/imagesHouses/houseImage_53_0%../assets/imagesHouses/houseImage_52_0%../assets/imagesHouses/houseImage_51_0%../assets/imagesHouses/houseImage_47_0%../assets/imagesHouses/houseImage_32_0%../assets/imagesHouses/houseImage_25_0%../assets/imagesHouses/houseImage_23_0%Array
 (
-    [houseId] => 85
+    [houseId] => 84
 )
 Array
 (
-    [HouseName] => rmerdaaaaaaaaaa
-    [PricePerDay] => 222
-    [Adress] => dasdas
-    [description] => asdddsdas
-    [PostalCode] => 50050-002
-    [City] => sdassd
-    [Country] => asdsdsda
+    [houseId] => 84
+)
+../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_28_0%../assets/imagesHouses/houseImage_82_0%../assets/imagesHouses/houseImage_48_0%../assets/imagesHouses/houseImage_35_0%../assets/imagesHouses/houseImage_20_0%../assets/imagesHouses/houseImage_84_0%../assets/imagesHouses/houseImage_82_0%../assets/imagesHouses/houseImage_69_0%../assets/imagesHouses/houseImage_68_0%../assets/imagesHouses/houseImage_65_0%../assets/imagesHouses/houseImage_64_0%../assets/imagesHouses/houseImage_63_0%../assets/imagesHouses/houseImage_62_0%../assets/imagesHouses/houseImage_61_0%../assets/imagesHouses/houseImage_60_0%../assets/imagesHouses/houseImage_59_0%../assets/imagesHouses/houseImage_58_0%../assets/imagesHouses/houseImage_57_0%../assets/imagesHouses/houseImage_56_0%../assets/imagesHouses/houseImage_55_0%../assets/imagesHouses/houseImage_54_0%../assets/imagesHouses/houseImage_53_0%../assets/imagesHouses/houseImage_52_0%../assets/imagesHouses/houseImage_51_0%../assets/imagesHouses/houseImage_47_0%../assets/imagesHouses/houseImage_32_0%../assets/imagesHouses/houseImage_25_0%../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_82_0%../assets/imagesHouses/houseImage_69_0%../assets/imagesHouses/houseImage_68_0%../assets/imagesHouses/houseImage_65_0%../assets/imagesHouses/houseImage_64_0%../assets/imagesHouses/houseImage_63_0%../assets/imagesHouses/houseImage_62_0%../assets/imagesHouses/houseImage_61_0%../assets/imagesHouses/houseImage_60_0%../assets/imagesHouses/houseImage_59_0%../assets/imagesHouses/houseImage_58_0%../assets/imagesHouses/houseImage_57_0%../assets/imagesHouses/houseImage_56_0%../assets/imagesHouses/houseImage_55_0%../assets/imagesHouses/houseImage_54_0%../assets/imagesHouses/houseImage_53_0%../assets/imagesHouses/houseImage_52_0%../assets/imagesHouses/houseImage_51_0%../assets/imagesHouses/houseImage_47_0%../assets/imagesHouses/houseImage_32_0%../assets/imagesHouses/houseImage_25_0%../assets/imagesHouses/houseImage_23_0%Array
+(
+    [houseId] => 82
+)
+Array
+(
+    [houseId] => 82
+)
+../assets/imagesHouses/houseImage_82_0%../assets/imagesHouses/houseImage_69_0%../assets/imagesHouses/houseImage_68_0%../assets/imagesHouses/houseImage_65_0%../assets/imagesHouses/houseImage_64_0%../assets/imagesHouses/houseImage_63_0%../assets/imagesHouses/houseImage_62_0%../assets/imagesHouses/houseImage_61_0%../assets/imagesHouses/houseImage_60_0%../assets/imagesHouses/houseImage_59_0%../assets/imagesHouses/houseImage_58_0%../assets/imagesHouses/houseImage_57_0%../assets/imagesHouses/houseImage_56_0%../assets/imagesHouses/houseImage_55_0%../assets/imagesHouses/houseImage_54_0%../assets/imagesHouses/houseImage_53_0%../assets/imagesHouses/houseImage_52_0%../assets/imagesHouses/houseImage_51_0%../assets/imagesHouses/houseImage_47_0%../assets/imagesHouses/houseImage_32_0%../assets/imagesHouses/houseImage_25_0%../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_28_0%../assets/imagesHouses/houseImage_82_0%../assets/imagesHouses/houseImage_48_0%../assets/imagesHouses/houseImage_35_0%../assets/imagesHouses/houseImage_20_0%../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_28_0%../assets/imagesHouses/houseImage_82_0%../assets/imagesHouses/houseImage_48_0%../assets/imagesHouses/houseImage_35_0%../assets/imagesHouses/houseImage_20_0%../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_28_0%../assets/imagesHouses/houseImage_82_0%../assets/imagesHouses/houseImage_48_0%../assets/imagesHouses/houseImage_35_0%../assets/imagesHouses/houseImage_20_0%../assets/imagesHouses/houseImage_82_0%../assets/imagesHouses/houseImage_69_0%../assets/imagesHouses/houseImage_68_0%../assets/imagesHouses/houseImage_65_0%../assets/imagesHouses/houseImage_64_0%../assets/imagesHouses/houseImage_63_0%../assets/imagesHouses/houseImage_62_0%../assets/imagesHouses/houseImage_61_0%../assets/imagesHouses/houseImage_60_0%../assets/imagesHouses/houseImage_59_0%../assets/imagesHouses/houseImage_58_0%../assets/imagesHouses/houseImage_57_0%../assets/imagesHouses/houseImage_56_0%../assets/imagesHouses/houseImage_55_0%../assets/imagesHouses/houseImage_54_0%../assets/imagesHouses/houseImage_53_0%../assets/imagesHouses/houseImage_52_0%../assets/imagesHouses/houseImage_51_0%../assets/imagesHouses/houseImage_47_0%../assets/imagesHouses/houseImage_32_0%../assets/imagesHouses/houseImage_25_0%../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_28_0%../assets/imagesHouses/houseImage_82_0%../assets/imagesHouses/houseImage_48_0%../assets/imagesHouses/houseImage_35_0%../assets/imagesHouses/houseImage_20_0%../assets/imagesHouses/houseImage_82_0%../assets/imagesHouses/houseImage_69_0%../assets/imagesHouses/houseImage_68_0%../assets/imagesHouses/houseImage_65_0%../assets/imagesHouses/houseImage_64_0%../assets/imagesHouses/houseImage_63_0%../assets/imagesHouses/houseImage_62_0%../assets/imagesHouses/houseImage_61_0%../assets/imagesHouses/houseImage_60_0%../assets/imagesHouses/houseImage_59_0%../assets/imagesHouses/houseImage_58_0%../assets/imagesHouses/houseImage_57_0%../assets/imagesHouses/houseImage_56_0%../assets/imagesHouses/houseImage_55_0%../assets/imagesHouses/houseImage_54_0%../assets/imagesHouses/houseImage_53_0%../assets/imagesHouses/houseImage_52_0%../assets/imagesHouses/houseImage_51_0%../assets/imagesHouses/houseImage_47_0%../assets/imagesHouses/houseImage_32_0%../assets/imagesHouses/houseImage_25_0%../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_28_0%../assets/imagesHouses/houseImage_82_0%../assets/imagesHouses/houseImage_48_0%../assets/imagesHouses/houseImage_35_0%../assets/imagesHouses/houseImage_20_0%../assets/imagesHouses/houseImage_82_0%../assets/imagesHouses/houseImage_69_0%../assets/imagesHouses/houseImage_68_0%../assets/imagesHouses/houseImage_65_0%../assets/imagesHouses/houseImage_64_0%../assets/imagesHouses/houseImage_63_0%../assets/imagesHouses/houseImage_62_0%../assets/imagesHouses/houseImage_61_0%../assets/imagesHouses/houseImage_60_0%../assets/imagesHouses/houseImage_59_0%../assets/imagesHouses/houseImage_58_0%../assets/imagesHouses/houseImage_57_0%../assets/imagesHouses/houseImage_56_0%../assets/imagesHouses/houseImage_55_0%../assets/imagesHouses/houseImage_54_0%../assets/imagesHouses/houseImage_53_0%../assets/imagesHouses/houseImage_52_0%../assets/imagesHouses/houseImage_51_0%../assets/imagesHouses/houseImage_47_0%../assets/imagesHouses/houseImage_32_0%../assets/imagesHouses/houseImage_25_0%../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_28_0%../assets/imagesHouses/houseImage_82_0%../assets/imagesHouses/houseImage_48_0%../assets/imagesHouses/houseImage_35_0%../assets/imagesHouses/houseImage_20_0%../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_28_0%../assets/imagesHouses/houseImage_82_0%../assets/imagesHouses/houseImage_48_0%../assets/imagesHouses/houseImage_35_0%../assets/imagesHouses/houseImage_20_0%../assets/imagesHouses/houseImage_18_0%../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_28_0%../assets/imagesHouses/houseImage_82_0%../assets/imagesHouses/houseImage_48_0%../assets/imagesHouses/houseImage_35_0%../assets/imagesHouses/houseImage_20_0%../assets/imagesHouses/houseImage_18_0%../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_28_0%../assets/imagesHouses/houseImage_82_0%../assets/imagesHouses/houseImage_48_0%../assets/imagesHouses/houseImage_35_0%../assets/imagesHouses/houseImage_20_0%../assets/imagesHouses/houseImage_18_0%../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_28_0%../assets/imagesHouses/houseImage_82_0%../assets/imagesHouses/houseImage_48_0%../assets/imagesHouses/houseImage_35_0%../assets/imagesHouses/houseImage_20_0%../assets/imagesHouses/houseImage_26_0%../assets/imagesHouses/houseImage_18_0%../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_28_0%../assets/imagesHouses/houseImage_82_0%../assets/imagesHouses/houseImage_48_0%../assets/imagesHouses/houseImage_35_0%../assets/imagesHouses/houseImage_20_0%../assets/imagesHouses/houseImage_82_0%../assets/imagesHouses/houseImage_69_0%../assets/imagesHouses/houseImage_68_0%../assets/imagesHouses/houseImage_65_0%../assets/imagesHouses/houseImage_64_0%../assets/imagesHouses/houseImage_63_0%../assets/imagesHouses/houseImage_62_0%../assets/imagesHouses/houseImage_61_0%../assets/imagesHouses/houseImage_60_0%../assets/imagesHouses/houseImage_59_0%../assets/imagesHouses/houseImage_58_0%../assets/imagesHouses/houseImage_57_0%../assets/imagesHouses/houseImage_56_0%../assets/imagesHouses/houseImage_55_0%../assets/imagesHouses/houseImage_54_0%../assets/imagesHouses/houseImage_53_0%../assets/imagesHouses/houseImage_52_0%../assets/imagesHouses/houseImage_51_0%../assets/imagesHouses/houseImage_47_0%../assets/imagesHouses/houseImage_32_0%../assets/imagesHouses/houseImage_25_0%../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_26_0%../assets/imagesHouses/houseImage_18_0%../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_28_0%../assets/imagesHouses/houseImage_82_0%../assets/imagesHouses/houseImage_48_0%../assets/imagesHouses/houseImage_35_0%../assets/imagesHouses/houseImage_20_0%../assets/imagesHouses/houseImage_26_0%../assets/imagesHouses/houseImage_18_0%../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_82_0%../assets/imagesHouses/houseImage_48_0%../assets/imagesHouses/houseImage_35_0%../assets/imagesHouses/houseImage_20_0%../assets/imagesHouses/houseImage_26_0%../assets/imagesHouses/houseImage_18_0%../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_82_0%../assets/imagesHouses/houseImage_48_0%../assets/imagesHouses/houseImage_35_0%../assets/imagesHouses/houseImage_20_0%../assets/imagesHouses/houseImage_82_0%../assets/imagesHouses/houseImage_69_0%../assets/imagesHouses/houseImage_68_0%../assets/imagesHouses/houseImage_65_0%../assets/imagesHouses/houseImage_64_0%../assets/imagesHouses/houseImage_63_0%../assets/imagesHouses/houseImage_62_0%../assets/imagesHouses/houseImage_61_0%../assets/imagesHouses/houseImage_60_0%../assets/imagesHouses/houseImage_59_0%../assets/imagesHouses/houseImage_58_0%../assets/imagesHouses/houseImage_57_0%../assets/imagesHouses/houseImage_56_0%../assets/imagesHouses/houseImage_55_0%../assets/imagesHouses/houseImage_54_0%../assets/imagesHouses/houseImage_53_0%../assets/imagesHouses/houseImage_52_0%../assets/imagesHouses/houseImage_51_0%../assets/imagesHouses/houseImage_47_0%../assets/imagesHouses/houseImage_32_0%../assets/imagesHouses/houseImage_25_0%../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_82_0%../assets/imagesHouses/houseImage_69_0%../assets/imagesHouses/houseImage_68_0%../assets/imagesHouses/houseImage_65_0%../assets/imagesHouses/houseImage_64_0%../assets/imagesHouses/houseImage_63_0%../assets/imagesHouses/houseImage_62_0%../assets/imagesHouses/houseImage_61_0%../assets/imagesHouses/houseImage_60_0%../assets/imagesHouses/houseImage_59_0%../assets/imagesHouses/houseImage_58_0%../assets/imagesHouses/houseImage_57_0%../assets/imagesHouses/houseImage_56_0%../assets/imagesHouses/houseImage_55_0%../assets/imagesHouses/houseImage_54_0%../assets/imagesHouses/houseImage_53_0%../assets/imagesHouses/houseImage_52_0%../assets/imagesHouses/houseImage_51_0%../assets/imagesHouses/houseImage_47_0%../assets/imagesHouses/houseImage_32_0%../assets/imagesHouses/houseImage_25_0%../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_26_0%../assets/imagesHouses/houseImage_18_0%../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_82_0%../assets/imagesHouses/houseImage_48_0%../assets/imagesHouses/houseImage_35_0%../assets/imagesHouses/houseImage_20_0%../assets/imagesHouses/houseImage_26_0%../assets/imagesHouses/houseImage_18_0%../assets/imagesHouses/houseImage_82_0%../assets/imagesHouses/houseImage_48_0%../assets/imagesHouses/houseImage_35_0%../assets/imagesHouses/houseImage_20_0%../assets/imagesHouses/houseImage_82_0%../assets/imagesHouses/houseImage_69_0%../assets/imagesHouses/houseImage_68_0%../assets/imagesHouses/houseImage_65_0%../assets/imagesHouses/houseImage_64_0%../assets/imagesHouses/houseImage_63_0%../assets/imagesHouses/houseImage_62_0%../assets/imagesHouses/houseImage_61_0%../assets/imagesHouses/houseImage_60_0%../assets/imagesHouses/houseImage_59_0%../assets/imagesHouses/houseImage_58_0%../assets/imagesHouses/houseImage_57_0%../assets/imagesHouses/houseImage_56_0%../assets/imagesHouses/houseImage_55_0%../assets/imagesHouses/houseImage_54_0%../assets/imagesHouses/houseImage_53_0%../assets/imagesHouses/houseImage_52_0%../assets/imagesHouses/houseImage_51_0%../assets/imagesHouses/houseImage_47_0%../assets/imagesHouses/houseImage_32_0%../assets/imagesHouses/houseImage_25_0%../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_82_0%../assets/imagesHouses/houseImage_69_0%../assets/imagesHouses/houseImage_68_0%../assets/imagesHouses/houseImage_65_0%../assets/imagesHouses/houseImage_64_0%../assets/imagesHouses/houseImage_63_0%../assets/imagesHouses/houseImage_62_0%../assets/imagesHouses/houseImage_61_0%../assets/imagesHouses/houseImage_60_0%../assets/imagesHouses/houseImage_59_0%../assets/imagesHouses/houseImage_58_0%../assets/imagesHouses/houseImage_57_0%../assets/imagesHouses/houseImage_56_0%../assets/imagesHouses/houseImage_55_0%../assets/imagesHouses/houseImage_54_0%../assets/imagesHouses/houseImage_53_0%../assets/imagesHouses/houseImage_52_0%../assets/imagesHouses/houseImage_51_0%../assets/imagesHouses/houseImage_47_0%../assets/imagesHouses/houseImage_32_0%../assets/imagesHouses/houseImage_25_0%../assets/imagesHouses/houseImage_23_0%Array
+(
+    [houseId] => 82
+)
+../assets/imagesHouses/houseImage_82_0%../assets/imagesHouses/houseImage_69_0%../assets/imagesHouses/houseImage_68_0%../assets/imagesHouses/houseImage_65_0%../assets/imagesHouses/houseImage_64_0%../assets/imagesHouses/houseImage_63_0%../assets/imagesHouses/houseImage_62_0%../assets/imagesHouses/houseImage_61_0%../assets/imagesHouses/houseImage_60_0%../assets/imagesHouses/houseImage_59_0%../assets/imagesHouses/houseImage_58_0%../assets/imagesHouses/houseImage_57_0%../assets/imagesHouses/houseImage_56_0%../assets/imagesHouses/houseImage_55_0%../assets/imagesHouses/houseImage_54_0%../assets/imagesHouses/houseImage_53_0%../assets/imagesHouses/houseImage_52_0%../assets/imagesHouses/houseImage_51_0%../assets/imagesHouses/houseImage_47_0%../assets/imagesHouses/houseImage_32_0%../assets/imagesHouses/houseImage_25_0%../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_26_0%../assets/imagesHouses/houseImage_18_0%../assets/imagesHouses/houseImage_82_0%../assets/imagesHouses/houseImage_48_0%../assets/imagesHouses/houseImage_35_0%../assets/imagesHouses/houseImage_20_0%../assets/imagesHouses/houseImage_82_0%../assets/imagesHouses/houseImage_69_0%../assets/imagesHouses/houseImage_68_0%../assets/imagesHouses/houseImage_65_0%../assets/imagesHouses/houseImage_64_0%../assets/imagesHouses/houseImage_63_0%../assets/imagesHouses/houseImage_62_0%../assets/imagesHouses/houseImage_61_0%../assets/imagesHouses/houseImage_60_0%../assets/imagesHouses/houseImage_59_0%../assets/imagesHouses/houseImage_58_0%../assets/imagesHouses/houseImage_57_0%../assets/imagesHouses/houseImage_56_0%../assets/imagesHouses/houseImage_55_0%../assets/imagesHouses/houseImage_54_0%../assets/imagesHouses/houseImage_53_0%../assets/imagesHouses/houseImage_52_0%../assets/imagesHouses/houseImage_51_0%../assets/imagesHouses/houseImage_47_0%../assets/imagesHouses/houseImage_32_0%../assets/imagesHouses/houseImage_25_0%../assets/imagesHouses/houseImage_23_0%Array
+(
+    [houseId] => 82
+)
+Array
+(
+    [HouseName] => merda
+    [PricePerDay] => 10000
+    [Adress] => sdasdasassadsa
+    [description] =>  merda 
+    [PostalCode] => 34234Q
+    [City] => wwqe
+    [Country] => qweqweqw
     [Capacity] => 33
-    [houseId] => 85
-    [File0] => 2
-    [File1] => 2
-    [File2] => 0
-    [File3] => 0
-    [File4] => 0
-    [File5] => 0
-)
-Array
-(
-    [0] => 2
-    [1] => 2
-    [2] => 0
-    [3] => 0
-    [4] => 0
-    [5] => 0
-)
-Array
-(
-    [houseId] => 85
-)
-Array
-(
-    [houseId] => 85
-)
-Array
-(
-    [HouseName] => merdaaSsaSSSsAS
-    [PricePerDay] => 222
-    [Adress] => dasdas
-    [description] => SAsASa
-    [PostalCode] => 50050-002
-    [City] => sSasAS
-    [Country] => asASs
-    [Capacity] => 33
-    [houseId] => 85
-    [File0] => 2
-    [File1] => 2
-    [File2] => 0
-    [File3] => 0
-    [File4] => 0
-    [File5] => 0
-)
-Array
-(
-    [0] => 2
-    [1] => 2
-    [2] => 0
-    [3] => 0
-    [4] => 0
-    [5] => 0
-)
-Array
-(
-    [houseId] => 85
-)
-Array
-(
-    [HouseName] => merdAAAAAAAAAAAAAAAAA
-    [PricePerDay] => 222
-    [Adress] => dasdas
-    [description] => asdadadsds
-    [PostalCode] => 50050-002
-    [City] => asdasdad
-    [Country] => asdasdas
-    [Capacity] => 33
-    [houseId] => 85
-    [File0] => 2
-    [File1] => 2
-    [File2] => 0
-    [File3] => 0
-    [File4] => 0
-    [File5] => 0
-)
-Array
-(
-    [0] => 2
-    [1] => 2
-    [2] => 0
-    [3] => 0
-    [4] => 0
-    [5] => 0
-)
-shitArray
-(
-    [houseId] => 85
-)
-Array
-(
-    [houseId] => 85
-)
-Array
-(
-    [houseId] => 85
-)
-Array
-(
-    [HouseName] => merdaaaaaaa
-    [PricePerDay] => 222
-    [Adress] => dasdassadasdasd
-    [description] => asdasdasdasd
-    [PostalCode] => 50050-002
-    [City] => asdasdasd
-    [Country] => asdasdasd
-    [Capacity] => 33
-    [houseId] => 85
-    [File0] => 2
-    [File1] => 2
-    [File2] => 0
-    [File3] => 0
-    [File4] => 0
-    [File5] => 0
-)
-Array
-(
-    [0] => 2
-    [1] => 2
-    [2] => 0
-    [3] => 0
-    [4] => 0
-    [5] => 0
-)
-merda1merda2shitArray
-(
-    [houseId] => 85
-)
-Array
-(
-    [HouseName] => merdaaaaaaa
-    [PricePerDay] => 222
-    [Adress] => dasdas
-    [description] => dasadasd
-    [PostalCode] => 50050-002
-    [City] => asdasdasd
-    [Country] => dasdasdasd
-    [Capacity] => 33
-    [houseId] => 85
-    [File0] => 2
-    [File1] => 2
-    [File2] => 0
-    [File3] => 0
-    [File4] => 0
-    [File5] => 0
-)
-Array
-(
-    [0] => 2
-    [1] => 2
-    [2] => 0
-    [3] => 0
-    [4] => 0
-    [5] => 0
-)
-merda1merda2shitArray
-(
-    [HouseName] => merdaaaaaaa
-    [PricePerDay] => 222
-    [Adress] => dasdas
-    [description] => dasadasd
-    [PostalCode] => 50050-002
-    [City] => asdasdasd
-    [Country] => dasdasdasd
-    [Capacity] => 33
-    [houseId] => 85
-    [File0] => 2
-    [File1] => 2
-    [File2] => 0
-    [File3] => 0
-    [File4] => 0
-    [File5] => 0
-)
-Array
-(
-    [0] => 2
-    [1] => 2
-    [2] => 0
-    [3] => 0
-    [4] => 0
-    [5] => 0
-)
-merda1merda2PDOException Object
-(
-    [message:protected] => SQLSTATE[HY000]: General error: 1 near "House": syntax error
-    [string:Exception:private] => 
-    [code:protected] => HY000
-    [file:protected] => C:\xampp\htdocs\MIEIC_ltw\proj\database\db_functions.php
-    [line:protected] => 263
-    [trace:Exception:private] => Array
-        (
-            [0] => Array
-                (
-                    [file] => C:\xampp\htdocs\MIEIC_ltw\proj\database\db_functions.php
-                    [line] => 263
-                    [function] => prepare
-                    [class] => PDO
-                    [type] => ->
-                    [args] => Array
-                        (
-                            [0] => UPDATE House SET Name = :house_name,Description = :description,PricePerDay = :price_per_day,Adress = :adress,PostalCode = :postal_code,Capacity = :capacityWHERE House.Id = :house_id
-                        )
-
-                )
-
-            [1] => Array
-                (
-                    [file] => C:\xampp\htdocs\MIEIC_ltw\proj\actions\api_update_house.php
-                    [line] => 30
-                    [function] => update_property
-                    [args] => Array
-                        (
-                            [0] => 85
-                            [1] => merdaaaaaaa
-                            [2] => 222
-                            [3] => dasdas
-                            [4] => dasadasd
-                            [5] => 50050-002
-                            [6] => asdasdasd
-                            [7] => dasdasdasd
-                            [8] => 33
-                            [9] => pniblett0
-                        )
-
-                )
-
-        )
-
-    [previous:Exception:private] => 
-    [errorInfo] => Array
-        (
-            [0] => HY000
-            [1] => 1
-            [2] => near "House": syntax error
-        )
-
-)
-shitArray
-(
-    [houseId] => 85
-)
-Array
-(
-    [houseId] => 85
-)
-Array
-(
-    [HouseName] => lololololol
-    [PricePerDay] => 222
-    [Adress] => dasdas
-    [description] => asdasd
-    [PostalCode] => 50050-002
-    [City] => dasd
-    [Country] => adasdasd
-    [Capacity] => 33
-    [houseId] => 85
-    [File0] => 2
-    [File1] => 2
-    [File2] => 0
-    [File3] => 0
-    [File4] => 0
-    [File5] => 0
-)
-Array
-(
-    [0] => 2
-    [1] => 2
-    [2] => 0
-    [3] => 0
-    [4] => 0
-    [5] => 0
-)
-merda1merda2PDOException Object
-(
-    [message:protected] => SQLSTATE[HY000]: General error: 1 near "House": syntax error
-    [string:Exception:private] => 
-    [code:protected] => HY000
-    [file:protected] => C:\xampp\htdocs\MIEIC_ltw\proj\database\db_functions.php
-    [line:protected] => 263
-    [trace:Exception:private] => Array
-        (
-            [0] => Array
-                (
-                    [file] => C:\xampp\htdocs\MIEIC_ltw\proj\database\db_functions.php
-                    [line] => 263
-                    [function] => prepare
-                    [class] => PDO
-                    [type] => ->
-                    [args] => Array
-                        (
-                            [0] => UPDATE House SET Name = :house_name,Description = :description,PricePerDay = :price_per_day,Address = :adress,PostalCode = :postal_code,Capacity = :capacityWHERE House.Id = :house_id
-                        )
-
-                )
-
-            [1] => Array
-                (
-                    [file] => C:\xampp\htdocs\MIEIC_ltw\proj\actions\api_update_house.php
-                    [line] => 30
-                    [function] => update_property
-                    [args] => Array
-                        (
-                            [0] => 85
-                            [1] => lololololol
-                            [2] => 222
-                            [3] => dasdas
-                            [4] => asdasd
-                            [5] => 50050-002
-                            [6] => dasd
-                            [7] => adasdasd
-                            [8] => 33
-                            [9] => pniblett0
-                        )
-
-                )
-
-        )
-
-    [previous:Exception:private] => 
-    [errorInfo] => Array
-        (
-            [0] => HY000
-            [1] => 1
-            [2] => near "House": syntax error
-        )
-
-)
-shitArray
-(
-    [houseId] => 85
-)
-Array
-(
-    [HouseName] => rdsdadasdasnnnnnnn
-    [PricePerDay] => 222
-    [Adress] => dasdadasdasds
-    [description] => asdasdasd
-    [PostalCode] => 50050-002
-    [City] => dasdasd
-    [Country] => asdasdasd
-    [Capacity] => 33
-    [houseId] => 85
-    [File0] => 2
-    [File1] => 2
-    [File2] => 0
-    [File3] => 0
-    [File4] => 0
-    [File5] => 0
-)
-Array
-(
-    [0] => 2
-    [1] => 2
-    [2] => 0
-    [3] => 0
-    [4] => 0
-    [5] => 0
-)
-merda1merda2PDOException Object
-(
-    [message:protected] => SQLSTATE[HY000]: General error: 1 near "House": syntax error
-    [string:Exception:private] => 
-    [code:protected] => HY000
-    [file:protected] => C:\xampp\htdocs\MIEIC_ltw\proj\database\db_functions.php
-    [line:protected] => 260
-    [trace:Exception:private] => Array
-        (
-            [0] => Array
-                (
-                    [file] => C:\xampp\htdocs\MIEIC_ltw\proj\database\db_functions.php
-                    [line] => 260
-                    [function] => prepare
-                    [class] => PDO
-                    [type] => ->
-                    [args] => Array
-                        (
-                            [0] => UPDATE House SET Name = :house_name,Description = :description,PricePerDay = :price_per_day,Address = :adress,PostalCode = :postal_code,Capacity = :capacityWHERE House.Id = :house_id
-                        )
-
-                )
-
-            [1] => Array
-                (
-                    [file] => C:\xampp\htdocs\MIEIC_ltw\proj\actions\api_update_house.php
-                    [line] => 30
-                    [function] => update_property
-                    [args] => Array
-                        (
-                            [0] => 85
-                            [1] => rdsdadasdasnnnnnnn
-                            [2] => 222
-                            [3] => dasdadasdasds
-                            [4] => asdasdasd
-                            [5] => 50050-002
-                            [6] => dasdasd
-                            [7] => asdasdasd
-                            [8] => 33
-                            [9] => pniblett0
-                        )
-
-                )
-
-        )
-
-    [previous:Exception:private] => 
-    [errorInfo] => Array
-        (
-            [0] => HY000
-            [1] => 1
-            [2] => near "House": syntax error
-        )
-
-)
-shitArray
-(
-    [HouseName] => rdsdadasdasnnnnnnn
-    [PricePerDay] => 222
-    [Adress] => dasdadasdasds
-    [description] => asdasdasd
-    [PostalCode] => 50050-002
-    [City] => dasdasd
-    [Country] => asdasdasd
-    [Capacity] => 33
-    [houseId] => 85
-    [File0] => 2
-    [File1] => 2
-    [File2] => 0
-    [File3] => 0
-    [File4] => 0
-    [File5] => 0
-)
-Array
-(
-    [0] => 2
-    [1] => 2
-    [2] => 0
-    [3] => 0
-    [4] => 0
-    [5] => 0
-)
-merda1merda2PDOException Object
-(
-    [message:protected] => SQLSTATE[HY000]: General error: 1 near "House": syntax error
-    [string:Exception:private] => 
-    [code:protected] => HY000
-    [file:protected] => C:\xampp\htdocs\MIEIC_ltw\proj\database\db_functions.php
-    [line:protected] => 261
-    [trace:Exception:private] => Array
-        (
-            [0] => Array
-                (
-                    [file] => C:\xampp\htdocs\MIEIC_ltw\proj\database\db_functions.php
-                    [line] => 261
-                    [function] => prepare
-                    [class] => PDO
-                    [type] => ->
-                    [args] => Array
-                        (
-                            [0] => UPDATE House SET Name = "2asdss",Description = :description,PricePerDay = :price_per_day,Address = :adress,PostalCode = :postal_code,Capacity = :capacityWHERE House.Id = :house_id
-                        )
-
-                )
-
-            [1] => Array
-                (
-                    [file] => C:\xampp\htdocs\MIEIC_ltw\proj\actions\api_update_house.php
-                    [line] => 30
-                    [function] => update_property
-                    [args] => Array
-                        (
-                            [0] => 85
-                            [1] => rdsdadasdasnnnnnnn
-                            [2] => 222
-                            [3] => dasdadasdasds
-                            [4] => asdasdasd
-                            [5] => 50050-002
-                            [6] => dasdasd
-                            [7] => asdasdasd
-                            [8] => 33
-                            [9] => pniblett0
-                        )
-
-                )
-
-        )
-
-    [previous:Exception:private] => 
-    [errorInfo] => Array
-        (
-            [0] => HY000
-            [1] => 1
-            [2] => near "House": syntax error
-        )
-
-)
-shitArray
-(
-    [houseId] => 85
-)
-Array
-(
-    [HouseName] => dasdadasssssssssssssssssssssssssssnnnnnnnnnnnnnnnnnnnnnnnnnn
-    [PricePerDay] => 222
-    [Adress] => dasdasddddasdas
-    [description] => ssssasdddd
-    [PostalCode] => 50050-002
-    [City] => asddasdasd
-    [Country] => dasdasdasdas
-    [Capacity] => 33
-    [houseId] => 85
-    [File0] => 2
-    [File1] => 2
-    [File2] => 0
-    [File3] => 0
-    [File4] => 0
-    [File5] => 0
-)
-Array
-(
-    [0] => 2
-    [1] => 2
-    [2] => 0
-    [3] => 0
-    [4] => 0
-    [5] => 0
-)
-merda1merda2PDOException Object
-(
-    [message:protected] => SQLSTATE[HY000]: General error: 1 near "House": syntax error
-    [string:Exception:private] => 
-    [code:protected] => HY000
-    [file:protected] => C:\xampp\htdocs\MIEIC_ltw\proj\database\db_functions.php
-    [line:protected] => 261
-    [trace:Exception:private] => Array
-        (
-            [0] => Array
-                (
-                    [file] => C:\xampp\htdocs\MIEIC_ltw\proj\database\db_functions.php
-                    [line] => 261
-                    [function] => prepare
-                    [class] => PDO
-                    [type] => ->
-                    [args] => Array
-                        (
-                            [0] => UPDATE House SET Name = "2asdss",Description = :description,PricePerDay = :price_per_day,Address = :adress,PostalCode = :postal_code,Capacity = :capacityWHERE House.Id = :house_id
-                        )
-
-                )
-
-            [1] => Array
-                (
-                    [file] => C:\xampp\htdocs\MIEIC_ltw\proj\actions\api_update_house.php
-                    [line] => 30
-                    [function] => update_property
-                    [args] => Array
-                        (
-                            [0] => 85
-                            [1] => dasdadasssssssssssssssssssssssssssnnnnnnnnnnnnnnnnnnnnnnnnnn
-                            [2] => 222
-                            [3] => dasdasddddasdas
-                            [4] => ssssasdddd
-                            [5] => 50050-002
-                            [6] => asddasdasd
-                            [7] => dasdasdasdas
-                            [8] => 33
-                            [9] => pniblett0
-                        )
-
-                )
-
-        )
-
-    [previous:Exception:private] => 
-    [errorInfo] => Array
-        (
-            [0] => HY000
-            [1] => 1
-            [2] => near "House": syntax error
-        )
-
-)
-shitArray
-(
-    [houseId] => 85
-)
-Array
-(
-    [HouseName] => rua dos assdnnnnnnnnn
-    [PricePerDay] => 222
-    [Adress] => dasdas
-    [description] => sdadas
-    [PostalCode] => 50050-002
-    [City] => asdasd
-    [Country] => asdasd
-    [Capacity] => 33
-    [houseId] => 85
-    [File0] => 2
-    [File1] => 2
-    [File2] => 0
-    [File3] => 0
-    [File4] => 0
-    [File5] => 0
-)
-Array
-(
-    [0] => 2
-    [1] => 2
-    [2] => 0
-    [3] => 0
-    [4] => 0
-    [5] => 0
-)
-merda1merda20Array
-(
-    [image0] => Array
-        (
-            [name] => 
-            [type] => 
-            [tmp_name] => 
-            [error] => 4
-            [size] => 0
-        )
-
-    [image1] => Array
-        (
-            [name] => 
-            [type] => 
-            [tmp_name] => 
-            [error] => 4
-            [size] => 0
-        )
-
-    [image2] => Array
-        (
-            [name] => 
-            [type] => 
-            [tmp_name] => 
-            [error] => 4
-            [size] => 0
-        )
-
-    [image3] => Array
-        (
-            [name] => 
-            [type] => 
-            [tmp_name] => 
-            [error] => 4
-            [size] => 0
-        )
-
-    [image4] => Array
-        (
-            [name] => 
-            [type] => 
-            [tmp_name] => 
-            [error] => 4
-            [size] => 0
-        )
-
-    [image5] => Array
-        (
-            [name] => 
-            [type] => 
-            [tmp_name] => 
-            [error] => 4
-            [size] => 0
-        )
-
-)
-220000LOL2Array
-(
-    [houseId] => 85
-)
-Array
-(
-    [HouseName] => rua dos assdnnnnnnnnndasdadadaddasasdasdasdasdassssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-    [PricePerDay] => 222
-    [Adress] => dasdas 
-    [description] => asdasddddddddddddd
-    [PostalCode] => 50050-002
-    [City] => asddssadsdadas
-    [Country] => asdsadssad
-    [Capacity] => 33
-    [houseId] => 85
-    [File0] => 2
-    [File1] => 2
-    [File2] => 0
-    [File3] => 0
-    [File4] => 0
-    [File5] => 0
-)
-Array
-(
-    [0] => 2
-    [1] => 2
-    [2] => 0
-    [3] => 0
-    [4] => 0
-    [5] => 0
-)
-merda1merda20Array
-(
-    [image0] => Array
-        (
-            [name] => 
-            [type] => 
-            [tmp_name] => 
-            [error] => 4
-            [size] => 0
-        )
-
-    [image1] => Array
-        (
-            [name] => 
-            [type] => 
-            [tmp_name] => 
-            [error] => 4
-            [size] => 0
-        )
-
-    [image2] => Array
-        (
-            [name] => 
-            [type] => 
-            [tmp_name] => 
-            [error] => 4
-            [size] => 0
-        )
-
-    [image3] => Array
-        (
-            [name] => 
-            [type] => 
-            [tmp_name] => 
-            [error] => 4
-            [size] => 0
-        )
-
-    [image4] => Array
-        (
-            [name] => 
-            [type] => 
-            [tmp_name] => 
-            [error] => 4
-            [size] => 0
-        )
-
-    [image5] => Array
-        (
-            [name] => 
-            [type] => 
-            [tmp_name] => 
-            [error] => 4
-            [size] => 0
-        )
-
-)
-220000LOL2Array
-(
-    [houseId] => 83
-)
-Array
-(
-    [HouseName] => rua dos ruassss
-    [PricePerDay] => 222
-    [Adress] => dasdas
-    [description] => sdadd
-    [PostalCode] => 50050-002
-    [City] => adasd
-    [Country] => asdasdad
-    [Capacity] => 33
-    [houseId] => 83
-    [File0] => 2
-    [File1] => 2
-    [File2] => 0
-    [File3] => 0
-    [File4] => 0
-    [File5] => 0
-)
-Array
-(
-    [0] => 2
-    [1] => 2
-    [2] => 0
-    [3] => 0
-    [4] => 0
-    [5] => 0
-)
-merda1merda20Array
-(
-    [image0] => Array
-        (
-            [name] => 
-            [type] => 
-            [tmp_name] => 
-            [error] => 4
-            [size] => 0
-        )
-
-    [image1] => Array
-        (
-            [name] => 
-            [type] => 
-            [tmp_name] => 
-            [error] => 4
-            [size] => 0
-        )
-
-    [image2] => Array
-        (
-            [name] => 
-            [type] => 
-            [tmp_name] => 
-            [error] => 4
-            [size] => 0
-        )
-
-    [image3] => Array
-        (
-            [name] => 
-            [type] => 
-            [tmp_name] => 
-            [error] => 4
-            [size] => 0
-        )
-
-    [image4] => Array
-        (
-            [name] => 
-            [type] => 
-            [tmp_name] => 
-            [error] => 4
-            [size] => 0
-        )
-
-    [image5] => Array
-        (
-            [name] => 
-            [type] => 
-            [tmp_name] => 
-            [error] => 4
-            [size] => 0
-        )
-
-)
-220000LOL2Array
-(
-    [houseId] => 83
-)
-Array
-(
-    [HouseName] => rua dos ruassss
-    [PricePerDay] => 222
-    [Adress] => dasdas 
-    [description] => 
-    [PostalCode] => 50050-002
-    [City] => zxzx
-    [Country] => swqd
-    [Capacity] => 33
-    [houseId] => 83
+    [houseId] => 82
     [File0] => 1
-    [File1] => 2
+    [File1] => 1
     [File2] => 0
     [File3] => 0
     [File4] => 0
@@ -880,30 +43,30 @@ Array
 Array
 (
     [0] => 1
-    [1] => 2
+    [1] => 1
     [2] => 0
     [3] => 0
     [4] => 0
     [5] => 0
 )
-merda1merda20Array
+merda1merda282Array
 (
     [image0] => Array
         (
-            [name] => inverso.jpg
-            [type] => image/jpeg
-            [tmp_name] => C:\xampp\tmp\php47BC.tmp
+            [name] => colmo.png
+            [type] => image/png
+            [tmp_name] => C:\xampp\tmp\php98C1.tmp
             [error] => 0
-            [size] => 29718
+            [size] => 207731
         )
 
     [image1] => Array
         (
-            [name] => 
-            [type] => 
-            [tmp_name] => 
-            [error] => 4
-            [size] => 0
+            [name] => palm_tree_leaf.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\php98D2.tmp
+            [error] => 0
+            [size] => 228930
         )
 
     [image2] => Array
@@ -943,19 +106,23 @@ merda1merda20Array
         )
 
 )
-1adicionar o pathArray
+1adicionar o path1adicionar o path0000LOL2../assets/imagesHouses/houseImage_82_0%../assets/imagesHouses/houseImage_69_0%../assets/imagesHouses/houseImage_68_0%../assets/imagesHouses/houseImage_65_0%../assets/imagesHouses/houseImage_64_0%../assets/imagesHouses/houseImage_63_0%../assets/imagesHouses/houseImage_62_0%../assets/imagesHouses/houseImage_61_0%../assets/imagesHouses/houseImage_60_0%../assets/imagesHouses/houseImage_59_0%../assets/imagesHouses/houseImage_58_0%../assets/imagesHouses/houseImage_57_0%../assets/imagesHouses/houseImage_56_0%../assets/imagesHouses/houseImage_55_0%../assets/imagesHouses/houseImage_54_0%../assets/imagesHouses/houseImage_53_0%../assets/imagesHouses/houseImage_52_0%../assets/imagesHouses/houseImage_51_0%../assets/imagesHouses/houseImage_47_0%../assets/imagesHouses/houseImage_32_0%../assets/imagesHouses/houseImage_25_0%../assets/imagesHouses/houseImage_23_0%Array
 (
-    [HouseName] => rua dos ruassss
-    [PricePerDay] => 222
-    [Adress] => dasdas 
-    [description] => dfsfdsdf
-    [PostalCode] => 50050-002
-    [City] => zxzx
-    [Country] => swqd
+    [houseId] => 82
+)
+Array
+(
+    [HouseName] => merda
+    [PricePerDay] => 10000
+    [Adress] => sdasdasassadsa 
+    [description] =>   merda  
+    [PostalCode] => 34234Q
+    [City] => qwewew
+    [Country] => qweweqe
     [Capacity] => 33
-    [houseId] => 83
-    [File0] => 1
-    [File1] => 2
+    [houseId] => 82
+    [File0] => 2
+    [File1] => 0
     [File2] => 0
     [File3] => 0
     [File4] => 0
@@ -963,22 +130,22 @@ merda1merda20Array
 )
 Array
 (
-    [0] => 1
-    [1] => 2
+    [0] => 2
+    [1] => 0
     [2] => 0
     [3] => 0
     [4] => 0
     [5] => 0
 )
-merda1merda20Array
+merda1merda282Array
 (
     [image0] => Array
         (
-            [name] => inverso.jpg
-            [type] => image/jpeg
-            [tmp_name] => C:\xampp\tmp\php60C3.tmp
-            [error] => 0
-            [size] => 29718
+            [name] => 
+            [type] => 
+            [tmp_name] => 
+            [error] => 4
+            [size] => 0
         )
 
     [image1] => Array
@@ -1027,34 +194,38 @@ merda1merda20Array
         )
 
 )
-1adicionar o pathArray
+200000LOL2../assets/imagesHouses/houseImage_82_0%../assets/imagesHouses/houseImage_69_0%../assets/imagesHouses/houseImage_68_0%../assets/imagesHouses/houseImage_65_0%../assets/imagesHouses/houseImage_64_0%../assets/imagesHouses/houseImage_63_0%../assets/imagesHouses/houseImage_62_0%../assets/imagesHouses/houseImage_61_0%../assets/imagesHouses/houseImage_60_0%../assets/imagesHouses/houseImage_59_0%../assets/imagesHouses/houseImage_58_0%../assets/imagesHouses/houseImage_57_0%../assets/imagesHouses/houseImage_56_0%../assets/imagesHouses/houseImage_55_0%../assets/imagesHouses/houseImage_54_0%../assets/imagesHouses/houseImage_53_0%../assets/imagesHouses/houseImage_52_0%../assets/imagesHouses/houseImage_51_0%../assets/imagesHouses/houseImage_47_0%../assets/imagesHouses/houseImage_32_0%../assets/imagesHouses/houseImage_25_0%../assets/imagesHouses/houseImage_23_0%Array
 (
-    [HouseName] => rua dos ruassss
-    [PricePerDay] => 222
-    [Adress] => dasdas 
-    [description] => dfsfdsdf
-    [PostalCode] => 50050-002
-    [City] => zxzx
-    [Country] => swqd
+    [houseId] => 82
+)
+Array
+(
+    [HouseName] => merda
+    [PricePerDay] => 10000
+    [Adress] => sdasdasassadsa  
+    [description] =>    merda   
+    [PostalCode] => 34234Q
+    [City] => qwe
+    [Country] => qweqwe
     [Capacity] => 33
-    [houseId] => 83
+    [houseId] => 82
     [File0] => 0
-    [File1] => 2
+    [File1] => 0
     [File2] => 0
     [File3] => 0
     [File4] => 0
-    [File5] => 0
+    [File5] => 1
 )
 Array
 (
     [0] => 0
-    [1] => 2
+    [1] => 0
     [2] => 0
     [3] => 0
     [4] => 0
-    [5] => 0
+    [5] => 1
 )
-merda1merda20Array
+merda1merda282Array
 (
     [image0] => Array
         (
@@ -1103,46 +274,54 @@ merda1merda20Array
 
     [image5] => Array
         (
-            [name] => 
-            [type] => 
-            [tmp_name] => 
-            [error] => 4
-            [size] => 0
+            [name] => palm_tree_leaf.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\phpD7B1.tmp
+            [error] => 0
+            [size] => 228930
         )
 
 )
-020000LOL2Array
+000001adicionar o pathLOL2../assets/imagesHouses/houseImage_82_0%../assets/imagesHouses/houseImage_69_0%../assets/imagesHouses/houseImage_68_0%../assets/imagesHouses/houseImage_65_0%../assets/imagesHouses/houseImage_64_0%../assets/imagesHouses/houseImage_63_0%../assets/imagesHouses/houseImage_62_0%../assets/imagesHouses/houseImage_61_0%../assets/imagesHouses/houseImage_60_0%../assets/imagesHouses/houseImage_59_0%../assets/imagesHouses/houseImage_58_0%../assets/imagesHouses/houseImage_57_0%../assets/imagesHouses/houseImage_56_0%../assets/imagesHouses/houseImage_55_0%../assets/imagesHouses/houseImage_54_0%../assets/imagesHouses/houseImage_53_0%../assets/imagesHouses/houseImage_52_0%../assets/imagesHouses/houseImage_51_0%../assets/imagesHouses/houseImage_47_0%../assets/imagesHouses/houseImage_32_0%../assets/imagesHouses/houseImage_25_0%../assets/imagesHouses/houseImage_23_0%Array
 (
-    [houseId] => 83
+    [houseId] => 82
 )
 Array
 (
-    [HouseName] => rua dos ruassss
-    [PricePerDay] => 222
-    [Adress] => dasdas  
-    [description] => dffffgdg
-    [PostalCode] => 50050-002
-    [City] => fdgdfgdf
-    [Country] => dfgdfg
+    [houseId] => 82
+)
+Array
+(
+    [houseId] => 82
+)
+Array
+(
+    [HouseName] => merda
+    [PricePerDay] => 10000
+    [Adress] => sdasdasassadsa   
+    [description] =>     merda    
+    [PostalCode] => 34234Q
+    [City] => wer
+    [Country] => werewrr
     [Capacity] => 33
-    [houseId] => 83
+    [houseId] => 82
     [File0] => 0
-    [File1] => 2
+    [File1] => 0
     [File2] => 0
     [File3] => 0
     [File4] => 0
-    [File5] => 0
+    [File5] => 1
 )
 Array
 (
     [0] => 0
-    [1] => 2
+    [1] => 0
     [2] => 0
     [3] => 0
     [4] => 0
-    [5] => 0
+    [5] => 1
 )
-merda1merda20Array
+merda1merda282Array
 (
     [image0] => Array
         (
@@ -1191,12 +370,19 @@ merda1merda20Array
 
     [image5] => Array
         (
-            [name] => 
-            [type] => 
-            [tmp_name] => 
-            [error] => 4
-            [size] => 0
+            [name] => esperguicadeira.png
+            [type] => image/png
+            [tmp_name] => C:\xampp\tmp\phpC0BB.tmp
+            [error] => 0
+            [size] => 105919
         )
 
 )
-020000LOL2
+000001adicionar o pathLOL2../assets/imagesHouses/houseImage_82_0%../assets/imagesHouses/houseImage_69_0%../assets/imagesHouses/houseImage_68_0%../assets/imagesHouses/houseImage_65_0%../assets/imagesHouses/houseImage_64_0%../assets/imagesHouses/houseImage_63_0%../assets/imagesHouses/houseImage_62_0%../assets/imagesHouses/houseImage_61_0%../assets/imagesHouses/houseImage_60_0%../assets/imagesHouses/houseImage_59_0%../assets/imagesHouses/houseImage_58_0%../assets/imagesHouses/houseImage_57_0%../assets/imagesHouses/houseImage_56_0%../assets/imagesHouses/houseImage_55_0%../assets/imagesHouses/houseImage_54_0%../assets/imagesHouses/houseImage_53_0%../assets/imagesHouses/houseImage_52_0%../assets/imagesHouses/houseImage_51_0%../assets/imagesHouses/houseImage_47_0%../assets/imagesHouses/houseImage_32_0%../assets/imagesHouses/houseImage_25_0%../assets/imagesHouses/houseImage_23_0%Array
+(
+    [houseId] => 82
+)
+../assets/imagesHouses/houseImage_26_0%../assets/imagesHouses/houseImage_18_0%../assets/imagesHouses/houseImage_82_0%../assets/imagesHouses/houseImage_48_0%../assets/imagesHouses/houseImage_35_0%../assets/imagesHouses/houseImage_20_0%../assets/imagesHouses/houseImage_82_0%../assets/imagesHouses/houseImage_69_0%../assets/imagesHouses/houseImage_68_0%../assets/imagesHouses/houseImage_65_0%../assets/imagesHouses/houseImage_64_0%../assets/imagesHouses/houseImage_63_0%../assets/imagesHouses/houseImage_62_0%../assets/imagesHouses/houseImage_61_0%../assets/imagesHouses/houseImage_60_0%../assets/imagesHouses/houseImage_59_0%../assets/imagesHouses/houseImage_58_0%../assets/imagesHouses/houseImage_57_0%../assets/imagesHouses/houseImage_56_0%../assets/imagesHouses/houseImage_55_0%../assets/imagesHouses/houseImage_54_0%../assets/imagesHouses/houseImage_53_0%../assets/imagesHouses/houseImage_52_0%../assets/imagesHouses/houseImage_51_0%../assets/imagesHouses/houseImage_47_0%../assets/imagesHouses/houseImage_32_0%../assets/imagesHouses/houseImage_25_0%../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_26_0%../assets/imagesHouses/houseImage_18_0%../assets/imagesHouses/houseImage_82_0%../assets/imagesHouses/houseImage_48_0%../assets/imagesHouses/houseImage_35_0%../assets/imagesHouses/houseImage_20_0%../assets/imagesHouses/houseImage_82_0%../assets/imagesHouses/houseImage_69_0%../assets/imagesHouses/houseImage_68_0%../assets/imagesHouses/houseImage_65_0%../assets/imagesHouses/houseImage_64_0%../assets/imagesHouses/houseImage_63_0%../assets/imagesHouses/houseImage_62_0%../assets/imagesHouses/houseImage_61_0%../assets/imagesHouses/houseImage_60_0%../assets/imagesHouses/houseImage_59_0%../assets/imagesHouses/houseImage_58_0%../assets/imagesHouses/houseImage_57_0%../assets/imagesHouses/houseImage_56_0%../assets/imagesHouses/houseImage_55_0%../assets/imagesHouses/houseImage_54_0%../assets/imagesHouses/houseImage_53_0%../assets/imagesHouses/houseImage_52_0%../assets/imagesHouses/houseImage_51_0%../assets/imagesHouses/houseImage_47_0%../assets/imagesHouses/houseImage_32_0%../assets/imagesHouses/houseImage_25_0%../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_26_0%../assets/imagesHouses/houseImage_18_0%../assets/imagesHouses/houseImage_82_0%../assets/imagesHouses/houseImage_48_0%../assets/imagesHouses/houseImage_35_0%../assets/imagesHouses/houseImage_20_0%../assets/imagesHouses/houseImage_82_0%../assets/imagesHouses/houseImage_69_0%../assets/imagesHouses/houseImage_68_0%../assets/imagesHouses/houseImage_65_0%../assets/imagesHouses/houseImage_64_0%../assets/imagesHouses/houseImage_63_0%../assets/imagesHouses/houseImage_62_0%../assets/imagesHouses/houseImage_61_0%../assets/imagesHouses/houseImage_60_0%../assets/imagesHouses/houseImage_59_0%../assets/imagesHouses/houseImage_58_0%../assets/imagesHouses/houseImage_57_0%../assets/imagesHouses/houseImage_56_0%../assets/imagesHouses/houseImage_55_0%../assets/imagesHouses/houseImage_54_0%../assets/imagesHouses/houseImage_53_0%../assets/imagesHouses/houseImage_52_0%../assets/imagesHouses/houseImage_51_0%../assets/imagesHouses/houseImage_47_0%../assets/imagesHouses/houseImage_32_0%../assets/imagesHouses/houseImage_25_0%../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_26_0%../assets/imagesHouses/houseImage_18_0%../assets/imagesHouses/houseImage_82_0%../assets/imagesHouses/houseImage_48_0%../assets/imagesHouses/houseImage_35_0%../assets/imagesHouses/houseImage_20_0%../assets/imagesHouses/houseImage_82_0%../assets/imagesHouses/houseImage_69_0%../assets/imagesHouses/houseImage_68_0%../assets/imagesHouses/houseImage_65_0%../assets/imagesHouses/houseImage_64_0%../assets/imagesHouses/houseImage_63_0%../assets/imagesHouses/houseImage_62_0%../assets/imagesHouses/houseImage_61_0%../assets/imagesHouses/houseImage_60_0%../assets/imagesHouses/houseImage_59_0%../assets/imagesHouses/houseImage_58_0%../assets/imagesHouses/houseImage_57_0%../assets/imagesHouses/houseImage_56_0%../assets/imagesHouses/houseImage_55_0%../assets/imagesHouses/houseImage_54_0%../assets/imagesHouses/houseImage_53_0%../assets/imagesHouses/houseImage_52_0%../assets/imagesHouses/houseImage_51_0%../assets/imagesHouses/houseImage_47_0%../assets/imagesHouses/houseImage_32_0%../assets/imagesHouses/houseImage_25_0%../assets/imagesHouses/houseImage_23_0%Array
+(
+    [houseId] => 82
+)

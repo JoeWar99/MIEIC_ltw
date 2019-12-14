@@ -162,8 +162,24 @@ function draw_house_in_organized_fashion_Properties(house_data) {
     return_html_in_string_form = draw_house_in_organized_fashion(house_data);
 
     return_html_in_string_form += '<button class="buttonsReservations_2" onClick="pressed_Message_Button(' + house_id + ')">Message Owner</button>';
-    return_html_in_string_form += '<button class = "buttonsReservations_1" > Review </button>';
-    return_html_in_string_form += '<button class = "buttonsReservations_1" onClick="pressed_cancel_Button(' + rent_id + ')"> Cancel </button>';
+
+    var today = new Date();
+    var dd = String(today.getDate()).padStart(2, '0');
+    var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+    var yyyy = today.getFullYear();
+
+    today = yyyy + '/' + mm + '/' + dd;
+    //document.write(today);
+
+    if (today > house_data['EndDate']) {
+        return_html_in_string_form += '<button class = "buttonsReservations_1" > Review </button>';
+    }
+    if (today < house_data['StartDate']) {
+        return_html_in_string_form += '<button class = "buttonsReservations_1" onClick="pressed_cancel_Button(' + rent_id + ')"> Cancel </button>';
+    } else if (today > house_data['EndDate']) {
+        return_html_in_string_form += '<button class = "buttonsReservations_1" onClick="pressed_cancel_Button(' + rent_id + ')"> Arquive </button>';
+    }
+
 
     return return_html_in_string_form;
 }
@@ -186,7 +202,7 @@ function draw_house_in_organized_fashion(house_data) {
     return_html_in_string_form += '<p>' + addr + '</p>';
     let price = house_data["PricePerDay"];
     return_html_in_string_form += '<p> Price: ' + price + '€ /night </p>';
-    let rating = house_data["Rating"];
+    let rating = (Math.round(house_data["Rating"] * 100) / 100).toFixed(1);
     let cnt = house_data["cnt"];
     return_html_in_string_form += '<pre><img src=../assets/star.png width="18" height="15" />' + rating + '       ' + cnt + 'comments </pre>';
     return_html_in_string_form += '</section>';

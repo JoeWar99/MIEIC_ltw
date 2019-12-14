@@ -430,7 +430,6 @@ function draw_add_property($usr)
 function draw_edit_property($usr, $house_id)
 {   
     $house_id = intval($house_id);
-    var_dump($house_id);
     echo "<div id=\"MyPropertiesHeader\">";
     echo "<p id=\"MyPropertiesTitle\"> Add Property </p> ";
     echo "</div>";
@@ -440,11 +439,12 @@ function draw_edit_property($usr, $house_id)
 
 
     if($house_information == false){
-        var_dump('deu mal');
+        alert("Something went wrong");
     }
 
     else{
-        var_dump($house_information);
+       
+    
     ?>
 
 <form>
@@ -566,7 +566,7 @@ function draw_edit_property($usr, $house_id)
                 <input id="adress" name="Adress" class="InputAddProperty" type="text" value="<?php echo $house_information['Address'] ?>" placeholder="Adress">
                 <div id="AdressError" class="valErrorP"> </div> <br>
 
-                <textarea class="InputAddPropertyD" name="description" rows="4" cols="50" value="<?php echo $house_information['Description'] ?>" placeholder="Description"></textarea>
+                <textarea class="InputAddPropertyD" name="description" rows="4" cols="50" placeholder="Description"> <?php echo $house_information['Description'] ?> </textarea>
 
                 <input id="postal-code" name="PostalCode" class="InputAddProperty" type="text" value="<?php echo $house_information['PostalCode'] ?>" placeholder="Postal Code">
                 <div id="PostalCodeError" class="valErrorP"> </div> <br>
@@ -582,7 +582,7 @@ function draw_edit_property($usr, $house_id)
 
             </div>
         </div>
-        <input value="Add Property" name="submitButton" id="btnR2" type="button" onclick="Validate(<?php echo $house_id ?>);">
+        <input value="Submit edit" name="submitButton" id="btnR2" type="button" onclick="Validate(<?php echo $house_id ?>);">
 
     </form>
 <?php

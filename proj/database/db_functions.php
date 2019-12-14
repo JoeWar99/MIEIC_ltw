@@ -79,12 +79,21 @@ function count_comments($house_id)
 }
 
 function get_house_top_pic($house_id)
-{
-    $db = Database::instance()->db();
-    $stmt = $db->prepare("SELECT Path as path FROM House H join Photo P on H.Id = P.HouseId WHERE H.Id = ?;");
-    $stmt->execute(array(intval($house_id)));
-    $result = $stmt->fetch();
-    return $result['path'];
+{ 
+    try{
+        $db = Database::instance()->db();
+        $stmt = $db->prepare("SELECT Path as path FROM House H join Photo P on H.Id = P.HouseId WHERE H.Id = ? and P.Path LIKE ?;");
+        $path = "../assets/imagesHouses/houseImage_" . $house_id . "_" . 0 . "%";
+        file_put_contents('somefilename.txt', print_r($path, true), FILE_APPEND);
+        $stmt->execute(array(intval($house_id), $path));
+        $result = $stmt->fetch();
+        return $result['path'];
+    }
+    catch (PDOException $e) {
+        file_put_contents('somefilename.txt', print_r($e, true), FILE_APPEND);
+        return -1;
+    }
+
 }
 
 function get_house_by_id($house_id)
@@ -344,6 +353,19 @@ function add_photo_path_to_house($id, $originalFileName_string)
 
         $stmt = $db->prepare("INSERT INTO Photo (Id, HouseId, Description, Path) values (? , ?, 'Foto Principal da casa',  ?);");
         $stmt->execute(array(null, $id, $originalFileName_string));
+        return true;
+    } catch (PDOException $e) {
+        return false;
+    }
+}
+
+function remove_photo_path_to_house($id, $originalFileName_string)
+{
+    $db = Database::instance()->db();
+    try {
+
+        $stmt = $db->prepare("DELETE FROM Photo WHERE Photo.path=?;");
+        $stmt->execute(array($originalFileName_string));
         return true;
     } catch (PDOException $e) {
         return false;
