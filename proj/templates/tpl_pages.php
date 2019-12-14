@@ -247,28 +247,29 @@ function draw_house_pics($picpath){
     echo "<img src=$picpath alt=\"House_Pic1\" />";
 }
 
-function draw_rent_form($hid, $ppd){
-    echo "<form id=\"rent_form\" style=\"visibility:hidden;\">";
-    echo "<div id=\"checkin\">";
-    h4("Checkin: ");
-    echo "<input id=\"start_date\" type=\"date\">";
-    echo "<div id=\"checkin_error\">";
-    echo "</div>";
-    echo "</div>";
+function draw_rent_form($hid, $ppd){?>
+    <form id="rent_form" style="visibility:hidden;">
+    <div id=checkin>"
+    <h4>Check-in:</h4>
+    <input id="start_date" name="start_date" type="date" required="required">
+    <div id="checkin_error">
+    </div>
+    </div>
 
-    echo "<div id=\"checkout\">";
-    h4("Checkout");
-    echo "<input id=\"end_date\" type=\"date\">";
-    echo "<div id=\"checkout_error\">";
-    echo "</div>";
-    echo "</div>";
+    <div id="checkout">
+    <h4>Check-out:</h4>
+    <input id="end_date" name="end_date" type="date" required="required">
+    <div id="checkout_error">
+    </div>
+    </div>
 
-    echo "<br>";
-    echo "<input id=\"ppd\" value=\"" . $ppd . "\" readonly style=\"visibility:hidden\">";
-    echo "<input id=\"hid\" value=\"" . $hid . "\" readonly style=\"visibility:hidden\">";
-    echo "<br>";
-    echo "<button id=\"sub_btn\" formaction=\"../actions/action_rent.php\" formmethod=\"get\">RENT</button>";
-    echo "</form>";
+    <br>
+    <input id="ppd" name="ppd" value=<?=$ppd?>  readonly style="visibility:hidden">
+    <input id="hid" name="hid" value= <?=$hid?> readonly style="visibility:hidden">
+    <br>
+    <button type="submit" formaction="../actions/action_rent.php" formmethod="post"> RENT </button>
+    </form>
+<?php   
 }
 
 /**
