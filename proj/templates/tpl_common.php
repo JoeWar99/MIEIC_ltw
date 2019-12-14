@@ -155,6 +155,14 @@
 } 
 ?>
 
+<?php function draw_messages_menu(){
+      echo "<div id=\"messagesMenu\">";
+      echo "<button id= \"reservations\" onclick=\"window.location.href = 'myMessages.php';\">My Messages</button>";
+      echo "</div>";
+} 
+?>
+
+
 <?php $fonts = ["https://use.fontawesome.com/releases/v5.3.1/css/all.css",
                 "https://fonts.googleapis.com/css?family=Merriweather|Open+Sans+Condensed:300",
                 "https://fonts.googleapis.com/css?family=Poppins&display=swap"];
@@ -185,6 +193,7 @@
             draw_profile_menu($username);
             draw_properties_menu();
             draw_reservations_menu();
+            draw_messages_menu();
             echo "<div>";
           close_td();
 

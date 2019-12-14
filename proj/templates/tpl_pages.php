@@ -249,7 +249,7 @@ function draw_house_pics($picpath){
 
 function draw_rent_form($hid, $tid, $ppd){?>
     <form id="rent_form" style="visibility:hidden;">
-    <div id=checkin>"
+    <div id=checkin>
     <h4>Check-in:</h4>
     <input id="start_date" name="start_date" type="date" required="required">
     <div id="checkin_error">
