@@ -227,7 +227,7 @@ function draw_house_comments($comments){
 /** 
  * Draws the rent button in the page for a certain house
  */
-function draw_rent_button($hid, $ppd, $capacity){
+function draw_rent_button(){
     echo "<button id=\"rent_button\" type=\"button\" >Rent</button>";
 }
 
@@ -236,7 +236,9 @@ function draw_rent_button($hid, $ppd, $capacity){
  * Draws the message the owner button in the page for a certain house
  */
 function draw_msg_button(){
-    echo "<button id=\"message_button\" type=\"button\">Message Owner</button>";
+    echo "<form method\"GET\" action=\"../pages/myMessages.php\">";
+    echo "<button id=\"message_button\" type=\"submit\">Message Owner</button>";
+    echo "</form>";
 }
 
 /**
@@ -295,13 +297,13 @@ function draw_housepage($house_info, $city_info, $country_info, $commodities, $o
     draw_house_commodities($commodities);
     draw_house_owners($owner_info);
     draw_house_comments($comments);
-    draw_rent_button($house_info['Id'], $house_info['PricePerDay'], $house_info['Capacity']);
+    draw_rent_button();
     draw_msg_button();
     draw_pic($picpath, "House_PIC1");
     echo "</div>";
 }
 
-function draw_search_page($city_id, $start_date, $end_date, $guest_no, $house_list){
+function draw_search_page($city_id, $country_id, $start_date, $end_date, $guest_no, $house_list){
 
     h2("Showing results for places in: ". get_city_by_id($city_id)['Name'] . ", " . get_country_by_id($country_id)['Name']);
     $tmp1 = explode("-", $start_date);
@@ -318,6 +320,10 @@ function draw_search_page($city_id, $start_date, $end_date, $guest_no, $house_li
 
 /* END OF FUNCTIONS TO DRAW THE HOUSE PAGE */
 
+/* MESSAGES */
+function draw_my_msgs($usr){
+    echo $usr;
+}
 
 /* START OF FUNCTIONS TO DRAW THE MY PROPERTIES PAGE */
 

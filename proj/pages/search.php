@@ -25,7 +25,7 @@
     open_body();
     open_overlay();
     draw_header($usr, 'search');
-    draw_search_page($city_id, $start_date, $end_date, $guest_no, $house_list);
+    draw_search_page($city_id, $country_id, $start_date, $end_date, $guest_no, $house_list);
     footer();
     close_overlay();
     close_body(); 
