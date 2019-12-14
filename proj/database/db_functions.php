@@ -12,13 +12,12 @@ function create_user($name, $date, $email, $username, $password)
     $stmt->execute(array(null, $name, $date, $email, $username, password_hash($password, PASSWORD_DEFAULT, $options)));
 }
 
-function is_house_available($hid, $start_date, $end_date){
+function is_house_occupied($hid, $start_date, $end_date){
     $db = Database::instance()->db();
     $stmt = $db->prepare('SELECT * FROM Occupied WHERE MAX(StartDate, ?) <= MIN(EndDate, ?) AND HouseId = ?');
     $stmt->execute(array($start_date, $end_date, $hid));
-    $results = $stmt->fetchAll();
-    if(!$results) return true;
-    else return false;
+    $result = $stmt->fetch();
+    return $result;
 }
 
 function is_date_occupied($date, $hid){

@@ -98,6 +98,23 @@ function on_date_input(){
             let tp = document.getElementById("total_price");
             if(tp) rent_form.removeChild(tp);
             rent_form.insertAdjacentHTML("beforeend", "<p id=\"total_price\"> Total Price: " + price + "€ </p>" );
+            let req = new XMLHttpRequest();
+            req.open("GET", "../actions/action_check_availibility.php?" + encodeForAjax({end_date:end_date_f.value, start_date:start_date_f.value ,id:hid}), true);
+            req.onload = function(){
+                if(req.status >= 200 && req.status < 400){ // Se o SRV retornar bem
+                    let error = document.getElementById("checkout_error");
+                    if(this.responseText == "NAY") error.innerHTML = "date span unavailable";
+                    else error.innerHTML = "";
+                }
+                else {
+                    console.log("Server Error");
+                }
+            };
+        
+            req.onerror = function (){ //SE não ligar ao srv
+                console.log("Connection Error");
+            };
+            req.send();
         }
     }
 }
