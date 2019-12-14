@@ -21,13 +21,12 @@ function is_house_available($hid, $start_date, $end_date){
     else return false;
 }
 
-function is_date_available($date, $hid){
-    $db = Database ::instance()->db();
-    $stmt = $db->prepare('SELECT * FROM Occupied WHERE HouseId = ? AND StartDate <= ? AND EndDate >= ?');
-    $stmt->excute(array($hid, $date, $date));
-    $results = $stmt->fetchAll();
-    if(!$results) return true;
-    else return false;
+function is_date_occupied($date, $hid){
+    $db = Database::instance()->db();
+    $stmt = $db->prepare("SELECT * FROM Occupied WHERE HouseId = ? AND StartDate <= ? AND EndDate >= ?;");
+    $stmt->execute(array($hid, $date, $date));
+    $result = $stmt->fetch();
+    return $result;
 }
 
 function create_rent($start_date, $end_date, $price, $hid, $tid){

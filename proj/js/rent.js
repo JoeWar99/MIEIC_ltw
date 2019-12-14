@@ -47,13 +47,9 @@ function on_date_input(){
         req.open("GET", "../actions/action_check_date.php?" + encodeForAjax({date:start_date_f.value, id:hid}), true);
         req.onload = function(){
             if(req.status >= 200 && req.status < 400){ // Se o SRV retornar bem
-                //tf.insertAdjacentHTML("afterend", "<p>" + this.responseText + "</p>");
-                if(this.responseText == "true"){
-                    let error = document.getElementById("checkin_error");
-                    error.innerHTML = "date unavailable";
-                }
-
-                else console.log("Pintou");
+                let error = document.getElementById("checkin_error");
+                if(this.responseText == "NAY") error.innerHTML = "date unavailable";
+                else error.innerHTML = "";
             }
             else {
                 console.log("Server Error");
@@ -72,13 +68,9 @@ function on_date_input(){
         req.open("GET", "../actions/action_check_date.php?" + encodeForAjax({date:end_date_f.value, id:hid}), true);
         req.onload = function(){
             if(req.status >= 200 && req.status < 400){ // Se o SRV retornar bem
-                //tf.insertAdjacentHTML("afterend", "<p>" + this.responseText + "</p>");
-                if(this.responseText == "true"){
-                    let error = document.getElementById("checkin_error");
-                    error.innerHTML = "date unavailable";
-                }
-
-                else console.log(this.responseText);
+                let error = document.getElementById("checkout_error");
+                if(this.responseText == "NAY") error.innerHTML = "date unavailable";
+                else error.innerHTML = "";
             }
             else {
                 console.log("Server Error");

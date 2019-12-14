@@ -255,8 +255,14 @@ function draw_rent_form($hid, $ppd){
     echo "<div id=\"checkin_error\">";
     echo "</div>";
     echo "</div>";
+
+    echo "<div id=\"checkout\">";
     h4("Checkout");
     echo "<input id=\"end_date\" type=\"date\">";
+    echo "<div id=\"checkout_error\">";
+    echo "</div>";
+    echo "</div>";
+
     echo "<br>";
     echo "<input id=\"sub_btn\" type=\"button\" value=\"Rent\">";
     echo "<br>";
