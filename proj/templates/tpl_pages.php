@@ -264,10 +264,10 @@ function draw_rent_form($hid, $ppd){
     echo "</div>";
 
     echo "<br>";
-    echo "<input id=\"sub_btn\" type=\"button\" value=\"Rent\">";
-    echo "<br>";
     echo "<input id=\"ppd\" value=\"" . $ppd . "\" readonly style=\"visibility:hidden\">";
     echo "<input id=\"hid\" value=\"" . $hid . "\" readonly style=\"visibility:hidden\">";
+    echo "<br>";
+    echo "<button id=\"sub_btn\" formaction=\"../actions/action_rent.php\" formmethod=\"get\">RENT</button>";
     echo "</form>";
 }
 

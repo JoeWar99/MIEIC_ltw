@@ -104,7 +104,10 @@ function on_date_input(){
                 if(req.status >= 200 && req.status < 400){ // Se o SRV retornar bem
                     let error = document.getElementById("checkout_error");
                     if(this.responseText == "NAY") error.innerHTML = "date span unavailable";
-                    else error.innerHTML = "";
+                    else {
+                        error.innerHTML = "";
+                        rent_form.removeEventListener("submit", cancel_sub);
+                    }
                 }
                 else {
                     console.log("Server Error");
@@ -119,5 +122,8 @@ function on_date_input(){
     }
 }
 
+let cancel_sub = function(evt){evt.preventDefault();};
+
 start_date_f.addEventListener("input", on_date_input);
 end_date_f.addEventListener("input", on_date_input);
+rent_form.addEventListener("submit", cancel_sub);
