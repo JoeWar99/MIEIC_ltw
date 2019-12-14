@@ -227,7 +227,7 @@ function draw_house_comments($comments){
 /** 
  * Draws the rent button in the page for a certain house
  */
-function draw_rent_button($hid, $tid, $ppd, $capacity){
+function draw_rent_button($hid, $ppd, $capacity){
     echo "<button id=\"rent_button\" type=\"button\" >Rent</button>";
 }
 
@@ -247,7 +247,7 @@ function draw_house_pics($picpath){
     echo "<img src=$picpath alt=\"House_Pic1\" />";
 }
 
-function draw_rent_form($hid, $ppd){?>
+function draw_rent_form($hid, $tid, $ppd){?>
     <form id="rent_form" style="visibility:hidden;">
     <div id=checkin>"
     <h4>Check-in:</h4>
@@ -266,6 +266,7 @@ function draw_rent_form($hid, $ppd){?>
     <br>
     <input id="ppd" name="ppd" value=<?=$ppd?>  readonly style="visibility:hidden">
     <input id="hid" name="hid" value= <?=$hid?> readonly style="visibility:hidden">
+    <input id="tid" name="tid" value= <?=$tid?> readonly style="visibility:hidden">
     <br>
     <button type="submit" formaction="../actions/action_rent.php" formmethod="post"> RENT </button>
     </form>
@@ -282,7 +283,7 @@ function draw_rent_form($hid, $ppd){?>
  * @param comments an array containing the most recent comments for the house
  * @param picpath the path to the main image for the house
  */
-function draw_housepage($house_info, $city_info, $country_info, $commodities, $owner_info, $comments, $picpath, $usrid){
+function draw_housepage($house_info, $city_info, $country_info, $commodities, $owner_info, $comments, $picpath){
     echo "<div id=\"housepage\">";
     $name = $house_info['Name'];
     h1($name);
@@ -294,7 +295,7 @@ function draw_housepage($house_info, $city_info, $country_info, $commodities, $o
     draw_house_commodities($commodities);
     draw_house_owners($owner_info);
     draw_house_comments($comments);
-    draw_rent_button($house_info['Id'], $usrid, $house_info['PricePerDay'], $house_info['Capacity']);
+    draw_rent_button($house_info['Id'], $house_info['PricePerDay'], $house_info['Capacity']);
     draw_msg_button();
     draw_pic($picpath, "House_PIC1");
     echo "</div>";
