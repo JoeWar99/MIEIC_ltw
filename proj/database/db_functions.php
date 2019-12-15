@@ -208,12 +208,46 @@ function get_all_reservations_for_a_user($usr){
         return -1;
 }
 
+function get_name_from_id($usrid){
+    $db = Database::instance()->db();
+    $stmt = $db->prepare("SELECT Username FROM User WHERE Id = ?");
+    $stmt->execute(array($usrid));
+    $result = $stmt->fetch();
+    return $result;
+}
+
 function get_usr_msgs($usrid){
     $db = Database::instance()->db();
     $stmt = $db->prepare("SELECT * FROM Message WHERE SenderId = ? OR ReceiverId = ?");
     $stmt->execute(array($usrid, $usrid));
     $result = $stmt->fetchAll();
     return $result;
+}
+
+function get_usr_sent_contacts_ids($usrid){
+    $db = Database::instance()->db();
+    $stmt = $db->prepare("SELECT ReceiverId FROM Message WHERE SenderId = ?");
+    $stmt->execute(array($usrid));
+    $result = $stmt->fetchAll();
+    
+    $ids = array();
+    foreach($result as $res) array_push($ids, intval($res['ReceiverId']));
+    return $ids;
+}
+
+function get_usr_received_contacts_ids($usrid){
+    $db = Database::instance()->db();
+    $stmt = $db->prepare("SELECT SenderId FROM Message WHERE ReceiverId = ?");
+    $stmt->execute(array($usrid));
+    $result = $stmt->fetchAll();
+
+    $ids = array();
+    foreach($result as $res) array_push($ids, intval($res['SenderId']));
+    return $ids;
+}
+
+function get_usr_contacts($usrid){
+    return array_unique(array_merge(get_usr_sent_contacts_ids($usrid), get_usr_received_contacts_ids(($usrid))));
 }
 
 function find_me_a_cozy_place($city_id, $start_date, $end_date, $guest_no){

@@ -321,17 +321,22 @@ function draw_search_page($city_id, $country_id, $start_date, $end_date, $guest_
 /* END OF FUNCTIONS TO DRAW THE HOUSE PAGE */
 
 /* MESSAGES */
-function draw_my_msgs($messages){
+function draw_my_contacts($contacts){
 
-    if(!$messages) echo "<p>Nothing to see here...</p>";
+    if(!$contacts) echo "<p>Nothing to see here...</p>";
     else {
-        foreach($messages as $message){
-            var_dump($message);
-            echo "<br>";
+        echo "<form id=\"user_select_form\">";
+        echo "<select id=\"user\" id=\"name\">";
+        foreach($contacts as $id){
+            $usrname = get_name_from_id($id);
+            echo "<option value=" . $usrname['Username'] .  ">" .  $usrname['Username'] . "</option>";
         }
+        echo "</select>";
+        echo "</form>";
     }
 }
 
+/* END OF MESSAGES */
 /* START OF FUNCTIONS TO DRAW THE MY PROPERTIES PAGE */
 
 /**
