@@ -10,9 +10,16 @@
 
 
   $house_id = $_POST['HouseId'];
-
+  global $main_stylesheet, $fonts, $editProperty_sl;
+  
+  open_html(); 
+  draw_head(get_title("editProperty"), [$main_stylesheet,$fonts[0], $fonts[1], $fonts[2]], $editProperty_sl);
+  open_body();
+  open_overlay();
   draw_header($usr, "editProperty"); 
   draw_edit_property($usr, $house_id);
-  draw_footer();
-
+  footer();
+  close_overlay();
+  close_body();
+  close_html();
 ?>

@@ -12,6 +12,30 @@ function create_user($name, $date, $email, $username, $password)
     $stmt->execute(array(null, $name, $date, $email, $username, password_hash($password, PASSWORD_DEFAULT, $options)));
 }
 
+
+function is_house_occupied($hid, $start_date, $end_date){
+    $db = Database::instance()->db();
+    $stmt = $db->prepare('SELECT * FROM Occupied WHERE MAX(StartDate, ?) <= MIN(EndDate, ?) AND HouseId = ?');
+    $stmt->execute(array($start_date, $end_date, $hid));
+    $result = $stmt->fetch();
+    return $result;
+}
+
+function is_date_occupied($date, $hid){
+    $db = Database::instance()->db();
+    $stmt = $db->prepare("SELECT * FROM Occupied WHERE HouseId = ? AND StartDate <= ? AND EndDate >= ?;");
+    $stmt->execute(array($hid, $date, $date));
+    $result = $stmt->fetch();
+    return $result;
+}
+
+function create_rent($start_date, $end_date, $price, $hid, $tid){
+    $db = Database::instance()->db();
+    $stmt = $db->prepare('INSERT INTO Rent (StartDate, EndDate, Price, HouseId, TouristId) VALUES (?, ?, ?, ?, ?)');
+    $stmt->execute(array($start_date, $end_date, $price, $hid, $tid));
+}
+
+
 /**
  * Verifies if a certain username, password combination
  * exists in the database. Use the sha1 hashing function.
@@ -195,6 +219,160 @@ function get_all_reservations_for_a_user($usr)
     } else
         return -1;
 }
+
+function check_for_a_review_of_rent($rent_id){
+
+    $db = Database::instance()->db();
+    $stmt = $db->prepare("SELECT COUNT(*) as count  FROM Review 
+    WHERE Review.RentId = ?;");
+    $stmt->execute(array(intval($rent_id)));
+    $result = $stmt->fetch();
+    return $result['count'];
+}
+
+
+function find_me_a_cozy_place($city_id, $start_date, $end_date, $guest_no){
+    $db = Database::instance()->db();
+    $stmt = $db->prepare("SELECT Id, Name, Rating, PricePerDay FROM House
+    WHERE (House.CityId = ? AND House.Capacity >= ? AND House.Id NOT IN (SELECT HouseId FROM Occupied WHERE (SELECT MAX(StartDate, ?)) <= (SELECT MIN(EndDate, ?))));");
+    $stmt->execute(array(intval($city_id), $guest_no, $start_date, $end_date));
+    $result = $stmt->fetchall();
+    return $result;
+}
+
+function get_location_from_names($city_name, $country_name){
+    $db = Database::instance()->db();
+    $stmt = $db->prepare("SELECT City.Id, City.CountryId FROM City, Country WHERE City.Name = ? AND City.CountryId = Country.Id AND Country.Name = ?;");
+    $stmt->execute(array($city_name, $country_name));
+    $result = $stmt->fetch();
+    return $result;
+}
+
+function get_name_from_usr($username)
+{
+    $dbh = Database::instance()->db();
+    try {
+        $stmt = $dbh->prepare('SELECT Name FROM User WHERE Username = ?');
+        $stmt->execute(array($username));
+        $user = $stmt->fetch();
+        if ($user !== false)
+            return $user['Name'];
+    } catch (PDOException $e) {
+        return -1;
+    }
+}
+
+function get_email_from_usr($username)
+{
+    $dbh = Database::instance()->db();
+    try {
+        $stmt = $dbh->prepare('SELECT Email FROM User WHERE Username = ?');
+        $stmt->execute(array($username));
+        $user = $stmt->fetch();
+        if ($user !== false)
+            return $user['Email'];
+    } catch (PDOException $e) {
+        return -1;
+    }
+}
+
+function get_date_from_usr($username)
+{
+    $dbh = Database::instance()->db();
+    try {
+        $stmt = $dbh->prepare('SELECT DateOfBirth FROM User WHERE Username = ?');
+        $stmt->execute(array($username));
+        $user = $stmt->fetch();
+        if ($user !== false)
+            return $user['DateOfBirth'];
+    } catch (PDOException $e) {
+        return -1;
+    }
+}
+
+function get_description_from_usr($username)
+{
+    $dbh = Database::instance()->db();
+    try {
+        $stmt = $dbh->prepare('SELECT Description FROM User WHERE Username = ?');
+        $stmt->execute(array($username));
+        $user = $stmt->fetch();
+        if ($user !== false)
+            return $user['Description'];
+    } catch (PDOException $e) {
+        return NULL;
+    }
+}
+
+function get_photo_from_usr($username)
+{
+    $dbh = Database::instance()->db();
+    try {
+        $stmt = $dbh->prepare('SELECT Photo FROM User WHERE Username = ?');
+        $stmt->execute(array($username));
+        $user = $stmt->fetch();
+        return $user['Photo'];
+    
+    } catch (PDOException $e) {
+        return NULL;
+    }
+}
+
+function new_username($old_username, $new_username)
+{
+    try {
+        $db = Database::instance()->db();
+        $id = get_id_from_usr($old_username);
+        $query = "UPDATE User SET Username = '" . $new_username . "' WHERE Id = " . $id;
+        $res = $db->query($query);
+        return 0;
+    } catch(PDOException $e) {
+        return -1;
+    }
+}
+
+function new_password($username, $new_password)
+{
+    try {
+        $db = Database::instance()->db();
+        $id = get_id_from_usr($username);
+        $options = ['cost' => 12];
+        $password = password_hash($new_password, PASSWORD_DEFAULT, $options);
+        $query = "UPDATE User SET Password = '" . $password . "' WHERE Id = " . $id;
+        $res = $db->query($query);
+        return 0;
+    } catch(PDOException $e) {
+        return -1;
+    }
+}
+
+function new_description($username, $description)
+{
+    try {
+        $db = Database::instance()->db();
+        $id = get_id_from_usr($username);
+        $query = "UPDATE User SET Description = '" . $description . "' WHERE Id = " . $id;
+        $res = $db->query($query);
+        return 0;
+    } catch(PDOException $e) {
+        return -1;
+    }
+}
+
+function new_photo($username, $photo)
+{
+    try {
+        $db = Database::instance()->db();
+        $id = get_id_from_usr($username);
+        $query = "UPDATE User SET Photo = '" . $photo . "' WHERE Id = " . $id;
+        $res = $db->query($query);
+        return 0;
+    } catch(PDOException $e) {
+        return -1;
+    }
+}
+
+
 
 
 /**

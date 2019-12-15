@@ -1,7 +1,11 @@
 html {
-    /**background-image: url("https://images.unsplash.com/photo-1533327325824-76bc4e62d560?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80%22");*/
     background-color: white;
     background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+
+#overlay {
     height: 100%;
     width: 100%;
 }
@@ -112,7 +116,7 @@ html {
     border-radius: 5%;
     margin: 2em auto;
     border: 1px solid var(white);
-    background-color: white;
+    background-color: turquoise;
 }
 
 #registerbox>header {
@@ -226,9 +230,11 @@ body {
     display: none;
     position: absolute;
     background-color: white;
+    z-index: 10;
 }
 
 #dropdownList a {
+    font-size: 1em;
     float: none;
     color: black;
     padding: 1em;
@@ -237,7 +243,24 @@ body {
     text-align: left;
 }
 
+#dropdownList button {
+    font-size: 1em;
+    border: none;
+    background-color: white;
+    float: none;
+    color: black;
+    padding: 1em;
+    padding-right: 3.5em;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
 #dropdownList a:hover {
+    background-color: teal;
+}
+
+#dropdownList button:hover {
     background-color: teal;
 }
 
@@ -298,6 +321,7 @@ pre {
     position: absolute;
     top: 7em;
     left: 0;
+    z-index: 0;
     width: 100%;
     height: 100%;
 }
@@ -404,6 +428,23 @@ pre {
     padding: 0;
 }
 
+#error403page {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    background-image: url("../assets/403image.jpg");
+    height: 100%;
+    width: 100%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+}
+
+#error403page>* {
+    margin: 0;
+    padding: 0;
+}
+
 
 /* MY RESERVATIONS */
 
@@ -452,6 +493,189 @@ pre {
     padding-bottom: 0.2em;
     font-size: 1.5em;
     margin-left: 1em;
+}
+
+
+/* PROFILE PAGE */
+
+
+/*PopUp profile page*/
+
+#popup {
+    display: none;
+    position: fixed;
+    padding-top: 10em;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+#popup_content {
+    background-color: white;
+    margin: auto;
+    padding: 1em;
+    border: 0;
+    width: 50%;
+}
+
+#close {
+    color: grey;
+    float: right;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+#close:hover,
+#close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#error_change_username {
+    color: red;
+    opacity: 0.7;
+    display: none;
+}
+
+#error_username_size {
+    color: red;
+    opacity: 0.7;
+    display: none;
+}
+
+#error_pass {
+    color: red;
+    opacity: 0.7;
+    display: none;
+}
+
+#error_pass2 {
+    color: red;
+    opacity: 0.7;
+    display: none;
+}
+
+
+/*Edit Page*/
+
+#edit_profile {
+    display: flex;
+    align-items: center;
+}
+
+#image_div {
+    flex-basis: 30%;
+    margin-left: 3%;
+}
+
+#profile_info {
+    font-size: 1.5em;
+    margin-left: 5%;
+    flex-basis: 35%;
+    margin-bottom: 10%;
+}
+
+#description_div {
+    flex-basis: 40%;
+}
+
+#profile_img {
+    border-radius: 50%;
+}
+
+#edit_avatar {
+    margin-left: 36%;
+    margin-bottom: 30%;
+}
+
+#edit_pro {
+    margin-top: 5%;
+    margin-left: 25%;
+}
+
+#description {
+    padding-bottom: 20em;
+    width: 30em;
+    margin-bottom: 4em;
+}
+
+#edit_des {
+    margin-left: 10em;
+}
+
+footer {
+    background-color: white;
+    text-align: end;
+    color: black;
+    position: float;
+}
+
+.blur {
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+}
+
+
+/*house page*/
+
+#housepage {
+    background-color: white;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding-bottom: 2em;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+#housepage>img {
+    height: 20em;
+    width: 30em;
+}
+
+#housepage>* {
+    margin: 1em;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+#housepage ul {
+    list-style-type: none;
+}
+
+#housepage>button {
+    width: 10em;
+    height: 5em;
+    background: #47D4B7;
+    border-radius: 50px;
+    border-style: none;
+}
+
+#rent_button {
+    position: fixed;
+    top: 10em;
+    left: 134em;
+}
+
+#message_button {
+    position: fixed;
+    top: 17em;
+    left: 134em;
+}
+
+#rent_form {
+    position: absolute;
+    top: 45%;
+    left: 45%;
 }
 
 
@@ -554,7 +778,7 @@ input[type="file"] {
 }
 
 
-/*popup*/
+/*popup for the review */
 
 #popup {
     display: none;

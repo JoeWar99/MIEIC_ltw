@@ -17,6 +17,8 @@ else{
         $cnt = count_comments($houses_reserved[$i]["Id"]);
         $houses_reserved[$i]["pic"] = $pic;
         $houses_reserved[$i]["cnt"] = $cnt;
+        $rentId = $houses_reserved[$i]["RentId"];
+        $houses_reserved[$i]["review"] = check_for_a_review_of_rent($rentId);
     }
 
     echo json_encode($houses_reserved);

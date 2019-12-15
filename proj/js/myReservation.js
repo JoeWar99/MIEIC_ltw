@@ -36,6 +36,7 @@ function cancel_reservation() {
 
 
 function pressed_review_Button(rent_id) {
+
     var popup = document.getElementById("popup");
 
     let return_html_in_string_form = '<div id="popup_content"><span id="close">&times;</span><form>Rating: <br><input type="text" id="new_rating" name="new_rating" placeholder="Rating"><br>';
@@ -218,6 +219,7 @@ function draw_house_in_organized_fashion_Properties(house_data) {
 
     let house_id = house_data['Id'];
     let rent_id = house_data['RentId'];
+    let review_added_or_not = house_data['review'];
     let return_html_in_string_form;
 
     return_html_in_string_form = draw_house_in_organized_fashion(house_data);
@@ -231,8 +233,9 @@ function draw_house_in_organized_fashion_Properties(house_data) {
 
     today = yyyy + '/' + mm + '/' + dd;
     //document.write(today);
+    console.log(review_added_or_not)
 
-    if (today > house_data['EndDate']) {
+    if (today > house_data['EndDate'] && review_added_or_not == 0) {
         return_html_in_string_form += '<button class = "buttonsReservations_1" onClick="pressed_review_Button(' + rent_id + ')"> Review </button>';
     }
     if (today < house_data['StartDate']) {
