@@ -1,1 +1,0 @@
-SELECT * FROM House ORDER BY Rating ASC LIMIT 0, 6;
