@@ -1,0 +1,125 @@
+
+
+header{
+    background-color: #046DD5;
+    padding: 1em;
+    padding-top: 1.5em;
+    padding-bottom: 1em;
+}
+
+header > h1> a:first-child{
+    font-size: 1.5rem;
+
+}
+
+#hamburger{
+    display: none;
+}
+
+.hamburger{
+    display:none;
+}
+
+header *{
+    color: white;
+    text-decoration: none;
+    font-family: "Verdana", sans-serif;
+    font-weight: bold;
+    margin: 0 auto;
+
+    
+    
+}
+
+nav > *{
+   padding: 0em;
+   margin: 0em; 
+}
+
+
+nav > ul > li{
+    text-align: center;
+    height: 1em;
+    padding: 1em;
+    border: 0;
+    border-color: white;
+    border-style: solid;
+    list-style-type: none;
+    border-top-width: thick;
+    
+}
+nav > ul > li > a{
+    text-decoration: none;
+    font-family: "Verdana", sans-serif;
+    color: black;
+}
+
+nav > ul > li:nth-child(1){
+    border-top-color: red;
+
+}
+nav > ul > li:nth-child(2){
+    border-top-color: green;
+
+}
+
+nav > ul > li:nth-child(3){
+    border-top-color:purple;
+
+}
+
+nav > ul > li:nth-child(4){
+    border-top-color:orange;
+
+}
+
+nav > ul > li:nth-child(5){
+    border-top-color:cyan;
+
+}
+
+nav > ul > li:nth-child(6){
+    border-top-color: magenta;
+
+}
+
+#related{
+    padding: 1em;
+    background-color: black;
+}
+
+#related > article > p{
+    color: white;
+    font-family: "Verdana", sans-serif;
+}
+#related > article > header > h1 > a{
+    text-decoration: none;
+    margin: 0;
+    padding: 0; 
+    font-family: "Verdana", sans-serif;
+    color: white;
+}
+
+#news > article > header > h1 {
+    margin: 0;
+    padding: 0; 
+    background-color: white;
+    opacity: 1;
+}
+
+#news > article > header {
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    opacity: 1;
+}
+
+#news > article > header > h1 > a{
+    padding: 0;
+    text-decoration: none;
+    font-family: "Verdana", sans-serif;
+    color:black;
+}
+
+
+

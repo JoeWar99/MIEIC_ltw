@@ -1,0 +1,826 @@
+html {
+    background-color: white;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+
+#overlay {
+    height: 100%;
+    width: 100%;
+}
+
+
+/* LOGIN */
+
+#loginPage {
+    background-image: url("../assets/background_loginpage.jpg");
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#logo {
+    border-radius: 50%;
+    height: 20em;
+}
+
+#name {
+    margin: 1em;
+    margin-left: 2em;
+    height: 3em;
+}
+
+#loginBox {
+    width: 20em;
+    margin: 2em auto;
+    border: 1px solid var(white);
+}
+
+#loginForm {
+    margin: 0;
+    text-align: center;
+}
+
+#username {
+    margin-bottom: 2em;
+    height: 2em;
+    width: 90%;
+    background-color: white;
+    border: 3px solid;
+    border-color: turquoise;
+}
+
+#loginButton {
+    margin-left: 16em;
+    margin-top: 2em;
+    width: 30%;
+    height: 3em;
+    background-color: white;
+    border: 3px solid;
+    border-color: turquoise;
+}
+
+#loginBox>header>h1 {
+    text-align: center;
+    color: turquoise;
+    font-family: 'Poppins', sans-serif;
+}
+
+#password {
+    height: 2em;
+    width: 90%;
+    background-color: white;
+    border: 3px solid;
+    border-color: turquoise;
+}
+
+
+/* REGISTER */
+
+#registerPage {
+    background-image: url("../assets/background_registerpage.jpg");
+    background-size: cover;
+    position: absolute;
+    top: 7em;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.valError {
+    color: red;
+    font-family: 'Poppins', sans-serif;
+    margin-left: 1.2em;
+    margin-bottom: 2em;
+}
+
+#registerButton {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-top: 2em;
+    margin-right: 10em;
+    height: 3em;
+    width: 10em;
+    background-color: white;
+    border: 3px solid;
+    border-color: turquoise;
+}
+
+#registerbox {
+    width: 30em;
+    border-radius: 5%;
+    margin: 2em auto;
+    border: 1px solid var(white);
+    background-color: turquoise;
+}
+
+#registerbox>header {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    margin-left: 2em;
+}
+
+.InputR {
+    margin-bottom: 0em;
+    height: 2em;
+    margin-left: 1.5em;
+    width: 90%;
+    background-color: white;
+}
+
+#btnR {
+    margin-left: 23em;
+    margin-bottom: 1em;
+    width: 30%;
+    height: 3em;
+    background-color: white;
+    border: 3px solid;
+    border-color: turquoise;
+}
+
+
+/* REGISTER NAV */
+
+body {
+    margin: 0em;
+    padding: 0em;
+    height: 100%;
+    width: 100%;
+}
+
+#registernav {
+    background-color: white;
+    width: 100%;
+}
+
+#registernav>table {
+    width: 100%;
+}
+
+#green_bar {
+    background-color: turquoise;
+    height: 0.5em;
+}
+
+#logoText {
+    width: 50%;
+    height: 20%;
+}
+
+#logoText>img {
+    margin-left: 6.5%;
+    margin-right: 80%;
+}
+
+#loginButtonR {
+    float: right;
+    width: 5em;
+    height: 3em;
+    background-color: white;
+    margin-top: 3em;
+    margin-right: 4em;
+    border: 3px solid;
+    border-color: turquoise;
+}
+
+#messageLoginFailed>p {
+    color: white;
+    text-align: center;
+    opacity: 1.0;
+}
+
+#messageLoginFailed {
+    background-color: red;
+    opacity: 0.7;
+}
+
+
+/* Menus*/
+
+#flexboxMenu {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#profileMenu {
+    float: left;
+    overflow: hidden;
+}
+
+#profileMenu #dropdown {
+    font-size: 1.5em;
+    border: none;
+    outline: none;
+    color: black;
+    padding: 0.5em;
+    background-color: white;
+    margin: 0;
+}
+
+#profileMenu:hover #dropdown {
+    background-color: teal;
+}
+
+#dropdownList {
+    display: none;
+    position: absolute;
+    background-color: white;
+    z-index: 10;
+}
+
+#dropdownList a {
+    font-size: 1em;
+    float: none;
+    color: black;
+    padding: 1em;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+#dropdownList button {
+    font-size: 1em;
+    border: none;
+    background-color: white;
+    float: none;
+    color: black;
+    padding: 1em;
+    padding-right: 3.5em;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+#dropdownList a:hover {
+    background-color: teal;
+}
+
+#dropdownList button:hover {
+    background-color: teal;
+}
+
+#profileMenu:hover #dropdownList {
+    display: block;
+}
+
+#propertiesMenu #properties {
+    float: left;
+    overflow: hidden;
+    font-size: 1.5em;
+    border: none;
+    outline: none;
+    color: black;
+    padding: 0.5em;
+    background-color: white;
+    margin: 0;
+}
+
+#propertiesMenu:hover #properties:hover {
+    display: block;
+    background-color: teal;
+}
+
+#reservationsMenu #reservations {
+    float: left;
+    overflow: hidden;
+    font-size: 1.5em;
+    border: none;
+    outline: none;
+    color: black;
+    padding: 0.5em;
+    background-color: white;
+    margin: 0;
+}
+
+#reservationsMenu:hover #reservations:hover {
+    display: block;
+    background-color: teal;
+}
+
+#messageLoginFailed2>p {
+    color: red;
+    text-align: center;
+}
+
+p,
+pre {
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* HOME PAGE */
+
+#homePage {
+    background-image: url("../assets/background_homepage.png");
+    background-size: cover;
+    position: absolute;
+    top: 7em;
+    left: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#trending {
+    margin-top: 22%;
+    margin-left: 10%;
+    font-size: 200%;
+}
+
+#sample_house {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.sample_house1 {
+    margin-top: 2em;
+    grid-column: 1;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.sample_house2 {
+    margin-top: 2em;
+    grid-column: 2;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.sample_house3 {
+    margin-top: 2em;
+    grid-column: 3;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+#footer_information {
+    text-align: end;
+}
+
+#trending {
+    margin-top: 22%;
+    margin-left: 10%;
+    font-size: 200%;
+}
+
+#howmany {
+    padding-left: 5em;
+    padding-left: 5em;
+    margin-left: 2em;
+}
+
+#searchbox {
+    width: 30em;
+    border-radius: 5%;
+    margin-left: 10em;
+    margin-top: 7em;
+    border: 1px solid var(white);
+    background-color: turquoise;
+}
+
+#searchbox>header {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    margin-left: 2em;
+}
+
+#searchbox>form>input {
+    margin-bottom: 2em;
+    height: 2em;
+    margin-left: 1.5em;
+    width: 90%;
+    background-color: white;
+    border: 3px solid;
+    border-color: turquoise;
+}
+
+#searchbox>form>button {
+    margin-left: 23em;
+    margin-bottom: 1em;
+    width: 30%;
+    height: 3em;
+    background-color: white;
+    border: 3px solid;
+    border-color: turquoise;
+}
+
+
+/*404*/
+
+#error404page {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    background-image: url("../assets/404image.jpg");
+    height: 100%;
+    width: 100%;
+    background-size: 95%;
+    margin: 0;
+    padding: 0;
+}
+
+#error404page>* {
+    margin: 0;
+    padding: 0;
+}
+
+#error403page {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    background-image: url("../assets/403image.jpg");
+    height: 100%;
+    width: 100%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+}
+
+#error403page>* {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* MY RESERVATIONS */
+
+#my_reservations {
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 2fr 2fr 0.5fr;
+}
+
+#MyReservationsTitle {
+    font-size: 2em;
+    margin-left: 5em;
+}
+
+
+/* MY PROPERTIES PAGE */
+
+#MyPropertiesHeader {
+    display: flex;
+}
+
+#MyPropertiesTitle {
+    font-size: 2em;
+    margin-left: 5em;
+}
+
+#addProperty {
+    margin-left: 2.5em;
+    height: 2em;
+    margin-top: 1.5em;
+    font-size: 1.5em;
+}
+
+#error-no-properties {
+    position: relative;
+    top: 0;
+    margin-left: 5em;
+    width: 100%;
+    height: 100%;
+    font-size: 2em;
+}
+
+.buttonsPropertyOwned {
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    font-size: 1.5em;
+    margin-left: 1em;
+}
+
+
+/* PROFILE PAGE */
+
+
+/*PopUp profile page*/
+
+#popup {
+    display: none;
+    position: fixed;
+    padding-top: 10em;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+#popup_content {
+    background-color: white;
+    margin: auto;
+    padding: 1em;
+    border: 0;
+    width: 50%;
+}
+
+#close {
+    color: grey;
+    float: right;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+#close:hover,
+#close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#error_change_username {
+    color: red;
+    opacity: 0.7;
+    display: none;
+}
+
+#error_username_size {
+    color: red;
+    opacity: 0.7;
+    display: none;
+}
+
+#error_pass {
+    color: red;
+    opacity: 0.7;
+    display: none;
+}
+
+#error_pass2 {
+    color: red;
+    opacity: 0.7;
+    display: none;
+}
+
+
+/*Edit Page*/
+
+#edit_profile {
+    display: flex;
+    align-items: center;
+}
+
+#image_div {
+    flex-basis: 30%;
+    margin-left: 3%;
+}
+
+#profile_info {
+    font-size: 1.5em;
+    margin-left: 5%;
+    flex-basis: 35%;
+    margin-bottom: 10%;
+}
+
+#description_div {
+    flex-basis: 40%;
+}
+
+#profile_img {
+    border-radius: 50%;
+}
+
+#edit_avatar {
+    margin-left: 36%;
+    margin-bottom: 30%;
+}
+
+#edit_pro {
+    margin-top: 5%;
+    margin-left: 25%;
+}
+
+#description {
+    padding-bottom: 20em;
+    width: 30em;
+    margin-bottom: 4em;
+}
+
+#edit_des {
+    margin-left: 10em;
+}
+
+footer {
+    background-color: white;
+    text-align: end;
+    color: black;
+    position: float;
+}
+
+.blur {
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+}
+
+
+/*house page*/
+
+#housepage {
+    background-color: white;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding-bottom: 2em;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+#housepage>img {
+    height: 20em;
+    width: 30em;
+}
+
+#housepage>* {
+    margin: 1em;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+#housepage ul {
+    list-style-type: none;
+}
+
+#housepage>button {
+    width: 10em;
+    height: 5em;
+    background: #47D4B7;
+    border-radius: 50px;
+    border-style: none;
+}
+
+#rent_button {
+    position: fixed;
+    top: 10em;
+    left: 134em;
+}
+
+#message_button {
+    position: fixed;
+    top: 17em;
+    left: 134em;
+}
+
+#rent_form {
+    position: absolute;
+    top: 45%;
+    left: 45%;
+}
+
+
+/* CSS For the add property page */
+
+.InputAddProperty {
+    margin-bottom: 0em;
+    height: 3em;
+    margin-top: 0.2em;
+    width: 80%;
+    background-color: white;
+}
+
+.InputAddPropertyD {
+    width: 80%;
+    height: 6em;
+    background-color: white;
+    margin-bottom: 2em;
+}
+
+#btnR2 {
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 0em;
+    font-size: 1.5em;
+    margin-top: 1em;
+    width: 30%;
+    height: 2em;
+    text-align: center;
+    background-color: white;
+    border: 3px solid;
+    border-color: turquoise;
+}
+
+#add-property-content {
+    display: grid;
+    text-align: center;
+    grid-template-columns: 0.5fr 2.5fr 2.5fr 0.5fr;
+    grid-template-rows: 1fr;
+}
+
+#add-property-form-text {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+#add-property-form-images {
+    grid-column: 3;
+    grid-row: 1;
+}
+
+.valErrorP {
+    color: red;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 2em;
+}
+
+#my-info {
+    font-size: 2em;
+}
+
+#my-images {
+    font-size: 2em;
+}
+
+#add-propertyForm {
+    text-align: center;
+}
+
+#add-property-form-text>input {
+    font-size: 1em;
+    font-family: 'Poppins', sans-serif;
+}
+
+#add-property-form-text>textarea {
+    font-size: 1em;
+    font-family: 'Poppins', sans-serif;
+}
+
+.file-input-box {
+    border: 2px solid turquoise;
+}
+
+#file-input-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1em;
+    row-gap: 1em;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.btn-upload-image {
+    margin-right: 20%;
+    margin-left: 20%;
+    border: 3px solid;
+    border-color: turquoise;
+}
+
+
+/*popup for the review */
+
+#popup {
+    display: none;
+    position: fixed;
+    padding-top: 10em;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+#popup_content {
+    background-color: white;
+    margin: auto;
+    padding: 1em;
+    border: 0;
+    width: 50%;
+}
+
+#close {
+    color: grey;
+    float: right;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+#close:hover,
+#close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#error_rating {
+    color: red;
+    opacity: 0.7;
+    display: none;
+}
+
+.form_place_holder {
+    text-align: left;
+    margin-left: 10%;
+}
