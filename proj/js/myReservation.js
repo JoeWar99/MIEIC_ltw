@@ -1,3 +1,6 @@
+'use strict'
+
+
 function encodeForAjax(data) {
     return Object.keys(data).map(function(k) {
         return encodeURIComponent(k) + '=' + encodeURIComponent(data[k])
@@ -29,6 +32,64 @@ function cancel_reservation() {
         reloadHtmlRequest();
     } else
         alert("Can't cancel that reservation");
+}
+
+
+function pressed_review_Button(rent_id) {
+    var popup = document.getElementById("popup");
+
+    let return_html_in_string_form = '<div id="popup_content"><span id="close">&times;</span><form>Rating: <br><input type="text" id="new_rating" name="new_rating" placeholder="Rating"><br>';
+    return_html_in_string_form += '<span id=\"error_rating\" >  Rating between 1 and 5</span>Review: <br><input type="text" id="new_review" name="new_review" placeholder="Review"><br>';
+    return_html_in_string_form += '<button id="create_review" type="button" onclick="pressed_create_review(' + rent_id + ')">Submit</button><br>';
+    return_html_in_string_form += '</form></div>';
+
+    popup.innerHTML = return_html_in_string_form;
+
+    var popup = document.getElementById("popup");
+    var x = document.getElementById("close");
+    var error_rating = document.getElementById("error_rating");
+
+    popup.style.display = "block";
+
+    x.onclick = function() {
+        popup.style.display = "none";
+        error_rating.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+        if (event.target == popup) {
+            popup.style.display = "none";
+            error_rating.style.display = "none";
+        }
+    }
+}
+
+function pressed_create_review(rent_id) {
+    var rating = document.getElementById("new_rating").value;
+    var comment = document.getElementById("new_review").value;
+
+    var today = new Date();
+    var dd = String(today.getDate()).padStart(2, '0');
+    var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+    var yyyy = today.getFullYear();
+
+    today = yyyy + '-' + mm + '-' + dd;
+
+    if (rating > 1 && rating < 5) {
+        let ourRequest = new XMLHttpRequest();
+        console.log(rent_id);
+        ourRequest.open("POST", "../actions/api_create_review.php", true);
+        ourRequest.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+        ourRequest.onload = create_review;
+        ourRequest.send(encodeForAjax({ rent_id: rent_id, comment: comment, date: today, rating: rating }));
+        location.reload();
+    } else {
+        error_rating.style.display = "block";
+    }
+}
+
+function create_review() {
+    console.log(this.responseText);
 }
 
 reloadHtmlRequest();
@@ -172,7 +233,7 @@ function draw_house_in_organized_fashion_Properties(house_data) {
     //document.write(today);
 
     if (today > house_data['EndDate']) {
-        return_html_in_string_form += '<button class = "buttonsReservations_1" > Review </button>';
+        return_html_in_string_form += '<button class = "buttonsReservations_1" onClick="pressed_review_Button(' + rent_id + ')"> Review </button>';
     }
     if (today < house_data['StartDate']) {
         return_html_in_string_form += '<button class = "buttonsReservations_1" onClick="pressed_cancel_Button(' + rent_id + ')"> Cancel </button>';

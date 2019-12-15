@@ -123,6 +123,7 @@ function get_city_by_id($city_id)
     return $result;
 }
 
+
 function get_country_by_id($country_id)
 {
     $db = Database::instance()->db();
@@ -249,11 +250,51 @@ function delete_house($house_id)
     }
 }
 
+function get_city_id_from_name($city_name){
+
+    $db = Database::instance()->db();
+    $stmt = $db->prepare("SELECT * FROM City WHERE City.Name = ?;");
+    $stmt->execute(array($city_name));
+    $result = $stmt->fetch();
+    return $result['Id'];
+}
+
+function get_country_id_from_name($country_name){
+    
+    $db = Database::instance()->db();
+    $stmt = $db->prepare("SELECT * FROM Country WHERE Country.Name = ?;");
+    $stmt->execute(array($country_name));
+    $result = $stmt->fetch();
+    return $result['Id'];
+}
+
+
+
+
+
+function get_country_by_city_id($city_id){
+
+    $city_info = get_city_by_id($city_id);
+
+    $db = Database::instance()->db();
+    $stmt = $db->prepare("SELECT * FROM Country WHERE Country.Id = ?;");
+    $stmt->execute(array(intval($city_info['CountryId'])));
+    $result = $stmt->fetch();
+    return  $result['Name'];     
+}
+
 
 function update_property($house_id, $house_name, $price_per_day, $adress, $description, $postal_code, $city, $country, $capacity, $username)
 {
     $db = Database::instance()->db();
     try {
+        
+        $city = trim($city);
+        $house_name = trim($house_name);
+        $adress = trim($adress);
+        $description = trim($description);
+
+        $cityId = get_city_id_from_name($city);
         file_put_contents('somefilename.txt', print_r('merda1', true), FILE_APPEND);
 
         //     $sql = "UPDATE House " . "SET Name = \"2asdss\"," . "Description = :description," . "PricePerDay = :price_per_day,"
@@ -279,7 +320,8 @@ function update_property($house_id, $house_name, $price_per_day, $adress, $descr
         $sql = "UPDATE House " . "SET Name = '" . $house_name . "'," . "Description ='". $description . "'," . "PricePerDay =" . $price_per_day . ","
             . "Address ='" . $adress  . " ',"
             . "PostalCode ='" .$postal_code . "',"
-            . "Capacity =" .$capacity 
+            . "Capacity =" .$capacity . ","
+            . "CityId =" . $cityId
             . " WHERE House.Id =" . $house_id . ";";
 
         //   UPDATE House SET Name = "merda", Description = "merda", PricePerDay = "10000", Adress = "sdasdasassadsa", PostalCode = "34234Q", Capacity = "33" WHERE House.Id = 82;
@@ -333,13 +375,38 @@ function cancel_reservation($rent_id)
     }
 }
 
+function create_review($rent_id, $rating, $comment, $date)
+{
+    $db = Database::instance()->db();
+    try {
+        $stmt = $db->prepare("INSERT INTO Review(Id, Rating, RentId) VALUES(?, ?, ?)");
+        $stmt->execute(array(null, $rating, $rent_id));
+        $id = $db->lastInsertId();
+        $stmt = $db->prepare("INSERT INTO Comment(Id, Text, Date, ReviewId) VALUES(?, ?, ?, ?)");
+        $stmt->execute(array(null, $comment, $date, $id));
+        $ret = $stmt->fetch();
+        return true;
+    } catch (PDOException $e) {
+        return false;
+    }
+}
+
 function insert_new_property($house_name, $price_per_day, $adress, $description, $postal_code, $city, $country, $capacity, $username)
 {
     $db = Database::instance()->db();
     try {
+
+        $city = trim($city);
+        $house_name = trim($house_name);
+        $adress = trim($adress);
+        $description = trim($description);
+
+        
+        $cityId = get_city_id_from_name($city);
+
         $onwer_id = get_id_from_usr($username);
         $stmt = $db->prepare("INSERT INTO House (id, Name, Rating, Description, PricePerDay, Address, PostalCode, OwnerId, CityId, Capacity) values (?,?,?,?,?,?,?,?,?,?);");
-        $stmt->execute(array(null, $house_name, 0, $description, $price_per_day, $adress, $postal_code, $onwer_id, 1, $capacity));
+        $stmt->execute(array(null, $house_name, 0, $description, $price_per_day, $adress, $postal_code, $onwer_id, $cityId, $capacity));
         return true;
     } catch (PDOException $e) {
         return false;
@@ -386,6 +453,50 @@ function get_house_information($house_id)
         return false;
     }
 }
+
+
+
+function check_city_for_a_country($city, $country)
+{
+    $db = Database::instance()->db();
+    try {
+        
+        $stmt = $db->prepare("SELECT COUNT(*) as total, Country.Id as country_id FROM Country  WHERE  Country.Name= ?;");
+        $stmt->execute(array($country));
+        $result = $stmt->fetch();
+
+        file_put_contents('somefilename.txt', print_r('1', true), FILE_APPEND);
+
+        if($result['total'] == 0){
+            return -1;
+        }
+        else if($result ['total'] == 1){
+           
+            file_put_contents('somefilename.txt', print_r('2', true), FILE_APPEND);
+
+            $stmt = $db->prepare("SELECT COUNT(*) as total FROM City  WHERE  City.Name= ? and City.CountryId = ?;");
+            $stmt->execute(array($city,  $result['country_id']));
+            $result = $stmt->fetch();
+    
+            if($result['total'] == 0){
+                return -2;
+            }
+            else if($result ['total'] == 1){
+                return 0;
+            }
+            else{
+                return -2;
+            }
+        }
+        else{
+            return -1;
+        }
+       
+    } catch (PDOException $e) {
+        return -1;
+    }
+}
+
 
 
 

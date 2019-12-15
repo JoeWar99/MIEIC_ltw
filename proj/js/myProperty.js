@@ -1,4 +1,5 @@
 // POP UPS
+'use script'
 
 
 let add_property_button = document.getElementById("addProperty");

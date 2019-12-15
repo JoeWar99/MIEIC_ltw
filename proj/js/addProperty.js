@@ -1,5 +1,5 @@
 // GETTING ALL INPUT TEXT OBJECTS
-
+'use strict'
 
 let house_name = document.getElementById("house-name");
 let price_per_day = document.getElementById("price-per-day");
@@ -54,20 +54,16 @@ function Validate() {
         returnValue = false;
     }
 
-    if (!city_verify()) {
-        returnValue = false;
-    }
-
-    if (!country_verify()) {
-
-        returnValue = false;
-    }
 
     if (!capacity_verify()) {
         returnValue = false;
     }
 
     if (!postal_code_verify()) {
+        returnValue = false;
+    }
+
+    if (!return_value_country || !return_value_city) {
         returnValue = false;
     }
 
@@ -125,38 +121,128 @@ function capacity_verify() {
 }
 
 
-function country_verify() {
 
-    if (country.value == "") {
+function country_verify() {
+    let country_name = country.value;
+    let city_name = city.value;
+
+    country_name = country_name.trim();
+    city_name = city_name.trim();
+
+    let ourRequest = new XMLHttpRequest();
+    ourRequest.open("POST", "../actions/api_check_city_country.php", true);
+    ourRequest.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+    ourRequest.onload = request_response_country;
+    ourRequest.send(encodeForAjax({ country: country_name, city: city_name }));
+}
+
+let return_value_country = false;
+let return_value_city = false;
+
+function request_response_country() {
+    let ourData = JSON.parse(this.responseText);
+    console.log("repsonse");
+    console.log(ourData);
+
+    if (ourData == '-1') {
         country.style.border = "1px solid red";
         country_error.style.fontSize = "small";
         country_error.style.textAlign = "center";
-        country_error.textContent = "Country is required";
-        return false;
-    } else {
-        country.style.border = border_style;
-        country_error.innerHTML = ""
-        return true;
-    }
+        if (country.value == "")
+            country_error.textContent = "Country is required";
+        else
+            country_error.textContent = "Invalid Country";
+        return_value_country = false;
+    } else if (ourData == "-2") {
 
+        city.style.border = "1px solid red";
+        city_error.style.fontSize = "small";
+        city_error.style.textAlign = "center";
+        country.style.border = border_style;
+        country_error.innerHTML = "";
+        if (city.value == "")
+            city_error.textContent = "City is required";
+        else
+            city_error.textContent = "Invalid City for the country";
+        return_value_country = true;
+        return_value_city = false;
+
+    } else if (ourData == "0") {
+        city.style.border = border_style;
+        city_error.innerHTML = "";
+        country.style.border = border_style;
+        country_error.innerHTML = "";
+        return_value_city = true;
+        return_value_country = true;
+    }
 }
 
 
 function city_verify() {
 
-    if (city.value == "") {
+    let country_name = country.value;
+    let city_name = city.value;
+
+    country_name = country_name.trim();
+    city_name = city_name.trim();
+
+    let ourRequest = new XMLHttpRequest();
+    ourRequest.open("POST", "../actions/api_check_city_country.php", true);
+    ourRequest.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+    ourRequest.onload = request_response_city;
+    ourRequest.send(encodeForAjax({ country: country_name, city: city_name }));
+
+
+}
+
+function request_response_city() {
+    let ourData = JSON.parse(this.responseText);
+    console.log("repsonse");
+    console.log(ourData);
+
+    if (country.value != "") {
+        if (ourData == '-1') {
+            country.style.border = "1px solid red";
+            country_error.style.fontSize = "small";
+            country_error.style.textAlign = "center";
+            if (country.value == "")
+                country_error.textContent = "Country is required";
+            else
+                country_error.textContent = "Invalid Country";
+            return_value_country = false;
+        } else if (ourData == "-2") {
+
+            city.style.border = "1px solid red";
+            city_error.style.fontSize = "small";
+            city_error.style.textAlign = "center";
+            country.style.border = border_style;
+            country_error.innerHTML = "";
+            if (city.value == "")
+                city_error.textContent = "City is required";
+            else
+                city_error.textContent = "Invalid City for the country";
+            return_value_country = true;
+            return_value_city = false;
+
+        } else if (ourData == "0") {
+            city.style.border = border_style;
+            city_error.innerHTML = "";
+            country.style.border = border_style;
+            country_error.innerHTML = "";
+            return_value_city = true;
+            return_value_country = true;
+        }
+    } else if (city.value == "") {
         city.style.border = "1px solid red";
         city_error.style.fontSize = "small";
         city_error.style.textAlign = "center";
         city_error.textContent = "City is required";
-        return false;
-    } else {
-        city.style.border = border_style;
-        city_error.innerHTML = ""
-        return true;
-    }
 
+    }
 }
+
+
+
 
 
 function adress_verify() {

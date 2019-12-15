@@ -275,6 +275,8 @@ function draw_my_reservations($usr)
     echo "<p id=\"MyReservationsTitle\"> My Reservations </p>";
     echo "<div id=\"my_reservations\">";
     echo "</div>";
+    echo "<div id=\"popup\">";
+    echo "</div>";
 }
 
 
@@ -284,7 +286,6 @@ function draw_add_property($usr)
     echo "<div id=\"MyPropertiesHeader\">";
     echo "<p id=\"MyPropertiesTitle\"> Add Property </p> ";
     echo "</div>";
-
     ?>
 
     <form id="add-propertyForm" name="addPropertyForm" action="#" method="post" enctype="multipart/form-data">
@@ -435,17 +436,20 @@ function draw_edit_property($usr, $house_id)
     echo "</div>";
 
     $house_information = get_house_information($house_id);
-
-
-
+    
+    
     if($house_information == false){
-        alert("Something went wrong");
+        echo "Some error ocurred";
     }
-
+    
     else{
-       
+        
+        $city_info = get_city_by_id($house_information['CityId']);
+        $city_name = $city_info['Name'];
+        $country_name = get_country_by_city_id($city_info['Id']);
     
     ?>
+
 
 <form>
 <input id="house_id" type="hidden" name="HouseId" value= <?php echo $house_id ?> />
@@ -557,26 +561,34 @@ function draw_edit_property($usr, $house_id)
 
                 <p id="my-info"> Info </p>
 
+                <p class="form_place_holder"> House Name </p>
                 <input id="house-name" name="HouseName" class="InputAddProperty" type="text" value="<?php echo $house_information['Name'] ?>"  placeholder="House Name">
                 <div id="HouseNameError" class="valErrorP"> </div> <br>
 
+                <p class="form_place_holder"> Price per day </p>
                 <input id="price-per-day" name="PricePerDay" class="InputAddProperty" type="number" value="<?php echo $house_information['PricePerDay'] ?>" placeholder="Price Per Day">
                 <div id="PricePerDayError" class="valErrorP"> </div> <br>
 
+                <p class="form_place_holder"> Adress </p>
                 <input id="adress" name="Adress" class="InputAddProperty" type="text" value="<?php echo $house_information['Address'] ?>" placeholder="Adress">
                 <div id="AdressError" class="valErrorP"> </div> <br>
 
+                <p class="form_place_holder"> Description </p>
                 <textarea class="InputAddPropertyD" name="description" rows="4" cols="50" placeholder="Description"> <?php echo $house_information['Description'] ?> </textarea>
 
+                <p class="form_place_holder"> Postal Code </p>
                 <input id="postal-code" name="PostalCode" class="InputAddProperty" type="text" value="<?php echo $house_information['PostalCode'] ?>" placeholder="Postal Code">
                 <div id="PostalCodeError" class="valErrorP"> </div> <br>
-
-                <input id="city" name="City" class="InputAddProperty" type="text"  placeholder="City">
+        
+                <p class="form_place_holder"> City </p>
+                <input id="city" name="City" class="InputAddProperty" type="text" value= "<?php echo $city_name ?>"  placeholder="City">
                 <div id="CityError" class="valErrorP"> </div> <br>
 
-                <input id="country" name="Country" class="InputAddProperty" type="text" placeholder="Country">
+                <p class="form_place_holder"> Country </p>
+                <input id="country" name="Country" class="InputAddProperty" type="text" value= "<?php echo $country_name?>" placeholder="Country">
                 <div id="CountryError" class="valErrorP"> </div> <br>
 
+                <p class="form_place_holder"> Capacity </p>
                 <input id="capacity" name="Capacity" class="InputAddProperty" type="number" value="<?php echo $house_information['Capacity'] ?>" placeholder="Capacity">
                 <div id="CapacityError" class="valErrorP"> </div> <br>
 

@@ -8,7 +8,6 @@ let username = document.forms["registerForm"]["username"];
 let password = document.forms["registerForm"]["password"];
 let passwordConfirm = document.forms["registerForm"]["passwordConfirmation"];
 
-console.log()
 
 // GETTING ALL ERROR DISPLAY OBJECTS
 let nameError = document.getElementById("nameError");
