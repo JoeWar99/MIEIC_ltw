@@ -321,9 +321,15 @@ function draw_search_page($city_id, $country_id, $start_date, $end_date, $guest_
 /* END OF FUNCTIONS TO DRAW THE HOUSE PAGE */
 
 /* MESSAGES */
-function draw_my_msgs($usr){
-    //
-    echo $usr;
+function draw_my_msgs($messages){
+
+    if(!$messages) echo "<p>Nothing to see here...</p>";
+    else {
+        foreach($messages as $message){
+            var_dump($message);
+            echo "<br>";
+        }
+    }
 }
 
 /* START OF FUNCTIONS TO DRAW THE MY PROPERTIES PAGE */
