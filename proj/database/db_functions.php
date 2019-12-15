@@ -208,10 +208,17 @@ function get_all_reservations_for_a_user($usr){
         return -1;
 }
 
+function get_usr_msgs($usrid){
+    $db = Database::instance()->db();
+    $stmt = $db->prepare("SELECT * FROM Message WHERE SenderId = ? OR ReceiverId = ?");
+    $stmt->execute(array($usrid, $usrid));
+    $result = $stmt->fetchAll();
+    return $result;
+}
 
 function find_me_a_cozy_place($city_id, $start_date, $end_date, $guest_no){
     $db = Database::instance()->db();
-    $stmt = $db->prepare("SELECT Id, Name, Rating, PricePerDay FROM House
+    $stmt = $db->prepare("SELECT Id, Name, Rating, PricePerDay, CityId FROM House
     WHERE (House.CityId = ? AND House.Capacity >= ? AND House.Id NOT IN (SELECT HouseId FROM Occupied WHERE (SELECT MAX(StartDate, ?)) <= (SELECT MIN(EndDate, ?))));");
     $stmt->execute(array(intval($city_id), $guest_no, $start_date, $end_date));
     $result = $stmt->fetchall();

@@ -20,17 +20,17 @@ function draw_searchbox(){
             echo "<form name=\"search_form\">";
                 
                 echo "<div>";
-                    echo "<input name=\"location\" type=\"text\" placeholder=\"Location\" required=\"required\">";
+                    echo "<input name=\"location\" id=\"location\" type=\"text\" placeholder=\"Location\" required=\"required\">";
                     echo "<div id=\"location_error\" class=\"valError\"> </div>";
                 echo "</div>";
                 
                 echo "<div>";
-                    echo "<input name=\"start\" type=\"date\" required=\"required\">";
+                    echo "<input name=\"start\" id=\"start\" type=\"date\" required=\"required\">";
                     echo "<div id=\"start_error\" class=\"valError\"> </div>";
                 echo "</div>";
 
                 echo "<div>";
-                    echo "<input name=\"end\" type=\"date\" required=\"required\"> <br>";
+                    echo "<input name=\"end\" id=\"end\" type=\"date\" required=\"required\"> <br>";
                     echo "<div id=\"end_error\" class=\"valError\"> </div>";
                 echo "</div>";
 
@@ -322,6 +322,7 @@ function draw_search_page($city_id, $country_id, $start_date, $end_date, $guest_
 
 /* MESSAGES */
 function draw_my_msgs($usr){
+    //
     echo $usr;
 }
 

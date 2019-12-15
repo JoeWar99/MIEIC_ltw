@@ -21,7 +21,7 @@
 
     global $main_stylesheet, $fonts, $search_sl;
     open_html(); 
-    draw_head(get_title("search"), [$main_stylesheet,$fonts[0], $fonts[1], $fonts[2]], $search_sl);
+    draw_head(get_title("search"), [$main_stylesheet,$fonts[0], $fonts[1], $fonts[2]]);
     open_body();
     open_overlay();
     draw_header($usr, 'search');

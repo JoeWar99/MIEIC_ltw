@@ -3,9 +3,9 @@
 let form = "search_form";
 
 // GETTING ALL INPUT TEXT OBJECTS
-let location_text = document.forms[form]["location"];
-let start_date_text = document.forms[form]["start"];
-let end_date_text = document.forms[form]["end"];
+let location_text = document.getElementById("location");
+let start_date_text = document.getElementById("start");
+let end_date_text = document.getElementById("end");
 
 
 // GETTING ALL ERROR DISPLAY OBJECTS
