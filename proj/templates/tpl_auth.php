@@ -98,7 +98,7 @@
                 </div>
 
                 <div>
-                    <input value="Register" name="submitButton" id="btnR" type="submit">
+                    <input id="register_but" value="Register" name="submitButton" id="btnR" type="submit">
                 </div>
 
             </form>

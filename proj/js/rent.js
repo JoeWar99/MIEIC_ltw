@@ -16,11 +16,13 @@ function encodeForAjax(data) {
     }).join('&');
 }
 
-let rent_button = document.getElementById("rent_button");
+let rent_button = document.getElementById("rent_house_button");
 let rent_form = document.getElementById("rent_form");
 
 let start_date_f = document.getElementById("start_date");
 let end_date_f = document.getElementById("end_date");
+
+let popup = document.getElementById("popup");
 
 let i1 = false, i2 = false;
 
@@ -31,11 +33,14 @@ rent_button.addEventListener("click", function(){
     blurin();
     event.stopImmediatePropagation();
     rent_form.style.visibility = "visible";
-
+    popup.style.display = "block";
 });
-overlay.addEventListener("click", function(){
+window.addEventListener("click", function(){
+    if (event.target == popup) {
     blurout();
     rent_form.style.visibility = "hidden";
+    popup.style.display = "none";
+    }   
 });
 
 let price = 0;

@@ -65,7 +65,6 @@ function reloadHtml() {
 
     } else {
 
-        div_to_hold_houses.setAttribute("style", " display: grid; grid-template-columns: 0.5fr 2fr 2fr 2fr 0.5fr;");
         let article = document.createElement('houses')
         article.setAttribute('class', 'post')
         console.log(document)
@@ -78,19 +77,8 @@ function reloadHtml() {
 
         div_to_hold_houses.innerHTML = article.innerHTML;
 
-        let my_properties1 = document.getElementsByClassName("myproperties1");
-        let my_properties2 = document.getElementsByClassName("myproperties2");
-        let my_properties3 = document.getElementsByClassName("myproperties3");
 
-        for (let i = 0; i < my_properties1.length; i++) {
-            my_properties1[i].setAttribute("style", "text-align: center; margin-top: 3em; grid-column: 2; margin-left: 20%; margin-right: 20%;");
-        }
-        for (let i = 0; i < my_properties2.length; i++) {
-            my_properties2[i].setAttribute("style", "text-align: center; margin-top: 3em; grid-column: 3; margin-left: 20%; margin-right: 20%;");
-        }
-        for (let i = 0; i < my_properties3.length; i++) {
-            my_properties3[i].setAttribute("style", "text-align: center; margin-top: 3em; grid-column: 4; margin-left: 20%; margin-right: 20%;");
-        }
+
     }
 
 }
@@ -154,17 +142,17 @@ function draw_house_in_organized_fashion(house_data) {
     console.log('pic?');
     console.log(pic);
     return_html_in_string_form = '<img src=' + pic + ' width="330" height="230" />';
-    return_html_in_string_form += '<section name="information">';
+    return_html_in_string_form += '<section id="my_properties_info" name="information">';
     let name = house_data["Name"];
     let id = house_data['Id'];
-    return_html_in_string_form += '<p> <a href="housepage.php?house_id=' + id + '">' + name + '</a></p>';
+    return_html_in_string_form += '<p> <a id="see_house" href="housepage.php?house_id=' + id + '">' + name + '</a></p>';
     let addr = house_data["Address"];
     return_html_in_string_form += '<p>' + addr + '</p>';
     let price = house_data["PricePerDay"];
     return_html_in_string_form += '<p> Price: ' + price + '€ /night </p>';
     let rating = (Math.round(house_data["Rating"] * 100) / 100).toFixed(1);
     let cnt = house_data["cnt"];
-    return_html_in_string_form += '<pre><img src=../assets/star.png width="18" height="15" />' + rating + '       ' + cnt + 'comments </pre>';
+    return_html_in_string_form += '<pre><img src=../assets/star.png width="18" height="15" />' + rating + '     ' + cnt + '  comments </pre>';
     return_html_in_string_form += '</section>';
 
     return return_html_in_string_form;

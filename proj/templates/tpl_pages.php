@@ -17,21 +17,21 @@ function draw_searchbox(){
             echo "<form name=\"search_form\">";
                 
                 echo "<div>";
-                    echo "<input name=\"location\" type=\"text\" placeholder=\"Location\" required=\"required\">";
+                    echo "<span id=\"inputs\">Location: </span><input id=\"input_location\" name=\"location\" type=\"text\" placeholder=\"Location\" required=\"required\">";
                     echo "<div id=\"location_error\" class=\"valError\"> </div>";
                 echo "</div>";
                 
                 echo "<div>";
-                    echo "<input name=\"start\" type=\"date\" required=\"required\">";
+                    echo "<span id=\"inputs\">Start Date: </span><input id=\"start_time\" name=\"start\" type=\"date\" required=\"required\">";
                     echo "<div id=\"start_error\" class=\"valError\"> </div>";
                 echo "</div>";
 
                 echo "<div>";
-                    echo "<input name=\"end\" type=\"date\" required=\"required\"> <br>";
+                    echo "<span id=\"inputs\">End Date: </span><input id=\"end_time\" name=\"end\" type=\"date\" required=\"required\"> <br>";
                     echo "<div id=\"end_error\" class=\"valError\"> </div>";
                 echo "</div>";
 
-                echo "<select id=\"guest_no\" name=\"people\">";
+                echo "<span id=\"inputs\">How Many People: </span><select id=\"guest_no\" name=\"people\">";
                     echo "<option value=\"1\">1 guest</option>";
                     echo "<option value=\"2\">2 guests</option>";
                     echo "<option value=\"3\">3 guests</option>";
@@ -84,19 +84,20 @@ function draw_house_in_organized_fashion($house)
 
     $pic = get_house_top_pic($house['Id']);
     echo "<img src=$pic width=\"330\" height=\"230\" />";
-    echo "<section name=\"information\">";
+    echo "<section id=\"trending_houses\" name=\"information\">";
     $name = $house["Name"];
     $id = $house['Id'];
-    echo "<p><a href=\"housepage.php?house_id=$id\"> $name </a></p>";
+    echo "<p><a id=\"see_house\" href=\"housepage.php?house_id=$id\"> $name </a></p>";
     $addr = $house["Address"];
     echo "<p> $addr </p>";
     $price = $house["PricePerDay"];
     echo "<p> Price: $price € /night </p>";
     $rating = $house["Rating"];
     $cnt = count_comments($house['Id']);
-    echo "<p> $rating";
+    echo "<p>";
+    echo "<span>$rating </span>";
     draw_rating_star(); 
-    echo "$cnt comments</p>";    echo "</section>";
+    echo "<span>  $cnt comments</span>";    echo "</section>";
 }
 
 /**
@@ -148,14 +149,12 @@ function draw_homepage()
 function draw_house_base_info($house_info)
 {
     echo "<div id=\"baseinfo\">";
-    echo "<ul>";
     $rating = $house_info['Rating'];
-    echo "<li> $rating";
+    echo "<span> $rating";
     draw_rating_star();
-    echo "</li>";
+    echo "</span><br>";
     $capacity = $house_info['Capacity'];
-    echo "<li>Room for $capacity guests</li>";
-    echo "</ul>";
+    echo "<span id=\"capacity\">Room for $capacity guests</span><br>";
     echo "</div>";
 }
 
@@ -165,7 +164,7 @@ function draw_house_base_info($house_info)
  */
 function draw_house_description($house_info)
 {
-    echo "<div id=\"description\">";
+    echo "<div id=\"description_house\">";
     h2("Description");
     $description = $house_info['Description'];
     echo $description;
@@ -235,7 +234,7 @@ function draw_house_comments($comments)
  * Draws the rent button in the page for a certain house
  */
 function draw_rent_button($hid, $ppd, $capacity){
-    echo "<button id=\"rent_button\" type=\"button\" >Rent</button>";
+    echo "<button id=\"rent_house_button\" type=\"button\" >Rent</button>";
 }
 
 
@@ -244,7 +243,7 @@ function draw_rent_button($hid, $ppd, $capacity){
  * Draws the message the owner button in the page for a certain house
  */
 function draw_msg_button(){
-    echo "<button id=\"message_button\" type=\"button\">Message Owner</button>";
+    echo "<button id=\"owner_message_button\" type=\"button\">Message Owner</button><br>";
 }
 
 /**
@@ -256,16 +255,17 @@ function draw_house_pics($picpath){
 }
 
 function draw_rent_form($hid, $tid, $ppd){?>
+    <div id="popup">
     <form id="rent_form" style="visibility:hidden;">
-    <div id=checkin>"
-    <h4>Check-in:</h4>
+    <div id=checkin>
+    <h4 id="check_in_text">Check-in:</h4>
     <input id="start_date" name="start_date" type="date" required="required">
     <div id="checkin_error">
     </div>
     </div>
 
     <div id="checkout">
-    <h4>Check-out:</h4>
+    <h4 id="check_out_text">Check-out:</h4>
     <input id="end_date" name="end_date" type="date" required="required">
     <div id="checkout_error">
     </div>
@@ -276,8 +276,9 @@ function draw_rent_form($hid, $tid, $ppd){?>
     <input id="hid" name="hid" value= <?=$hid?> readonly style="visibility:hidden">
     <input id="tid" name="tid" value= <?=$tid?> readonly style="visibility:hidden">
     <br>
-    <button type="submit" formaction="../actions/action_rent.php" formmethod="post"> RENT </button>
+    <button type="submit" id="rent_but" formaction="../actions/action_rent.php" formmethod="post"> RENT </button>
     </form>
+    </div>
 <?php   
 }
 
@@ -291,22 +292,37 @@ function draw_rent_form($hid, $tid, $ppd){?>
  * @param comments an array containing the most recent comments for the house
  * @param picpath the path to the main image for the house
  */
-function draw_housepage($house_info, $city_info, $country_info, $commodities, $owner_info, $comments, $picpath){
+function draw_housepage($house_info, $city_info, $country_info, $commodities, $owner_info, $comments, $picpath, $house_id){
     echo "<div id=\"housepage\">";
+    echo "<div id=\"housepage1\">";
     $name = $house_info['Name'];
     h1($name);
     $city = $city_info['Name']; $country = $country_info['Name'];
-    h3($city .", " . $country);
+    h3($city .", " . $country); 
+    $photos = get_houses_photos($house_id);
 
     draw_house_base_info($house_info);
     draw_house_description($house_info);
     draw_house_commodities($commodities);
     draw_house_owners($owner_info);
-    draw_house_comments($comments);
+    echo "</div>";
+    echo "<div id=\"housepage2\">";
     draw_rent_button($house_info['Id'], $house_info['PricePerDay'], $house_info['Capacity']);
     draw_msg_button();
-    draw_pic($picpath, "House_PIC1");
+    echo "<div>";
+    foreach($photos as $photo){
+        draw_image_slide($photo["path"]);
+    }
+    echo "<button id=\"button_left\" onclick=\"mudar(-1)\">&#10094;</button>";
+    echo "<button id=\"button_right\" onclick=\"mudar(1)\">&#10095;</button>";
     echo "</div>";
+    draw_house_comments($comments);
+    echo "</div>";
+    echo "</div>";
+}
+
+function draw_image_slide($photo){
+    echo "<img class=\"slide\" src=$photo>";
 }
 
 
@@ -358,7 +374,7 @@ function draw_my_reservations($usr)
     echo "<p id=\"MyReservationsTitle\"> My Reservations </p>";
     echo "<div id=\"my_reservations\">";
     echo "</div>";
-    echo "<div id=\"popup\">";
+    echo "<div id=\"popup_review\">";
     echo "</div>";
 }
 
@@ -696,32 +712,33 @@ function draw_editpage($usr){
     if($description == NULL) $description = "Description";
     $photo = get_photo_from_usr($usr);
     if($photo == NULL) $photo = "..\assets\profile.jpg";
-    echo "<p> My Profile </p>";
+    echo "<p id=\"profile_title\"> My Profile </p>";
     echo "<div id=\"edit_profile\">";
         echo "<div id=\"image_div\">";
         echo "<img id=\"profile_img\" src=$photo alt=\"profile_picture\" height=\"400\" width=\"400\"><br>"; 
         echo "<form action=\"../actions/change_photo.php\" method=\"post\" enctype=\"multipart/form-data\">";
-        echo "<label class = \"btn-upload-image\"> <input type=\"file\" id=\"choose_photo\" name=\"choose_photo\"></input> Choose Image</label>";
+        echo "<label <input type=\"file\" id=\"choose_photo\" name=\"choose_photo\"></input> Choose Image</label>";
         echo "<input type=\"submit\" id=\"change_photo\" value=\"Change\"></input> <br>";
         echo "</form>";
         echo "</div>"; 
         echo "<div id=\"profile_info\">";
-        echo "<span>Name: $name</span><br>";
-        echo "<span>Username: $usr</span><br>";
-        echo "<span>Email: $email</span><br>";
-        echo "<span>Date of birth: $date</span><br>";
+        echo "<span><b>Name:</b> $name</span><br>";
+        echo "<span><b>Username:</b> $usr</span><br>";
+        echo "<span><b>Email:</b> $email</span><br>";
+        echo "<span><b>Date of birth:</b> $date</span><br>";
         echo "<button id=\"edit_pro\">Edit Profile</button><br>";
         echo "</div>";
             echo "<div id=\"popup\">";
                 echo "<div id=\"popup_content\">";
                 echo "<span id=\"close\">&times;</span>";
+                echo "<span id=\"edit_text\">Edit Profile </span><br>";
                 echo "<form>";
-                    echo "New Username: <br>";
+                    echo "<span id=\"username_text\">New Username: </span><br>";
                     echo "<input type=\"text\" id=\"new_username\" name=\"new_username\" placeholder=\"New Username\">";
                     echo "<button id=\"change_username\" type=\"button\">Change Username</button><br>";
                     echo "<span id=\"error_change_username\">  New Username not valid</span>";
                     echo "<span id=\"error_username_size\">  New Username must have at least 6 characters and no special characters</span><br>";
-                    echo "New Password: <br>";
+                    echo "<span id=\"password_text\">New Password: </span><br>";
                     echo "<input type=\"password\" id=\"new_password\" name=\"new_password\" placeholder=\"New Password\"><br>";
                     echo "<input type=\"password\" id=\"new_password2\" name=\"new_password\" placeholder=\"Confirm Password\">";
                     echo "<button id=\"change_password\" type=\"button\">Change Password</button><br>";

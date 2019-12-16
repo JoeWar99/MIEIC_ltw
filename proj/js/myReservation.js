@@ -37,16 +37,15 @@ function cancel_reservation() {
 
 function pressed_review_Button(rent_id) {
 
-    var popup = document.getElementById("popup");
+    var popup = document.getElementById("popup_review");
 
-    let return_html_in_string_form = '<div id="popup_content"><span id="close">&times;</span><form>Rating: <br><input type="text" id="new_rating" name="new_rating" placeholder="Rating"><br>';
-    return_html_in_string_form += '<span id=\"error_rating\" >  Rating between 1 and 5</span>Review: <br><input type="text" id="new_review" name="new_review" placeholder="Review"><br>';
+    let return_html_in_string_form = '<div id="popup_content_review"><span id="close">&times;</span><form><span id=\"rating_text\">Rating: </span><br><input type="text" id="new_rating" name="new_rating" placeholder="Rating"><br>';
+    return_html_in_string_form += '<span id=\"error_rating\" >  Rating between 1 and 5</span><span id=\"review_text\">Review: </span><br><textarea type="text" id="new_review" name="new_review" placeholder="Review"></textarea><br>';
     return_html_in_string_form += '<button id="create_review" type="button" onclick="pressed_create_review(' + rent_id + ')">Submit</button><br>';
     return_html_in_string_form += '</form></div>';
 
     popup.innerHTML = return_html_in_string_form;
 
-    var popup = document.getElementById("popup");
     var x = document.getElementById("close");
     var error_rating = document.getElementById("error_rating");
 
@@ -76,7 +75,7 @@ function pressed_create_review(rent_id) {
 
     today = yyyy + '-' + mm + '-' + dd;
 
-    if (rating > 1 && rating < 5) {
+    if (rating >= 1 && rating <= 5) {
         let ourRequest = new XMLHttpRequest();
         console.log(rent_id);
         ourRequest.open("POST", "../actions/api_create_review.php", true);
@@ -122,7 +121,6 @@ function reloadHtml() {
 
     } else {
 
-        div_to_hold_houses.setAttribute("style", " display: grid; grid-template-columns: 0.5 fr 2 fr 2 fr 2 fr 0.5 fr;");
         let article = document.createElement('houses')
         article.setAttribute('class', 'post')
 
@@ -148,18 +146,6 @@ function reloadHtml() {
 
         for (let i = 0; i < buttonsReservations_2.length; i++) {
             buttonsReservations_2[i].setAttribute("style", "font-size: 1.3em; margin-left: 0.3em; padding: 0.4em;");
-        }
-
-
-
-        for (let i = 0; i < my_properties1.length; i++) {
-            my_properties1[i].setAttribute("style", "text-align: center; margin-top: 3em; grid-column: 2; margin-left: 10%; margin-right: 10%;");
-        }
-        for (let i = 0; i < my_properties2.length; i++) {
-            my_properties2[i].setAttribute("style", "text-align: center; margin-top: 3em; grid-column: 3; margin-left: 10%; margin-right: 10%;");
-        }
-        for (let i = 0; i < my_properties3.length; i++) {
-            my_properties3[i].setAttribute("style", "text-align: center; margin-top: 3em; grid-column: 4; margin-left: 10%; margin-right: 10%;");
         }
 
 
@@ -235,7 +221,7 @@ function draw_house_in_organized_fashion_Properties(house_data) {
     //document.write(today);
     console.log(review_added_or_not)
 
-    if (today > house_data['EndDate'] && review_added_or_not == 0) {
+    if (today > house_data['EndDate']) {
         return_html_in_string_form += '<button class = "buttonsReservations_1" onClick="pressed_review_Button(' + rent_id + ')"> Review </button>';
     }
     if (today < house_data['StartDate']) {
@@ -258,10 +244,10 @@ function draw_house_in_organized_fashion(house_data) {
         pic = '../assets/imagesHouses/noHouseImage.png';
     }
     return_html_in_string_form = '<img src=' + pic + ' width="330" height="230" />';
-    return_html_in_string_form += '<section name="information">';
+    return_html_in_string_form += '<section id="my_reservation" name="information">';
     let name = house_data["Name"];
     let id = house_data['Id'];
-    return_html_in_string_form += '<p> <a href="housepage.php?house_id=' + id + '">' + name + '</a></p>';
+    return_html_in_string_form += '<p> <a id="see_house" href="housepage.php?house_id=' + id + '">' + name + '</a></p>';
     let addr = house_data["Address"];
     return_html_in_string_form += '<p>' + addr + '</p>';
     let price = house_data["PricePerDay"];

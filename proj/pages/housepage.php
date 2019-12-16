@@ -16,6 +16,7 @@
         $usrid = get_id_from_usr($usr);
     }
 
+    $house_id = $_GET['house_id'];
     $house_info = get_house_by_id($_GET['house_id']);
     $city_info = get_city_by_id($house_info['CityId']);
     $country_info = get_country_by_id($city_info['CountryId']);
@@ -33,7 +34,7 @@
     open_body();
     open_overlay();
     draw_header($usr, "house");
-    draw_housepage($house_info, $city_info, $country_info, $commodities, $owner_info, $comments, $picpath);
+    draw_housepage($house_info, $city_info, $country_info, $commodities, $owner_info, $comments, $picpath, $house_id);
     close_overlay();
     draw_rent_form($house_info['Id'], $usrid, $house_info['PricePerDay']);
     footer();

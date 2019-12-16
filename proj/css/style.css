@@ -5,6 +5,9 @@ html {
     width: 100%;
 }
 
+* {
+    font-family: 'Poppins', sans-serif;
+}
 #overlay {
     height: 100%;
     width: 100%;
@@ -133,7 +136,7 @@ html {
     background-color: white;
 }
 
-#btnR {
+#R {
     margin-left: 23em;
     margin-bottom: 1em;
     width: 30%;
@@ -188,6 +191,16 @@ body {
     border-color: turquoise;
 }
 
+#register_but {
+    background-color: white;
+    border: 0.1em solid;
+    border-color: darkslategray;
+    width: 10em;
+    height: 2.5em;
+    margin-left: 12em;
+    margin-bottom: 1em;
+}
+
 #messageLoginFailed>p {
     color: white;
     text-align: center;
@@ -205,6 +218,7 @@ body {
 #flexboxMenu {
     display: flex;
     justify-content: flex-end;
+    align-items: center;
 }
 
 #profileMenu {
@@ -333,29 +347,29 @@ pre {
 }
 
 #sample_house {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 1em;
 }
 
 .sample_house1 {
+    margin-left: 10em;
+    flex-basis: 20%;
     margin-top: 2em;
-    grid-column: 1;
-    margin-left: 20%;
-    margin-right: 20%;
+
 }
 
 .sample_house2 {
+    margin-left: 10em;
+    flex-basis: 20%;
     margin-top: 2em;
-    grid-column: 2;
-    margin-left: 20%;
-    margin-right: 20%;
+
 }
 
 .sample_house3 {
+    margin-left: 10em;
     margin-top: 2em;
-    grid-column: 3;
-    margin-left: 20%;
-    margin-right: 20%;
+    flex-basis: 20%;
 }
 
 #footer_information {
@@ -379,7 +393,8 @@ pre {
     border-radius: 5%;
     margin-left: 10em;
     margin-top: 7em;
-    border: 1px solid var(white);
+    border: 0.15em solid;
+    border-color: darkslategrey;
     background-color: turquoise;
 }
 
@@ -399,14 +414,41 @@ pre {
     border-color: turquoise;
 }
 
-#searchbox>form>button {
-    margin-left: 23em;
-    margin-bottom: 1em;
+#guest_no {
     width: 30%;
+    height: 2em;
+}
+
+#input_location, #start_time, #end_time {
+    width: 50%;
+}
+
+#inputs {
+    margin-left: 1em;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    font-size: 1.3em;
+}
+
+#searchbox>form>button {
+    margin-top: 1em;
+    margin-left: 25em;
+    margin-bottom: 1em;
+    width: 25%;
     height: 3em;
     background-color: white;
     border: 3px solid;
-    border-color: turquoise;
+    border-color: darkslategrey;
+}
+
+#trending_houses {
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+}
+
+#see_house {
+    text-decoration: none;
+    color: darkturquoise;
 }
 
 
@@ -449,8 +491,8 @@ pre {
 /* MY RESERVATIONS */
 
 #my_reservations {
-    display: grid;
-    grid-template-columns: 0.5fr 2fr 2fr 2fr 0.5fr;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 #MyReservationsTitle {
@@ -458,11 +500,24 @@ pre {
     margin-left: 5em;
 }
 
+.buttonsReservations_1, .buttonsReservations_2 {
+    background-color: white;
+    border: 3px solid;
+    border-color: turquoise;
+    margin: 0.5em;
+    
+}
+
+#my_reservation{
+    text-align: left;
+}
+
 
 /* MY PROPERTIES PAGE */
 
 #MyPropertiesHeader {
     display: flex;
+    flex-wrap: wrap;
 }
 
 #MyPropertiesTitle {
@@ -471,10 +526,13 @@ pre {
 }
 
 #addProperty {
-    margin-left: 2.5em;
+    margin-left: 5em;
     height: 2em;
-    margin-top: 1.5em;
-    font-size: 1.5em;
+    margin-top: 0.8em;
+    font-size: 2em;
+    background-color: white;
+    border: 0.1em solid;
+    border-color: turquoise;
 }
 
 #error-no-properties {
@@ -493,6 +551,34 @@ pre {
     padding-bottom: 0.2em;
     font-size: 1.5em;
     margin-left: 1em;
+    float: left;
+    background-color: white;
+    border: 0.1em solid;
+    border-color: turquoise;
+}
+
+#my_properties {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 2em;
+}
+
+.myproperties1 {
+    margin-left: 7em;
+    flex-basis: 25%;
+    margin-top: 2em;
+}
+
+.myproperties2 {
+    margin-left: 7em;
+    flex-basis: 25%;
+    margin-top: 2em;
+}
+
+.myproperties3 {
+    margin-left: 7em;
+    flex-basis: 25%;
+    margin-top: 2em;
 }
 
 
@@ -510,7 +596,7 @@ pre {
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 #popup_content {
@@ -519,6 +605,7 @@ pre {
     padding: 1em;
     border: 0;
     width: 50%;
+    background-color: turquoise;
 }
 
 #close {
@@ -533,6 +620,45 @@ pre {
     color: black;
     text-decoration: none;
     cursor: pointer;
+}
+
+#new_username {
+    margin-top: 2%;
+    margin-bottom: 2%;
+    padding: 1%;
+    width: 40%;
+}
+
+#change_username, #change_password {
+    margin-left: 5%;
+    margin-top: 2%;
+    padding: 1%;
+    background-color: white;
+    border: 0.1em solid;
+    border-color: darkslategray;
+}
+
+#new_password {
+    margin-top: 2%;
+    margin-bottom: 2%;
+    padding: 1%;
+    width: 40%;
+}
+
+#edit_text, #username_text, #password_text {
+    font-size: 1.5em;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+#edit_text {
+    font-size: 2em;
+    margin-left: 35%;
+}
+
+#new_password2 {
+    padding: 1%;
+    width: 40%;
 }
 
 #error_change_username {
@@ -562,8 +688,14 @@ pre {
 
 /*Edit Page*/
 
+#profile_title {
+    margin-left: 10%;
+    font-size: 2em;
+}
+
 #edit_profile {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
 }
 
@@ -574,17 +706,46 @@ pre {
 
 #profile_info {
     font-size: 1.5em;
-    margin-left: 5%;
-    flex-basis: 35%;
+    margin-top: 5%;
+    margin-left: 3%;
+    flex-basis: 30%;
     margin-bottom: 10%;
 }
 
 #description_div {
-    flex-basis: 40%;
+    margin-left: 3%;
+    flex-basis: 30%;
 }
 
 #profile_img {
     border-radius: 50%;
+    border: 0.1em solid;
+    border-color: turquoise;
+}
+
+#change_photo {
+    background-color: white;
+    border: 0.1em solid;
+    border-color: turquoise;
+    margin-left: 5%;
+    margin-top: 5%;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    font-size: 1.2em;
+}
+
+#choose_photo {
+    background-color: white;
+    border: 0.1em solid;
+    border-color: turquoise;
+    margin-left: 10%;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    font-size: 1.2em;
 }
 
 #edit_avatar {
@@ -594,24 +755,45 @@ pre {
 
 #edit_pro {
     margin-top: 5%;
-    margin-left: 25%;
+    margin-left: 17%;
+    background-color: white;
+    border: 0.1em solid;
+    border-color: turquoise;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    font-size: 1em;
 }
 
 #description {
     padding-bottom: 20em;
     width: 30em;
     margin-bottom: 4em;
+    border: 0.5em solid;
+    border-color: turquoise;
 }
 
 #edit_des {
-    margin-left: 10em;
+    margin-left: 20%;
+    background-color: white;
+    border: 0.1em solid;
+    border-color: turquoise;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    font-size: 1.2em;
 }
 
 footer {
-    background-color: white;
+    width: 100%;
+    background-color: turquoise;
     text-align: end;
     color: black;
-    position: float;
+    position: fixed;
+    bottom: 0;
+    right: 0;
 }
 
 .blur {
@@ -633,13 +815,22 @@ footer {
     margin: 0;
     padding-bottom: 2em;
     display: flex;
-    flex-direction: column;
     flex-wrap: wrap;
+}
+
+#housepage1 {
+  width: 45%;
+}
+
+#housepage2 {
+  width: 50%;
 }
 
 #housepage>img {
     height: 20em;
     width: 30em;
+    border: 0.2em solid;
+    border-color: turquoise;
 }
 
 #housepage>* {
@@ -650,14 +841,6 @@ footer {
 
 #housepage ul {
     list-style-type: none;
-}
-
-#housepage>button {
-    width: 10em;
-    height: 5em;
-    background: #47D4B7;
-    border-radius: 50px;
-    border-style: none;
 }
 
 #rent_button {
@@ -674,8 +857,70 @@ footer {
 
 #rent_form {
     position: absolute;
-    top: 45%;
-    left: 45%;
+    top: 30%;
+    left: 35%;
+    background-color: turquoise;
+    width: 25%;
+}
+
+#owner_message_button {
+    width: 10em;
+    height: 5em;
+    background: turquoise;
+    border-radius: 50px;
+    border-style: none;
+    margin-left: 1em;
+}
+
+#rent_house_button {
+    width: 10em;
+    height: 5em;
+    background: turquoise;
+    border-radius: 50px;
+    border-style: none;
+    margin-bottom: 1em;
+}
+
+#check_in_text, #check_out_text {
+    font-size: 1.5em;
+    color: white;
+    margin: 0.5em;
+}
+
+#start_date, #end_date {
+    margin-left: 1em;
+}
+
+#rent_but {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    margin-left: 9em;
+    margin-bottom: 1em;
+    background-color: white;
+    border: 0.1em solid;
+    border-color: darkslategray;
+    width: 10em;
+    height: 3em;
+}
+
+.slide {
+    display: none;
+    height: 25em;
+}
+
+#button_right, #button_left {
+    opacity: 0.8;
+    border: 0.1em solid;
+    border-color: gray;
+    height: 3em;
+    width: 3em;
+    margin-top: 0.5em;
+    background-color: turquoise;
+}
+
+#button_right {
+    margin-left: 1em;
 }
 
 
@@ -698,7 +943,7 @@ footer {
 
 #btnR2 {
     font-family: 'Poppins', sans-serif;
-    margin-bottom: 0em;
+    margin-bottom: 1.5em;
     font-size: 1.5em;
     margin-top: 1em;
     width: 30%;
@@ -710,20 +955,19 @@ footer {
 }
 
 #add-property-content {
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
     text-align: center;
-    grid-template-columns: 0.5fr 2.5fr 2.5fr 0.5fr;
-    grid-template-rows: 1fr;
 }
 
 #add-property-form-text {
-    grid-column: 2;
-    grid-row: 1;
+    order: 1;
+    flex-basis: 45%;
 }
 
 #add-property-form-images {
-    grid-column: 3;
-    grid-row: 1;
+    order: 2;
+    flex-basis: 50%;
 }
 
 .valErrorP {
@@ -780,7 +1024,7 @@ input[type="file"] {
 
 /*popup for the review */
 
-#popup {
+#popup_review {
     display: none;
     position: fixed;
     padding-top: 10em;
@@ -789,29 +1033,42 @@ input[type="file"] {
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
-#popup_content {
+#popup_content_review {
     background-color: white;
     margin: auto;
     padding: 1em;
     border: 0;
-    width: 50%;
+    width: 30%;
+    background-color: turquoise;
 }
 
-#close {
-    color: grey;
-    float: right;
-    font-size: 1em;
-    font-weight: bold;
+#review_text, #rating_text {
+    font-size: 1.5em;
+    color: white;
 }
 
-#close:hover,
-#close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
+#new_rating, #new_review {
+    padding: 1%;
+    width: 40%;
+}
+
+#new_review {
+    resize: none;
+    height: 10em;
+    width: 33em;
+}
+
+#create_review {
+    margin-left: 35%;
+    margin-top: 2%;
+    padding: 2%;
+    width: 10em;
+    background-color: white;
+    border: 0.1em solid;
+    border-color: darkslategray;
 }
 
 #error_rating {

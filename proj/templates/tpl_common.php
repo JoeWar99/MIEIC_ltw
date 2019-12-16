@@ -158,7 +158,7 @@
   echo "<div id=\"profileMenu\">";
   echo "<button id=\"dropdown\"> $username </button>";
   echo "<div id=\"dropdownList\">";
-  echo "<button id= \"edit\" onclick=\"window.location.href = 'editprofile.php';\">Edit</button>";
+  echo "<button id= \"edit\" onclick=\"window.location.href = 'editprofile.php';\">Profile</button>";
   echo "<a href=\"../actions/action_logout.php\">Logout</a>";
   echo "</div>";
   echo "</div>";
@@ -194,9 +194,9 @@ $register_sl = [["../js/register.js", true]];
 $search_sl = [["../js/search.js", true]];
 
 $edit_sl = [["../js/edit.js", true]];
-$logged_house_sl = [["../js/rent.js", true], ["../js/message.js", true]];
+$logged_house_sl = [["../js/rent.js", true], ["../js/message.js", true], ["../js/slide.js", true]];
 
-$not_logged_house_sl = [["../js/not_logged_buttons.js", true]];
+$not_logged_house_sl = [["../js/not_logged_buttons.js", true], ["../js/slide.js", true]];
 
 
 $myProperties_sl = [["../js/myProperty.js", true]];
