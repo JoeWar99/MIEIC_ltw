@@ -218,7 +218,7 @@ function get_name_from_id($usrid){
 
 function get_msgs_bw_2_usrs($usrid1, $usrid2){
     $db = Database::instance()->db();
-    $stmt = $db->prepare("SELECT * FROM Message WHERE (SenderId = ? AND ReceiverId = ?) OR (SenderId = ? AND ReceiverId = ?)");
+    $stmt = $db->prepare("SELECT * FROM Message WHERE (SenderId = ? AND ReceiverId = ?) OR (SenderId = ? AND ReceiverId = ?) ORDER BY SentDate ASC");
     $stmt->execute(array($usrid1, $usrid2, $usrid2, $usrid1));
     $result = $stmt->fetchAll();
     return $result;
