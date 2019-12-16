@@ -1,1471 +1,14 @@
 Array
 (
-    [houseId] => 82
-)
-Array
-(
-    [HouseName] => merda
-    [PricePerDay] => 10000
-    [Adress] => sdasdasassadsa    
-    [description] =>      merda     
-    [PostalCode] => 34234Q
-    [City] => Guoduwan
-    [Country] => China
-    [Capacity] => 33
-    [houseId] => 82
-    [File0] => 0
-    [File1] => 0
-    [File2] => 0
-    [File3] => 0
-    [File4] => 0
-    [File5] => 2
-)
-Array
-(
-    [0] => 0
-    [1] => 0
-    [2] => 0
-    [3] => 0
-    [4] => 0
-    [5] => 2
-)
-merda1merda2PDOException Object
-(
-    [message:protected] => SQLSTATE[HY000]: General error: 1 unrecognized token: "33CityId"
-    [string:Exception:private] => 
-    [code:protected] => HY000
-    [file:protected] => C:\xampp\htdocs\MIEIC_ltw\proj\database\db_functions.php
-    [line:protected] => 328
-    [trace:Exception:private] => Array
-        (
-            [0] => Array
-                (
-                    [file] => C:\xampp\htdocs\MIEIC_ltw\proj\database\db_functions.php
-                    [line] => 328
-                    [function] => prepare
-                    [class] => PDO
-                    [type] => ->
-                    [args] => Array
-                        (
-                            [0] => UPDATE House SET Name = 'merda',Description ='     merda     ',PricePerDay =10000,Address ='sdasdasassadsa     ',PostalCode ='34234Q',Capacity =33CityId = 1 WHERE House.Id =82;
-                        )
-
-                )
-
-            [1] => Array
-                (
-                    [file] => C:\xampp\htdocs\MIEIC_ltw\proj\actions\api_update_house.php
-                    [line] => 29
-                    [function] => update_property
-                    [args] => Array
-                        (
-                            [0] => 82
-                            [1] => merda
-                            [2] => 10000
-                            [3] => sdasdasassadsa    
-                            [4] =>      merda     
-                            [5] => 34234Q
-                            [6] => Guoduwan
-                            [7] => China
-                            [8] => 33
-                            [9] => pniblett0
-                        )
-
-                )
-
-        )
-
-    [previous:Exception:private] => 
-    [errorInfo] => Array
-        (
-            [0] => HY000
-            [1] => 1
-            [2] => unrecognized token: "33CityId"
-        )
-
-)
-shitArray
-(
-    [houseId] => 82
-)
-Array
-(
-    [HouseName] => merda
-    [PricePerDay] => 10000
-    [Adress] => sdasdasassadsa    
-    [description] =>      merda     
-    [PostalCode] => 34234Q
-    [City] => Guoduwan
-    [Country] => China
-    [Capacity] => 33
-    [houseId] => 82
-    [File0] => 0
-    [File1] => 0
-    [File2] => 0
-    [File3] => 0
-    [File4] => 0
-    [File5] => 2
-)
-Array
-(
-    [0] => 0
-    [1] => 0
-    [2] => 0
-    [3] => 0
-    [4] => 0
-    [5] => 2
-)
-merda1merda2PDOException Object
-(
-    [message:protected] => SQLSTATE[HY000]: General error: 1 near "WHERE": syntax error
-    [string:Exception:private] => 
-    [code:protected] => HY000
-    [file:protected] => C:\xampp\htdocs\MIEIC_ltw\proj\database\db_functions.php
-    [line:protected] => 332
-    [trace:Exception:private] => Array
-        (
-            [0] => Array
-                (
-                    [file] => C:\xampp\htdocs\MIEIC_ltw\proj\database\db_functions.php
-                    [line] => 332
-                    [function] => prepare
-                    [class] => PDO
-                    [type] => ->
-                    [args] => Array
-                        (
-                            [0] => UPDATE House SET Name = 'merda',Description ='merda',PricePerDay =10000,Address ='sdasdasassadsa ',PostalCode ='34234Q',Capacity =33,CityId = 1, WHERE House.Id =82;
-                        )
-
-                )
-
-            [1] => Array
-                (
-                    [file] => C:\xampp\htdocs\MIEIC_ltw\proj\actions\api_update_house.php
-                    [line] => 29
-                    [function] => update_property
-                    [args] => Array
-                        (
-                            [0] => 82
-                            [1] => merda
-                            [2] => 10000
-                            [3] => sdasdasassadsa
-                            [4] => merda
-                            [5] => 34234Q
-                            [6] => Guoduwan
-                            [7] => China
-                            [8] => 33
-                            [9] => pniblett0
-                        )
-
-                )
-
-        )
-
-    [previous:Exception:private] => 
-    [errorInfo] => Array
-        (
-            [0] => HY000
-            [1] => 1
-            [2] => near "WHERE": syntax error
-        )
-
-)
-shitArray
-(
-    [houseId] => 82
-)
-Array
-(
-    [HouseName] => merda
-    [PricePerDay] => 10000
-    [Adress] => sdasdasassadsa    
-    [description] =>      merda     
-    [PostalCode] => 34234Q
-    [City] => Guoduwan
-    [Country] => China
-    [Capacity] => 33
-    [houseId] => 82
-    [File0] => 0
-    [File1] => 0
-    [File2] => 0
-    [File3] => 0
-    [File4] => 0
-    [File5] => 2
-)
-Array
-(
-    [0] => 0
-    [1] => 0
-    [2] => 0
-    [3] => 0
-    [4] => 0
-    [5] => 2
-)
-merda1merda282Array
-(
-    [image0] => Array
-        (
-            [name] => 
-            [type] => 
-            [tmp_name] => 
-            [error] => 4
-            [size] => 0
-        )
-
-    [image1] => Array
-        (
-            [name] => 
-            [type] => 
-            [tmp_name] => 
-            [error] => 4
-            [size] => 0
-        )
-
-    [image2] => Array
-        (
-            [name] => 
-            [type] => 
-            [tmp_name] => 
-            [error] => 4
-            [size] => 0
-        )
-
-    [image3] => Array
-        (
-            [name] => 
-            [type] => 
-            [tmp_name] => 
-            [error] => 4
-            [size] => 0
-        )
-
-    [image4] => Array
-        (
-            [name] => 
-            [type] => 
-            [tmp_name] => 
-            [error] => 4
-            [size] => 0
-        )
-
-    [image5] => Array
-        (
-            [name] => 
-            [type] => 
-            [tmp_name] => 
-            [error] => 4
-            [size] => 0
-        )
-
-)
-000002LOL2../assets/imagesHouses/houseImage_82_0%../assets/imagesHouses/houseImage_69_0%../assets/imagesHouses/houseImage_68_0%../assets/imagesHouses/houseImage_65_0%../assets/imagesHouses/houseImage_64_0%../assets/imagesHouses/houseImage_63_0%../assets/imagesHouses/houseImage_62_0%../assets/imagesHouses/houseImage_61_0%../assets/imagesHouses/houseImage_60_0%../assets/imagesHouses/houseImage_59_0%../assets/imagesHouses/houseImage_58_0%../assets/imagesHouses/houseImage_57_0%../assets/imagesHouses/houseImage_56_0%../assets/imagesHouses/houseImage_55_0%../assets/imagesHouses/houseImage_54_0%../assets/imagesHouses/houseImage_53_0%../assets/imagesHouses/houseImage_52_0%../assets/imagesHouses/houseImage_51_0%../assets/imagesHouses/houseImage_47_0%../assets/imagesHouses/houseImage_32_0%../assets/imagesHouses/houseImage_25_0%../assets/imagesHouses/houseImage_23_0%Array
-(
-    [houseId] => 82
-)
-Array
-(
-    [HouseName] => merda
-    [PricePerDay] => 10000
-    [Adress] => sdasdasassadsa 
-    [description] =>  merda kjkjkjkj                           jknjknjknjknjknjk
-    [PostalCode] => 34234Q
-    [City] => Guoduwan
-    [Country] => China
-    [Capacity] => 33
-    [houseId] => 82
-    [File0] => 0
-    [File1] => 0
-    [File2] => 0
-    [File3] => 0
-    [File4] => 0
-    [File5] => 2
-)
-Array
-(
-    [0] => 0
-    [1] => 0
-    [2] => 0
-    [3] => 0
-    [4] => 0
-    [5] => 2
-)
-merda1merda282Array
-(
-    [image0] => Array
-        (
-            [name] => 
-            [type] => 
-            [tmp_name] => 
-            [error] => 4
-            [size] => 0
-        )
-
-    [image1] => Array
-        (
-            [name] => 
-            [type] => 
-            [tmp_name] => 
-            [error] => 4
-            [size] => 0
-        )
-
-    [image2] => Array
-        (
-            [name] => 
-            [type] => 
-            [tmp_name] => 
-            [error] => 4
-            [size] => 0
-        )
-
-    [image3] => Array
-        (
-            [name] => 
-            [type] => 
-            [tmp_name] => 
-            [error] => 4
-            [size] => 0
-        )
-
-    [image4] => Array
-        (
-            [name] => 
-            [type] => 
-            [tmp_name] => 
-            [error] => 4
-            [size] => 0
-        )
-
-    [image5] => Array
-        (
-            [name] => 
-            [type] => 
-            [tmp_name] => 
-            [error] => 4
-            [size] => 0
-        )
-
-)
-000002LOL2../assets/imagesHouses/houseImage_82_0%../assets/imagesHouses/houseImage_69_0%../assets/imagesHouses/houseImage_68_0%../assets/imagesHouses/houseImage_65_0%../assets/imagesHouses/houseImage_64_0%../assets/imagesHouses/houseImage_63_0%../assets/imagesHouses/houseImage_62_0%../assets/imagesHouses/houseImage_61_0%../assets/imagesHouses/houseImage_60_0%../assets/imagesHouses/houseImage_59_0%../assets/imagesHouses/houseImage_58_0%../assets/imagesHouses/houseImage_57_0%../assets/imagesHouses/houseImage_56_0%../assets/imagesHouses/houseImage_55_0%../assets/imagesHouses/houseImage_54_0%../assets/imagesHouses/houseImage_53_0%../assets/imagesHouses/houseImage_52_0%../assets/imagesHouses/houseImage_51_0%../assets/imagesHouses/houseImage_47_0%../assets/imagesHouses/houseImage_32_0%../assets/imagesHouses/houseImage_25_0%../assets/imagesHouses/houseImage_23_0%Array
-(
-    [houseId] => 82
-)
-Array
-(
-    [HouseName] => merda
-    [PricePerDay] => 10000
-    [Adress] => sdasdasassadsa 
-    [description] =>  merdakjkjkjkjjknjknjknjknjknjk  knmnm
-    [PostalCode] => 34234Q
-    [City] => Guoduwan
-    [Country] => China
-    [Capacity] => 33
-    [houseId] => 82
-    [File0] => 0
-    [File1] => 0
-    [File2] => 0
-    [File3] => 0
-    [File4] => 0
-    [File5] => 2
-)
-Array
-(
-    [0] => 0
-    [1] => 0
-    [2] => 0
-    [3] => 0
-    [4] => 0
-    [5] => 2
-)
-merda1merda282Array
-(
-    [image0] => Array
-        (
-            [name] => 
-            [type] => 
-            [tmp_name] => 
-            [error] => 4
-            [size] => 0
-        )
-
-    [image1] => Array
-        (
-            [name] => 
-            [type] => 
-            [tmp_name] => 
-            [error] => 4
-            [size] => 0
-        )
-
-    [image2] => Array
-        (
-            [name] => 
-            [type] => 
-            [tmp_name] => 
-            [error] => 4
-            [size] => 0
-        )
-
-    [image3] => Array
-        (
-            [name] => 
-            [type] => 
-            [tmp_name] => 
-            [error] => 4
-            [size] => 0
-        )
-
-    [image4] => Array
-        (
-            [name] => 
-            [type] => 
-            [tmp_name] => 
-            [error] => 4
-            [size] => 0
-        )
-
-    [image5] => Array
-        (
-            [name] => 
-            [type] => 
-            [tmp_name] => 
-            [error] => 4
-            [size] => 0
-        )
-
-)
-000002LOL2../assets/imagesHouses/houseImage_82_0%../assets/imagesHouses/houseImage_69_0%../assets/imagesHouses/houseImage_68_0%../assets/imagesHouses/houseImage_65_0%../assets/imagesHouses/houseImage_64_0%../assets/imagesHouses/houseImage_63_0%../assets/imagesHouses/houseImage_62_0%../assets/imagesHouses/houseImage_61_0%../assets/imagesHouses/houseImage_60_0%../assets/imagesHouses/houseImage_59_0%../assets/imagesHouses/houseImage_58_0%../assets/imagesHouses/houseImage_57_0%../assets/imagesHouses/houseImage_56_0%../assets/imagesHouses/houseImage_55_0%../assets/imagesHouses/houseImage_54_0%../assets/imagesHouses/houseImage_53_0%../assets/imagesHouses/houseImage_52_0%../assets/imagesHouses/houseImage_51_0%../assets/imagesHouses/houseImage_47_0%../assets/imagesHouses/houseImage_32_0%../assets/imagesHouses/houseImage_25_0%../assets/imagesHouses/houseImage_23_0%Array
-(
-    [houseId] => 82
-)
-Array
-(
-    [houseId] => 82
-)
-Array
-(
-    [HouseName] => merda
-    [PricePerDay] => 10000
-    [Adress] => sdasdasassadsa 
-    [description] =>  merdakjkjkjkjjknjknjknjknjknjkknmnm   ssAA           
-    [PostalCode] => 34234Q
-    [City] => Guoduwan
-    [Country] => China
-    [Capacity] => 33
-    [houseId] => 82
-    [File0] => 0
-    [File1] => 0
-    [File2] => 0
-    [File3] => 0
-    [File4] => 0
-    [File5] => 2
-)
-Array
-(
-    [0] => 0
-    [1] => 0
-    [2] => 0
-    [3] => 0
-    [4] => 0
-    [5] => 2
-)
-merda1merda282Array
-(
-    [image0] => Array
-        (
-            [name] => 
-            [type] => 
-            [tmp_name] => 
-            [error] => 4
-            [size] => 0
-        )
-
-    [image1] => Array
-        (
-            [name] => 
-            [type] => 
-            [tmp_name] => 
-            [error] => 4
-            [size] => 0
-        )
-
-    [image2] => Array
-        (
-            [name] => 
-            [type] => 
-            [tmp_name] => 
-            [error] => 4
-            [size] => 0
-        )
-
-    [image3] => Array
-        (
-            [name] => 
-            [type] => 
-            [tmp_name] => 
-            [error] => 4
-            [size] => 0
-        )
-
-    [image4] => Array
-        (
-            [name] => 
-            [type] => 
-            [tmp_name] => 
-            [error] => 4
-            [size] => 0
-        )
-
-    [image5] => Array
-        (
-            [name] => 
-            [type] => 
-            [tmp_name] => 
-            [error] => 4
-            [size] => 0
-        )
-
-)
-000002LOL2../assets/imagesHouses/houseImage_82_0%../assets/imagesHouses/houseImage_69_0%../assets/imagesHouses/houseImage_68_0%../assets/imagesHouses/houseImage_65_0%../assets/imagesHouses/houseImage_64_0%../assets/imagesHouses/houseImage_63_0%../assets/imagesHouses/houseImage_62_0%../assets/imagesHouses/houseImage_61_0%../assets/imagesHouses/houseImage_60_0%../assets/imagesHouses/houseImage_59_0%../assets/imagesHouses/houseImage_58_0%../assets/imagesHouses/houseImage_57_0%../assets/imagesHouses/houseImage_56_0%../assets/imagesHouses/houseImage_55_0%../assets/imagesHouses/houseImage_54_0%../assets/imagesHouses/houseImage_53_0%../assets/imagesHouses/houseImage_52_0%../assets/imagesHouses/houseImage_51_0%../assets/imagesHouses/houseImage_47_0%../assets/imagesHouses/houseImage_32_0%../assets/imagesHouses/houseImage_25_0%../assets/imagesHouses/houseImage_23_0%Array
-(
-    [houseId] => 82
-)
-Array
-(
-    [houseId] => 82
-)
-Array
-(
-    [houseId] => 82
-)
-Array
-(
-    [country] => China
-    [city] => Guoduwa
-)
-12Array
-(
-    [country] => China
-    [city] => Guoduw
-)
-12Array
-(
-    [country] => China
-    [city] => Guodu
-)
-12Array
-(
-    [country] => China
-    [city] => Guod
-)
-12Array
-(
-    [country] => China
-    [city] => Guodd
-)
-12Array
-(
-    [country] => China
-    [city] => Guodds
-)
-12Array
-(
-    [country] => China
-    [city] => Guoddsd
-)
-12Array
-(
-    [country] => China
-    [city] => Guoddsds
-)
-12Array
-(
-    [country] => China
-    [city] => Guoddsdsd
-)
-12Array
-(
-    [country] => China
-    [city] => Guoddsdsds
-)
-12Array
-(
-    [country] => China
-    [city] => Guoddsdsdsd
-)
-12Array
-(
-    [country] => China
-    [city] => Guoddsdsdsds
-)
-12Array
-(
-    [country] => China
-    [city] => Guoddsdsdsdsd
-)
-12Array
-(
-    [country] => China
-    [city] => Guoddsdsdsds
-)
-12Array
-(
-    [country] => China
-    [city] => Guoddsdsdsd
-)
-12Array
-(
-    [country] => China
-    [city] => Guoddsdsds
-)
-12Array
-(
-    [country] => China
-    [city] => Guoddsdsd
-)
-12Array
-(
-    [country] => China
-    [city] => Guoddsds
-)
-12Array
-(
-    [country] => China
-    [city] => Guoddsd
-)
-12Array
-(
-    [country] => China
-    [city] => Guodds
-)
-12Array
-(
-    [country] => China
-    [city] => Guoddsdsdsdsd
-)
-12Array
-(
-    [country] => China
-    [city] => Guoduwa
-)
-12Array
-(
-    [country] => China
-    [city] => Guoduwan
-)
-12Array
-(
-    [country] => Chin
-    [city] => Guoduwan
-)
-1Array
-(
-    [country] => Chi
-    [city] => Guoduwan
-)
-1Array
-(
-    [country] => Chin
-    [city] => Guoduwan
-)
-1Array
-(
-    [country] => China
-    [city] => Guoduwan
-)
-12Array
-(
-    [country] => Chin
-    [city] => Guoduwan
-)
-1Array
-(
-    [country] => Chin
-    [city] => Guoduwa
-)
-1Array
-(
-    [country] => Chin
-    [city] => Guoduw
-)
-1Array
-(
-    [country] => China
-    [city] => Guoduw
-)
-12Array
-(
-    [country] => 
-    [city] => Guoduw
-)
-1Array
-(
-    [country] => 
-    [city] => 
-)
-1Array
-(
-    [houseId] => 82
-)
-Array
-(
-    [country] => 
-    [city] => Guoduwan
-)
-1Array
-(
-    [country] => 
-    [city] => 
-)
-1Array
-(
-    [country] => 
-    [city] => s
-)
-1Array
-(
-    [country] => 
-    [city] => sd
-)
-1Array
-(
-    [country] => 
-    [city] => s
-)
-1Array
-(
-    [country] => 
-    [city] => 
-)
-1Array
-(
-    [houseId] => 82
-)
-Array
-(
-    [country] => China
-    [city] => 
-)
-12Array
-(
-    [country] => China
-    [city] => s
-)
-12Array
-(
-    [country] => China
-    [city] => sd
-)
-12Array
-(
-    [country] => China
-    [city] => sdd
-)
-12Array
-(
-    [country] => China
-    [city] => sd
-)
-12Array
-(
-    [country] => China
-    [city] => s
-)
-12Array
-(
-    [country] => China
-    [city] => 
-)
-12Array
-(
-    [country] => China
-    [city] => sdd
-)
-12Array
-(
-    [country] => China
-    [city] => s
-)
-12Array
-(
-    [country] => China
-    [city] => 
-)
-12Array
-(
-    [country] => China
-    [city] => Guoduwan
-)
-12Array
-(
-    [country] => China
-    [city] => Guoduwa
-)
-12Array
-(
-    [country] => China
-    [city] => Guoduw
-)
-12Array
-(
-    [country] => China
-    [city] => Guodu
-)
-12Array
-(
-    [country] => China
-    [city] => Guod
-)
-12Array
-(
-    [country] => China
-    [city] => Guo
-)
-12Array
-(
-    [country] => China
-    [city] => Gu
-)
-12Array
-(
-    [country] => China
-    [city] => G
-)
-12Array
-(
-    [country] => China
-    [city] => 
-)
-12Array
-(
-    [country] => China
-    [city] => Guoduwan
-)
-12Array
-(
-    [HouseName] => merda
-    [PricePerDay] => 10000
-    [Adress] => sdasdasassadsa 
-    [description] =>  merdakjkjkjkjjknjknjknjknjknjkknmnm   ssAA 
-    [PostalCode] => 34234Q
-    [City] => Guoduwan
-    [Country] => China
-    [Capacity] => 33
-    [houseId] => 82
-    [File0] => 0
-    [File1] => 0
-    [File2] => 0
-    [File3] => 0
-    [File4] => 0
-    [File5] => 2
-)
-Array
-(
-    [0] => 0
-    [1] => 0
-    [2] => 0
-    [3] => 0
-    [4] => 0
-    [5] => 2
-)
-merda1merda282Array
-(
-    [image0] => Array
-        (
-            [name] => 
-            [type] => 
-            [tmp_name] => 
-            [error] => 4
-            [size] => 0
-        )
-
-    [image1] => Array
-        (
-            [name] => 
-            [type] => 
-            [tmp_name] => 
-            [error] => 4
-            [size] => 0
-        )
-
-    [image2] => Array
-        (
-            [name] => 
-            [type] => 
-            [tmp_name] => 
-            [error] => 4
-            [size] => 0
-        )
-
-    [image3] => Array
-        (
-            [name] => 
-            [type] => 
-            [tmp_name] => 
-            [error] => 4
-            [size] => 0
-        )
-
-    [image4] => Array
-        (
-            [name] => 
-            [type] => 
-            [tmp_name] => 
-            [error] => 4
-            [size] => 0
-        )
-
-    [image5] => Array
-        (
-            [name] => 
-            [type] => 
-            [tmp_name] => 
-            [error] => 4
-            [size] => 0
-        )
-
-)
-000002LOL2../assets/imagesHouses/houseImage_82_0%../assets/imagesHouses/houseImage_69_0%../assets/imagesHouses/houseImage_68_0%../assets/imagesHouses/houseImage_65_0%../assets/imagesHouses/houseImage_64_0%../assets/imagesHouses/houseImage_63_0%../assets/imagesHouses/houseImage_62_0%../assets/imagesHouses/houseImage_61_0%../assets/imagesHouses/houseImage_60_0%../assets/imagesHouses/houseImage_59_0%../assets/imagesHouses/houseImage_58_0%../assets/imagesHouses/houseImage_57_0%../assets/imagesHouses/houseImage_56_0%../assets/imagesHouses/houseImage_55_0%../assets/imagesHouses/houseImage_54_0%../assets/imagesHouses/houseImage_53_0%../assets/imagesHouses/houseImage_52_0%../assets/imagesHouses/houseImage_51_0%../assets/imagesHouses/houseImage_47_0%../assets/imagesHouses/houseImage_32_0%../assets/imagesHouses/houseImage_25_0%../assets/imagesHouses/houseImage_23_0%Array
-(
-    [houseId] => 82
-)
-Array
-(
-    [country] => China
-    [city] => 
-)
-12Array
-(
-    [country] => China
-    [city] => F
-)
-12Array
-(
-    [country] => China
-    [city] => Fa
-)
-12Array
-(
-    [country] => China
-    [city] => Far
-)
-12Array
-(
-    [country] => China
-    [city] => Faro
-)
-12Array
-(
-    [country] => 
-    [city] => Faro
-)
-1Array
-(
-    [country] => P
-    [city] => Faro
-)
-1Array
-(
-    [country] => PO
-    [city] => Faro
-)
-1Array
-(
-    [country] => P
-    [city] => Faro
-)
-1Array
-(
-    [country] => Po
-    [city] => Faro
-)
-1Array
-(
-    [country] => Por
-    [city] => Faro
-)
-1Array
-(
-    [country] => Port
-    [city] => Faro
-)
-1Array
-(
-    [country] => Portu
-    [city] => Faro
-)
-1Array
-(
-    [country] => Portug
-    [city] => Faro
-)
-1Array
-(
-    [country] => Portuga
-    [city] => Faro
-)
-1Array
-(
-    [country] => Portugal
-    [city] => Faro
-)
-12Array
-(
-    [HouseName] => merda
-    [PricePerDay] => 10000
-    [Adress] => sdasdasassadsa 
-    [description] =>  merdakjkjkjkjjknjknjknjknjknjkknmnm   ssAA 
-    [PostalCode] => 34234Q
-    [City] => Faro
-    [Country] => Portugal
-    [Capacity] => 33
-    [houseId] => 82
-    [File0] => 0
-    [File1] => 0
-    [File2] => 0
-    [File3] => 0
-    [File4] => 0
-    [File5] => 2
-)
-Array
-(
-    [0] => 0
-    [1] => 0
-    [2] => 0
-    [3] => 0
-    [4] => 0
-    [5] => 2
-)
-merda1merda282Array
-(
-    [image0] => Array
-        (
-            [name] => 
-            [type] => 
-            [tmp_name] => 
-            [error] => 4
-            [size] => 0
-        )
-
-    [image1] => Array
-        (
-            [name] => 
-            [type] => 
-            [tmp_name] => 
-            [error] => 4
-            [size] => 0
-        )
-
-    [image2] => Array
-        (
-            [name] => 
-            [type] => 
-            [tmp_name] => 
-            [error] => 4
-            [size] => 0
-        )
-
-    [image3] => Array
-        (
-            [name] => 
-            [type] => 
-            [tmp_name] => 
-            [error] => 4
-            [size] => 0
-        )
-
-    [image4] => Array
-        (
-            [name] => 
-            [type] => 
-            [tmp_name] => 
-            [error] => 4
-            [size] => 0
-        )
-
-    [image5] => Array
-        (
-            [name] => 
-            [type] => 
-            [tmp_name] => 
-            [error] => 4
-            [size] => 0
-        )
-
-)
-000002LOL2../assets/imagesHouses/houseImage_82_0%../assets/imagesHouses/houseImage_69_0%../assets/imagesHouses/houseImage_68_0%../assets/imagesHouses/houseImage_65_0%../assets/imagesHouses/houseImage_64_0%../assets/imagesHouses/houseImage_63_0%../assets/imagesHouses/houseImage_62_0%../assets/imagesHouses/houseImage_61_0%../assets/imagesHouses/houseImage_60_0%../assets/imagesHouses/houseImage_59_0%../assets/imagesHouses/houseImage_58_0%../assets/imagesHouses/houseImage_57_0%../assets/imagesHouses/houseImage_56_0%../assets/imagesHouses/houseImage_55_0%../assets/imagesHouses/houseImage_54_0%../assets/imagesHouses/houseImage_53_0%../assets/imagesHouses/houseImage_52_0%../assets/imagesHouses/houseImage_51_0%../assets/imagesHouses/houseImage_47_0%../assets/imagesHouses/houseImage_32_0%../assets/imagesHouses/houseImage_25_0%../assets/imagesHouses/houseImage_23_0%Array
-(
-    [houseId] => 82
-)
-Array
-(
-    [HouseName] => merda
-    [PricePerDay] => 10000
-    [Adress] => sdasdasassadsa 
-    [description] =>  merdakjkjkjkjjknjknjknjknjknjkknmnm   ssAA 
-    [PostalCode] => 34234Q
-    [City] => Faro
-    [Country] => Portugal
-    [Capacity] => 33
-    [houseId] => 82
-    [File0] => 0
-    [File1] => 0
-    [File2] => 0
-    [File3] => 0
-    [File4] => 0
-    [File5] => 2
-)
-Array
-(
-    [0] => 0
-    [1] => 0
-    [2] => 0
-    [3] => 0
-    [4] => 0
-    [5] => 2
-)
-merda1merda282Array
-(
-    [image0] => Array
-        (
-            [name] => 
-            [type] => 
-            [tmp_name] => 
-            [error] => 4
-            [size] => 0
-        )
-
-    [image1] => Array
-        (
-            [name] => 
-            [type] => 
-            [tmp_name] => 
-            [error] => 4
-            [size] => 0
-        )
-
-    [image2] => Array
-        (
-            [name] => 
-            [type] => 
-            [tmp_name] => 
-            [error] => 4
-            [size] => 0
-        )
-
-    [image3] => Array
-        (
-            [name] => 
-            [type] => 
-            [tmp_name] => 
-            [error] => 4
-            [size] => 0
-        )
-
-    [image4] => Array
-        (
-            [name] => 
-            [type] => 
-            [tmp_name] => 
-            [error] => 4
-            [size] => 0
-        )
-
-    [image5] => Array
-        (
-            [name] => 
-            [type] => 
-            [tmp_name] => 
-            [error] => 4
-            [size] => 0
-        )
-
-)
-000002LOL2../assets/imagesHouses/houseImage_82_0%../assets/imagesHouses/houseImage_69_0%../assets/imagesHouses/houseImage_68_0%../assets/imagesHouses/houseImage_65_0%../assets/imagesHouses/houseImage_64_0%../assets/imagesHouses/houseImage_63_0%../assets/imagesHouses/houseImage_62_0%../assets/imagesHouses/houseImage_61_0%../assets/imagesHouses/houseImage_60_0%../assets/imagesHouses/houseImage_59_0%../assets/imagesHouses/houseImage_58_0%../assets/imagesHouses/houseImage_57_0%../assets/imagesHouses/houseImage_56_0%../assets/imagesHouses/houseImage_55_0%../assets/imagesHouses/houseImage_54_0%../assets/imagesHouses/houseImage_53_0%../assets/imagesHouses/houseImage_52_0%../assets/imagesHouses/houseImage_51_0%../assets/imagesHouses/houseImage_47_0%../assets/imagesHouses/houseImage_32_0%../assets/imagesHouses/houseImage_25_0%../assets/imagesHouses/houseImage_23_0%Array
-(
-    [country] => 
-    [city] => s
-)
-1Array
-(
-    [country] => 
-    [city] => 
-)
-1Array
-(
-    [country] => 
-    [city] => F
-)
-1Array
-(
-    [country] => 
-    [city] => FA
-)
-1Array
-(
-    [country] => 
-    [city] => F
-)
-1Array
-(
-    [country] => 
-    [city] => Fa
-)
-1Array
-(
-    [country] => 
-    [city] => Far
-)
-1Array
-(
-    [country] => 
-    [city] => Faro
-)
-1Array
-(
-    [country] => P
-    [city] => Faro
-)
-1Array
-(
-    [country] => Po
-    [city] => Faro
-)
-1Array
-(
-    [country] => Por
-    [city] => Faro
-)
-1Array
-(
-    [country] => Port
-    [city] => Faro
-)
-1Array
-(
-    [country] => Portu
-    [city] => Faro
-)
-1Array
-(
-    [country] => Portug
-    [city] => Faro
-)
-1Array
-(
-    [country] => Portuga
-    [city] => Faro
-)
-1Array
-(
-    [country] => Portugal
-    [city] => Faro
-)
-12Array
-(
-    [country] => Portuga
-    [city] => Faro
-)
-1Array
-(
-    [country] => Portug
-    [city] => Faro
-)
-1Array
-(
-    [country] => Portugl
-    [city] => Faro
-)
-1Array
-(
-    [country] => Portug
-    [city] => Faro
-)
-1Array
-(
-    [country] => Portu
-    [city] => Faro
-)
-1Array
-(
-    [country] => Portug
-    [city] => Faro
-)
-1Array
-(
-    [country] => Portuga
-    [city] => Faro
-)
-1Array
-(
-    [country] => Portugal
-    [city] => Faro
-)
-12Array
-(
-    [country] => Portugal
-    [city] => Far
-)
-12Array
-(
-    [country] => Portugal
-    [city] => Faro
-)
-12Array
-(
-    [country] => Portugal
-    [city] => Far
-)
-12Array
-(
-    [country] => Portugal
-    [city] => Fa
-)
-12Array
-(
-    [country] => Portugal
-    [city] => F
-)
-12Array
-(
-    [country] => Portugal
-    [city] => 
-)
-12Array
-(
-    [country] => Portugal
-    [city] => F
-)
-12Array
-(
-    [country] => Portugal
-    [city] => Fa
-)
-12Array
-(
-    [country] => Portugal
-    [city] => Faa
-)
-12Array
-(
-    [country] => Portugal
-    [city] => Faar
-)
-12Array
-(
-    [country] => Portugal
-    [city] => Faa
-)
-12Array
-(
-    [country] => Portugal
-    [city] => Fa
-)
-12Array
-(
-    [country] => Portugal
-    [city] => Far
-)
-12Array
-(
-    [country] => Portugal
-    [city] => Faro
-)
-12Array
-(
-    [country] => Portugal
-    [city] => toronto
-)
-12Array
-(
-    [country] => 
-    [city] => toronto
-)
-1Array
-(
-    [country] => Portugal
-    [city] => 
-)
-12Array
-(
-    [country] => Portugal
-    [city] => F
-)
-12Array
-(
-    [country] => Portugal
-    [city] => Fa
-)
-12Array
-(
-    [country] => Portugal
-    [city] => F
-)
-12Array
-(
-    [country] => Portugal
-    [city] => 
-)
-12Array
-(
-    [country] => Portugal
-    [city] => toronto
-)
-12Array
-(
-    [country] => 
-    [city] => toronto
-)
-1Array
-(
-    [country] => Portugal
-    [city] => toronto
-)
-12Array
-(
-    [country] => Portugal
-    [city] => 
-)
-12Array
-(
-    [country] => Portugal
-    [city] => F
-)
-12Array
-(
-    [country] => Portugal
-    [city] => Fa
-)
-12Array
-(
-    [country] => Portugal
-    [city] => Far
-)
-12Array
-(
-    [country] => Portugal
-    [city] => Fari
-)
-12Array
-(
-    [country] => Portugal
-    [city] => Far
-)
-12Array
-(
-    [country] => Portugal
-    [city] => Faro
-)
-12Array
-(
     [HouseName] => rua dos ruas
-    [PricePerDay] => 12
-    [Adress] => rua dos ruas
-    [description] => dsadasd
+    [PricePerDay] => 33
+    [Adress] => asdasd
+    [description] => dssdd
     [PostalCode] => 50050-002
     [City] => Faro
     [Country] => Portugal
-    [Capacity] => 12
+    [Capacity] => 333
+    [commodities] => [{"id":0,"title":"sdasd","description":"adsd"},{"id":1,"title":"asdasd","description":"adsdsd"}]
     [File0] => 0
     [File1] => 0
     [File2] => 0
@@ -1482,78 +25,64 @@ Array
     [4] => 0
     [5] => 0
 )
-83Array
+[{"id":0,"title":"sdasd","description":"adsd"},{"id":1,"title":"asdasd","description":"adsdsd"}]Array
 (
-    [image0] => Array
+    [0] => stdClass Object
         (
-            [name] => 
-            [type] => 
-            [tmp_name] => 
-            [error] => 4
-            [size] => 0
+            [id] => 0
+            [title] => sdasd
+            [description] => adsd
         )
 
-    [image1] => Array
+    [1] => stdClass Object
         (
-            [name] => 
-            [type] => 
-            [tmp_name] => 
-            [error] => 4
-            [size] => 0
-        )
-
-    [image2] => Array
-        (
-            [name] => 
-            [type] => 
-            [tmp_name] => 
-            [error] => 4
-            [size] => 0
-        )
-
-    [image3] => Array
-        (
-            [name] => 
-            [type] => 
-            [tmp_name] => 
-            [error] => 4
-            [size] => 0
-        )
-
-    [image4] => Array
-        (
-            [name] => 
-            [type] => 
-            [tmp_name] => 
-            [error] => 4
-            [size] => 0
-        )
-
-    [image5] => Array
-        (
-            [name] => 
-            [type] => 
-            [tmp_name] => 
-            [error] => 4
-            [size] => 0
+            [id] => 1
+            [title] => asdasd
+            [description] => adsdsd
         )
 
 )
-000000LOL2../assets/imagesHouses/houseImage_83_0%../assets/imagesHouses/houseImage_82_0%../assets/imagesHouses/houseImage_69_0%../assets/imagesHouses/houseImage_68_0%../assets/imagesHouses/houseImage_65_0%../assets/imagesHouses/houseImage_64_0%../assets/imagesHouses/houseImage_63_0%../assets/imagesHouses/houseImage_62_0%../assets/imagesHouses/houseImage_61_0%../assets/imagesHouses/houseImage_60_0%../assets/imagesHouses/houseImage_59_0%../assets/imagesHouses/houseImage_58_0%../assets/imagesHouses/houseImage_57_0%../assets/imagesHouses/houseImage_56_0%../assets/imagesHouses/houseImage_55_0%../assets/imagesHouses/houseImage_54_0%../assets/imagesHouses/houseImage_53_0%../assets/imagesHouses/houseImage_52_0%../assets/imagesHouses/houseImage_51_0%../assets/imagesHouses/houseImage_47_0%../assets/imagesHouses/houseImage_32_0%../assets/imagesHouses/houseImage_25_0%../assets/imagesHouses/houseImage_23_0%Array
+[Array
 (
-    [houseId] => 83
+    [country] => Portugal
+    [city] => Faro
 )
-Array
+12Array
+(
+    [country] => 
+    [city] => Faro
+)
+1Array
+(
+    [country] => Portuga
+    [city] => Faro
+)
+1Array
+(
+    [country] => Portugak
+    [city] => Faro
+)
+1Array
+(
+    [country] => Portuga
+    [city] => Faro
+)
+1Array
+(
+    [country] => Portugal
+    [city] => Faro
+)
+12Array
 (
     [HouseName] => rua dos ruas
-    [PricePerDay] => 12
-    [Adress] => rua dos ruas
-    [description] => dsadasd
-    [PostalCode] => 50050-002
+    [PricePerDay] => 31123
+    [Adress] => 3121
+    [description] => 213
+    [PostalCode] => 213
     [City] => Faro
     [Country] => Portugal
-    [Capacity] => 12
-    [houseId] => 83
+    [Capacity] => 333
+    [commodities] => [["fdf","fd\n"],["dfsf","sdfdfs"],["fggf","dffgfd"]]
     [File0] => 0
     [File1] => 0
     [File2] => 0
@@ -1570,7 +99,29 @@ Array
     [4] => 0
     [5] => 0
 )
-merda1merda283Array
+[["fdf","fd\n"],["dfsf","sdfdfs"],["fggf","dffgfd"]]Array
+(
+    [0] => Array
+        (
+            [0] => fdf
+            [1] => fd
+
+        )
+
+    [1] => Array
+        (
+            [0] => dfsf
+            [1] => sdfdfs
+        )
+
+    [2] => Array
+        (
+            [0] => fggf
+            [1] => dffgfd
+        )
+
+)
+[fdf89Array
 (
     [image0] => Array
         (
@@ -1627,48 +178,7 @@ merda1merda283Array
         )
 
 )
-000000LOL2../assets/imagesHouses/houseImage_83_0%../assets/imagesHouses/houseImage_82_0%../assets/imagesHouses/houseImage_69_0%../assets/imagesHouses/houseImage_68_0%../assets/imagesHouses/houseImage_65_0%../assets/imagesHouses/houseImage_64_0%../assets/imagesHouses/houseImage_63_0%../assets/imagesHouses/houseImage_62_0%../assets/imagesHouses/houseImage_61_0%../assets/imagesHouses/houseImage_60_0%../assets/imagesHouses/houseImage_59_0%../assets/imagesHouses/houseImage_58_0%../assets/imagesHouses/houseImage_57_0%../assets/imagesHouses/houseImage_56_0%../assets/imagesHouses/houseImage_55_0%../assets/imagesHouses/houseImage_54_0%../assets/imagesHouses/houseImage_53_0%../assets/imagesHouses/houseImage_52_0%../assets/imagesHouses/houseImage_51_0%../assets/imagesHouses/houseImage_47_0%../assets/imagesHouses/houseImage_32_0%../assets/imagesHouses/houseImage_25_0%../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_83_0%../assets/imagesHouses/houseImage_82_0%../assets/imagesHouses/houseImage_69_0%../assets/imagesHouses/houseImage_68_0%../assets/imagesHouses/houseImage_65_0%../assets/imagesHouses/houseImage_64_0%../assets/imagesHouses/houseImage_63_0%../assets/imagesHouses/houseImage_62_0%../assets/imagesHouses/houseImage_61_0%../assets/imagesHouses/houseImage_60_0%../assets/imagesHouses/houseImage_59_0%../assets/imagesHouses/houseImage_58_0%../assets/imagesHouses/houseImage_57_0%../assets/imagesHouses/houseImage_56_0%../assets/imagesHouses/houseImage_55_0%../assets/imagesHouses/houseImage_54_0%../assets/imagesHouses/houseImage_53_0%../assets/imagesHouses/houseImage_52_0%../assets/imagesHouses/houseImage_51_0%../assets/imagesHouses/houseImage_47_0%../assets/imagesHouses/houseImage_32_0%../assets/imagesHouses/houseImage_25_0%../assets/imagesHouses/houseImage_23_0%Array
-(
-    [houseId] => 83
-)
-Array
-(
-    [houseId] => 83
-)
-Array
-(
-    [houseId] => 83
-)
-Array
-(
-    [houseId] => 83
-)
-Array
-(
-    [houseId] => 83
-)
-Array
-(
-    [houseId] => 83
-)
-Array
-(
-    [houseId] => 83
-)
-Array
-(
-    [houseId] => 83
-)
-Array
-(
-    [houseId] => 83
-)
-../assets/imagesHouses/houseImage_83_0%../assets/imagesHouses/houseImage_82_0%../assets/imagesHouses/houseImage_69_0%../assets/imagesHouses/houseImage_68_0%../assets/imagesHouses/houseImage_65_0%../assets/imagesHouses/houseImage_64_0%../assets/imagesHouses/houseImage_63_0%../assets/imagesHouses/houseImage_62_0%../assets/imagesHouses/houseImage_61_0%../assets/imagesHouses/houseImage_60_0%../assets/imagesHouses/houseImage_59_0%../assets/imagesHouses/houseImage_58_0%../assets/imagesHouses/houseImage_57_0%../assets/imagesHouses/houseImage_56_0%../assets/imagesHouses/houseImage_55_0%../assets/imagesHouses/houseImage_54_0%../assets/imagesHouses/houseImage_53_0%../assets/imagesHouses/houseImage_52_0%../assets/imagesHouses/houseImage_51_0%../assets/imagesHouses/houseImage_47_0%../assets/imagesHouses/houseImage_32_0%../assets/imagesHouses/houseImage_25_0%../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_26_0%../assets/imagesHouses/houseImage_18_0%../assets/imagesHouses/houseImage_82_0%../assets/imagesHouses/houseImage_48_0%../assets/imagesHouses/houseImage_35_0%../assets/imagesHouses/houseImage_20_0%../assets/imagesHouses/houseImage_26_0%../assets/imagesHouses/houseImage_18_0%../assets/imagesHouses/houseImage_82_0%../assets/imagesHouses/houseImage_48_0%../assets/imagesHouses/houseImage_35_0%../assets/imagesHouses/houseImage_20_0%../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_28_0%../assets/imagesHouses/houseImage_48_0%../assets/imagesHouses/houseImage_35_0%../assets/imagesHouses/houseImage_20_0%../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_28_0%../assets/imagesHouses/houseImage_48_0%../assets/imagesHouses/houseImage_35_0%../assets/imagesHouses/houseImage_20_0%../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_28_0%../assets/imagesHouses/houseImage_48_0%../assets/imagesHouses/houseImage_35_0%../assets/imagesHouses/houseImage_20_0%../assets/imagesHouses/houseImage_80_0%../assets/imagesHouses/houseImage_79_0%../assets/imagesHouses/houseImage_78_0%../assets/imagesHouses/houseImage_73_0%../assets/imagesHouses/houseImage_72_0%../assets/imagesHouses/houseImage_71_0%../assets/imagesHouses/houseImage_70_0%../assets/imagesHouses/houseImage_69_0%../assets/imagesHouses/houseImage_68_0%../assets/imagesHouses/houseImage_65_0%../assets/imagesHouses/houseImage_64_0%../assets/imagesHouses/houseImage_63_0%../assets/imagesHouses/houseImage_62_0%../assets/imagesHouses/houseImage_61_0%../assets/imagesHouses/houseImage_60_0%../assets/imagesHouses/houseImage_59_0%../assets/imagesHouses/houseImage_58_0%../assets/imagesHouses/houseImage_57_0%../assets/imagesHouses/houseImage_56_0%../assets/imagesHouses/houseImage_55_0%../assets/imagesHouses/houseImage_54_0%../assets/imagesHouses/houseImage_53_0%../assets/imagesHouses/houseImage_52_0%../assets/imagesHouses/houseImage_51_0%../assets/imagesHouses/houseImage_47_0%../assets/imagesHouses/houseImage_40_0%../assets/imagesHouses/houseImage_32_0%../assets/imagesHouses/houseImage_25_0%../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_12_0%../assets/imagesHouses/houseImage_80_0%../assets/imagesHouses/houseImage_79_0%../assets/imagesHouses/houseImage_78_0%../assets/imagesHouses/houseImage_73_0%../assets/imagesHouses/houseImage_72_0%../assets/imagesHouses/houseImage_71_0%../assets/imagesHouses/houseImage_70_0%../assets/imagesHouses/houseImage_69_0%../assets/imagesHouses/houseImage_68_0%../assets/imagesHouses/houseImage_65_0%../assets/imagesHouses/houseImage_64_0%../assets/imagesHouses/houseImage_63_0%../assets/imagesHouses/houseImage_62_0%../assets/imagesHouses/houseImage_61_0%../assets/imagesHouses/houseImage_60_0%../assets/imagesHouses/houseImage_59_0%../assets/imagesHouses/houseImage_58_0%../assets/imagesHouses/houseImage_57_0%../assets/imagesHouses/houseImage_56_0%../assets/imagesHouses/houseImage_55_0%../assets/imagesHouses/houseImage_54_0%../assets/imagesHouses/houseImage_53_0%../assets/imagesHouses/houseImage_52_0%../assets/imagesHouses/houseImage_51_0%../assets/imagesHouses/houseImage_47_0%../assets/imagesHouses/houseImage_40_0%../assets/imagesHouses/houseImage_32_0%../assets/imagesHouses/houseImage_25_0%../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_12_0%../assets/imagesHouses/houseImage_80_0%../assets/imagesHouses/houseImage_78_0%../assets/imagesHouses/houseImage_73_0%../assets/imagesHouses/houseImage_72_0%../assets/imagesHouses/houseImage_71_0%../assets/imagesHouses/houseImage_70_0%../assets/imagesHouses/houseImage_69_0%../assets/imagesHouses/houseImage_68_0%../assets/imagesHouses/houseImage_65_0%../assets/imagesHouses/houseImage_64_0%../assets/imagesHouses/houseImage_63_0%../assets/imagesHouses/houseImage_62_0%../assets/imagesHouses/houseImage_61_0%../assets/imagesHouses/houseImage_60_0%../assets/imagesHouses/houseImage_59_0%../assets/imagesHouses/houseImage_58_0%../assets/imagesHouses/houseImage_57_0%../assets/imagesHouses/houseImage_56_0%../assets/imagesHouses/houseImage_55_0%../assets/imagesHouses/houseImage_54_0%../assets/imagesHouses/houseImage_53_0%../assets/imagesHouses/houseImage_52_0%../assets/imagesHouses/houseImage_51_0%../assets/imagesHouses/houseImage_47_0%../assets/imagesHouses/houseImage_40_0%../assets/imagesHouses/houseImage_32_0%../assets/imagesHouses/houseImage_25_0%../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_12_0%../assets/imagesHouses/houseImage_80_0%../assets/imagesHouses/houseImage_78_0%../assets/imagesHouses/houseImage_73_0%../assets/imagesHouses/houseImage_72_0%../assets/imagesHouses/houseImage_71_0%../assets/imagesHouses/houseImage_70_0%../assets/imagesHouses/houseImage_69_0%../assets/imagesHouses/houseImage_68_0%../assets/imagesHouses/houseImage_65_0%../assets/imagesHouses/houseImage_64_0%../assets/imagesHouses/houseImage_63_0%../assets/imagesHouses/houseImage_62_0%../assets/imagesHouses/houseImage_61_0%../assets/imagesHouses/houseImage_60_0%../assets/imagesHouses/houseImage_59_0%../assets/imagesHouses/houseImage_58_0%../assets/imagesHouses/houseImage_57_0%../assets/imagesHouses/houseImage_56_0%../assets/imagesHouses/houseImage_55_0%../assets/imagesHouses/houseImage_54_0%../assets/imagesHouses/houseImage_53_0%../assets/imagesHouses/houseImage_52_0%../assets/imagesHouses/houseImage_51_0%../assets/imagesHouses/houseImage_47_0%../assets/imagesHouses/houseImage_40_0%../assets/imagesHouses/houseImage_32_0%../assets/imagesHouses/houseImage_25_0%../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_12_0%../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_28_0%../assets/imagesHouses/houseImage_48_0%../assets/imagesHouses/houseImage_35_0%../assets/imagesHouses/houseImage_20_0%../assets/imagesHouses/houseImage_80_0%../assets/imagesHouses/houseImage_78_0%../assets/imagesHouses/houseImage_73_0%../assets/imagesHouses/houseImage_72_0%../assets/imagesHouses/houseImage_71_0%../assets/imagesHouses/houseImage_70_0%../assets/imagesHouses/houseImage_69_0%../assets/imagesHouses/houseImage_68_0%../assets/imagesHouses/houseImage_65_0%../assets/imagesHouses/houseImage_64_0%../assets/imagesHouses/houseImage_63_0%../assets/imagesHouses/houseImage_62_0%../assets/imagesHouses/houseImage_61_0%../assets/imagesHouses/houseImage_60_0%../assets/imagesHouses/houseImage_59_0%../assets/imagesHouses/houseImage_58_0%../assets/imagesHouses/houseImage_57_0%../assets/imagesHouses/houseImage_56_0%../assets/imagesHouses/houseImage_55_0%../assets/imagesHouses/houseImage_54_0%../assets/imagesHouses/houseImage_53_0%../assets/imagesHouses/houseImage_52_0%../assets/imagesHouses/houseImage_51_0%../assets/imagesHouses/houseImage_47_0%../assets/imagesHouses/houseImage_40_0%../assets/imagesHouses/houseImage_32_0%../assets/imagesHouses/houseImage_25_0%../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_12_0%../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_28_0%../assets/imagesHouses/houseImage_48_0%../assets/imagesHouses/houseImage_35_0%../assets/imagesHouses/houseImage_20_0%../assets/imagesHouses/houseImage_80_0%../assets/imagesHouses/houseImage_78_0%../assets/imagesHouses/houseImage_73_0%../assets/imagesHouses/houseImage_72_0%../assets/imagesHouses/houseImage_71_0%../assets/imagesHouses/houseImage_70_0%../assets/imagesHouses/houseImage_69_0%../assets/imagesHouses/houseImage_68_0%../assets/imagesHouses/houseImage_65_0%../assets/imagesHouses/houseImage_64_0%../assets/imagesHouses/houseImage_63_0%../assets/imagesHouses/houseImage_62_0%../assets/imagesHouses/houseImage_61_0%../assets/imagesHouses/houseImage_60_0%../assets/imagesHouses/houseImage_59_0%../assets/imagesHouses/houseImage_58_0%../assets/imagesHouses/houseImage_57_0%../assets/imagesHouses/houseImage_56_0%../assets/imagesHouses/houseImage_55_0%../assets/imagesHouses/houseImage_54_0%../assets/imagesHouses/houseImage_53_0%../assets/imagesHouses/houseImage_52_0%../assets/imagesHouses/houseImage_51_0%../assets/imagesHouses/houseImage_47_0%../assets/imagesHouses/houseImage_40_0%../assets/imagesHouses/houseImage_32_0%../assets/imagesHouses/houseImage_25_0%../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_12_0%../assets/imagesHouses/houseImage_80_0%../assets/imagesHouses/houseImage_78_0%../assets/imagesHouses/houseImage_73_0%../assets/imagesHouses/houseImage_72_0%../assets/imagesHouses/houseImage_71_0%../assets/imagesHouses/houseImage_70_0%../assets/imagesHouses/houseImage_69_0%../assets/imagesHouses/houseImage_68_0%../assets/imagesHouses/houseImage_65_0%../assets/imagesHouses/houseImage_64_0%../assets/imagesHouses/houseImage_63_0%../assets/imagesHouses/houseImage_62_0%../assets/imagesHouses/houseImage_61_0%../assets/imagesHouses/houseImage_60_0%../assets/imagesHouses/houseImage_59_0%../assets/imagesHouses/houseImage_58_0%../assets/imagesHouses/houseImage_57_0%../assets/imagesHouses/houseImage_56_0%../assets/imagesHouses/houseImage_55_0%../assets/imagesHouses/houseImage_54_0%../assets/imagesHouses/houseImage_53_0%../assets/imagesHouses/houseImage_52_0%../assets/imagesHouses/houseImage_51_0%../assets/imagesHouses/houseImage_47_0%../assets/imagesHouses/houseImage_40_0%../assets/imagesHouses/houseImage_32_0%../assets/imagesHouses/houseImage_25_0%../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_12_0%../assets/imagesHouses/houseImage_80_0%../assets/imagesHouses/houseImage_78_0%../assets/imagesHouses/houseImage_73_0%../assets/imagesHouses/houseImage_72_0%../assets/imagesHouses/houseImage_71_0%../assets/imagesHouses/houseImage_70_0%../assets/imagesHouses/houseImage_69_0%../assets/imagesHouses/houseImage_68_0%../assets/imagesHouses/houseImage_65_0%../assets/imagesHouses/houseImage_64_0%../assets/imagesHouses/houseImage_63_0%../assets/imagesHouses/houseImage_62_0%../assets/imagesHouses/houseImage_61_0%../assets/imagesHouses/houseImage_60_0%../assets/imagesHouses/houseImage_59_0%../assets/imagesHouses/houseImage_58_0%../assets/imagesHouses/houseImage_57_0%../assets/imagesHouses/houseImage_56_0%../assets/imagesHouses/houseImage_55_0%../assets/imagesHouses/houseImage_54_0%../assets/imagesHouses/houseImage_53_0%../assets/imagesHouses/houseImage_52_0%../assets/imagesHouses/houseImage_51_0%../assets/imagesHouses/houseImage_47_0%../assets/imagesHouses/houseImage_40_0%../assets/imagesHouses/houseImage_32_0%../assets/imagesHouses/houseImage_25_0%../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_12_0%../assets/imagesHouses/houseImage_80_0%../assets/imagesHouses/houseImage_78_0%../assets/imagesHouses/houseImage_73_0%../assets/imagesHouses/houseImage_72_0%../assets/imagesHouses/houseImage_71_0%../assets/imagesHouses/houseImage_70_0%../assets/imagesHouses/houseImage_69_0%../assets/imagesHouses/houseImage_68_0%../assets/imagesHouses/houseImage_65_0%../assets/imagesHouses/houseImage_64_0%../assets/imagesHouses/houseImage_63_0%../assets/imagesHouses/houseImage_62_0%../assets/imagesHouses/houseImage_61_0%../assets/imagesHouses/houseImage_60_0%../assets/imagesHouses/houseImage_59_0%../assets/imagesHouses/houseImage_58_0%../assets/imagesHouses/houseImage_57_0%../assets/imagesHouses/houseImage_56_0%../assets/imagesHouses/houseImage_55_0%../assets/imagesHouses/houseImage_54_0%../assets/imagesHouses/houseImage_53_0%../assets/imagesHouses/houseImage_52_0%../assets/imagesHouses/houseImage_51_0%../assets/imagesHouses/houseImage_47_0%../assets/imagesHouses/houseImage_40_0%../assets/imagesHouses/houseImage_32_0%../assets/imagesHouses/houseImage_25_0%../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_12_0%../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_28_0%../assets/imagesHouses/houseImage_48_0%../assets/imagesHouses/houseImage_35_0%../assets/imagesHouses/houseImage_20_0%Array
-(
-    [country] => Portugal
-    [city] => toronto
-)
-12Array
+000000LOL2../assets/imagesHouses/houseImage_89_0%../assets/imagesHouses/houseImage_88_0%../assets/imagesHouses/houseImage_87_0%../assets/imagesHouses/houseImage_86_0%../assets/imagesHouses/houseImage_85_0%../assets/imagesHouses/houseImage_84_0%../assets/imagesHouses/houseImage_83_0%../assets/imagesHouses/houseImage_82_0%../assets/imagesHouses/houseImage_81_0%../assets/imagesHouses/houseImage_42_0%../assets/imagesHouses/houseImage_39_0%../assets/imagesHouses/houseImage_29_0%../assets/imagesHouses/houseImage_17_0%../assets/imagesHouses/houseImage_9_0%../assets/imagesHouses/houseImage_8_0%../assets/imagesHouses/houseImage_5_0%../assets/imagesHouses/houseImage_4_0%../assets/imagesHouses/houseImage_89_0%../assets/imagesHouses/houseImage_88_0%../assets/imagesHouses/houseImage_87_0%../assets/imagesHouses/houseImage_86_0%../assets/imagesHouses/houseImage_85_0%../assets/imagesHouses/houseImage_84_0%../assets/imagesHouses/houseImage_83_0%../assets/imagesHouses/houseImage_82_0%../assets/imagesHouses/houseImage_81_0%../assets/imagesHouses/houseImage_42_0%../assets/imagesHouses/houseImage_39_0%../assets/imagesHouses/houseImage_29_0%../assets/imagesHouses/houseImage_17_0%../assets/imagesHouses/houseImage_9_0%../assets/imagesHouses/houseImage_8_0%../assets/imagesHouses/houseImage_5_0%../assets/imagesHouses/houseImage_4_0%Array
 (
     [country] => 
     [city] => toronto
@@ -1676,6 +186,11 @@ Array
 1Array
 (
     [country] => Portugal
+    [city] => toronto
+)
+12Array
+(
+    [country] => Portugal
     [city] => 
 )
 12Array
@@ -1700,225 +215,214 @@ Array
 )
 12Array
 (
-    [country] => Portugal
-    [city] => Far
+    [HouseName] => rua dos ruas
+    [PricePerDay] => 2222
+    [Adress] => asdads
+    [description] => sdda
+    [PostalCode] => 50050-002
+    [City] => Faro
+    [Country] => Portugal
+    [Capacity] => 222
+    [commodities] => [["piscina","piscina 4x4"],["Carro","4X4"],["Casa de banho","4e"],["Casa de banho",""]]
+    [File0] => 0
+    [File1] => 0
+    [File2] => 0
+    [File3] => 0
+    [File4] => 0
+    [File5] => 0
 )
-12Array
+Array
 (
-    [country] => Portugal
-    [city] => Faro
+    [0] => 0
+    [1] => 0
+    [2] => 0
+    [3] => 0
+    [4] => 0
+    [5] => 0
 )
-12Array
+shitArray
 (
-    [country] => Portugal
-    [city] => Far
+    [HouseName] => rua dos ruas
+    [PricePerDay] => 2222
+    [Adress] => asdads
+    [description] => sdda
+    [PostalCode] => 50050-002
+    [City] => Faro
+    [Country] => Portugal
+    [Capacity] => 222
+    [commodities] => [["piscina","piscina 4x4"],["Carro","4X4"],["Casa de banho","4e"],["Casa de banho",""]]
+    [File0] => 0
+    [File1] => 0
+    [File2] => 0
+    [File3] => 0
+    [File4] => 0
+    [File5] => 0
 )
-12Array
+Array
 (
-    [country] => Portugal
-    [city] => Faro
+    [0] => 0
+    [1] => 0
+    [2] => 0
+    [3] => 0
+    [4] => 0
+    [5] => 0
 )
-12Array
+104Array
 (
-    [country] => Portugal
-    [city] => Far
+    [image0] => Array
+        (
+            [name] => 
+            [type] => 
+            [tmp_name] => 
+            [error] => 4
+            [size] => 0
+        )
+
+    [image1] => Array
+        (
+            [name] => 
+            [type] => 
+            [tmp_name] => 
+            [error] => 4
+            [size] => 0
+        )
+
+    [image2] => Array
+        (
+            [name] => 
+            [type] => 
+            [tmp_name] => 
+            [error] => 4
+            [size] => 0
+        )
+
+    [image3] => Array
+        (
+            [name] => 
+            [type] => 
+            [tmp_name] => 
+            [error] => 4
+            [size] => 0
+        )
+
+    [image4] => Array
+        (
+            [name] => 
+            [type] => 
+            [tmp_name] => 
+            [error] => 4
+            [size] => 0
+        )
+
+    [image5] => Array
+        (
+            [name] => 
+            [type] => 
+            [tmp_name] => 
+            [error] => 4
+            [size] => 0
+        )
+
 )
-12Array
+000000LOL2../assets/imagesHouses/houseImage_91_0%../assets/imagesHouses/houseImage_90_0%../assets/imagesHouses/houseImage_89_0%../assets/imagesHouses/houseImage_88_0%../assets/imagesHouses/houseImage_87_0%../assets/imagesHouses/houseImage_86_0%../assets/imagesHouses/houseImage_85_0%../assets/imagesHouses/houseImage_84_0%../assets/imagesHouses/houseImage_83_0%../assets/imagesHouses/houseImage_82_0%../assets/imagesHouses/houseImage_81_0%../assets/imagesHouses/houseImage_42_0%../assets/imagesHouses/houseImage_39_0%../assets/imagesHouses/houseImage_29_0%../assets/imagesHouses/houseImage_17_0%../assets/imagesHouses/houseImage_9_0%../assets/imagesHouses/houseImage_8_0%../assets/imagesHouses/houseImage_5_0%../assets/imagesHouses/houseImage_4_0%../assets/imagesHouses/houseImage_91_0%../assets/imagesHouses/houseImage_90_0%../assets/imagesHouses/houseImage_89_0%../assets/imagesHouses/houseImage_88_0%../assets/imagesHouses/houseImage_87_0%../assets/imagesHouses/houseImage_86_0%../assets/imagesHouses/houseImage_85_0%../assets/imagesHouses/houseImage_84_0%../assets/imagesHouses/houseImage_83_0%../assets/imagesHouses/houseImage_82_0%../assets/imagesHouses/houseImage_81_0%../assets/imagesHouses/houseImage_42_0%../assets/imagesHouses/houseImage_39_0%../assets/imagesHouses/houseImage_29_0%../assets/imagesHouses/houseImage_17_0%../assets/imagesHouses/houseImage_9_0%../assets/imagesHouses/houseImage_8_0%../assets/imagesHouses/houseImage_5_0%../assets/imagesHouses/houseImage_4_0%../assets/imagesHouses/houseImage_91_0%../assets/imagesHouses/houseImage_90_0%../assets/imagesHouses/houseImage_89_0%../assets/imagesHouses/houseImage_88_0%../assets/imagesHouses/houseImage_87_0%../assets/imagesHouses/houseImage_86_0%../assets/imagesHouses/houseImage_85_0%../assets/imagesHouses/houseImage_84_0%../assets/imagesHouses/houseImage_83_0%../assets/imagesHouses/houseImage_82_0%../assets/imagesHouses/houseImage_81_0%../assets/imagesHouses/houseImage_42_0%../assets/imagesHouses/houseImage_39_0%../assets/imagesHouses/houseImage_29_0%../assets/imagesHouses/houseImage_17_0%../assets/imagesHouses/houseImage_9_0%../assets/imagesHouses/houseImage_8_0%../assets/imagesHouses/houseImage_5_0%../assets/imagesHouses/houseImage_4_0%../assets/imagesHouses/houseImage_91_0%../assets/imagesHouses/houseImage_90_0%../assets/imagesHouses/houseImage_89_0%../assets/imagesHouses/houseImage_88_0%../assets/imagesHouses/houseImage_87_0%../assets/imagesHouses/houseImage_86_0%../assets/imagesHouses/houseImage_85_0%../assets/imagesHouses/houseImage_84_0%../assets/imagesHouses/houseImage_83_0%../assets/imagesHouses/houseImage_82_0%../assets/imagesHouses/houseImage_81_0%../assets/imagesHouses/houseImage_42_0%../assets/imagesHouses/houseImage_39_0%../assets/imagesHouses/houseImage_29_0%../assets/imagesHouses/houseImage_17_0%../assets/imagesHouses/houseImage_9_0%../assets/imagesHouses/houseImage_8_0%../assets/imagesHouses/houseImage_5_0%../assets/imagesHouses/houseImage_4_0%Array
 (
-    [country] => Portugal
-    [city] => Faro
+    [houseId] => 91
 )
-12Array
+Array
 (
-    [country] => Portugal
-    [city] => Far
+    [HouseName] => rua dos ruas
+    [PricePerDay] => 2222
+    [Adress] => asdads
+    [description] =>  sdda 
+    [PostalCode] => 50050-002
+    [City] => Faro
+    [Country] => Portugal
+    [Capacity] => 222
+    [houseId] => 91
+    [File0] => 1
+    [File1] => 0
+    [File2] => 0
+    [File3] => 0
+    [File4] => 0
+    [File5] => 0
 )
-12Array
+Array
 (
-    [country] => Portugal
-    [city] => Faro
+    [0] => 1
+    [1] => 0
+    [2] => 0
+    [3] => 0
+    [4] => 0
+    [5] => 0
 )
-12Array
+merda1merda291Array
 (
-    [country] => Portugal
-    [city] => Far
+    [image0] => Array
+        (
+            [name] => fences.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\phpC922.tmp
+            [error] => 0
+            [size] => 30182
+        )
+
+    [image1] => Array
+        (
+            [name] => 
+            [type] => 
+            [tmp_name] => 
+            [error] => 4
+            [size] => 0
+        )
+
+    [image2] => Array
+        (
+            [name] => 
+            [type] => 
+            [tmp_name] => 
+            [error] => 4
+            [size] => 0
+        )
+
+    [image3] => Array
+        (
+            [name] => 
+            [type] => 
+            [tmp_name] => 
+            [error] => 4
+            [size] => 0
+        )
+
+    [image4] => Array
+        (
+            [name] => 
+            [type] => 
+            [tmp_name] => 
+            [error] => 4
+            [size] => 0
+        )
+
+    [image5] => Array
+        (
+            [name] => 
+            [type] => 
+            [tmp_name] => 
+            [error] => 4
+            [size] => 0
+        )
+
 )
-12Array
-(
-    [country] => Portugal
-    [city] => Faro
-)
-12Array
-(
-    [country] => Portugal
-    [city] => Far
-)
-12Array
-(
-    [country] => Portugal
-    [city] => Faro
-)
-12Array
-(
-    [country] => Portugal
-    [city] => Far
-)
-12Array
-(
-    [country] => Portugal
-    [city] => Faro
-)
-12Array
-(
-    [country] => Portugal
-    [city] => Far
-)
-12Array
-(
-    [country] => Portugal
-    [city] => Faro
-)
-12Array
-(
-    [country] => Portugal
-    [city] => Far
-)
-12Array
-(
-    [country] => Portugal
-    [city] => Faro
-)
-12Array
-(
-    [country] => Portugal
-    [city] => Far
-)
-12Array
-(
-    [country] => Portugal
-    [city] => Faro
-)
-12Array
-(
-    [country] => Portugal
-    [city] => Far
-)
-12Array
-(
-    [country] => Portugal
-    [city] => Faro
-)
-12Array
-(
-    [country] => Portugal
-    [city] => Far
-)
-12Array
-(
-    [country] => Portugal
-    [city] => Fa
-)
-12Array
-(
-    [country] => Portugal
-    [city] => F
-)
-12Array
-(
-    [country] => Portugal
-    [city] => 
-)
-12Array
+1adicionar o path00000LOL2../assets/imagesHouses/houseImage_91_0%../assets/imagesHouses/houseImage_90_0%../assets/imagesHouses/houseImage_89_0%../assets/imagesHouses/houseImage_88_0%../assets/imagesHouses/houseImage_87_0%../assets/imagesHouses/houseImage_86_0%../assets/imagesHouses/houseImage_85_0%../assets/imagesHouses/houseImage_84_0%../assets/imagesHouses/houseImage_83_0%../assets/imagesHouses/houseImage_82_0%../assets/imagesHouses/houseImage_81_0%../assets/imagesHouses/houseImage_42_0%../assets/imagesHouses/houseImage_39_0%../assets/imagesHouses/houseImage_29_0%../assets/imagesHouses/houseImage_17_0%../assets/imagesHouses/houseImage_9_0%../assets/imagesHouses/houseImage_8_0%../assets/imagesHouses/houseImage_5_0%../assets/imagesHouses/houseImage_4_0%../assets/imagesHouses/houseImage_91_0%../assets/imagesHouses/houseImage_90_0%../assets/imagesHouses/houseImage_89_0%../assets/imagesHouses/houseImage_88_0%../assets/imagesHouses/houseImage_87_0%../assets/imagesHouses/houseImage_86_0%../assets/imagesHouses/houseImage_85_0%../assets/imagesHouses/houseImage_84_0%../assets/imagesHouses/houseImage_83_0%../assets/imagesHouses/houseImage_82_0%../assets/imagesHouses/houseImage_81_0%../assets/imagesHouses/houseImage_42_0%../assets/imagesHouses/houseImage_39_0%../assets/imagesHouses/houseImage_29_0%../assets/imagesHouses/houseImage_17_0%../assets/imagesHouses/houseImage_9_0%../assets/imagesHouses/houseImage_8_0%../assets/imagesHouses/houseImage_5_0%../assets/imagesHouses/houseImage_4_0%Array
 (
     [country] => 
-    [city] => 
+    [city] => toronto
 )
 1Array
 (
-    [country] => 
-    [city] => F
+    [country] => Portugal
+    [city] => toronto
 )
-1Array
-(
-    [country] => 
-    [city] => Fa
-)
-1Array
-(
-    [country] => 
-    [city] => Far
-)
-1Array
-(
-    [country] => 
-    [city] => Fa
-)
-1Array
-(
-    [country] => 
-    [city] => F
-)
-1Array
-(
-    [country] => 
-    [city] => 
-)
-1Array
-(
-    [country] => P
-    [city] => 
-)
-1Array
-(
-    [country] => Po
-    [city] => 
-)
-1Array
-(
-    [country] => Por
-    [city] => 
-)
-1Array
-(
-    [country] => Port
-    [city] => 
-)
-1Array
-(
-    [country] => Portg
-    [city] => 
-)
-1Array
-(
-    [country] => Portgu
-    [city] => 
-)
-1Array
-(
-    [country] => Portg
-    [city] => 
-)
-1Array
-(
-    [country] => Port
-    [city] => 
-)
-1Array
-(
-    [country] => Portu
-    [city] => 
-)
-1Array
-(
-    [country] => Portug
-    [city] => 
-)
-1Array
-(
-    [country] => Portuga
-    [city] => 
-)
-1Array
+12Array
 (
     [country] => Portugal
     [city] => 
@@ -1946,564 +450,21 @@ Array
 12Array
 (
     [country] => Portugal
-    [city] => FAR
-)
-12Array
-(
-    [country] => Portugal
-    [city] => FA
-)
-12Array
-(
-    [country] => Portugal
-    [city] => F
-)
-12Array
-(
-    [country] => Portugal
-    [city] => Fa
-)
-12Array
-(
-    [country] => Portugal
-    [city] => Far
-)
-12Array
-(
-    [country] => Portugal
-    [city] => Faro
-)
-12Array
-(
-    [country] => Portugal
-    [city] => Far
-)
-12Array
-(
-    [country] => Portugal
-    [city] => Faro
-)
-12Array
-(
-    [country] => Portugal
-    [city] => Faroo
-)
-12Array
-(
-    [country] => Portugal
-    [city] => Farooo
-)
-12Array
-(
-    [country] => Portugal
-    [city] => Faroo
-)
-12Array
-(
-    [country] => Portugal
-    [city] => Faro
-)
-12Array
-(
-    [country] => Portugal
-    [city] => Far
-)
-12Array
-(
-    [country] => Portugal
-    [city] => Faro
-)
-12Array
-(
-    [country] => Portugal
-    [city] => Faro
-)
-12Array
-(
-    [country] => Portugal
-    [city] => Faro
-)
-12Array
-(
-    [country] => Portugal
-    [city] => Faro
-)
-12Array
-(
-    [country] => Portugal
-    [city] => Faro
-)
-12Array
-(
-    [country] => Portugal
-    [city] => Faro
-)
-12Array
-(
-    [country] => Portugal
-    [city] => Faro
-)
-12Array
-(
-    [country] => Portugal
-    [city] => Far
-)
-12Array
-(
-    [country] => Portugal
-    [city] => Fa
-)
-12Array
-(
-    [country] => Portugal
-    [city] => F
-)
-12Array
-(
-    [country] => Portugal
-    [city] => 
-)
-12Array
-(
-    [country] => 
-    [city] => 
-)
-1Array
-(
-    [country] => 
-    [city] => F
-)
-1Array
-(
-    [country] => 
-    [city] => Fa
-)
-1Array
-(
-    [country] => 
-    [city] => Far
-)
-1Array
-(
-    [country] => 
-    [city] => Faro
-)
-1Array
-(
-    [country] => P
-    [city] => Faro
-)
-1Array
-(
-    [country] => Po
-    [city] => Faro
-)
-1Array
-(
-    [country] => Por
-    [city] => Faro
-)
-1Array
-(
-    [country] => Port
-    [city] => Faro
-)
-1Array
-(
-    [country] => Portu
-    [city] => Faro
-)
-1Array
-(
-    [country] => Portug
-    [city] => Faro
-)
-1Array
-(
-    [country] => Portuga
-    [city] => Faro
-)
-1Array
-(
-    [country] => Portugal
     [city] => Faro
 )
 12Array
 (
     [HouseName] => rua dos ruas
-    [PricePerDay] => 222
-    [Adress] => dasdsad
-    [description] => asdasds
+    [PricePerDay] => 33
+    [Adress] => 333
+    [description] => 333
     [PostalCode] => 50050-002
     [City] => Faro
     [Country] => Portugal
     [Capacity] => 33
-    [File0] => 1
-    [File1] => 1
-    [File2] => 1
-    [File3] => 1
-    [File4] => 1
-    [File5] => 1
-)
-Array
-(
-    [0] => 1
-    [1] => 1
-    [2] => 1
-    [3] => 1
-    [4] => 1
-    [5] => 1
-)
-81Array
-(
-    [image0] => Array
-        (
-            [name] => esperguicadeira.png
-            [type] => image/png
-            [tmp_name] => C:\xampp\tmp\php8FEA.tmp
-            [error] => 0
-            [size] => 105919
-        )
-
-    [image1] => Array
-        (
-            [name] => plastic.jpg
-            [type] => image/jpeg
-            [tmp_name] => C:\xampp\tmp\php901A.tmp
-            [error] => 0
-            [size] => 428668
-        )
-
-    [image2] => Array
-        (
-            [name] => beachBuoy1.jpg
-            [type] => image/jpeg
-            [tmp_name] => C:\xampp\tmp\php902B.tmp
-            [error] => 0
-            [size] => 136167
-        )
-
-    [image3] => Array
-        (
-            [name] => fences.jpg
-            [type] => image/jpeg
-            [tmp_name] => C:\xampp\tmp\php903C.tmp
-            [error] => 0
-            [size] => 30182
-        )
-
-    [image4] => Array
-        (
-            [name] => colmo.png
-            [type] => image/png
-            [tmp_name] => C:\xampp\tmp\php904C.tmp
-            [error] => 0
-            [size] => 207731
-        )
-
-    [image5] => Array
-        (
-            [name] => beachBuoy1.jpg
-            [type] => image/jpeg
-            [tmp_name] => C:\xampp\tmp\php904D.tmp
-            [error] => 0
-            [size] => 136167
-        )
-
-)
-1adicionar o path1adicionar o path1adicionar o path1adicionar o path1adicionar o path1adicionar o pathLOL2../assets/imagesHouses/houseImage_81_0%../assets/imagesHouses/houseImage_80_0%../assets/imagesHouses/houseImage_78_0%../assets/imagesHouses/houseImage_73_0%../assets/imagesHouses/houseImage_72_0%../assets/imagesHouses/houseImage_71_0%../assets/imagesHouses/houseImage_70_0%../assets/imagesHouses/houseImage_69_0%../assets/imagesHouses/houseImage_68_0%../assets/imagesHouses/houseImage_65_0%../assets/imagesHouses/houseImage_64_0%../assets/imagesHouses/houseImage_63_0%../assets/imagesHouses/houseImage_62_0%../assets/imagesHouses/houseImage_61_0%../assets/imagesHouses/houseImage_60_0%../assets/imagesHouses/houseImage_59_0%../assets/imagesHouses/houseImage_58_0%../assets/imagesHouses/houseImage_57_0%../assets/imagesHouses/houseImage_56_0%../assets/imagesHouses/houseImage_55_0%../assets/imagesHouses/houseImage_54_0%../assets/imagesHouses/houseImage_53_0%../assets/imagesHouses/houseImage_52_0%../assets/imagesHouses/houseImage_51_0%../assets/imagesHouses/houseImage_47_0%../assets/imagesHouses/houseImage_40_0%../assets/imagesHouses/houseImage_32_0%../assets/imagesHouses/houseImage_25_0%../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_12_0%Array
-(
-    [houseId] => 81
-)
-Array
-(
-    [HouseName] => rua dos ruas
-    [PricePerDay] => 222
-    [Adress] => dasdsad
-    [description] =>  asdasds 
-    [PostalCode] => 50050-002
-    [City] => Faro
-    [Country] => Portugal
-    [Capacity] => 33
-    [houseId] => 81
-    [File0] => 2
-    [File1] => 2
-    [File2] => 0
-    [File3] => 2
-    [File4] => 2
-    [File5] => 2
-)
-Array
-(
-    [0] => 2
-    [1] => 2
-    [2] => 0
-    [3] => 2
-    [4] => 2
-    [5] => 2
-)
-merda1merda281Array
-(
-    [image0] => Array
-        (
-            [name] => 
-            [type] => 
-            [tmp_name] => 
-            [error] => 4
-            [size] => 0
-        )
-
-    [image1] => Array
-        (
-            [name] => 
-            [type] => 
-            [tmp_name] => 
-            [error] => 4
-            [size] => 0
-        )
-
-    [image2] => Array
-        (
-            [name] => 
-            [type] => 
-            [tmp_name] => 
-            [error] => 4
-            [size] => 0
-        )
-
-    [image3] => Array
-        (
-            [name] => 
-            [type] => 
-            [tmp_name] => 
-            [error] => 4
-            [size] => 0
-        )
-
-    [image4] => Array
-        (
-            [name] => 
-            [type] => 
-            [tmp_name] => 
-            [error] => 4
-            [size] => 0
-        )
-
-    [image5] => Array
-        (
-            [name] => 
-            [type] => 
-            [tmp_name] => 
-            [error] => 4
-            [size] => 0
-        )
-
-)
-220222LOL2../assets/imagesHouses/houseImage_81_0%../assets/imagesHouses/houseImage_80_0%../assets/imagesHouses/houseImage_78_0%../assets/imagesHouses/houseImage_73_0%../assets/imagesHouses/houseImage_72_0%../assets/imagesHouses/houseImage_71_0%../assets/imagesHouses/houseImage_70_0%../assets/imagesHouses/houseImage_69_0%../assets/imagesHouses/houseImage_68_0%../assets/imagesHouses/houseImage_65_0%../assets/imagesHouses/houseImage_64_0%../assets/imagesHouses/houseImage_63_0%../assets/imagesHouses/houseImage_62_0%../assets/imagesHouses/houseImage_61_0%../assets/imagesHouses/houseImage_60_0%../assets/imagesHouses/houseImage_59_0%../assets/imagesHouses/houseImage_58_0%../assets/imagesHouses/houseImage_57_0%../assets/imagesHouses/houseImage_56_0%../assets/imagesHouses/houseImage_55_0%../assets/imagesHouses/houseImage_54_0%../assets/imagesHouses/houseImage_53_0%../assets/imagesHouses/houseImage_52_0%../assets/imagesHouses/houseImage_51_0%../assets/imagesHouses/houseImage_47_0%../assets/imagesHouses/houseImage_40_0%../assets/imagesHouses/houseImage_32_0%../assets/imagesHouses/houseImage_25_0%../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_12_0%Array
-(
-    [houseId] => 81
-)
-Array
-(
-    [houseId] => 81
-)
-../assets/imagesHouses/houseImage_81_0%../assets/imagesHouses/houseImage_80_0%../assets/imagesHouses/houseImage_78_0%../assets/imagesHouses/houseImage_73_0%../assets/imagesHouses/houseImage_72_0%../assets/imagesHouses/houseImage_71_0%../assets/imagesHouses/houseImage_70_0%../assets/imagesHouses/houseImage_69_0%../assets/imagesHouses/houseImage_68_0%../assets/imagesHouses/houseImage_65_0%../assets/imagesHouses/houseImage_64_0%../assets/imagesHouses/houseImage_63_0%../assets/imagesHouses/houseImage_62_0%../assets/imagesHouses/houseImage_61_0%../assets/imagesHouses/houseImage_60_0%../assets/imagesHouses/houseImage_59_0%../assets/imagesHouses/houseImage_58_0%../assets/imagesHouses/houseImage_57_0%../assets/imagesHouses/houseImage_56_0%../assets/imagesHouses/houseImage_55_0%../assets/imagesHouses/houseImage_54_0%../assets/imagesHouses/houseImage_53_0%../assets/imagesHouses/houseImage_52_0%../assets/imagesHouses/houseImage_51_0%../assets/imagesHouses/houseImage_47_0%../assets/imagesHouses/houseImage_40_0%../assets/imagesHouses/houseImage_32_0%../assets/imagesHouses/houseImage_25_0%../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_12_0%../assets/imagesHouses/houseImage_81_0%../assets/imagesHouses/houseImage_80_0%../assets/imagesHouses/houseImage_78_0%../assets/imagesHouses/houseImage_73_0%../assets/imagesHouses/houseImage_72_0%../assets/imagesHouses/houseImage_71_0%../assets/imagesHouses/houseImage_70_0%../assets/imagesHouses/houseImage_69_0%../assets/imagesHouses/houseImage_68_0%../assets/imagesHouses/houseImage_65_0%../assets/imagesHouses/houseImage_64_0%../assets/imagesHouses/houseImage_63_0%../assets/imagesHouses/houseImage_62_0%../assets/imagesHouses/houseImage_61_0%../assets/imagesHouses/houseImage_60_0%../assets/imagesHouses/houseImage_59_0%../assets/imagesHouses/houseImage_58_0%../assets/imagesHouses/houseImage_57_0%../assets/imagesHouses/houseImage_56_0%../assets/imagesHouses/houseImage_54_0%../assets/imagesHouses/houseImage_53_0%../assets/imagesHouses/houseImage_52_0%../assets/imagesHouses/houseImage_51_0%../assets/imagesHouses/houseImage_47_0%../assets/imagesHouses/houseImage_40_0%../assets/imagesHouses/houseImage_32_0%../assets/imagesHouses/houseImage_25_0%../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_12_0%../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_28_0%../assets/imagesHouses/houseImage_48_0%../assets/imagesHouses/houseImage_35_0%../assets/imagesHouses/houseImage_20_0%../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_28_0%../assets/imagesHouses/houseImage_48_0%../assets/imagesHouses/houseImage_35_0%../assets/imagesHouses/houseImage_20_0%../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_28_0%../assets/imagesHouses/houseImage_48_0%../assets/imagesHouses/houseImage_35_0%../assets/imagesHouses/houseImage_20_0%../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_28_0%../assets/imagesHouses/houseImage_48_0%../assets/imagesHouses/houseImage_35_0%../assets/imagesHouses/houseImage_81_0%../assets/imagesHouses/houseImage_80_0%../assets/imagesHouses/houseImage_78_0%../assets/imagesHouses/houseImage_73_0%../assets/imagesHouses/houseImage_72_0%../assets/imagesHouses/houseImage_71_0%../assets/imagesHouses/houseImage_70_0%../assets/imagesHouses/houseImage_69_0%../assets/imagesHouses/houseImage_68_0%../assets/imagesHouses/houseImage_65_0%../assets/imagesHouses/houseImage_64_0%../assets/imagesHouses/houseImage_63_0%../assets/imagesHouses/houseImage_62_0%../assets/imagesHouses/houseImage_61_0%../assets/imagesHouses/houseImage_60_0%../assets/imagesHouses/houseImage_59_0%../assets/imagesHouses/houseImage_58_0%../assets/imagesHouses/houseImage_57_0%../assets/imagesHouses/houseImage_56_0%../assets/imagesHouses/houseImage_54_0%../assets/imagesHouses/houseImage_53_0%../assets/imagesHouses/houseImage_52_0%../assets/imagesHouses/houseImage_51_0%../assets/imagesHouses/houseImage_47_0%../assets/imagesHouses/houseImage_40_0%../assets/imagesHouses/houseImage_32_0%../assets/imagesHouses/houseImage_25_0%../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_12_0%../assets/imagesHouses/houseImage_81_0%../assets/imagesHouses/houseImage_80_0%../assets/imagesHouses/houseImage_78_0%../assets/imagesHouses/houseImage_73_0%../assets/imagesHouses/houseImage_72_0%../assets/imagesHouses/houseImage_71_0%../assets/imagesHouses/houseImage_70_0%../assets/imagesHouses/houseImage_69_0%../assets/imagesHouses/houseImage_68_0%../assets/imagesHouses/houseImage_65_0%../assets/imagesHouses/houseImage_64_0%../assets/imagesHouses/houseImage_63_0%../assets/imagesHouses/houseImage_62_0%../assets/imagesHouses/houseImage_61_0%../assets/imagesHouses/houseImage_60_0%../assets/imagesHouses/houseImage_59_0%../assets/imagesHouses/houseImage_58_0%../assets/imagesHouses/houseImage_57_0%../assets/imagesHouses/houseImage_56_0%../assets/imagesHouses/houseImage_54_0%../assets/imagesHouses/houseImage_53_0%../assets/imagesHouses/houseImage_52_0%../assets/imagesHouses/houseImage_51_0%../assets/imagesHouses/houseImage_47_0%../assets/imagesHouses/houseImage_40_0%../assets/imagesHouses/houseImage_32_0%../assets/imagesHouses/houseImage_25_0%../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_12_0%../assets/imagesHouses/houseImage_81_0%../assets/imagesHouses/houseImage_80_0%../assets/imagesHouses/houseImage_78_0%../assets/imagesHouses/houseImage_73_0%../assets/imagesHouses/houseImage_72_0%../assets/imagesHouses/houseImage_71_0%../assets/imagesHouses/houseImage_70_0%../assets/imagesHouses/houseImage_69_0%../assets/imagesHouses/houseImage_68_0%../assets/imagesHouses/houseImage_65_0%../assets/imagesHouses/houseImage_64_0%../assets/imagesHouses/houseImage_63_0%../assets/imagesHouses/houseImage_62_0%../assets/imagesHouses/houseImage_61_0%../assets/imagesHouses/houseImage_60_0%../assets/imagesHouses/houseImage_59_0%../assets/imagesHouses/houseImage_58_0%../assets/imagesHouses/houseImage_57_0%../assets/imagesHouses/houseImage_56_0%../assets/imagesHouses/houseImage_54_0%../assets/imagesHouses/houseImage_53_0%../assets/imagesHouses/houseImage_52_0%../assets/imagesHouses/houseImage_51_0%../assets/imagesHouses/houseImage_47_0%../assets/imagesHouses/houseImage_40_0%../assets/imagesHouses/houseImage_32_0%../assets/imagesHouses/houseImage_25_0%../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_12_0%../assets/imagesHouses/houseImage_81_0%../assets/imagesHouses/houseImage_80_0%../assets/imagesHouses/houseImage_78_0%../assets/imagesHouses/houseImage_73_0%../assets/imagesHouses/houseImage_72_0%../assets/imagesHouses/houseImage_71_0%../assets/imagesHouses/houseImage_70_0%../assets/imagesHouses/houseImage_69_0%../assets/imagesHouses/houseImage_68_0%../assets/imagesHouses/houseImage_65_0%../assets/imagesHouses/houseImage_64_0%../assets/imagesHouses/houseImage_63_0%../assets/imagesHouses/houseImage_62_0%../assets/imagesHouses/houseImage_61_0%../assets/imagesHouses/houseImage_60_0%../assets/imagesHouses/houseImage_59_0%../assets/imagesHouses/houseImage_58_0%../assets/imagesHouses/houseImage_57_0%../assets/imagesHouses/houseImage_56_0%../assets/imagesHouses/houseImage_54_0%../assets/imagesHouses/houseImage_53_0%../assets/imagesHouses/houseImage_52_0%../assets/imagesHouses/houseImage_51_0%../assets/imagesHouses/houseImage_47_0%../assets/imagesHouses/houseImage_40_0%../assets/imagesHouses/houseImage_32_0%../assets/imagesHouses/houseImage_25_0%../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_12_0%../assets/imagesHouses/houseImage_81_0%../assets/imagesHouses/houseImage_80_0%../assets/imagesHouses/houseImage_78_0%../assets/imagesHouses/houseImage_73_0%../assets/imagesHouses/houseImage_72_0%../assets/imagesHouses/houseImage_71_0%../assets/imagesHouses/houseImage_70_0%../assets/imagesHouses/houseImage_69_0%../assets/imagesHouses/houseImage_68_0%../assets/imagesHouses/houseImage_65_0%../assets/imagesHouses/houseImage_64_0%../assets/imagesHouses/houseImage_63_0%../assets/imagesHouses/houseImage_62_0%../assets/imagesHouses/houseImage_61_0%../assets/imagesHouses/houseImage_60_0%../assets/imagesHouses/houseImage_59_0%../assets/imagesHouses/houseImage_58_0%../assets/imagesHouses/houseImage_57_0%../assets/imagesHouses/houseImage_56_0%../assets/imagesHouses/houseImage_54_0%../assets/imagesHouses/houseImage_53_0%../assets/imagesHouses/houseImage_52_0%../assets/imagesHouses/houseImage_51_0%../assets/imagesHouses/houseImage_47_0%../assets/imagesHouses/houseImage_40_0%../assets/imagesHouses/houseImage_32_0%../assets/imagesHouses/houseImage_25_0%../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_12_0%../assets/imagesHouses/houseImage_81_0%../assets/imagesHouses/houseImage_80_0%../assets/imagesHouses/houseImage_78_0%../assets/imagesHouses/houseImage_73_0%../assets/imagesHouses/houseImage_72_0%../assets/imagesHouses/houseImage_71_0%../assets/imagesHouses/houseImage_70_0%../assets/imagesHouses/houseImage_69_0%../assets/imagesHouses/houseImage_68_0%../assets/imagesHouses/houseImage_65_0%../assets/imagesHouses/houseImage_64_0%../assets/imagesHouses/houseImage_63_0%../assets/imagesHouses/houseImage_62_0%../assets/imagesHouses/houseImage_61_0%../assets/imagesHouses/houseImage_60_0%../assets/imagesHouses/houseImage_59_0%../assets/imagesHouses/houseImage_58_0%../assets/imagesHouses/houseImage_57_0%../assets/imagesHouses/houseImage_56_0%../assets/imagesHouses/houseImage_54_0%../assets/imagesHouses/houseImage_53_0%../assets/imagesHouses/houseImage_52_0%../assets/imagesHouses/houseImage_51_0%../assets/imagesHouses/houseImage_47_0%../assets/imagesHouses/houseImage_40_0%../assets/imagesHouses/houseImage_32_0%../assets/imagesHouses/houseImage_25_0%../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_12_0%../assets/imagesHouses/houseImage_81_0%../assets/imagesHouses/houseImage_80_0%../assets/imagesHouses/houseImage_78_0%../assets/imagesHouses/houseImage_73_0%../assets/imagesHouses/houseImage_72_0%../assets/imagesHouses/houseImage_71_0%../assets/imagesHouses/houseImage_70_0%../assets/imagesHouses/houseImage_69_0%../assets/imagesHouses/houseImage_68_0%../assets/imagesHouses/houseImage_65_0%../assets/imagesHouses/houseImage_64_0%../assets/imagesHouses/houseImage_63_0%../assets/imagesHouses/houseImage_62_0%../assets/imagesHouses/houseImage_61_0%../assets/imagesHouses/houseImage_60_0%../assets/imagesHouses/houseImage_59_0%../assets/imagesHouses/houseImage_58_0%../assets/imagesHouses/houseImage_57_0%../assets/imagesHouses/houseImage_56_0%../assets/imagesHouses/houseImage_54_0%../assets/imagesHouses/houseImage_53_0%../assets/imagesHouses/houseImage_52_0%../assets/imagesHouses/houseImage_51_0%../assets/imagesHouses/houseImage_47_0%../assets/imagesHouses/houseImage_40_0%../assets/imagesHouses/houseImage_32_0%../assets/imagesHouses/houseImage_25_0%../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_12_0%../assets/imagesHouses/houseImage_81_0%../assets/imagesHouses/houseImage_80_0%../assets/imagesHouses/houseImage_78_0%../assets/imagesHouses/houseImage_73_0%../assets/imagesHouses/houseImage_72_0%../assets/imagesHouses/houseImage_71_0%../assets/imagesHouses/houseImage_70_0%../assets/imagesHouses/houseImage_69_0%../assets/imagesHouses/houseImage_68_0%../assets/imagesHouses/houseImage_65_0%../assets/imagesHouses/houseImage_64_0%../assets/imagesHouses/houseImage_63_0%../assets/imagesHouses/houseImage_62_0%../assets/imagesHouses/houseImage_61_0%../assets/imagesHouses/houseImage_60_0%../assets/imagesHouses/houseImage_59_0%../assets/imagesHouses/houseImage_58_0%../assets/imagesHouses/houseImage_57_0%../assets/imagesHouses/houseImage_56_0%../assets/imagesHouses/houseImage_54_0%../assets/imagesHouses/houseImage_53_0%../assets/imagesHouses/houseImage_52_0%../assets/imagesHouses/houseImage_51_0%../assets/imagesHouses/houseImage_47_0%../assets/imagesHouses/houseImage_40_0%../assets/imagesHouses/houseImage_32_0%../assets/imagesHouses/houseImage_25_0%../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_12_0%../assets/imagesHouses/houseImage_81_0%../assets/imagesHouses/houseImage_80_0%../assets/imagesHouses/houseImage_78_0%../assets/imagesHouses/houseImage_73_0%../assets/imagesHouses/houseImage_72_0%../assets/imagesHouses/houseImage_71_0%../assets/imagesHouses/houseImage_70_0%../assets/imagesHouses/houseImage_69_0%../assets/imagesHouses/houseImage_68_0%../assets/imagesHouses/houseImage_65_0%../assets/imagesHouses/houseImage_64_0%../assets/imagesHouses/houseImage_63_0%../assets/imagesHouses/houseImage_62_0%../assets/imagesHouses/houseImage_61_0%../assets/imagesHouses/houseImage_60_0%../assets/imagesHouses/houseImage_59_0%../assets/imagesHouses/houseImage_58_0%../assets/imagesHouses/houseImage_57_0%../assets/imagesHouses/houseImage_56_0%../assets/imagesHouses/houseImage_54_0%../assets/imagesHouses/houseImage_53_0%../assets/imagesHouses/houseImage_52_0%../assets/imagesHouses/houseImage_51_0%../assets/imagesHouses/houseImage_47_0%../assets/imagesHouses/houseImage_40_0%../assets/imagesHouses/houseImage_32_0%../assets/imagesHouses/houseImage_25_0%../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_12_0%../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_28_0%../assets/imagesHouses/houseImage_48_0%../assets/imagesHouses/houseImage_35_0%../assets/imagesHouses/houseImage_81_0%../assets/imagesHouses/houseImage_80_0%../assets/imagesHouses/houseImage_78_0%../assets/imagesHouses/houseImage_73_0%../assets/imagesHouses/houseImage_72_0%../assets/imagesHouses/houseImage_71_0%../assets/imagesHouses/houseImage_70_0%../assets/imagesHouses/houseImage_69_0%../assets/imagesHouses/houseImage_68_0%../assets/imagesHouses/houseImage_65_0%../assets/imagesHouses/houseImage_64_0%../assets/imagesHouses/houseImage_63_0%../assets/imagesHouses/houseImage_62_0%../assets/imagesHouses/houseImage_61_0%../assets/imagesHouses/houseImage_60_0%../assets/imagesHouses/houseImage_59_0%../assets/imagesHouses/houseImage_58_0%../assets/imagesHouses/houseImage_57_0%../assets/imagesHouses/houseImage_56_0%../assets/imagesHouses/houseImage_54_0%../assets/imagesHouses/houseImage_53_0%../assets/imagesHouses/houseImage_52_0%../assets/imagesHouses/houseImage_51_0%../assets/imagesHouses/houseImage_47_0%../assets/imagesHouses/houseImage_40_0%../assets/imagesHouses/houseImage_32_0%../assets/imagesHouses/houseImage_25_0%../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_12_0%../assets/imagesHouses/houseImage_81_0%../assets/imagesHouses/houseImage_80_0%../assets/imagesHouses/houseImage_78_0%../assets/imagesHouses/houseImage_73_0%../assets/imagesHouses/houseImage_72_0%../assets/imagesHouses/houseImage_71_0%../assets/imagesHouses/houseImage_70_0%../assets/imagesHouses/houseImage_69_0%../assets/imagesHouses/houseImage_68_0%../assets/imagesHouses/houseImage_65_0%../assets/imagesHouses/houseImage_64_0%../assets/imagesHouses/houseImage_63_0%../assets/imagesHouses/houseImage_62_0%../assets/imagesHouses/houseImage_61_0%../assets/imagesHouses/houseImage_60_0%../assets/imagesHouses/houseImage_59_0%../assets/imagesHouses/houseImage_58_0%../assets/imagesHouses/houseImage_57_0%../assets/imagesHouses/houseImage_56_0%../assets/imagesHouses/houseImage_54_0%../assets/imagesHouses/houseImage_53_0%../assets/imagesHouses/houseImage_52_0%../assets/imagesHouses/houseImage_51_0%../assets/imagesHouses/houseImage_47_0%../assets/imagesHouses/houseImage_40_0%../assets/imagesHouses/houseImage_32_0%../assets/imagesHouses/houseImage_25_0%../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_12_0%Array
-(
-    [houseId] => 81
-)
-Array
-(
-    [HouseName] => rua dos ruas
-    [PricePerDay] => 222
-    [Adress] => dasdsad 
-    [description] =>  asdasds 
-    [PostalCode] => 50050-002
-    [City] => Faro
-    [Country] => Portugal
-    [Capacity] => 33
-    [houseId] => 81
-    [File0] => 2
-    [File1] => 2
-    [File2] => 0
-    [File3] => 2
-    [File4] => 2
-    [File5] => 2
-)
-Array
-(
-    [0] => 2
-    [1] => 2
-    [2] => 0
-    [3] => 2
-    [4] => 2
-    [5] => 2
-)
-merda1merda281Array
-(
-    [image0] => Array
-        (
-            [name] => 
-            [type] => 
-            [tmp_name] => 
-            [error] => 4
-            [size] => 0
-        )
-
-    [image1] => Array
-        (
-            [name] => 
-            [type] => 
-            [tmp_name] => 
-            [error] => 4
-            [size] => 0
-        )
-
-    [image2] => Array
-        (
-            [name] => 
-            [type] => 
-            [tmp_name] => 
-            [error] => 4
-            [size] => 0
-        )
-
-    [image3] => Array
-        (
-            [name] => 
-            [type] => 
-            [tmp_name] => 
-            [error] => 4
-            [size] => 0
-        )
-
-    [image4] => Array
-        (
-            [name] => 
-            [type] => 
-            [tmp_name] => 
-            [error] => 4
-            [size] => 0
-        )
-
-    [image5] => Array
-        (
-            [name] => 
-            [type] => 
-            [tmp_name] => 
-            [error] => 4
-            [size] => 0
-        )
-
-)
-220222LOL2../assets/imagesHouses/houseImage_81_0%../assets/imagesHouses/houseImage_80_0%../assets/imagesHouses/houseImage_78_0%../assets/imagesHouses/houseImage_73_0%../assets/imagesHouses/houseImage_72_0%../assets/imagesHouses/houseImage_71_0%../assets/imagesHouses/houseImage_70_0%../assets/imagesHouses/houseImage_69_0%../assets/imagesHouses/houseImage_68_0%../assets/imagesHouses/houseImage_65_0%../assets/imagesHouses/houseImage_64_0%../assets/imagesHouses/houseImage_63_0%../assets/imagesHouses/houseImage_62_0%../assets/imagesHouses/houseImage_61_0%../assets/imagesHouses/houseImage_60_0%../assets/imagesHouses/houseImage_59_0%../assets/imagesHouses/houseImage_58_0%../assets/imagesHouses/houseImage_57_0%../assets/imagesHouses/houseImage_56_0%../assets/imagesHouses/houseImage_54_0%../assets/imagesHouses/houseImage_53_0%../assets/imagesHouses/houseImage_52_0%../assets/imagesHouses/houseImage_51_0%../assets/imagesHouses/houseImage_47_0%../assets/imagesHouses/houseImage_40_0%../assets/imagesHouses/houseImage_32_0%../assets/imagesHouses/houseImage_25_0%../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_12_0%../assets/imagesHouses/houseImage_80_0%../assets/imagesHouses/houseImage_78_0%../assets/imagesHouses/houseImage_73_0%../assets/imagesHouses/houseImage_72_0%../assets/imagesHouses/houseImage_71_0%../assets/imagesHouses/houseImage_70_0%../assets/imagesHouses/houseImage_69_0%../assets/imagesHouses/houseImage_68_0%../assets/imagesHouses/houseImage_65_0%../assets/imagesHouses/houseImage_64_0%../assets/imagesHouses/houseImage_63_0%../assets/imagesHouses/houseImage_62_0%../assets/imagesHouses/houseImage_61_0%../assets/imagesHouses/houseImage_60_0%../assets/imagesHouses/houseImage_59_0%../assets/imagesHouses/houseImage_58_0%../assets/imagesHouses/houseImage_57_0%../assets/imagesHouses/houseImage_56_0%../assets/imagesHouses/houseImage_54_0%../assets/imagesHouses/houseImage_53_0%../assets/imagesHouses/houseImage_52_0%../assets/imagesHouses/houseImage_51_0%../assets/imagesHouses/houseImage_47_0%../assets/imagesHouses/houseImage_40_0%../assets/imagesHouses/houseImage_32_0%../assets/imagesHouses/houseImage_25_0%../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_12_0%../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_28_0%../assets/imagesHouses/houseImage_48_0%../assets/imagesHouses/houseImage_35_0%../assets/imagesHouses/houseImage_80_0%../assets/imagesHouses/houseImage_78_0%../assets/imagesHouses/houseImage_73_0%../assets/imagesHouses/houseImage_72_0%../assets/imagesHouses/houseImage_71_0%../assets/imagesHouses/houseImage_70_0%../assets/imagesHouses/houseImage_69_0%../assets/imagesHouses/houseImage_68_0%../assets/imagesHouses/houseImage_65_0%../assets/imagesHouses/houseImage_64_0%../assets/imagesHouses/houseImage_63_0%../assets/imagesHouses/houseImage_62_0%../assets/imagesHouses/houseImage_61_0%../assets/imagesHouses/houseImage_60_0%../assets/imagesHouses/houseImage_59_0%../assets/imagesHouses/houseImage_58_0%../assets/imagesHouses/houseImage_57_0%../assets/imagesHouses/houseImage_56_0%../assets/imagesHouses/houseImage_54_0%../assets/imagesHouses/houseImage_53_0%../assets/imagesHouses/houseImage_52_0%../assets/imagesHouses/houseImage_51_0%../assets/imagesHouses/houseImage_47_0%../assets/imagesHouses/houseImage_40_0%../assets/imagesHouses/houseImage_32_0%../assets/imagesHouses/houseImage_25_0%../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_12_0%../assets/imagesHouses/houseImage_80_0%../assets/imagesHouses/houseImage_78_0%../assets/imagesHouses/houseImage_73_0%../assets/imagesHouses/houseImage_72_0%../assets/imagesHouses/houseImage_71_0%../assets/imagesHouses/houseImage_70_0%../assets/imagesHouses/houseImage_69_0%../assets/imagesHouses/houseImage_68_0%../assets/imagesHouses/houseImage_65_0%../assets/imagesHouses/houseImage_64_0%../assets/imagesHouses/houseImage_63_0%../assets/imagesHouses/houseImage_62_0%../assets/imagesHouses/houseImage_61_0%../assets/imagesHouses/houseImage_60_0%../assets/imagesHouses/houseImage_59_0%../assets/imagesHouses/houseImage_58_0%../assets/imagesHouses/houseImage_57_0%../assets/imagesHouses/houseImage_56_0%../assets/imagesHouses/houseImage_54_0%../assets/imagesHouses/houseImage_53_0%../assets/imagesHouses/houseImage_52_0%../assets/imagesHouses/houseImage_51_0%../assets/imagesHouses/houseImage_47_0%../assets/imagesHouses/houseImage_40_0%../assets/imagesHouses/houseImage_32_0%../assets/imagesHouses/houseImage_25_0%../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_12_0%../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_28_0%../assets/imagesHouses/houseImage_48_0%../assets/imagesHouses/houseImage_35_0%../assets/imagesHouses/houseImage_80_0%../assets/imagesHouses/houseImage_78_0%../assets/imagesHouses/houseImage_73_0%../assets/imagesHouses/houseImage_72_0%../assets/imagesHouses/houseImage_71_0%../assets/imagesHouses/houseImage_70_0%../assets/imagesHouses/houseImage_69_0%../assets/imagesHouses/houseImage_68_0%../assets/imagesHouses/houseImage_65_0%../assets/imagesHouses/houseImage_64_0%../assets/imagesHouses/houseImage_63_0%../assets/imagesHouses/houseImage_62_0%../assets/imagesHouses/houseImage_61_0%../assets/imagesHouses/houseImage_60_0%../assets/imagesHouses/houseImage_59_0%../assets/imagesHouses/houseImage_58_0%../assets/imagesHouses/houseImage_57_0%../assets/imagesHouses/houseImage_56_0%../assets/imagesHouses/houseImage_54_0%../assets/imagesHouses/houseImage_53_0%../assets/imagesHouses/houseImage_52_0%../assets/imagesHouses/houseImage_51_0%../assets/imagesHouses/houseImage_47_0%../assets/imagesHouses/houseImage_40_0%../assets/imagesHouses/houseImage_32_0%../assets/imagesHouses/houseImage_25_0%../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_12_0%../assets/imagesHouses/houseImage_80_0%../assets/imagesHouses/houseImage_78_0%../assets/imagesHouses/houseImage_73_0%../assets/imagesHouses/houseImage_72_0%../assets/imagesHouses/houseImage_71_0%../assets/imagesHouses/houseImage_70_0%../assets/imagesHouses/houseImage_69_0%../assets/imagesHouses/houseImage_68_0%../assets/imagesHouses/houseImage_65_0%../assets/imagesHouses/houseImage_64_0%../assets/imagesHouses/houseImage_63_0%../assets/imagesHouses/houseImage_62_0%../assets/imagesHouses/houseImage_61_0%../assets/imagesHouses/houseImage_60_0%../assets/imagesHouses/houseImage_59_0%../assets/imagesHouses/houseImage_58_0%../assets/imagesHouses/houseImage_57_0%../assets/imagesHouses/houseImage_56_0%../assets/imagesHouses/houseImage_54_0%../assets/imagesHouses/houseImage_53_0%../assets/imagesHouses/houseImage_52_0%../assets/imagesHouses/houseImage_51_0%../assets/imagesHouses/houseImage_47_0%../assets/imagesHouses/houseImage_40_0%../assets/imagesHouses/houseImage_32_0%../assets/imagesHouses/houseImage_25_0%../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_12_0%../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_28_0%../assets/imagesHouses/houseImage_48_0%../assets/imagesHouses/houseImage_35_0%../assets/imagesHouses/houseImage_80_0%../assets/imagesHouses/houseImage_78_0%../assets/imagesHouses/houseImage_73_0%../assets/imagesHouses/houseImage_72_0%../assets/imagesHouses/houseImage_71_0%../assets/imagesHouses/houseImage_70_0%../assets/imagesHouses/houseImage_69_0%../assets/imagesHouses/houseImage_68_0%../assets/imagesHouses/houseImage_65_0%../assets/imagesHouses/houseImage_64_0%../assets/imagesHouses/houseImage_63_0%../assets/imagesHouses/houseImage_62_0%../assets/imagesHouses/houseImage_61_0%../assets/imagesHouses/houseImage_60_0%../assets/imagesHouses/houseImage_59_0%../assets/imagesHouses/houseImage_58_0%../assets/imagesHouses/houseImage_57_0%../assets/imagesHouses/houseImage_56_0%../assets/imagesHouses/houseImage_54_0%../assets/imagesHouses/houseImage_53_0%../assets/imagesHouses/houseImage_52_0%../assets/imagesHouses/houseImage_51_0%../assets/imagesHouses/houseImage_47_0%../assets/imagesHouses/houseImage_40_0%../assets/imagesHouses/houseImage_32_0%../assets/imagesHouses/houseImage_25_0%../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_12_0%Array
-(
-    [houseId] => 80
-)
-../assets/imagesHouses/houseImage_80_0%../assets/imagesHouses/houseImage_78_0%../assets/imagesHouses/houseImage_73_0%../assets/imagesHouses/houseImage_72_0%../assets/imagesHouses/houseImage_71_0%../assets/imagesHouses/houseImage_70_0%../assets/imagesHouses/houseImage_69_0%../assets/imagesHouses/houseImage_68_0%../assets/imagesHouses/houseImage_65_0%../assets/imagesHouses/houseImage_64_0%../assets/imagesHouses/houseImage_63_0%../assets/imagesHouses/houseImage_62_0%../assets/imagesHouses/houseImage_61_0%../assets/imagesHouses/houseImage_60_0%../assets/imagesHouses/houseImage_59_0%../assets/imagesHouses/houseImage_58_0%../assets/imagesHouses/houseImage_57_0%../assets/imagesHouses/houseImage_56_0%../assets/imagesHouses/houseImage_54_0%../assets/imagesHouses/houseImage_53_0%../assets/imagesHouses/houseImage_52_0%../assets/imagesHouses/houseImage_51_0%../assets/imagesHouses/houseImage_47_0%../assets/imagesHouses/houseImage_40_0%../assets/imagesHouses/houseImage_32_0%../assets/imagesHouses/houseImage_25_0%../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_12_0%../assets/imagesHouses/houseImage_80_0%../assets/imagesHouses/houseImage_78_0%../assets/imagesHouses/houseImage_73_0%../assets/imagesHouses/houseImage_72_0%../assets/imagesHouses/houseImage_71_0%../assets/imagesHouses/houseImage_70_0%../assets/imagesHouses/houseImage_69_0%../assets/imagesHouses/houseImage_68_0%../assets/imagesHouses/houseImage_65_0%../assets/imagesHouses/houseImage_64_0%../assets/imagesHouses/houseImage_63_0%../assets/imagesHouses/houseImage_62_0%../assets/imagesHouses/houseImage_61_0%../assets/imagesHouses/houseImage_60_0%../assets/imagesHouses/houseImage_59_0%../assets/imagesHouses/houseImage_58_0%../assets/imagesHouses/houseImage_57_0%../assets/imagesHouses/houseImage_56_0%../assets/imagesHouses/houseImage_54_0%../assets/imagesHouses/houseImage_53_0%../assets/imagesHouses/houseImage_52_0%../assets/imagesHouses/houseImage_51_0%../assets/imagesHouses/houseImage_47_0%../assets/imagesHouses/houseImage_40_0%../assets/imagesHouses/houseImage_32_0%../assets/imagesHouses/houseImage_25_0%../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_12_0%Array
-(
-    [houseId] => 80
-)
-Array
-(
-    [HouseName] => tortor duis
-    [PricePerDay] => 62
-    [Adress] => 2 Armistice Street
-    [description] =>  Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. 
-    [PostalCode] => 3358
-    [City] => Washington
-    [Country] => United States
-    [Capacity] => 1
-    [houseId] => 80
-    [File0] => 1
-    [File1] => 1
-    [File2] => 0
-    [File3] => 0
-    [File4] => 0
-    [File5] => 0
-)
-Array
-(
-    [0] => 1
-    [1] => 1
-    [2] => 0
-    [3] => 0
-    [4] => 0
-    [5] => 0
-)
-merda1merda280Array
-(
-    [image0] => Array
-        (
-            [name] => fences.jpg
-            [type] => image/jpeg
-            [tmp_name] => C:\xampp\tmp\php33D2.tmp
-            [error] => 0
-            [size] => 30182
-        )
-
-    [image1] => Array
-        (
-            [name] => beachBuoy1.jpg
-            [type] => image/jpeg
-            [tmp_name] => C:\xampp\tmp\php33E3.tmp
-            [error] => 0
-            [size] => 136167
-        )
-
-    [image2] => Array
-        (
-            [name] => 
-            [type] => 
-            [tmp_name] => 
-            [error] => 4
-            [size] => 0
-        )
-
-    [image3] => Array
-        (
-            [name] => 
-            [type] => 
-            [tmp_name] => 
-            [error] => 4
-            [size] => 0
-        )
-
-    [image4] => Array
-        (
-            [name] => 
-            [type] => 
-            [tmp_name] => 
-            [error] => 4
-            [size] => 0
-        )
-
-    [image5] => Array
-        (
-            [name] => 
-            [type] => 
-            [tmp_name] => 
-            [error] => 4
-            [size] => 0
-        )
-
-)
-1adicionar o path1adicionar o path0000LOL2../assets/imagesHouses/houseImage_80_0%../assets/imagesHouses/houseImage_78_0%../assets/imagesHouses/houseImage_73_0%../assets/imagesHouses/houseImage_72_0%../assets/imagesHouses/houseImage_71_0%../assets/imagesHouses/houseImage_70_0%../assets/imagesHouses/houseImage_69_0%../assets/imagesHouses/houseImage_68_0%../assets/imagesHouses/houseImage_65_0%../assets/imagesHouses/houseImage_64_0%../assets/imagesHouses/houseImage_63_0%../assets/imagesHouses/houseImage_62_0%../assets/imagesHouses/houseImage_61_0%../assets/imagesHouses/houseImage_60_0%../assets/imagesHouses/houseImage_59_0%../assets/imagesHouses/houseImage_58_0%../assets/imagesHouses/houseImage_57_0%../assets/imagesHouses/houseImage_56_0%../assets/imagesHouses/houseImage_54_0%../assets/imagesHouses/houseImage_53_0%../assets/imagesHouses/houseImage_52_0%../assets/imagesHouses/houseImage_51_0%../assets/imagesHouses/houseImage_47_0%../assets/imagesHouses/houseImage_40_0%../assets/imagesHouses/houseImage_32_0%../assets/imagesHouses/houseImage_25_0%../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_12_0%Array
-(
-    [houseId] => 80
-)
-Array
-(
-    [HouseName] => tortor duis
-    [PricePerDay] => 62
-    [Adress] => 2 Armistice Street 
-    [description] =>  Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. 
-    [PostalCode] => 3358
-    [City] => Washington
-    [Country] => United States
-    [Capacity] => 1
-    [houseId] => 80
+    [commodities] => [["sdad","asddd"]]
     [File0] => 0
-    [File1] => 2
+    [File1] => 0
     [File2] => 0
     [File3] => 0
     [File4] => 0
@@ -2512,13 +473,13 @@ Array
 Array
 (
     [0] => 0
-    [1] => 2
+    [1] => 0
     [2] => 0
     [3] => 0
     [4] => 0
     [5] => 0
 )
-merda1merda280Array
+105Array
 (
     [image0] => Array
         (
@@ -2575,9 +536,166 @@ merda1merda280Array
         )
 
 )
-020000LOL2../assets/imagesHouses/houseImage_80_0%../assets/imagesHouses/houseImage_78_0%../assets/imagesHouses/houseImage_73_0%../assets/imagesHouses/houseImage_72_0%../assets/imagesHouses/houseImage_71_0%../assets/imagesHouses/houseImage_70_0%../assets/imagesHouses/houseImage_69_0%../assets/imagesHouses/houseImage_68_0%../assets/imagesHouses/houseImage_65_0%../assets/imagesHouses/houseImage_64_0%../assets/imagesHouses/houseImage_63_0%../assets/imagesHouses/houseImage_62_0%../assets/imagesHouses/houseImage_61_0%../assets/imagesHouses/houseImage_60_0%../assets/imagesHouses/houseImage_59_0%../assets/imagesHouses/houseImage_58_0%../assets/imagesHouses/houseImage_57_0%../assets/imagesHouses/houseImage_56_0%../assets/imagesHouses/houseImage_54_0%../assets/imagesHouses/houseImage_53_0%../assets/imagesHouses/houseImage_52_0%../assets/imagesHouses/houseImage_51_0%../assets/imagesHouses/houseImage_47_0%../assets/imagesHouses/houseImage_40_0%../assets/imagesHouses/houseImage_32_0%../assets/imagesHouses/houseImage_25_0%../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_12_0%Array
+000000LOL2../assets/imagesHouses/houseImage_92_0%../assets/imagesHouses/houseImage_91_0%../assets/imagesHouses/houseImage_90_0%../assets/imagesHouses/houseImage_89_0%../assets/imagesHouses/houseImage_88_0%../assets/imagesHouses/houseImage_87_0%../assets/imagesHouses/houseImage_86_0%../assets/imagesHouses/houseImage_85_0%../assets/imagesHouses/houseImage_84_0%../assets/imagesHouses/houseImage_83_0%../assets/imagesHouses/houseImage_82_0%../assets/imagesHouses/houseImage_81_0%../assets/imagesHouses/houseImage_42_0%../assets/imagesHouses/houseImage_39_0%../assets/imagesHouses/houseImage_29_0%../assets/imagesHouses/houseImage_17_0%../assets/imagesHouses/houseImage_9_0%../assets/imagesHouses/houseImage_8_0%../assets/imagesHouses/houseImage_5_0%../assets/imagesHouses/houseImage_4_0%../assets/imagesHouses/houseImage_92_0%../assets/imagesHouses/houseImage_91_0%../assets/imagesHouses/houseImage_90_0%../assets/imagesHouses/houseImage_89_0%../assets/imagesHouses/houseImage_88_0%../assets/imagesHouses/houseImage_87_0%../assets/imagesHouses/houseImage_86_0%../assets/imagesHouses/houseImage_85_0%../assets/imagesHouses/houseImage_84_0%../assets/imagesHouses/houseImage_83_0%../assets/imagesHouses/houseImage_82_0%../assets/imagesHouses/houseImage_81_0%../assets/imagesHouses/houseImage_42_0%../assets/imagesHouses/houseImage_39_0%../assets/imagesHouses/houseImage_29_0%../assets/imagesHouses/houseImage_17_0%../assets/imagesHouses/houseImage_9_0%../assets/imagesHouses/houseImage_8_0%../assets/imagesHouses/houseImage_5_0%../assets/imagesHouses/houseImage_4_0%Array
 (
-    [houseId] => 80
+    [houseId] => 92
+)
+../assets/imagesHouses/houseImage_92_0%../assets/imagesHouses/houseImage_91_0%../assets/imagesHouses/houseImage_90_0%../assets/imagesHouses/houseImage_89_0%../assets/imagesHouses/houseImage_88_0%../assets/imagesHouses/houseImage_87_0%../assets/imagesHouses/houseImage_86_0%../assets/imagesHouses/houseImage_85_0%../assets/imagesHouses/houseImage_84_0%../assets/imagesHouses/houseImage_83_0%../assets/imagesHouses/houseImage_82_0%../assets/imagesHouses/houseImage_81_0%../assets/imagesHouses/houseImage_42_0%../assets/imagesHouses/houseImage_39_0%../assets/imagesHouses/houseImage_29_0%../assets/imagesHouses/houseImage_17_0%../assets/imagesHouses/houseImage_9_0%../assets/imagesHouses/houseImage_8_0%../assets/imagesHouses/houseImage_5_0%../assets/imagesHouses/houseImage_4_0%Array
+(
+    [houseId] => 92
+)
+../assets/imagesHouses/houseImage_92_0%../assets/imagesHouses/houseImage_91_0%../assets/imagesHouses/houseImage_90_0%../assets/imagesHouses/houseImage_89_0%../assets/imagesHouses/houseImage_88_0%../assets/imagesHouses/houseImage_87_0%../assets/imagesHouses/houseImage_86_0%../assets/imagesHouses/houseImage_85_0%../assets/imagesHouses/houseImage_84_0%../assets/imagesHouses/houseImage_83_0%../assets/imagesHouses/houseImage_82_0%../assets/imagesHouses/houseImage_81_0%../assets/imagesHouses/houseImage_42_0%../assets/imagesHouses/houseImage_39_0%../assets/imagesHouses/houseImage_29_0%../assets/imagesHouses/houseImage_17_0%../assets/imagesHouses/houseImage_9_0%../assets/imagesHouses/houseImage_8_0%../assets/imagesHouses/houseImage_5_0%../assets/imagesHouses/houseImage_4_0%../assets/imagesHouses/houseImage_92_0%../assets/imagesHouses/houseImage_91_0%../assets/imagesHouses/houseImage_90_0%../assets/imagesHouses/houseImage_89_0%../assets/imagesHouses/houseImage_88_0%../assets/imagesHouses/houseImage_87_0%../assets/imagesHouses/houseImage_86_0%../assets/imagesHouses/houseImage_85_0%../assets/imagesHouses/houseImage_84_0%../assets/imagesHouses/houseImage_83_0%../assets/imagesHouses/houseImage_82_0%../assets/imagesHouses/houseImage_81_0%../assets/imagesHouses/houseImage_42_0%../assets/imagesHouses/houseImage_39_0%../assets/imagesHouses/houseImage_29_0%../assets/imagesHouses/houseImage_17_0%../assets/imagesHouses/houseImage_9_0%../assets/imagesHouses/houseImage_8_0%../assets/imagesHouses/houseImage_5_0%../assets/imagesHouses/houseImage_4_0%Array
+(
+    [houseId] => 91
+)
+../assets/imagesHouses/houseImage_92_0%../assets/imagesHouses/houseImage_91_0%../assets/imagesHouses/houseImage_90_0%../assets/imagesHouses/houseImage_89_0%../assets/imagesHouses/houseImage_88_0%../assets/imagesHouses/houseImage_87_0%../assets/imagesHouses/houseImage_86_0%../assets/imagesHouses/houseImage_85_0%../assets/imagesHouses/houseImage_84_0%../assets/imagesHouses/houseImage_83_0%../assets/imagesHouses/houseImage_82_0%../assets/imagesHouses/houseImage_81_0%../assets/imagesHouses/houseImage_42_0%../assets/imagesHouses/houseImage_39_0%../assets/imagesHouses/houseImage_29_0%../assets/imagesHouses/houseImage_17_0%../assets/imagesHouses/houseImage_9_0%../assets/imagesHouses/houseImage_8_0%../assets/imagesHouses/houseImage_5_0%../assets/imagesHouses/houseImage_4_0%../assets/imagesHouses/houseImage_92_0%../assets/imagesHouses/houseImage_91_0%../assets/imagesHouses/houseImage_90_0%../assets/imagesHouses/houseImage_89_0%../assets/imagesHouses/houseImage_88_0%../assets/imagesHouses/houseImage_87_0%../assets/imagesHouses/houseImage_86_0%../assets/imagesHouses/houseImage_85_0%../assets/imagesHouses/houseImage_84_0%../assets/imagesHouses/houseImage_83_0%../assets/imagesHouses/houseImage_82_0%../assets/imagesHouses/houseImage_81_0%../assets/imagesHouses/houseImage_42_0%../assets/imagesHouses/houseImage_39_0%../assets/imagesHouses/houseImage_29_0%../assets/imagesHouses/houseImage_17_0%../assets/imagesHouses/houseImage_9_0%../assets/imagesHouses/houseImage_8_0%../assets/imagesHouses/houseImage_5_0%../assets/imagesHouses/houseImage_4_0%Array
+(
+    [houseId] => 91
+)
+Array
+(
+    [houseId] => 91
+)
+Array
+(
+    [houseId] => 91
+)
+Array
+(
+    [houseId] => 91
+)
+Array
+(
+    [houseId] => 91
+)
+Array
+(
+    [houseId] => 91
+)
+Array
+(
+    [houseId] => 91
+)
+Array
+(
+    [houseId] => 91
+)
+Array
+(
+    [houseId] => 91
+)
+Array
+(
+    [houseId] => 91
+)
+Array
+(
+    [houseId] => 91
+)
+Array
+(
+    [houseId] => 91
+)
+Array
+(
+    [houseId] => 91
+)
+Array
+(
+    [houseId] => 91
+)
+Array
+(
+    [HouseName] => rua dos ruas
+    [PricePerDay] => 2222
+    [Adress] => asdads 
+    [description] =>  sdda 
+    [PostalCode] => 50050-002
+    [City] => Faro
+    [Country] => Portugal
+    [Capacity] => 222
+    [houseId] => 91
+    [commodities] => [["piscina","piscina 4x4"],["Carro","4X4"]]
+    [File0] => 2
+    [File1] => 0
+    [File2] => 0
+    [File3] => 0
+    [File4] => 0
+    [File5] => 0
+)
+Array
+(
+    [0] => 2
+    [1] => 0
+    [2] => 0
+    [3] => 0
+    [4] => 0
+    [5] => 0
+)
+merda1merda291Array
+(
+    [image0] => Array
+        (
+            [name] => 
+            [type] => 
+            [tmp_name] => 
+            [error] => 4
+            [size] => 0
+        )
+
+    [image1] => Array
+        (
+            [name] => 
+            [type] => 
+            [tmp_name] => 
+            [error] => 4
+            [size] => 0
+        )
+
+    [image2] => Array
+        (
+            [name] => 
+            [type] => 
+            [tmp_name] => 
+            [error] => 4
+            [size] => 0
+        )
+
+    [image3] => Array
+        (
+            [name] => 
+            [type] => 
+            [tmp_name] => 
+            [error] => 4
+            [size] => 0
+        )
+
+    [image4] => Array
+        (
+            [name] => 
+            [type] => 
+            [tmp_name] => 
+            [error] => 4
+            [size] => 0
+        )
+
+    [image5] => Array
+        (
+            [name] => 
+            [type] => 
+            [tmp_name] => 
+            [error] => 4
+            [size] => 0
+        )
+
+)
+200000LOL2../assets/imagesHouses/houseImage_92_0%../assets/imagesHouses/houseImage_91_0%../assets/imagesHouses/houseImage_90_0%../assets/imagesHouses/houseImage_89_0%../assets/imagesHouses/houseImage_88_0%../assets/imagesHouses/houseImage_87_0%../assets/imagesHouses/houseImage_86_0%../assets/imagesHouses/houseImage_85_0%../assets/imagesHouses/houseImage_84_0%../assets/imagesHouses/houseImage_83_0%../assets/imagesHouses/houseImage_82_0%../assets/imagesHouses/houseImage_81_0%../assets/imagesHouses/houseImage_42_0%../assets/imagesHouses/houseImage_39_0%../assets/imagesHouses/houseImage_29_0%../assets/imagesHouses/houseImage_17_0%../assets/imagesHouses/houseImage_9_0%../assets/imagesHouses/houseImage_8_0%../assets/imagesHouses/houseImage_5_0%../assets/imagesHouses/houseImage_4_0%../assets/imagesHouses/houseImage_92_0%../assets/imagesHouses/houseImage_91_0%../assets/imagesHouses/houseImage_90_0%../assets/imagesHouses/houseImage_89_0%../assets/imagesHouses/houseImage_88_0%../assets/imagesHouses/houseImage_87_0%../assets/imagesHouses/houseImage_86_0%../assets/imagesHouses/houseImage_85_0%../assets/imagesHouses/houseImage_84_0%../assets/imagesHouses/houseImage_83_0%../assets/imagesHouses/houseImage_82_0%../assets/imagesHouses/houseImage_81_0%../assets/imagesHouses/houseImage_42_0%../assets/imagesHouses/houseImage_39_0%../assets/imagesHouses/houseImage_29_0%../assets/imagesHouses/houseImage_17_0%../assets/imagesHouses/houseImage_9_0%../assets/imagesHouses/houseImage_8_0%../assets/imagesHouses/houseImage_5_0%../assets/imagesHouses/houseImage_4_0%Array
+(
+    [houseId] => 91
+)
+Array
+(
+    [houseId] => 91
 )
 ../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_28_0%../assets/imagesHouses/houseImage_48_0%../assets/imagesHouses/houseImage_35_0%../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_28_0%../assets/imagesHouses/houseImage_35_0%../assets/imagesHouses/houseImage_80_0%../assets/imagesHouses/houseImage_78_0%../assets/imagesHouses/houseImage_73_0%../assets/imagesHouses/houseImage_72_0%../assets/imagesHouses/houseImage_71_0%../assets/imagesHouses/houseImage_70_0%../assets/imagesHouses/houseImage_69_0%../assets/imagesHouses/houseImage_68_0%../assets/imagesHouses/houseImage_65_0%../assets/imagesHouses/houseImage_64_0%../assets/imagesHouses/houseImage_63_0%../assets/imagesHouses/houseImage_62_0%../assets/imagesHouses/houseImage_61_0%../assets/imagesHouses/houseImage_60_0%../assets/imagesHouses/houseImage_59_0%../assets/imagesHouses/houseImage_58_0%../assets/imagesHouses/houseImage_57_0%../assets/imagesHouses/houseImage_56_0%../assets/imagesHouses/houseImage_54_0%../assets/imagesHouses/houseImage_53_0%../assets/imagesHouses/houseImage_52_0%../assets/imagesHouses/houseImage_51_0%../assets/imagesHouses/houseImage_47_0%../assets/imagesHouses/houseImage_40_0%../assets/imagesHouses/houseImage_32_0%../assets/imagesHouses/houseImage_25_0%../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_12_0%../assets/imagesHouses/houseImage_80_0%../assets/imagesHouses/houseImage_78_0%../assets/imagesHouses/houseImage_73_0%../assets/imagesHouses/houseImage_72_0%../assets/imagesHouses/houseImage_71_0%../assets/imagesHouses/houseImage_70_0%../assets/imagesHouses/houseImage_69_0%../assets/imagesHouses/houseImage_68_0%../assets/imagesHouses/houseImage_65_0%../assets/imagesHouses/houseImage_64_0%../assets/imagesHouses/houseImage_63_0%../assets/imagesHouses/houseImage_62_0%../assets/imagesHouses/houseImage_61_0%../assets/imagesHouses/houseImage_60_0%../assets/imagesHouses/houseImage_59_0%../assets/imagesHouses/houseImage_58_0%../assets/imagesHouses/houseImage_57_0%../assets/imagesHouses/houseImage_56_0%../assets/imagesHouses/houseImage_54_0%../assets/imagesHouses/houseImage_53_0%../assets/imagesHouses/houseImage_52_0%../assets/imagesHouses/houseImage_51_0%../assets/imagesHouses/houseImage_47_0%../assets/imagesHouses/houseImage_40_0%../assets/imagesHouses/houseImage_32_0%../assets/imagesHouses/houseImage_25_0%../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_12_0%../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_28_0%../assets/imagesHouses/houseImage_35_0%../assets/imagesHouses/houseImage_1_0%../assets/imagesHouses/houseImage_1_0%../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_28_0%../assets/imagesHouses/houseImage_35_0%../assets/imagesHouses/houseImage_1_0%../assets/imagesHouses/houseImage_1_0%../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_28_0%../assets/imagesHouses/houseImage_35_0%../assets/imagesHouses/houseImage_1_0%../assets/imagesHouses/houseImage_1_0%../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_28_0%../assets/imagesHouses/houseImage_35_0%../assets/imagesHouses/houseImage_80_0%../assets/imagesHouses/houseImage_78_0%../assets/imagesHouses/houseImage_73_0%../assets/imagesHouses/houseImage_72_0%../assets/imagesHouses/houseImage_71_0%../assets/imagesHouses/houseImage_70_0%../assets/imagesHouses/houseImage_69_0%../assets/imagesHouses/houseImage_68_0%../assets/imagesHouses/houseImage_65_0%../assets/imagesHouses/houseImage_64_0%../assets/imagesHouses/houseImage_63_0%../assets/imagesHouses/houseImage_62_0%../assets/imagesHouses/houseImage_61_0%../assets/imagesHouses/houseImage_60_0%../assets/imagesHouses/houseImage_59_0%../assets/imagesHouses/houseImage_58_0%../assets/imagesHouses/houseImage_57_0%../assets/imagesHouses/houseImage_56_0%../assets/imagesHouses/houseImage_54_0%../assets/imagesHouses/houseImage_53_0%../assets/imagesHouses/houseImage_52_0%../assets/imagesHouses/houseImage_51_0%../assets/imagesHouses/houseImage_47_0%../assets/imagesHouses/houseImage_40_0%../assets/imagesHouses/houseImage_32_0%../assets/imagesHouses/houseImage_25_0%../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_12_0%../assets/imagesHouses/houseImage_1_0%../assets/imagesHouses/houseImage_1_0%../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_28_0%../assets/imagesHouses/houseImage_35_0%../assets/imagesHouses/houseImage_80_0%../assets/imagesHouses/houseImage_78_0%../assets/imagesHouses/houseImage_73_0%../assets/imagesHouses/houseImage_72_0%../assets/imagesHouses/houseImage_71_0%../assets/imagesHouses/houseImage_70_0%../assets/imagesHouses/houseImage_69_0%../assets/imagesHouses/houseImage_68_0%../assets/imagesHouses/houseImage_65_0%../assets/imagesHouses/houseImage_64_0%../assets/imagesHouses/houseImage_63_0%../assets/imagesHouses/houseImage_62_0%../assets/imagesHouses/houseImage_61_0%../assets/imagesHouses/houseImage_60_0%../assets/imagesHouses/houseImage_59_0%../assets/imagesHouses/houseImage_58_0%../assets/imagesHouses/houseImage_57_0%../assets/imagesHouses/houseImage_56_0%../assets/imagesHouses/houseImage_54_0%../assets/imagesHouses/houseImage_53_0%../assets/imagesHouses/houseImage_52_0%../assets/imagesHouses/houseImage_51_0%../assets/imagesHouses/houseImage_47_0%../assets/imagesHouses/houseImage_40_0%../assets/imagesHouses/houseImage_32_0%../assets/imagesHouses/houseImage_25_0%../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_12_0%../assets/imagesHouses/houseImage_80_0%../assets/imagesHouses/houseImage_78_0%../assets/imagesHouses/houseImage_73_0%../assets/imagesHouses/houseImage_72_0%../assets/imagesHouses/houseImage_71_0%../assets/imagesHouses/houseImage_70_0%../assets/imagesHouses/houseImage_69_0%../assets/imagesHouses/houseImage_68_0%../assets/imagesHouses/houseImage_65_0%../assets/imagesHouses/houseImage_64_0%../assets/imagesHouses/houseImage_63_0%../assets/imagesHouses/houseImage_62_0%../assets/imagesHouses/houseImage_61_0%../assets/imagesHouses/houseImage_60_0%../assets/imagesHouses/houseImage_59_0%../assets/imagesHouses/houseImage_58_0%../assets/imagesHouses/houseImage_57_0%../assets/imagesHouses/houseImage_56_0%../assets/imagesHouses/houseImage_54_0%../assets/imagesHouses/houseImage_53_0%../assets/imagesHouses/houseImage_52_0%../assets/imagesHouses/houseImage_51_0%../assets/imagesHouses/houseImage_47_0%../assets/imagesHouses/houseImage_40_0%../assets/imagesHouses/houseImage_32_0%../assets/imagesHouses/houseImage_25_0%../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_12_0%../assets/imagesHouses/houseImage_80_0%../assets/imagesHouses/houseImage_78_0%../assets/imagesHouses/houseImage_73_0%../assets/imagesHouses/houseImage_72_0%../assets/imagesHouses/houseImage_71_0%../assets/imagesHouses/houseImage_70_0%../assets/imagesHouses/houseImage_69_0%../assets/imagesHouses/houseImage_68_0%../assets/imagesHouses/houseImage_65_0%../assets/imagesHouses/houseImage_64_0%../assets/imagesHouses/houseImage_63_0%../assets/imagesHouses/houseImage_62_0%../assets/imagesHouses/houseImage_61_0%../assets/imagesHouses/houseImage_60_0%../assets/imagesHouses/houseImage_59_0%../assets/imagesHouses/houseImage_58_0%../assets/imagesHouses/houseImage_57_0%../assets/imagesHouses/houseImage_56_0%../assets/imagesHouses/houseImage_54_0%../assets/imagesHouses/houseImage_53_0%../assets/imagesHouses/houseImage_52_0%../assets/imagesHouses/houseImage_51_0%../assets/imagesHouses/houseImage_47_0%../assets/imagesHouses/houseImage_40_0%../assets/imagesHouses/houseImage_32_0%../assets/imagesHouses/houseImage_25_0%../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_12_0%../assets/imagesHouses/houseImage_1_0%../assets/imagesHouses/houseImage_1_0%../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_28_0%../assets/imagesHouses/houseImage_35_0%../assets/imagesHouses/houseImage_1_0%../assets/imagesHouses/houseImage_1_0%../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_28_0%../assets/imagesHouses/houseImage_35_0%../assets/imagesHouses/houseImage_1_0%../assets/imagesHouses/houseImage_1_0%../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_28_0%../assets/imagesHouses/houseImage_35_0%../assets/imagesHouses/houseImage_1_0%../assets/imagesHouses/houseImage_1_0%../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_28_0%../assets/imagesHouses/houseImage_35_0%../assets/imagesHouses/houseImage_1_0%../assets/imagesHouses/houseImage_1_0%../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_28_0%../assets/imagesHouses/houseImage_35_0%../assets/imagesHouses/houseImage_1_0%../assets/imagesHouses/houseImage_1_0%../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_28_0%../assets/imagesHouses/houseImage_35_0%../assets/imagesHouses/houseImage_1_0%../assets/imagesHouses/houseImage_1_0%../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_28_0%../assets/imagesHouses/houseImage_35_0%../assets/imagesHouses/houseImage_1_0%../assets/imagesHouses/houseImage_1_0%../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_28_0%../assets/imagesHouses/houseImage_35_0%../assets/imagesHouses/houseImage_1_0%../assets/imagesHouses/houseImage_1_0%../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_28_0%../assets/imagesHouses/houseImage_35_0%../assets/imagesHouses/houseImage_1_0%../assets/imagesHouses/houseImage_1_0%../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_28_0%../assets/imagesHouses/houseImage_35_0%../assets/imagesHouses/houseImage_1_0%../assets/imagesHouses/houseImage_1_0%../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_28_0%../assets/imagesHouses/houseImage_35_0%../assets/imagesHouses/houseImage_1_0%../assets/imagesHouses/houseImage_1_0%../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_28_0%../assets/imagesHouses/houseImage_35_0%../assets/imagesHouses/houseImage_1_0%../assets/imagesHouses/houseImage_1_0%../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_28_0%../assets/imagesHouses/houseImage_35_0%../assets/imagesHouses/houseImage_1_0%../assets/imagesHouses/houseImage_1_0%../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_28_0%../assets/imagesHouses/houseImage_35_0%../assets/imagesHouses/houseImage_1_0%../assets/imagesHouses/houseImage_1_0%../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_28_0%../assets/imagesHouses/houseImage_35_0%../assets/imagesHouses/houseImage_1_0%../assets/imagesHouses/houseImage_1_0%../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_28_0%../assets/imagesHouses/houseImage_35_0%../assets/imagesHouses/houseImage_80_0%../assets/imagesHouses/houseImage_78_0%../assets/imagesHouses/houseImage_73_0%../assets/imagesHouses/houseImage_72_0%../assets/imagesHouses/houseImage_71_0%../assets/imagesHouses/houseImage_70_0%../assets/imagesHouses/houseImage_69_0%../assets/imagesHouses/houseImage_68_0%../assets/imagesHouses/houseImage_65_0%../assets/imagesHouses/houseImage_64_0%../assets/imagesHouses/houseImage_63_0%../assets/imagesHouses/houseImage_62_0%../assets/imagesHouses/houseImage_61_0%../assets/imagesHouses/houseImage_60_0%../assets/imagesHouses/houseImage_59_0%../assets/imagesHouses/houseImage_58_0%../assets/imagesHouses/houseImage_57_0%../assets/imagesHouses/houseImage_56_0%../assets/imagesHouses/houseImage_54_0%../assets/imagesHouses/houseImage_53_0%../assets/imagesHouses/houseImage_52_0%../assets/imagesHouses/houseImage_51_0%../assets/imagesHouses/houseImage_47_0%../assets/imagesHouses/houseImage_40_0%../assets/imagesHouses/houseImage_32_0%../assets/imagesHouses/houseImage_25_0%../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_12_0%../assets/imagesHouses/houseImage_1_0%../assets/imagesHouses/houseImage_1_0%../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_28_0%../assets/imagesHouses/houseImage_35_0%../assets/imagesHouses/houseImage_80_0%../assets/imagesHouses/houseImage_78_0%../assets/imagesHouses/houseImage_73_0%../assets/imagesHouses/houseImage_72_0%../assets/imagesHouses/houseImage_71_0%../assets/imagesHouses/houseImage_70_0%../assets/imagesHouses/houseImage_69_0%../assets/imagesHouses/houseImage_68_0%../assets/imagesHouses/houseImage_65_0%../assets/imagesHouses/houseImage_64_0%../assets/imagesHouses/houseImage_63_0%../assets/imagesHouses/houseImage_62_0%../assets/imagesHouses/houseImage_61_0%../assets/imagesHouses/houseImage_60_0%../assets/imagesHouses/houseImage_59_0%../assets/imagesHouses/houseImage_58_0%../assets/imagesHouses/houseImage_57_0%../assets/imagesHouses/houseImage_56_0%../assets/imagesHouses/houseImage_54_0%../assets/imagesHouses/houseImage_53_0%../assets/imagesHouses/houseImage_52_0%../assets/imagesHouses/houseImage_51_0%../assets/imagesHouses/houseImage_47_0%../assets/imagesHouses/houseImage_40_0%../assets/imagesHouses/houseImage_32_0%../assets/imagesHouses/houseImage_25_0%../assets/imagesHouses/houseImage_23_0%../assets/imagesHouses/houseImage_12_0%../assets/imagesHouses/houseImage_42_0%../assets/imagesHouses/houseImage_39_0%../assets/imagesHouses/houseImage_29_0%../assets/imagesHouses/houseImage_17_0%../assets/imagesHouses/houseImage_9_0%../assets/imagesHouses/houseImage_8_0%../assets/imagesHouses/houseImage_5_0%../assets/imagesHouses/houseImage_4_0%../assets/imagesHouses/houseImage_34_0%../assets/imagesHouses/houseImage_25_0%../assets/imagesHouses/houseImage_12_0%../assets/imagesHouses/houseImage_12_0%../assets/imagesHouses/houseImage_45_0%../assets/imagesHouses/houseImage_33_0%../assets/imagesHouses/houseImage_6_0%../assets/imagesHouses/houseImage_48_0%../assets/imagesHouses/houseImage_43_0%../assets/imagesHouses/houseImage_38_0%../assets/imagesHouses/houseImage_10_0%../assets/imagesHouses/houseImage_41_0%../assets/imagesHouses/houseImage_2_0%../assets/imagesHouses/houseImage_27_0%../assets/imagesHouses/houseImage_12_0%../assets/imagesHouses/houseImage_2_0%../assets/imagesHouses/houseImage_16_0%../assets/imagesHouses/houseImage_27_0%../assets/imagesHouses/houseImage_25_0%../assets/imagesHouses/houseImage_10_0%../assets/imagesHouses/houseImage_34_0%../assets/imagesHouses/houseImage_3_0%../assets/imagesHouses/houseImage_47_0%../assets/imagesHouses/houseImage_38_0%../assets/imagesHouses/houseImage_6_0%../assets/imagesHouses/houseImage_36_0%../assets/imagesHouses/houseImage_12_0%../assets/imagesHouses/houseImage_11_0%../assets/imagesHouses/houseImage_33_0%../assets/imagesHouses/houseImage_18_0%../assets/imagesHouses/houseImage_16_0%../assets/imagesHouses/houseImage_21_0%../assets/imagesHouses/houseImage_37_0%../assets/imagesHouses/houseImage_35_0%../assets/imagesHouses/houseImage_42_0%../assets/imagesHouses/houseImage_15_0%../assets/imagesHouses/houseImage_18_0%../assets/imagesHouses/houseImage_48_0%../assets/imagesHouses/houseImage_26_0%../assets/imagesHouses/houseImage_25_0%../assets/imagesHouses/houseImage_5_0%../assets/imagesHouses/houseImage_1_0%../assets/imagesHouses/houseImage_44_0%../assets/imagesHouses/houseImage_26_0%../assets/imagesHouses/houseImage_14_0%../assets/imagesHouses/houseImage_12_0%../assets/imagesHouses/houseImage_5_0%../assets/imagesHouses/houseImage_44_0%../assets/imagesHouses/houseImage_34_0%../assets/imagesHouses/houseImage_16_0%../assets/imagesHouses/houseImage_28_0%../assets/imagesHouses/houseImage_38_0%../assets/imagesHouses/houseImage_13_0%../assets/imagesHouses/houseImage_17_0%../assets/imagesHouses/houseImage_15_0%../assets/imagesHouses/houseImage_28_0%../assets/imagesHouses/houseImage_50_0%../assets/imagesHouses/houseImage_28_0%../assets/imagesHouses/houseImage_42_0%../assets/imagesHouses/houseImage_9_0%../assets/imagesHouses/houseImage_10_0%../assets/imagesHouses/houseImage_9_0%../assets/imagesHouses/houseImage_8_0%../assets/imagesHouses/houseImage_1_0%../assets/imagesHouses/houseImage_47_0%../assets/imagesHouses/houseImage_26_0%../assets/imagesHouses/houseImage_44_0%../assets/imagesHouses/houseImage_22_0%../assets/imagesHouses/houseImage_24_0%../assets/imagesHouses/houseImage_18_0%../assets/imagesHouses/houseImage_48_0%../assets/imagesHouses/houseImage_44_0%../assets/imagesHouses/houseImage_26_0%../assets/imagesHouses/houseImage_10_0%../assets/imagesHouses/houseImage_15_0%../assets/imagesHouses/houseImage_30_0%../assets/imagesHouses/houseImage_9_0%../assets/imagesHouses/houseImage_26_0%../assets/imagesHouses/houseImage_45_0%../assets/imagesHouses/houseImage_10_0%../assets/imagesHouses/houseImage_42_0%../assets/imagesHouses/houseImage_18_0%../assets/imagesHouses/houseImage_40_0%../assets/imagesHouses/houseImage_1_0%../assets/imagesHouses/houseImage_49_0%../assets/imagesHouses/houseImage_33_0%../assets/imagesHouses/houseImage_16_0%../assets/imagesHouses/houseImage_39_0%../assets/imagesHouses/houseImage_38_0%../assets/imagesHouses/houseImage_15_0%../assets/imagesHouses/houseImage_6_0%../assets/imagesHouses/houseImage_46_0%../assets/imagesHouses/houseImage_41_0%../assets/imagesHouses/houseImage_43_0%../assets/imagesHouses/houseImage_9_0%../assets/imagesHouses/houseImage_6_0%../assets/imagesHouses/houseImage_40_0%../assets/imagesHouses/houseImage_10_0%../assets/imagesHouses/houseImage_45_0%../assets/imagesHouses/houseImage_21_0%../assets/imagesHouses/houseImage_47_0%../assets/imagesHouses/houseImage_29_0%../assets/imagesHouses/houseImage_24_0%../assets/imagesHouses/houseImage_14_0%../assets/imagesHouses/houseImage_48_0%../assets/imagesHouses/houseImage_6_0%../assets/imagesHouses/houseImage_44_0%../assets/imagesHouses/houseImage_26_0%../assets/imagesHouses/houseImage_47_0%../assets/imagesHouses/houseImage_42_0%../assets/imagesHouses/houseImage_39_0%../assets/imagesHouses/houseImage_29_0%../assets/imagesHouses/houseImage_17_0%../assets/imagesHouses/houseImage_9_0%../assets/imagesHouses/houseImage_8_0%../assets/imagesHouses/houseImage_5_0%../assets/imagesHouses/houseImage_4_0%Array
 (

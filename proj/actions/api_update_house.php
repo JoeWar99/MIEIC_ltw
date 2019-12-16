@@ -20,13 +20,14 @@ $File2 =  $_POST['File2'];
 $File3 =  $_POST['File3'];
 $File4 =  $_POST['File4'];
 $File5 =  $_POST['File5'];
+$commodities = $_POST['commodities'];
 
 $Files_bool = array();
 
 array_push($Files_bool, $File0, $File1, $File2, $File3, $File4, $File5);
 file_put_contents('somefilename.txt', print_r($Files_bool, true), FILE_APPEND);
 
-if (!update_property($house_id, $house_name, $price_per_day, $adress, $description, $postal_code, $city, $country, $capacity, $username)) {
+if (!update_property($house_id, $house_name, $price_per_day, $adress, $description, $postal_code, $city, $country, $capacity, $commodities, $username)) {
   echo json_encode(-1);
   file_put_contents('somefilename.txt', print_r('shit', true), FILE_APPEND);
 } else {
