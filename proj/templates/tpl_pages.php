@@ -326,14 +326,34 @@ function draw_my_contacts($contacts){
     if(!$contacts) echo "<p>Nothing to see here...</p>";
     else {
         echo "<form id=\"user_select_form\">";
-        echo "<select id=\"user\" id=\"name\">";
+        echo "<select id=\"select_user\" name=\"select_user\">";
         foreach($contacts as $id){
             $usrname = get_name_from_id($id);
             echo "<option value=" . $usrname['Username'] .  ">" .  $usrname['Username'] . "</option>";
+            
         }
         echo "</select>";
+
+        foreach($contacts as $id){
+            $usrname = get_name_from_id($id);
+            echo "<input id=". $usrname['Username'] ." value=\"". intval($id). "\" style=\"visibility:hidden\">";
+        }
         echo "</form>";
     }
+}
+
+function draw_my_messages($contacts, $usrid){
+    draw_my_contacts($contacts);
+    ?>
+    <div id="messages_area">
+    </div>
+
+    <form id="message_form">
+    <textarea rows="2" cols="50" name="message"></textarea>
+    <input id="my_id" name="my_id" value= <?=$usrid?> readonly style="visibility:hidden">
+    <input id="their_id" name="their_id" value= <?=intval($contacts[0])?> style="visibility:hidden">
+    </form>
+<?php
 }
 
 /* END OF MESSAGES */

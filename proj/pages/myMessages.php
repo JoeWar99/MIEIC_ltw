@@ -12,12 +12,13 @@ else $usr = $_SESSION['username'];
 $usrid = get_id_from_usr($usr);
 $contacts = get_usr_contacts($usrid);
 
+
 open_html();
-draw_head(get_title("myMessages"), [$main_stylesheet, $fonts[0], $fonts[1], $fonts[2]]);
+draw_head(get_title("myMessages"), [$main_stylesheet, $fonts[0], $fonts[1], $fonts[2]], $message_sl);
 open_body();
 open_overlay();
 draw_header($usr, "myMessages"); 
-draw_my_contacts($contacts);
+draw_my_messages($contacts, $usrid);
 footer();
 close_overlay();
 close_body(); 

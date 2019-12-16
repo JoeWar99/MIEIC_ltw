@@ -170,13 +170,13 @@
       $main_stylesheet = "../css/style.css";
 
       $register_sl = [["../js/register.js", true]];
-
       $search_sl = [["../js/search.js", true]];
-
       $edit_sl = [["../js/edit.js", true]];
-      $logged_house_sl = [["../js/rent.js", true], ["../js/message.js", true]];
-
+      $logged_house_sl = [["../js/rent.js", true]];
       $not_logged_house_sl = [["../js/not_logged_buttons.js", true]];
+      $message_sl = [["../js/fetch_messages.js", true]];
+
+
 ?>
 
 <?php function draw_logged_header($username){
