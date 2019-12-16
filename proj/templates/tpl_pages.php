@@ -95,9 +95,10 @@ function draw_house_in_organized_fashion($house)
     $rating = $house["Rating"];
     $cnt = count_comments($house['Id']);
     echo "<p>";
-    echo "<span>$rating </span>";
+    echo round($rating, 2);
     draw_rating_star(); 
-    echo "<span>  $cnt comments</span>";    echo "</section>";
+    echo "<span>  $cnt comments</span>";    
+    echo "</section>";
 }
 
 /**
@@ -309,15 +310,15 @@ function draw_housepage($house_info, $city_info, $country_info, $commodities, $o
     echo "<div id=\"housepage2\">";
     draw_rent_button($house_info['Id'], $house_info['PricePerDay'], $house_info['Capacity']);
     draw_msg_button();
+    echo "<button id=\"button_left\" onclick=\"mudar(-1)\">&#10094;</button>";
+    echo "<button id=\"button_right\" onclick=\"mudar(1)\">&#10095;</button>";
     echo "<div>";
     foreach($photos as $photo){
         draw_image_slide($photo["path"]);
     }
-    echo "<button id=\"button_left\" onclick=\"mudar(-1)\">&#10094;</button>";
-    echo "<button id=\"button_right\" onclick=\"mudar(1)\">&#10095;</button>";
+    echo "</div>";
     echo "</div>";
     draw_house_comments($comments);
-    echo "</div>";
     echo "</div>";
 }
 

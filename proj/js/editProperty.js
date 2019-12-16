@@ -63,8 +63,8 @@ function see_commodity(commodity_id) {
     for (let i = 0; i < commodities_array.length; i++) {
         if (commodities_array[i].id == commodity_id) {
 
-            let return_html_in_string_form = '<div id="popup_content"><p> New Commodity </p> <span id="close">&times;</span><form>Title: <br><input type="text" value="' + commodities_array[i].title + '" id="comodotie-type" name="comodotie-type" placeholder="Title"><br>';
-            return_html_in_string_form += '<p id=\"error_type\" ></p>Description: <br>'
+            let return_html_in_string_form = '<div id="popup_content"><span id="close">&times;</span><p><span id="new_commodity_text"> New Commodity </span></p> <form><span id="title_text"> Title: </span><br><input type="text" value="' + commodities_array[i].title + '" id="comodotie-type" name="comodotie-type" placeholder="Title"><br>';
+            return_html_in_string_form += '<p id=\"error_type\" ></p><span id="des_text">Description: </span><br>'
             return_html_in_string_form += '<textarea id="commodoty-description" class="InputAddPropertyD" name="description" rows="4" cols="50" placeholder="Description"> ' + commodities_array[i].description + '</textarea>';
             return_html_in_string_form += '<button id="create_review" type="button" onclick = "pressed_edit_comodity(' + i + ')">Edit</button><br>';
             return_html_in_string_form += '</form></div>';
@@ -146,8 +146,8 @@ function reload_commodity_div() {
 
 function pressed_add_comodity() {
 
-    let return_html_in_string_form = '<div id="popup_content"><p> New Commodity </p> <span id="close">&times;</span><form>Title: <br><input type="text" id="comodotie-type" name="comodotie-type" placeholder="Title"><br>';
-    return_html_in_string_form += '<p id=\"error_type\" ></p>Description: <br>'
+    let return_html_in_string_form = '<div id="popup_content"><span id="close">&times;</span><p id="new_commodity_text"> New Commodity </p> <form><span id="title_text"> Title: </span><br><input type="text" id="comodotie-type" name="comodotie-type" placeholder="Title"><br>';
+    return_html_in_string_form += '<p id=\"error_type\" ></p><span id="des_text">Description: </span><br>'
     return_html_in_string_form += '<textarea id="commodoty-description" class="InputAddPropertyD" name="description" rows="4" cols="50" placeholder="Description"></textarea>';
     return_html_in_string_form += '<button id="create_review" type="button" onclick = "pressed_submit_comodity()">Submit</button><br>';
     return_html_in_string_form += '</form></div>';

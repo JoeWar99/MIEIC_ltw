@@ -154,8 +154,8 @@ function reload_commodity_div() {
 
 function pressed_add_comodity() {
 
-    let return_html_in_string_form = '<div id="popup_content"><p> New Commodity </p> <span id="close">&times;</span><form>Title: <br><input type="text" id="comodotie-type" name="comodotie-type" placeholder="Title"><br>';
-    return_html_in_string_form += '<p id=\"error_type\" ></p>Description: <br>'
+    let return_html_in_string_form = '<div id="popup_content"><span id="close">&times;</span><p id="new_commodity_text"> New Commodity </p><form>Title: <br><input type="text" id="comodotie-type" name="comodotie-type" placeholder="Title"><br>';
+    return_html_in_string_form += '<p id=\"error_type\" ></p><span id="des_text">Description: </span><br>'
     return_html_in_string_form += '<textarea id="commodoty-description" class="InputAddPropertyD" name="description" rows="4" cols="50" placeholder="Description"></textarea>';
     return_html_in_string_form += '<button id="create_review" type="button" onclick = "pressed_submit_comodity()">Submit</button><br>';
     return_html_in_string_form += '</form></div>';
