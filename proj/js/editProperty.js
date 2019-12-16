@@ -8,6 +8,7 @@ let city = document.getElementById("city");
 let country = document.getElementById("country");
 let capacity = document.getElementById("capacity");
 let postal_code = document.getElementById("postal-code");
+let popup = document.getElementById("pop-up-comodities");
 
 
 
@@ -20,14 +21,195 @@ let city_error = document.getElementById("CityError");
 let country_error = document.getElementById("CountryError");
 let capacity_error = document.getElementById("CapacityError");
 
+
+let commodities_array = [];
+
+class commodity {
+    constructor(id, title, description) {
+        this.id = id;
+        this.title = title;
+        this.description = description;
+    }
+}
+
+
+
+
+
+
+
+
+function pressed_edit_comodity(index) {
+
+    let type = document.getElementById("comodotie-type");
+    let description = document.getElementById("commodoty-description");
+    let error_type = document.getElementById("error_type");
+    console.log(type.value);
+    if (type.value == "") {
+        type.style.border = "1px solid red";
+        error_type.style.fontSize = "small";
+        error_type.style.textAlign = "left";
+        error_type.style.color = "red";
+        error_type.textContent = "Title is required";
+    } else {
+        commodities_array[index].title = type.value;
+        commodities_array[index].description = description.value;
+        reload_commodity_div();
+    }
+}
+
+function see_commodity(commodity_id) {
+
+    for (let i = 0; i < commodities_array.length; i++) {
+        if (commodities_array[i].id == commodity_id) {
+
+            let return_html_in_string_form = '<div id="popup_content"><p> New Commodity </p> <span id="close">&times;</span><form>Title: <br><input type="text" value="' + commodities_array[i].title + '" id="comodotie-type" name="comodotie-type" placeholder="Title"><br>';
+            return_html_in_string_form += '<p id=\"error_type\" ></p>Description: <br>'
+            return_html_in_string_form += '<textarea id="commodoty-description" class="InputAddPropertyD" name="description" rows="4" cols="50" placeholder="Description"> ' + commodities_array[i].description + '</textarea>';
+            return_html_in_string_form += '<button id="create_review" type="button" onclick = "pressed_edit_comodity(' + i + ')">Edit</button><br>';
+            return_html_in_string_form += '</form></div>';
+
+            popup.innerHTML = return_html_in_string_form;
+
+            let x = document.getElementById("close");
+            let error_tpye = document.getElementById("error_tpye");
+
+            popup.style.display = "block";
+
+            x.onclick = function() {
+                popup.style.display = "none";
+                error_type.style.display = "none";
+            }
+
+            window.onclick = function(event) {
+                if (event.target == popup) {
+                    popup.style.display = "none";
+                    error_type.style.display = "none";
+                }
+            }
+
+            break;
+        }
+    }
+
+
+}
+
+function pressed_delete_commodity(commodity_id) {
+    for (let i = 0; i < commodities_array.length; i++) {
+        if (commodities_array[i].id == commodity_id) {
+            commodities_array.splice(i, 1);
+            break;
+        }
+    }
+    reload_commodity_div();
+}
+
+function pressed_submit_comodity() {
+
+
+    let type = document.getElementById("comodotie-type");
+    let description = document.getElementById("commodoty-description");
+    let error_type = document.getElementById("error_type");
+    console.log(type.value);
+    if (type.value == "") {
+        type.style.border = "1px solid red";
+        error_type.style.fontSize = "small";
+        error_type.style.textAlign = "left";
+        error_type.style.color = "red";
+        error_type.textContent = "Title is required";
+    } else {
+        let commodity_aux = new commodity(commodities_array.length, type.value, description.value);
+        commodities_array.push(commodity_aux);
+        console.log(commodities_array);
+        reload_commodity_div();
+    }
+}
+
+function reload_commodity_div() {
+    let commoditiesAdd = document.getElementById("commoditiesAdd");
+    commoditiesAdd.innerHTML = "";
+    let innerHTML_aux = "";
+    for (let i = 0; i < commodities_array.length; i++) {
+        innerHTML_aux += '<div id="commodity_' + commodities_array[i].id + '">' + '<input value = "' + commodities_array[i].title + '" class = "seeCommodity" type = "button" onclick = "see_commodity(' + commodities_array[i].id + ');"> </input>';
+        innerHTML_aux += '<input value = "&times" name = "deleteCommodity" class = "deleteCommodity" type = "button" onclick = "pressed_delete_commodity(' + commodities_array[i].id + ');" > </input> </div>';
+    }
+
+
+    innerHTML_aux += ' <input value="Add new comodity" name="addComodityButton" id="addComodityButton" type="button" onclick="pressed_add_comodity();">'
+    commoditiesAdd.innerHTML = innerHTML_aux;
+    popup.style.display = "none";
+
+}
+
+
+
+function pressed_add_comodity() {
+
+    let return_html_in_string_form = '<div id="popup_content"><p> New Commodity </p> <span id="close">&times;</span><form>Title: <br><input type="text" id="comodotie-type" name="comodotie-type" placeholder="Title"><br>';
+    return_html_in_string_form += '<p id=\"error_type\" ></p>Description: <br>'
+    return_html_in_string_form += '<textarea id="commodoty-description" class="InputAddPropertyD" name="description" rows="4" cols="50" placeholder="Description"></textarea>';
+    return_html_in_string_form += '<button id="create_review" type="button" onclick = "pressed_submit_comodity()">Submit</button><br>';
+    return_html_in_string_form += '</form></div>';
+
+
+    popup.innerHTML = return_html_in_string_form;
+
+
+    let x = document.getElementById("close");
+    let error_tpye = document.getElementById("error_tpye");
+
+    popup.style.display = "block";
+
+    x.onclick = function() {
+        popup.style.display = "none";
+        error_rating.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+        if (event.target == popup) {
+            popup.style.display = "none";
+            error_rating.style.display = "none";
+        }
+    }
+
+
+}
+
+
 on_load();
+
 
 
 function on_load() {
 
     let house_id = document.getElementById("house_id").value;
+
+    on_load_page_place_commodities(house_id);
+
     on_load_page_place_images(house_id);
 
+}
+
+function on_load_page_place_commodities(house_id) {
+    console.log('entrei aqui');
+    let ourRequest = new XMLHttpRequest();
+    ourRequest.open("POST", "../actions/api_get_comodities_for_house.php", true);
+    ourRequest.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+    ourRequest.onload = on_response_commodities;
+    ourRequest.send(encodeForAjax({ houseId: house_id }));
+
+}
+
+function on_response_commodities() {
+    let ourData = JSON.parse(this.responseText);
+    console.log('commodities');
+    console.log(ourData);
+    for (let i = 0; i < ourData.length; i++) {
+        let commodity_aux = new commodity(commodities_array.length, ourData[i]['Type'], ourData[i]['Description']);
+        commodities_array.push(commodity_aux);
+    }
+    reload_commodity_div();
 }
 
 function on_load_page_place_images(house_id) {
@@ -39,8 +221,6 @@ function on_load_page_place_images(house_id) {
         on_response(this, house_id);
     };
     ourRequest.send(encodeForAjax({ houseId: house_id }));
-
-
 }
 
 let array_of_images = [0, 0, 0, 0, 0, 0];
@@ -159,9 +339,19 @@ function Validate($house_id) {
         let formData = new FormData(form);
         formData.append('houseId', $house_id);
 
+        let commodities_array_aux = [];
+
+        for (let i = 0; i < commodities_array.length; i++) {
+            commodities_array_aux[i] = [];
+            commodities_array_aux[i][0] = commodities_array[i].title;
+            commodities_array_aux[i][1] = commodities_array[i].description
+        }
+
+
         let ourRequest = new XMLHttpRequest();
         ourRequest.open("POST", "../actions/api_update_house.php", true);
         ourRequest.onload = receive_add_property_response;
+        formData.append('commodities', JSON.stringify(commodities_array_aux));
         formData.append('File0', array_of_images[0]);
         formData.append('File1', array_of_images[1]);
         formData.append('File2', array_of_images[2]);

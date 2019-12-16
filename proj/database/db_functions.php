@@ -13,7 +13,8 @@ function create_user($name, $date, $email, $username, $password)
 }
 
 
-function is_house_occupied($hid, $start_date, $end_date){
+function is_house_occupied($hid, $start_date, $end_date)
+{
     $db = Database::instance()->db();
     $stmt = $db->prepare('SELECT * FROM Occupied WHERE MAX(StartDate, ?) <= MIN(EndDate, ?) AND HouseId = ?');
     $stmt->execute(array($start_date, $end_date, $hid));
@@ -21,7 +22,8 @@ function is_house_occupied($hid, $start_date, $end_date){
     return $result;
 }
 
-function is_date_occupied($date, $hid){
+function is_date_occupied($date, $hid)
+{
     $db = Database::instance()->db();
     $stmt = $db->prepare("SELECT * FROM Occupied WHERE HouseId = ? AND StartDate <= ? AND EndDate >= ?;");
     $stmt->execute(array($hid, $date, $date));
@@ -29,7 +31,8 @@ function is_date_occupied($date, $hid){
     return $result;
 }
 
-function create_rent($start_date, $end_date, $price, $hid, $tid){
+function create_rent($start_date, $end_date, $price, $hid, $tid)
+{
     $db = Database::instance()->db();
     $stmt = $db->prepare('INSERT INTO Rent (StartDate, EndDate, Price, HouseId, TouristId) VALUES (?, ?, ?, ?, ?)');
     $stmt->execute(array($start_date, $end_date, $price, $hid, $tid));
@@ -103,8 +106,8 @@ function count_comments($house_id)
 }
 
 function get_house_top_pic($house_id)
-{ 
-    try{
+{
+    try {
         $db = Database::instance()->db();
         $stmt = $db->prepare("SELECT Path as path FROM House H join Photo P on H.Id = P.HouseId WHERE H.Id = ? and P.Path LIKE ?;");
         $path = "../assets/imagesHouses/houseImage_" . $house_id . "_" . 0 . "%";
@@ -112,12 +115,10 @@ function get_house_top_pic($house_id)
         $stmt->execute(array(intval($house_id), $path));
         $result = $stmt->fetch();
         return $result['path'];
-    }
-    catch (PDOException $e) {
+    } catch (PDOException $e) {
         file_put_contents('somefilename.txt', print_r($e, true), FILE_APPEND);
         return -1;
     }
-
 }
 
 function get_house_by_id($house_id)
@@ -131,11 +132,15 @@ function get_house_by_id($house_id)
 
 function get_commodities_by_house_id($house_id)
 {
-    $db = Database::instance()->db();
-    $stmt = $db->prepare("SELECT * FROM Commodity WHERE HouseId = ?;");
-    $stmt->execute(array(intval($house_id)));
-    $result = $stmt->fetchall();
-    return $result;
+    try {
+        $db = Database::instance()->db();
+        $stmt = $db->prepare("SELECT * FROM Commodity WHERE HouseId = ?;");
+        $stmt->execute(array(intval($house_id)));
+        $result = $stmt->fetchall();
+        return $result;
+    } catch (PDOException $e) {
+        return -1;
+    }
 }
 
 function get_city_by_id($city_id)
@@ -220,7 +225,8 @@ function get_all_reservations_for_a_user($usr)
         return -1;
 }
 
-function check_for_a_review_of_rent($rent_id){
+function check_for_a_review_of_rent($rent_id)
+{
 
     $db = Database::instance()->db();
     $stmt = $db->prepare("SELECT COUNT(*) as count  FROM Review 
@@ -231,7 +237,8 @@ function check_for_a_review_of_rent($rent_id){
 }
 
 
-function find_me_a_cozy_place($city_id, $start_date, $end_date, $guest_no){
+function find_me_a_cozy_place($city_id, $start_date, $end_date, $guest_no)
+{
     $db = Database::instance()->db();
     $stmt = $db->prepare("SELECT Id, Name, Rating, PricePerDay FROM House
     WHERE (House.CityId = ? AND House.Capacity >= ? AND House.Id NOT IN (SELECT HouseId FROM Occupied WHERE (SELECT MAX(StartDate, ?)) <= (SELECT MIN(EndDate, ?))));");
@@ -240,7 +247,8 @@ function find_me_a_cozy_place($city_id, $start_date, $end_date, $guest_no){
     return $result;
 }
 
-function get_location_from_names($city_name, $country_name){
+function get_location_from_names($city_name, $country_name)
+{
     $db = Database::instance()->db();
     $stmt = $db->prepare("SELECT City.Id, City.CountryId FROM City, Country WHERE City.Name = ? AND City.CountryId = Country.Id AND Country.Name = ?;");
     $stmt->execute(array($city_name, $country_name));
@@ -312,7 +320,6 @@ function get_photo_from_usr($username)
         $stmt->execute(array($username));
         $user = $stmt->fetch();
         return $user['Photo'];
-    
     } catch (PDOException $e) {
         return NULL;
     }
@@ -326,7 +333,7 @@ function new_username($old_username, $new_username)
         $query = "UPDATE User SET Username = '" . $new_username . "' WHERE Id = " . $id;
         $res = $db->query($query);
         return 0;
-    } catch(PDOException $e) {
+    } catch (PDOException $e) {
         return -1;
     }
 }
@@ -341,7 +348,7 @@ function new_password($username, $new_password)
         $query = "UPDATE User SET Password = '" . $password . "' WHERE Id = " . $id;
         $res = $db->query($query);
         return 0;
-    } catch(PDOException $e) {
+    } catch (PDOException $e) {
         return -1;
     }
 }
@@ -354,7 +361,7 @@ function new_description($username, $description)
         $query = "UPDATE User SET Description = '" . $description . "' WHERE Id = " . $id;
         $res = $db->query($query);
         return 0;
-    } catch(PDOException $e) {
+    } catch (PDOException $e) {
         return -1;
     }
 }
@@ -367,7 +374,7 @@ function new_photo($username, $photo)
         $query = "UPDATE User SET Photo = '" . $photo . "' WHERE Id = " . $id;
         $res = $db->query($query);
         return 0;
-    } catch(PDOException $e) {
+    } catch (PDOException $e) {
         return -1;
     }
 }
@@ -428,7 +435,8 @@ function delete_house($house_id)
     }
 }
 
-function get_city_id_from_name($city_name){
+function get_city_id_from_name($city_name)
+{
 
     $db = Database::instance()->db();
     $stmt = $db->prepare("SELECT * FROM City WHERE City.Name = ?;");
@@ -437,8 +445,9 @@ function get_city_id_from_name($city_name){
     return $result['Id'];
 }
 
-function get_country_id_from_name($country_name){
-    
+function get_country_id_from_name($country_name)
+{
+
     $db = Database::instance()->db();
     $stmt = $db->prepare("SELECT * FROM Country WHERE Country.Name = ?;");
     $stmt->execute(array($country_name));
@@ -450,7 +459,8 @@ function get_country_id_from_name($country_name){
 
 
 
-function get_country_by_city_id($city_id){
+function get_country_by_city_id($city_id)
+{
 
     $city_info = get_city_by_id($city_id);
 
@@ -458,15 +468,15 @@ function get_country_by_city_id($city_id){
     $stmt = $db->prepare("SELECT * FROM Country WHERE Country.Id = ?;");
     $stmt->execute(array(intval($city_info['CountryId'])));
     $result = $stmt->fetch();
-    return  $result['Name'];     
+    return  $result['Name'];
 }
 
 
-function update_property($house_id, $house_name, $price_per_day, $adress, $description, $postal_code, $city, $country, $capacity, $username)
+function update_property($house_id, $house_name, $price_per_day, $adress, $description, $postal_code, $city, $country, $capacity, $commodities, $username)
 {
     $db = Database::instance()->db();
     try {
-        
+
         $city = trim($city);
         $house_name = trim($house_name);
         $adress = trim($adress);
@@ -495,10 +505,10 @@ function update_property($house_id, $house_name, $price_per_day, $adress, $descr
         //     $stmt->bindValue(':capacity', $capacity);
         //     $stmt->bindValue(':house_id', $house_id);
 
-        $sql = "UPDATE House " . "SET Name = '" . $house_name . "'," . "Description ='". $description . "'," . "PricePerDay =" . $price_per_day . ","
+        $sql = "UPDATE House " . "SET Name = '" . $house_name . "'," . "Description ='" . $description . "'," . "PricePerDay =" . $price_per_day . ","
             . "Address ='" . $adress  . " ',"
-            . "PostalCode ='" .$postal_code . "',"
-            . "Capacity =" .$capacity . ","
+            . "PostalCode ='" . $postal_code . "',"
+            . "Capacity =" . $capacity . ","
             . "CityId =" . $cityId
             . " WHERE House.Id =" . $house_id . ";";
 
@@ -509,12 +519,43 @@ function update_property($house_id, $house_name, $price_per_day, $adress, $descr
 
         $stmt = $db->prepare($sql);
         $stmt->execute();
+
+        $commodities_decoded = json_decode($commodities);
+
+        if (delete_all_commodities_house($house_id) == -1) {
+            return false;
+        }
+
+        for ($i = 0; $i < count($commodities_decoded); $i++) {
+            $commodities_decoded[$i][0] = trim($commodities_decoded[$i][0]);
+            $commodities_decoded[$i][1] = trim($commodities_decoded[$i][1]);
+            if (insert_new_commodity($house_id, $commodities_decoded[$i][0], $commodities_decoded[$i][1]) == -1) {
+                return false;
+            };
+        }
+
+
         return true;
     } catch (PDOException $e) {
         file_put_contents('somefilename.txt', print_r($e, true), FILE_APPEND);
         return false;
     }
 }
+
+function delete_all_commodities_house($house_id)
+{
+
+    try {
+        $dbh = Database::instance()->db();
+
+        $stmt = $dbh->prepare("DELETE FROM Commodity WHERE Commodity.HouseId=?");
+        $stmt->execute(array($house_id));
+        return 0;
+    } catch (PDOException $e) {
+        return -1;
+    }
+}
+
 
 function get_houses_photos($house_id)
 {
@@ -569,7 +610,7 @@ function create_review($rent_id, $rating, $comment, $date)
     }
 }
 
-function insert_new_property($house_name, $price_per_day, $adress, $description, $postal_code, $city, $country, $capacity, $username)
+function insert_new_property($house_name, $price_per_day, $adress, $description, $postal_code, $city, $country, $capacity, $commodities, $username)
 {
     $db = Database::instance()->db();
     try {
@@ -579,15 +620,45 @@ function insert_new_property($house_name, $price_per_day, $adress, $description,
         $adress = trim($adress);
         $description = trim($description);
 
-        
+
+
+
+
         $cityId = get_city_id_from_name($city);
 
         $onwer_id = get_id_from_usr($username);
         $stmt = $db->prepare("INSERT INTO House (id, Name, Rating, Description, PricePerDay, Address, PostalCode, OwnerId, CityId, Capacity) values (?,?,?,?,?,?,?,?,?,?);");
         $stmt->execute(array(null, $house_name, 0, $description, $price_per_day, $adress, $postal_code, $onwer_id, $cityId, $capacity));
+
+        $commodities_decoded = json_decode($commodities);
+
+        $db = Database::instance()->db();
+        $house_id = $db->lastInsertId();
+
+
+        for ($i = 0; $i < count($commodities_decoded); $i++) {
+            $commodities_decoded[$i][0] = trim($commodities_decoded[$i][0]);
+            $commodities_decoded[$i][1] = trim($commodities_decoded[$i][1]);
+            if (insert_new_commodity($house_id, $commodities_decoded[$i][0], $commodities_decoded[$i][1]) == -1) {
+                return false;
+            };
+        }
         return true;
     } catch (PDOException $e) {
         return false;
+    }
+}
+
+
+function insert_new_commodity($house_id, $commodity_title, $commodity_description)
+{
+    try {
+        $dbh = Database::instance()->db();
+        $stmt = $dbh->prepare('INSERT INTO Commodity(Id, Description, Type, HouseId) values (?, ?, ? , ?);');
+        $stmt->execute(array(null, $commodity_description, $commodity_title, intval($house_id)));
+        return 0;
+    } catch (PDOException $e) {
+        return -1;
     }
 }
 
@@ -638,38 +709,33 @@ function check_city_for_a_country($city, $country)
 {
     $db = Database::instance()->db();
     try {
-        
+
         $stmt = $db->prepare("SELECT COUNT(*) as total, Country.Id as country_id FROM Country  WHERE  Country.Name= ?;");
         $stmt->execute(array($country));
         $result = $stmt->fetch();
 
         file_put_contents('somefilename.txt', print_r('1', true), FILE_APPEND);
 
-        if($result['total'] == 0){
+        if ($result['total'] == 0) {
             return -1;
-        }
-        else if($result ['total'] == 1){
-           
+        } else if ($result['total'] == 1) {
+
             file_put_contents('somefilename.txt', print_r('2', true), FILE_APPEND);
 
             $stmt = $db->prepare("SELECT COUNT(*) as total FROM City  WHERE  City.Name= ? and City.CountryId = ?;");
             $stmt->execute(array($city,  $result['country_id']));
             $result = $stmt->fetch();
-    
-            if($result['total'] == 0){
+
+            if ($result['total'] == 0) {
                 return -2;
-            }
-            else if($result ['total'] == 1){
+            } else if ($result['total'] == 1) {
                 return 0;
-            }
-            else{
+            } else {
                 return -2;
             }
-        }
-        else{
+        } else {
             return -1;
         }
-       
     } catch (PDOException $e) {
         return -1;
     }

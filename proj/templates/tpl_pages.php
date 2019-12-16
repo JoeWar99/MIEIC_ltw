@@ -371,6 +371,9 @@ function draw_add_property($usr)
     echo "</div>";
     ?>
 
+    <div id = "pop-up-comodities">
+    </div>
+
     <form id="add-propertyForm" name="addPropertyForm" action="#" method="post" enctype="multipart/form-data">
         <div id="add-property-content">
 
@@ -488,6 +491,12 @@ function draw_add_property($usr)
 
                 <textarea class="InputAddPropertyD" name="description" rows="4" cols="50" placeholder="Description"></textarea>
 
+                <p class="form_place_holder"> Comodities </p>
+                <div id = "commoditiesAdd">
+                    <input value="Add new comodity" name="addComodityButton" id="addComodityButton" type="button" onclick="pressed_add_comodity();">
+                </div>
+
+
                 <input id="postal-code" name="PostalCode" class="InputAddProperty" type="text" placeholder="Postal Code">
                 <div id="PostalCodeError" class="valErrorP"> </div> <br>
 
@@ -505,6 +514,8 @@ function draw_add_property($usr)
         <input value="Add Property" name="submitButton" id="btnR2" type="button" onclick="Validate();">
 
     </form>
+
+    
 <?php
 
 
@@ -518,6 +529,7 @@ function draw_edit_property($usr, $house_id)
     echo "<p id=\"MyPropertiesTitle\"> Add Property </p> ";
     echo "</div>";
 
+    
     $house_information = get_house_information($house_id);
     
     
@@ -530,9 +542,11 @@ function draw_edit_property($usr, $house_id)
         $city_info = get_city_by_id($house_information['CityId']);
         $city_name = $city_info['Name'];
         $country_name = get_country_by_city_id($city_info['Id']);
-    
-    ?>
+        
+        ?>
 
+<div id = "pop-up-comodities">
+</div>
 
 <form>
 <input id="house_id" type="hidden" name="HouseId" value= <?php echo $house_id ?> />
@@ -658,6 +672,11 @@ function draw_edit_property($usr, $house_id)
 
                 <p class="form_place_holder"> Description </p>
                 <textarea class="InputAddPropertyD" name="description" rows="4" cols="50" placeholder="Description"> <?php echo $house_information['Description'] ?> </textarea>
+
+                <p class="form_place_holder"> Comodities </p>
+                <div id = "commoditiesAdd">
+                    <input value="Add new comodity" name="addComodityButton" id="addComodityButton" type="button" onclick="pressed_add_comodity();">
+                </div>
 
                 <p class="form_place_holder"> Postal Code </p>
                 <input id="postal-code" name="PostalCode" class="InputAddProperty" type="text" value="<?php echo $house_information['PostalCode'] ?>" placeholder="Postal Code">
