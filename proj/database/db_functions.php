@@ -216,6 +216,14 @@ function get_name_from_id($usrid){
     return $result;
 }
 
+function get_msgs_bw_2_usrs($usrid1, $usrid2){
+    $db = Database::instance()->db();
+    $stmt = $db->prepare("SELECT * FROM Message WHERE (SenderId = ? AND ReceiverId = ?) OR (SenderId = ? AND ReceiverId = ?)");
+    $stmt->execute(array($usrid1, $usrid2, $usrid2, $usrid1));
+    $result = $stmt->fetchAll();
+    return $result;
+}
+
 function get_usr_msgs($usrid){
     $db = Database::instance()->db();
     $stmt = $db->prepare("SELECT * FROM Message WHERE SenderId = ? OR ReceiverId = ?");
