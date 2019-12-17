@@ -3,6 +3,30 @@
 let select_user = document.getElementById("select_user");
 let their_id = document.getElementById("their_id");
 let my_id = document.getElementById("my_id");
+let form = document.getElementById("message_form");
+
+form.addEventListener('submit', sendMessage);
+
+function sendMessage(event) {
+    event.preventDefault();
+    let my_id = document.querySelector('input[name=my_id]').value;
+    let their_id = document.querySelector('input[name=their_id]').value;
+    let message = document.getElementById("foobar");
+  
+    // Delete sent message
+    
+  
+    // Send message
+    let request = new XMLHttpRequest();
+    request.open('get', '../actions/action_send_message.php?' + encodeForAjax({mid: my_id, tid: their_id, content: message.value}), true);
+    message.value='';
+    request.onload = function (){
+        if(request.status >= 200 && request.status < 400){ // Se o SRV retornar bem
+            fetch();
+        }
+    };
+    request.send();
+}
 
 function encodeForAjax(data) {
     return Object.keys(data).map(function (k) {
@@ -10,7 +34,11 @@ function encodeForAjax(data) {
     }).join('&');
 }
 
-select_user.onchange = function(){
+function htmlEntities(str) {
+    return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '\'');
+}
+
+function fetch(){
     //console.log(select_user.value);
     let tmp_their_id = document.getElementById(select_user.value);
     their_id.value = tmp_their_id.value;
@@ -30,5 +58,7 @@ select_user.onchange = function(){
     };
     req.send();
 };
+
+select_user.onchange = fetch;
 
 select_user.onchange();

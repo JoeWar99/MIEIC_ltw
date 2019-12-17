@@ -34,6 +34,12 @@ function create_rent($start_date, $end_date, $price, $hid, $tid){
     $stmt->execute(array($start_date, $end_date, $price, $hid, $tid));
 }
 
+function create_msg($sid, $rid, $content, $date){
+    $db = Database::instance()->db();
+    $stmt = $db->prepare('INSERT INTO Message (SenderId, ReceiverId, Content, SentDate) VALUES (?, ?, ?, ?)');
+    $stmt->execute(array($sid, $rid, $content, $date));
+}
+
 /**
  * Verifies if a certain username, password combination
  * exists in the database. Use the sha1 hashing function.
@@ -222,6 +228,24 @@ function get_msgs_bw_2_usrs($usrid1, $usrid2){
     $stmt->execute(array($usrid1, $usrid2, $usrid2, $usrid1));
     $result = $stmt->fetchAll();
     return $result;
+}
+
+function get_received_msg($usrid1, $usrid2){
+    $db = Database::instance()->db();
+    $stmt = $db->prepare("SELECT * FROM Message WHERE (SenderId = ? AND ReceiverId = ?) ORDER BY SentDate DESC");
+    $stmt->execute(array($usrid2, $usrid1));
+    $result = $stmt->fetch();
+    return $result;
+}
+
+function get_last_recv_msgs($usrid){
+    $contacts = get_usr_contacts($usrid);
+    $msg_array = array();
+    foreach($contacts as $id){
+        $msg_array[$id] = get_received_msg($usrid, $id);
+    }
+
+    return $msg_array;
 }
 
 function get_usr_msgs($usrid){

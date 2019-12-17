@@ -174,7 +174,7 @@
       $edit_sl = [["../js/edit.js", true]];
       $logged_house_sl = [["../js/rent.js", true]];
       $not_logged_house_sl = [["../js/not_logged_buttons.js", true]];
-      $message_sl = [["../js/fetch_messages.js", true]];
+      $message_sl = [["../js/messages.js", true]];
 
 
 ?>

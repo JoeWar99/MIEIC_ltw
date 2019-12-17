@@ -342,6 +342,16 @@ function draw_my_contacts($contacts){
     }
 }
 
+function draw_last_messages($messages){ 
+    echo "<div id=\"last_messages\" style=\"visibility: hidden\">";
+    foreach($messages as $message){
+        echo "<div id=\"" . $message['SenderId'] . "_last_msg\">";
+        echo $message['Content'];
+        echo "</div>";
+    }
+    echo "</div>";
+}
+
 function draw_my_messages($contacts, $usrid){
     draw_my_contacts($contacts);
     ?>
@@ -349,11 +359,14 @@ function draw_my_messages($contacts, $usrid){
     </div>
 
     <form id="message_form">
-    <textarea rows="2" cols="50" name="message"></textarea>
+    <textarea id="foobar" rows="2" cols="50" name="message" required></textarea>
     <input id="my_id" name="my_id" value= <?=$usrid?> readonly style="visibility:hidden">
     <input id="their_id" name="their_id" value= <?=intval($contacts[0])?> style="visibility:hidden">
+    <input type="submit" value="Send">
     </form>
 <?php
+    $last_msgs = get_last_recv_msgs($usrid); 
+    draw_last_messages(($last_msgs));  
 }
 
 /* END OF MESSAGES */
