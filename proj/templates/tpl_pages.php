@@ -254,9 +254,11 @@ function draw_rent_button($hid, $ppd, $capacity){
 /**
  * Draws the message the owner button in the page for a certain house
  */
-function draw_msg_button(){
-    echo "<form method\"GET\" action=\"../pages/myMessages.php\">";
+function draw_msg_button($tid, $oid){
+    echo "<form method=\"GET\" action=\"../actions/action_msg_owner.php?\">";
     echo "<button id=\"message_button\" type=\"submit\">Message Owner</button>";
+    echo "<input name=\"mid\" value=\"" . $tid. "\" style=\"visibility:hidden\" readonly>";
+    echo "<input name=\"tid\" value=\"" . $oid. "\" style=\"visibility:hidden\" readonly>";
     echo "</form>";
 }
 
@@ -306,7 +308,7 @@ function draw_rent_form($hid, $tid, $ppd){?>
  * @param comments an array containing the most recent comments for the house
  * @param picpath the path to the main image for the house
  */
-function draw_housepage($house_info, $city_info, $country_info, $commodities, $owner_info, $comments, $picpath, $house_id){
+function draw_housepage($house_info, $city_info, $country_info, $commodities, $owner_info, $comments, $picpath, $house_id, $tid){
     echo "<div id=\"housepage\">";
     echo "<div id=\"housepage1\">";
     $name = $house_info['Name'];
@@ -322,7 +324,7 @@ function draw_housepage($house_info, $city_info, $country_info, $commodities, $o
     echo "</div>";
     echo "<div id=\"housepage2\">";
     draw_rent_button($house_info['Id'], $house_info['PricePerDay'], $house_info['Capacity']);
-    draw_msg_button();
+    draw_msg_button($tid, $house_info['OwnerId']);
     if($photos != null){
         echo "<button id=\"button_left\" onclick=\"mudar(-1)\">&#10094;</button>";
         echo "<button id=\"button_right\" onclick=\"mudar(1)\">&#10095;</button>";

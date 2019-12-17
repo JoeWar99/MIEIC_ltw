@@ -11,7 +11,6 @@ $content = htmlentities($_GET['content']);
 
 try {
     create_msg($mid, $tid, $content, date("Y-m-d H:i:s")); //está aqui o erro
-
     echo "YAY";
 } catch (PDOException $e) {
     echo "NAY";
