@@ -245,7 +245,9 @@ function draw_rent_button($hid, $ppd, $capacity){
  * Draws the message the owner button in the page for a certain house
  */
 function draw_msg_button(){
-    echo "<button id=\"owner_message_button\" type=\"button\">Message Owner</button><br>";
+    echo "<form method\"GET\" action=\"../pages/myMessages.php\">";
+    echo "<button id=\"message_button\" type=\"submit\">Message Owner</button>";
+    echo "</form>";
 }
 
 /**
@@ -310,6 +312,7 @@ function draw_housepage($house_info, $city_info, $country_info, $commodities, $o
     echo "</div>";
     echo "<div id=\"housepage2\">";
     draw_rent_button($house_info['Id'], $house_info['PricePerDay'], $house_info['Capacity']);
+    draw_house_comments($comments);
     draw_msg_button();
     echo "<button id=\"button_left\" onclick=\"mudar(-1)\">&#10094;</button>";
     echo "<button id=\"button_right\" onclick=\"mudar(1)\">&#10095;</button>";
@@ -348,7 +351,56 @@ function draw_search_page($city_id,$country_id, $start_date, $end_date, $guest_n
 
 /* END OF FUNCTIONS TO DRAW THE HOUSE PAGE */
 
+/* MESSAGES */
+function draw_my_contacts($contacts){
 
+    if(!$contacts) echo "<p>Nothing to see here...</p>";
+    else {
+        echo "<form id=\"user_select_form\">";
+        echo "<select id=\"select_user\" name=\"select_user\">";
+        foreach($contacts as $id){
+            $usrname = get_name_from_id($id);
+            echo "<option value=" . $usrname['Username'] .  ">" .  $usrname['Username'] . "</option>";
+            
+        }
+        echo "</select>";
+
+        foreach($contacts as $id){
+            $usrname = get_name_from_id($id);
+            echo "<input id=". $usrname['Username'] ." value=\"". intval($id). "\" style=\"visibility:hidden\">";
+        }
+        echo "</form>";
+    }
+}
+
+function draw_last_messages($messages){ 
+    echo "<div id=\"last_messages\" style=\"visibility: hidden\">";
+    foreach($messages as $message){
+        echo "<div id=\"" . $message['SenderId'] . "_last_msg\">";
+        echo $message['Content'];
+        echo "</div>";
+    }
+    echo "</div>";
+}
+
+function draw_my_messages($contacts, $usrid){
+    draw_my_contacts($contacts);
+    ?>
+    <div id="messages_area">
+    </div>
+
+    <form id="message_form">
+    <textarea id="foobar" rows="2" cols="50" name="message" required></textarea>
+    <input id="my_id" name="my_id" value= <?=$usrid?> readonly style="visibility:hidden">
+    <input id="their_id" name="their_id" value= <?=intval($contacts[0])?> style="visibility:hidden">
+    <input type="submit" value="Send">
+    </form>
+<?php
+    $last_msgs = get_last_recv_msgs($usrid); 
+    draw_last_messages(($last_msgs));  
+}
+
+/* END OF MESSAGES */
 /* START OF FUNCTIONS TO DRAW THE MY PROPERTIES PAGE */
 
 /**

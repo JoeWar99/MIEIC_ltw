@@ -185,6 +185,14 @@ function open_html()
 }
 ?>
 
+<?php function draw_messages_menu(){
+      echo "<div id=\"messagesMenu\">";
+      echo "<button id= \"reservations\" onclick=\"window.location.href = 'myMessages.php';\">My Messages</button>";
+      echo "</div>";
+} 
+?>
+
+
 <?php $fonts = [
   "https://use.fontawesome.com/releases/v5.3.1/css/all.css",
   "https://fonts.googleapis.com/css?family=Merriweather|Open+Sans+Condensed:300",
@@ -205,11 +213,25 @@ $not_logged_house_sl = [["../js/not_logged_buttons.js", true], ["../js/slide.js"
 
 $myProperties_sl = [["../js/myProperty.js", true]];
 
-$myReservations_sl = [["../js/myReservation.js", true]];
 
-$addProperty_sl = [["../js/addProperty.js", true]];
+ $fonts = ["https://use.fontawesome.com/releases/v5.3.1/css/all.css",
+                "https://fonts.googleapis.com/css?family=Merriweather|Open+Sans+Condensed:300",
+                "https://fonts.googleapis.com/css?family=Poppins&display=swap"];
+      
+      $main_stylesheet = "../css/style.css";
 
-$editProperty_sl = [["../js/editProperty.js", true]];
+      $register_sl = [["../js/register.js", true]];
+      $search_sl = [["../js/search.js", true]];
+      $edit_sl = [["../js/edit.js", true]];
+      $logged_house_sl = [["../js/rent.js", true]];
+      $not_logged_house_sl = [["../js/not_logged_buttons.js", true]];
+      $message_sl = [["../js/messages.js", true]];
+      $myReservations_sl = [["../js/myReservation.js", true]];
+
+      $addProperty_sl = [["../js/addProperty.js", true]];
+
+      $editProperty_sl = [["../js/editProperty.js", true]];
+
 
 ?>
 
@@ -228,6 +250,7 @@ $editProperty_sl = [["../js/editProperty.js", true]];
   draw_profile_menu($username);
   draw_properties_menu();
   draw_reservations_menu();
+  draw_messages_menu();
   echo "<div>";
   close_td();
 

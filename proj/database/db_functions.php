@@ -38,6 +38,11 @@ function create_rent($start_date, $end_date, $price, $hid, $tid)
     $stmt->execute(array($start_date, $end_date, $price, $hid, $tid));
 }
 
+function create_msg($sid, $rid, $content, $date){
+    $db = Database::instance()->db();
+    $stmt = $db->prepare('INSERT INTO Message (SenderId, ReceiverId, Content, SentDate) VALUES (?, ?, ?, ?)');
+    $stmt->execute(array($sid, $rid, $content, $date));
+}
 
 /**
  * Verifies if a certain username, password combination
@@ -274,11 +279,78 @@ function find_houses_in_location($city_id, $guest_no){
 
 }
 
+function get_name_from_id($usrid){
+    $db = Database::instance()->db();
+    $stmt = $db->prepare("SELECT Username FROM User WHERE Id = ?");
+    $stmt->execute(array($usrid));
+    $result = $stmt->fetch();
+    return $result;
+}
+
+function get_msgs_bw_2_usrs($usrid1, $usrid2){
+    $db = Database::instance()->db();
+    $stmt = $db->prepare("SELECT * FROM Message WHERE (SenderId = ? AND ReceiverId = ?) OR (SenderId = ? AND ReceiverId = ?) ORDER BY SentDate ASC");
+    $stmt->execute(array($usrid1, $usrid2, $usrid2, $usrid1));
+    $result = $stmt->fetchAll();
+    return $result;
+}
+
+function get_received_msg($usrid1, $usrid2){
+    $db = Database::instance()->db();
+    $stmt = $db->prepare("SELECT * FROM Message WHERE (SenderId = ? AND ReceiverId = ?) ORDER BY SentDate DESC");
+    $stmt->execute(array($usrid2, $usrid1));
+    $result = $stmt->fetch();
+    return $result;
+}
+
+function get_last_recv_msgs($usrid){
+    $contacts = get_usr_contacts($usrid);
+    $msg_array = array();
+    foreach($contacts as $id){
+        $msg_array[$id] = get_received_msg($usrid, $id);
+    }
+
+    return $msg_array;
+}
+
+function get_usr_msgs($usrid){
+    $db = Database::instance()->db();
+    $stmt = $db->prepare("SELECT * FROM Message WHERE SenderId = ? OR ReceiverId = ?");
+    $stmt->execute(array($usrid, $usrid));
+    $result = $stmt->fetchAll();
+    return $result;
+}
+
+function get_usr_sent_contacts_ids($usrid){
+    $db = Database::instance()->db();
+    $stmt = $db->prepare("SELECT ReceiverId FROM Message WHERE SenderId = ?");
+    $stmt->execute(array($usrid));
+    $result = $stmt->fetchAll();
+    
+    $ids = array();
+    foreach($result as $res) array_push($ids, intval($res['ReceiverId']));
+    return $ids;
+}
+
+function get_usr_received_contacts_ids($usrid){
+    $db = Database::instance()->db();
+    $stmt = $db->prepare("SELECT SenderId FROM Message WHERE ReceiverId = ?");
+    $stmt->execute(array($usrid));
+    $result = $stmt->fetchAll();
+
+    $ids = array();
+    foreach($result as $res) array_push($ids, intval($res['SenderId']));
+    return $ids;
+}
+
+function get_usr_contacts($usrid){
+    return array_unique(array_merge(get_usr_sent_contacts_ids($usrid), get_usr_received_contacts_ids(($usrid))));
+}
 
 function find_me_a_cozy_place($city_id, $start_date, $end_date, $guest_no)
 {
     $db = Database::instance()->db();
-    $stmt = $db->prepare("SELECT * FROM House
+    $stmt = $db->prepare("SELECT Id, Name, Rating, PricePerDay, CityId FROM House
     WHERE (House.CityId = ? AND House.Capacity >= ? AND House.Id NOT IN (SELECT HouseId FROM Occupied WHERE (SELECT MAX(StartDate, ?)) <= (SELECT MIN(EndDate, ?))));");
     $stmt->execute(array(intval($city_id), $guest_no, $start_date, $end_date));
     $result = $stmt->fetchall();

@@ -2,10 +2,10 @@
 include_once('../includes/session.php');
 include_once('../database/db_functions.php');
 
-//var_dump($_POST);
 if(!isset($_POST['start_date']) || !isset($_POST['end_date'])
-|| !isset($_POST['tid']) || !isset($_POST['hid']) || !isset($_POST['ppd'])) die(header("Location: ../pages/404.php"));
+|| !isset($_POST['tid']) || !isset($_POST['hid']) || !isset($_POST['ppd'])) var_dump($_POST);//die(header("Location: ../pages/404.php"));
 
+else{
 $start_date = $_POST['start_date'];
 $end_date = $_POST['end_date'];
 $tid = intval($_POST['tid']);
@@ -23,6 +23,7 @@ try {
 } catch (PDOException $e) {
     $_SESSION['messages'][] = array('type' => 'error', 'content' => 'Failed to rent!');
     header('Location: ../pages/housepage.php?id=' . $hid . "&msg=" . $_SESSION['messages']);
+}
 }
 
 ?>
