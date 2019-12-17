@@ -9,4 +9,5 @@ $comment = $_POST['comment'];
 $rating = $_POST['rating'];
 
 echo json_encode(create_review($rent_id, $rating, $comment, $date));
+
 ?>

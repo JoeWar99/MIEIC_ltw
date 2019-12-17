@@ -225,6 +225,33 @@ function get_all_reservations_for_a_user($usr)
         return -1;
 }
 
+function get_countries(){
+    try{
+        $db = Database::instance()->db();
+        $stmt = $db->prepare("SELECT DISTINCT Country.Name as country FROM Country");
+        $stmt->execute();
+        $result = $stmt->fetchall();
+        return $result;
+        }
+        catch(PDOException $e){
+            return -1;
+        }
+
+}
+
+function get_locations(){
+    try{
+    $db = Database::instance()->db();
+    $stmt = $db->prepare("SELECT DISTINCT City.Name || ', ' || Country.Name as location FROM City JOIN Country on City.CountryId = Country.Id");
+    $stmt->execute();
+    $result = $stmt->fetchall();
+    return $result;
+    }
+    catch(PDOException $e){
+        return -1;
+    }
+}
+
 function check_for_a_review_of_rent($rent_id)
 {
 
@@ -236,11 +263,22 @@ function check_for_a_review_of_rent($rent_id)
     return $result['count'];
 }
 
+function find_houses_in_location($city_id, $guest_no){
+    
+    $db = Database::instance()->db();
+    $stmt = $db->prepare("SELECT * FROM House
+    WHERE House.CityId = ? AND House.Capacity >= ?");
+    $stmt->execute(array(intval($city_id), $guest_no));
+    $result = $stmt->fetchall();
+    return $result;
+
+}
+
 
 function find_me_a_cozy_place($city_id, $start_date, $end_date, $guest_no)
 {
     $db = Database::instance()->db();
-    $stmt = $db->prepare("SELECT Id, Name, Rating, PricePerDay FROM House
+    $stmt = $db->prepare("SELECT * FROM House
     WHERE (House.CityId = ? AND House.Capacity >= ? AND House.Id NOT IN (SELECT HouseId FROM Occupied WHERE (SELECT MAX(StartDate, ?)) <= (SELECT MIN(EndDate, ?))));");
     $stmt->execute(array(intval($city_id), $guest_no, $start_date, $end_date));
     $result = $stmt->fetchall();
@@ -252,6 +290,15 @@ function get_location_from_names($city_name, $country_name)
     $db = Database::instance()->db();
     $stmt = $db->prepare("SELECT City.Id, City.CountryId FROM City, Country WHERE City.Name = ? AND City.CountryId = Country.Id AND Country.Name = ?;");
     $stmt->execute(array($city_name, $country_name));
+    $result = $stmt->fetch();
+    return $result;
+}
+
+function get_cities_id_from_country($country_name)
+{   $country_id = get_country_id_from_name($country_name);
+    $db = Database::instance()->db();
+    $stmt = $db->prepare("SELECT City.Id FROM City, Country WHERE City.CountryId = ?");
+    $stmt->execute(array($country_id));
     $result = $stmt->fetch();
     return $result;
 }
@@ -582,9 +629,7 @@ function cancel_reservation($rent_id)
 
         if ($date > $ret['StartDate'] && $date < $ret['EndDate']) {
             return -1;
-        } else if ($date < $ret['StartDate']) {
-            return -1;
-        } else {
+        }else {
             $stmt = $db->prepare("DELETE FROM Rent WHERE Rent.Id=?");
             $stmt->execute(array($rent_id));
             return true;

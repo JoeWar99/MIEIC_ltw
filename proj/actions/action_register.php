@@ -2,11 +2,13 @@
 include_once('../includes/session.php');
 include_once('../database/db_functions.php');
 
-$name  = $_POST['name'];
+$name  = trim($_POST['name']);
 $dateOfBirth = $_POST['dateOfBirth'];
-$email = $_POST['email'];
-$username = $_POST['username'];
-$password = $_POST['password'];
+$email = trim($_POST['email']);
+$username = trim($_POST['username']);
+$password = trim($_POST['password']);
+
+
 
 if (username_exists($username)) {
     $_SESSION['messageErrorUser'] = 'Username already exists';

@@ -249,7 +249,7 @@ function on_response(object, house_id) {
             number = 5;
         }
 
-        var preview = document.querySelector('#preview' + number);
+        let preview = document.querySelector('#preview' + number);
         console.log(this);
 
         // preview.setAttribute("style", " display: grid; grid-template-rows: 1fr 0.5fr;");
@@ -678,7 +678,7 @@ function readAndPreview(file) {
 
     reader.addEventListener("load", function() {
 
-        var preview = document.querySelector('#preview' + number);
+        let preview = document.querySelector('#preview' + number);
         console.log(this);
 
         // preview.setAttribute("style", " display: grid; grid-template-rows: 1fr 0.5fr;");

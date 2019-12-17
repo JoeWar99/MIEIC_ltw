@@ -14,21 +14,21 @@ function draw_searchbox(){
         echo "<header>";
             h2("Find me a cozy place...");
         echo "</header>";
-            echo "<form name=\"search_form\">";
+            echo "<form  method=\"POST\" action=\"../actions/action_search.php\" autocomplete=\"off\" name=\"search_form\" onsubmit=\"return Validate()\">";
                 
-                echo "<div>";
-                    echo "<input name=\"location\" type=\"text\" placeholder=\"Location\" required=\"required\">";
-                    echo "<div id=\"location_error\" class=\"valError\"> </div>";
+                echo "<div class=\"autocomplete\">";
+                    echo "<input id=\"location_input\" name=\"location\" type=\"text\" placeholder=\"Location\">";
+                    echo "<div id=\"location_error\" class=\"valError_search\"> </div>";
                 echo "</div>";
                 
                 echo "<div>";
-                    echo "<input name=\"start\" type=\"date\" required=\"required\">";
-                    echo "<div id=\"start_error\" class=\"valError\"> </div>";
+                    echo "<input id=\"start_input\" name=\"start\" type=\"date\">";
+                    echo "<div id=\"start_error\" class=\"valError_search\"> </div>";
                 echo "</div>";
 
                 echo "<div>";
-                    echo "<input name=\"end\" type=\"date\" required=\"required\"> <br>";
-                    echo "<div id=\"end_error\" class=\"valError\"> </div>";
+                    echo "<input id=\"end_input\" name=\"end\" type=\"date\"> <br>";
+                    echo "<div id=\"end_error\" class=\"valError_search\"> </div>";
                 echo "</div>";
 
                 echo "<select id=\"guest_no\" name=\"people\">";
@@ -42,9 +42,10 @@ function draw_searchbox(){
                     echo "<option value=\"8\">8 guests</option>";
                     echo "<option value=\"9\">9 guests</option>";
                 echo "</select> <br>";
-                echo "<button formaction=\"../actions/action_search.php\" formmethod=\"POST\" onsubmit=\"return Validate()\">Search</button>";
+                echo "<button>Search</button>";
             echo "</form>";
         echo "</div>";
+        
 }
 
 
@@ -312,11 +313,14 @@ function draw_housepage($house_info, $city_info, $country_info, $commodities, $o
 
 function draw_search_page($city_id,$country_id, $start_date, $end_date, $guest_no, $house_list){
 
-    h2("Showing results for places in: ". get_city_by_id($city_id)['Name'] . ", " . get_country_by_id($country_id)['Name']);
-    $tmp1 = explode("-", $start_date);
-    $tmp2 = explode("-", $end_date);
-    h3($tmp1[2] . "/" . $tmp1[1] . "/" . $tmp1[0] . " - " . $tmp2[2] . "/" . $tmp2[1] . "/" . $tmp2[0]);
-    
+    if($start_date != "" && $end_date != ""){
+        $tmp1 = explode("-", $start_date);
+        $tmp2 = explode("-", $end_date);
+        h2("Showing results for places in: ". get_city_by_id($city_id)['Name'] . ", " . get_country_by_id($country_id)['Name'] . ", From " . $tmp1[2] . "/" . $tmp1[1] . "/" . $tmp1[0] . " - " . $tmp2[2] . "/" . $tmp2[1] . "/" . $tmp2[0]);
+    }
+    else{
+        h2("Showing results for places in: ". get_city_by_id($city_id)['Name'] . ", " . get_country_by_id($country_id)['Name']);
+    }
     if ($house_list != false) draw_house_list($house_list);
     else {
         echo "<p>";
@@ -358,6 +362,8 @@ function draw_my_reservations($usr)
     echo "<p id=\"MyReservationsTitle\"> My Reservations </p>";
     echo "<div id=\"my_reservations\">";
     echo "</div>";
+    // Div meant to hold the alert that gives the error that happened in ajax
+    echo '<div id="error-popup"> </div>';
     echo "<div id=\"popup\">";
     echo "</div>";
 }

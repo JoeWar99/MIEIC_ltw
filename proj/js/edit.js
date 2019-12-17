@@ -8,34 +8,34 @@ function encodeForAjax(data) {
 
 
 //popup vars
-var popup = document.getElementById("popup");
+let popup = document.getElementById("popup");
 
-var button = document.getElementById("edit_pro");
+let button = document.getElementById("edit_pro");
 
-var x = document.getElementById("close");
+let x = document.getElementById("close");
 
 //username vars
-var change_user = document.getElementById("change_username");
+let change_user = document.getElementById("change_username");
 
-var new_user = document.getElementById("new_username");
+let new_user = document.getElementById("new_username");
 
-var error = document.getElementById("error_change_username");
+let error = document.getElementById("error_change_username");
 
-var error_size = document.getElementById("error_username_size");
+let error_size = document.getElementById("error_username_size");
 
 //password vars
-var change_pass = document.getElementById("change_password");
+let change_pass = document.getElementById("change_password");
 
-var new_pass = document.getElementById("new_password");
-var new_pass2 = document.getElementById("new_password2");
+let new_pass = document.getElementById("new_password");
+let new_pass2 = document.getElementById("new_password2");
 
-var error_pass = document.getElementById("error_pass");
-var error_pass2 = document.getElementById("error_pass2");
+let error_pass = document.getElementById("error_pass");
+let error_pass2 = document.getElementById("error_pass2");
 
 //description vars
-var change_description = document.getElementById("edit_des");
+let change_description = document.getElementById("edit_des");
 
-var description = document.getElementById("description");
+let description = document.getElementById("description");
 
 //popup functions
 button.onclick = function() {

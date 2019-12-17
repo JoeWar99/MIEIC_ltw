@@ -1,4 +1,8 @@
-<?php function open_html()
+
+<?php 
+include_once('../database/db_functions.php'); 
+
+function open_html()
 {
   echo "<!DOCTYPE html>";
   echo "<html>";
@@ -347,7 +351,7 @@ function close_overlay()
 ?>
 <?php function draw_header($username, $page)
 {
-  open_header();
+  open_header();  
   if ($page != "login") {
     if ($username != NULL) draw_logged_header($username);
     else draw_not_logged_header();
