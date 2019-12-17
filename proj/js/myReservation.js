@@ -131,7 +131,7 @@ function pressed_create_review(rent_id) {
     let rating = document.getElementById("new_rating").value;
     let comment = document.getElementById("new_review").value;
     let error_rating = document.getElementById("error_rating");
-    let popup = document.getElementById("popup");
+    let popup = document.getElementById("popup_review");
 
     // getting the current date
     let today = new Date();

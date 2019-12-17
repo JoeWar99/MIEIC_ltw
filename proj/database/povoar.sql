@@ -480,7 +480,6 @@ insert into Review (Id, Rating, RentId) values (58, 4.9, 58);
 insert into Review (Id, Rating, RentId) values (59, 2.2, 59);
 insert into Review (Id, Rating, RentId) values (60, 1.4, 60);
 insert into Review (Id, Rating, RentId) values (61, 2.7, 61);
-insert into Review (Id, Rating, RentId) values (62, 3.6, 62);
 insert into Review (Id, Rating, RentId) values (63, 1.9, 63);
 insert into Review (Id, Rating, RentId) values (64, 3.3, 64);
 insert into Review (Id, Rating, RentId) values (65, 2.2, 65);
@@ -633,7 +632,6 @@ insert into Comment (Id, Text, Date, ReviewId) values (58, 'Pellentesque at null
 insert into Comment (Id, Text, Date, ReviewId) values (59, 'Fusce consequat. Nulla nisl. Nunc nisl.', '1/1/2020', 59);
 insert into Comment (Id, Text, Date, ReviewId) values (60, 'Sed ante. Vivamus tortor. Duis mattis egestas metus.', '4/30/2020', 60);
 insert into Comment (Id, Text, Date, ReviewId) values (61, 'Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.', '12/13/2019', 61);
-insert into Comment (Id, Text, Date, ReviewId) values (62, 'Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.', '12/3/2019', 62);
 insert into Comment (Id, Text, Date, ReviewId) values (63, 'Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.', '6/11/2020', 63);
 insert into Comment (Id, Text, Date, ReviewId) values (64, 'Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.', '1/8/2020', 64);
 insert into Comment (Id, Text, Date, ReviewId) values (65, 'Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.', '8/25/2020', 65);

@@ -8,10 +8,18 @@ function create_user($name, $date, $email, $username, $password)
 {
     $db = Database::instance()->db();
     $options = ['cost' => 12];
-    $stmt = $db->prepare('INSERT INTO User VALUES(?, ?, ?, ?, ?, ?)');
+    $stmt = $db->prepare('INSERT INTO User (Id, Name, DateOfBirth, Email, Username, Password) VALUES(?, ?, ?, ?, ?, ?)');
     $stmt->execute(array(null, $name, $date, $email, $username, password_hash($password, PASSWORD_DEFAULT, $options)));
 }
 
+function get_username_from_email($email){
+    $db = Database::instance()->db();
+    $stmt = $db->prepare('SELECT User.Username as username FROM User WHERE User.Email=?');
+    $stmt->execute(array($email));
+    $result = $stmt->fetch();
+    return $result["username"];
+
+}
 
 function is_house_occupied($hid, $start_date, $end_date)
 {
