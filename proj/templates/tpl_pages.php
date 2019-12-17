@@ -54,6 +54,9 @@ function draw_house_list($house_list){
     foreach($house_list as $house){ 
         echo "<div class=\"house_preview\">";
             $pic = get_house_top_pic($house['Id']);
+            if($pic == null) {
+                $pic = "../assets/imagesHouses/noHouseImage.png";
+            }
             echo "<img src=$pic width=\"330\" height=\"230\" />";
             echo "<section name=\"information\">";
             $name = $house["Name"];
@@ -88,6 +91,9 @@ function draw_house_in_organized_fashion($house)
 {
 
     $pic = get_house_top_pic($house['Id']);
+    if($pic == null) {
+        $pic = "../assets/imagesHouses/noHouseImage.png";
+    }
     echo "<img src=$pic width=\"330\" height=\"230\" />";
     echo "<section id=\"trending_houses\" name=\"information\">";
     $name = $house["Name"];
