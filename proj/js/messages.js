@@ -4,8 +4,13 @@ let select_user = document.getElementById("select_user");
 let their_id = document.getElementById("their_id");
 let my_id = document.getElementById("my_id");
 let form = document.getElementById("message_form");
+let last_msgs = document.getElementById("last_messages");
 
 form.addEventListener('submit', sendMessage);
+
+window.setInterval(fetch, 2000);
+
+window.setInterval(reload_func, 10000);
 
 function htmlEntities(str) {
     return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '\'');
@@ -37,6 +42,23 @@ function encodeForAjax(data) {
 }
 
 
+function reload_last_msgs(){
+    let req = new XMLHttpRequest();
+    req.open("GET", "../actions/action_refresh_last_msgs.php", true);
+    req.onload = function(){
+        if(req.status >= 200 && req.status < 400){ // Se o SRV retornar bem
+            last_msgs.innerHTML = this.responseText;
+            console.log(this.responseText);
+        }
+    };
+    
+    req.onerror = function (){ //SE não ligar ao srv
+        console.log("Connection Error");
+    };
+    req.send();
+
+}
+
 
 function fetch(){
     //console.log(select_user.value);
@@ -57,7 +79,12 @@ function fetch(){
         console.log("Connection Error");
     };
     req.send();
+    reload_last_msgs();
 };
+
+function reload_func(){
+    location.reload();
+}
 
 select_user.onchange = fetch;
 

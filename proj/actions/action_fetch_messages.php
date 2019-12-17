@@ -41,9 +41,11 @@ function their_msg($msg){
 if (!$msgs) echo "<p>Nothing to see here...</p>";
 else {
     foreach($msgs as $msg){
+        if($msg['Content']!=""){
         if (intval($msg['SenderId']) == $mid) my_msg($msg);
         else their_msg($msg);
         echo "<br>";
+        }
     }
 }
 
