@@ -4,7 +4,7 @@
 
   // trimming the password or email after the input, eliminating spaces in the beginning and in the end
   $username_or_email = trim(strip_tags($_POST['username_or_email']));
-  $password = trim($_POST['password']);
+  $password = trim(strip_tags($_POST['password']));
 
   // checking if the username or email and password are valid one , if so the session start
   if (check_usr_pass($username_or_email, $password)) {

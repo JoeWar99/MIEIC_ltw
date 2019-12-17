@@ -116,12 +116,12 @@ function get_house_top_pic($house_id)
         $db = Database::instance()->db();
         $stmt = $db->prepare("SELECT Path as path FROM House H join Photo P on H.Id = P.HouseId WHERE H.Id = ? and P.Path LIKE ?;");
         $path = "../assets/imagesHouses/houseImage_" . $house_id . "_" . 0 . "%";
-        file_put_contents('somefilename.txt', print_r($path, true), FILE_APPEND);
+       
         $stmt->execute(array(intval($house_id), $path));
         $result = $stmt->fetch();
         return $result['path'];
     } catch (PDOException $e) {
-        file_put_contents('somefilename.txt', print_r($e, true), FILE_APPEND);
+        
         return -1;
     }
 }
@@ -602,27 +602,7 @@ function update_property($house_id, $house_name, $price_per_day, $adress, $descr
         $description = trim($description);
 
         $cityId = get_city_id_from_name($city);
-        file_put_contents('somefilename.txt', print_r('merda1', true), FILE_APPEND);
-
-        //     $sql = "UPDATE House " . "SET Name = \"2asdss\"," . "Description = :description," . "PricePerDay = :price_per_day,"
-        //         . "Address = :adress,"
-        //         . "PostalCode = :postal_code,"
-        //         . "Capacity = :capacity"
-        //         . "WHERE House.Id = :house_id";
-
-        //     //   UPDATE House SET Name = "merda", Description = "merda", PricePerDay = "10000", Adress = "sdasdasassadsa", PostalCode = "34234Q", Capacity = "33" WHERE House.Id = 82;
-
-        //     file_put_contents('somefilename.txt', print_r('merda2', true), FILE_APPEND);
-        //     // passing values to the parameters
-
-        //     $stmt = $db->prepare($sql);
-        //    // $stmt->bindValue(':house_name', $house_name);
-        //     $stmt->bindValue(':description', $description);
-        //     $stmt->bindValue(':price_per_day', $price_per_day);
-        //     $stmt->bindValue(':adress', $adress);
-        //     $stmt->bindValue(':postal_code', $postal_code);
-        //     $stmt->bindValue(':capacity', $capacity);
-        //     $stmt->bindValue(':house_id', $house_id);
+       
 
         $sql = "UPDATE House " . "SET Name = '" . $house_name . "'," . "Description ='" . $description . "'," . "PricePerDay =" . $price_per_day . ","
             . "Address ='" . $adress  . " ',"
@@ -633,7 +613,7 @@ function update_property($house_id, $house_name, $price_per_day, $adress, $descr
 
         //   UPDATE House SET Name = "merda", Description = "merda", PricePerDay = "10000", Adress = "sdasdasassadsa", PostalCode = "34234Q", Capacity = "33" WHERE House.Id = 82;
 
-        file_put_contents('somefilename.txt', print_r('merda2', true), FILE_APPEND);
+        
         // passing values to the parameters
 
         $stmt = $db->prepare($sql);
@@ -656,7 +636,7 @@ function update_property($house_id, $house_name, $price_per_day, $adress, $descr
 
         return true;
     } catch (PDOException $e) {
-        file_put_contents('somefilename.txt', print_r($e, true), FILE_APPEND);
+        
         return false;
     }
 }
@@ -831,13 +811,13 @@ function check_city_for_a_country($city, $country)
         $stmt->execute(array($country));
         $result = $stmt->fetch();
 
-        file_put_contents('somefilename.txt', print_r('1', true), FILE_APPEND);
+        
 
         if ($result['total'] == 0) {
             return -1;
         } else if ($result['total'] == 1) {
 
-            file_put_contents('somefilename.txt', print_r('2', true), FILE_APPEND);
+            
 
             $stmt = $db->prepare("SELECT COUNT(*) as total FROM City  WHERE  City.Name= ? and City.CountryId = ?;");
             $stmt->execute(array($city,  $result['country_id']));

@@ -6,11 +6,12 @@ if(!isset($_POST['start_date']) || !isset($_POST['end_date'])
 || !isset($_POST['tid']) || !isset($_POST['hid']) || !isset($_POST['ppd'])) var_dump($_POST);//die(header("Location: ../pages/404.php"));
 
 else{
-$start_date = $_POST['start_date'];
-$end_date = $_POST['end_date'];
-$tid = intval($_POST['tid']);
-$hid = intval($_POST['hid']);
-$ppd = intval($_POST['ppd']);
+
+$start_date = trim(strip_tags($_POST['start_date']));
+$end_date = trim(strip_tags($_POST['end_date']));
+$tid = intval(trim(strip_tags($_POST['tid'])));
+$hid = intval(trim(strip_tags($_POST['hid'])));
+$ppd = intval(trim(strip_tags($_POST['ppd'])));
 
 $st = strtotime($start_date);
 $et = strtotime($end_date);

@@ -2,11 +2,11 @@
 include_once('../includes/session.php');
 include_once('../database/db_functions.php');
 
-$name  = trim($_POST['name']);
-$dateOfBirth = $_POST['dateOfBirth'];
-$email = trim($_POST['email']);
-$username = trim($_POST['username']);
-$password = trim($_POST['password']);
+$name  = trim(strip_tags(($_POST['name'])));
+$dateOfBirth = trim(strip_tags($_POST['dateOfBirth']));
+$email = trim(strip_tags(($_POST['email'])));
+$username = trim(strip_tags($_POST['username']));
+$password = trim(strip_tags($_POST['password']));
 
 
 

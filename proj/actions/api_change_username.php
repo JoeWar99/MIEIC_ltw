@@ -4,7 +4,7 @@ include_once('../includes/session.php');
 ?>
 
 <?php
-    $new_username = $_POST['new_username'];
+    $new_username = trim(strip_tags($_POST['new_username']));
     $old_username = $_SESSION['username'];
 
     $ret = new_username($old_username, $new_username);

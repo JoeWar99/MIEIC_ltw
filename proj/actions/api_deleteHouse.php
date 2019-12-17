@@ -4,7 +4,7 @@ include_once('../includes/session.php');
 include_once('../database/db_functions.php');
 
 $username = $_SESSION['username'];
-$houseId = $_POST['houseId'];
+$houseId = trim(strip_tags($_POST['houseId']));
 
 
  if(!delete_house($houseId))

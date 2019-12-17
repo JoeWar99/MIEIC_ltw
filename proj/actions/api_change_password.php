@@ -4,7 +4,7 @@ include_once('../includes/session.php');
 ?>
 
 <?php
-    $new_password = $_POST['new_password'];
+    $new_password = trim(strip_tags($_POST['new_password']));
     $username = $_SESSION['username'];
 
     $ret = new_password($username, $new_password);

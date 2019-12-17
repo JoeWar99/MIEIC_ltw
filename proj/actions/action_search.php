@@ -13,14 +13,14 @@ $loc_info = explode(',', $location);
 
 
 
-$city_name = ltrim($loc_info[0]);
+$city_name = trim(strip_tags(ltrim($loc_info[0])));
 
-$country_name = ltrim($loc_info[1]);
+$country_name = trim(strip_tags(ltrim($loc_info[1])));
 
 $result = get_location_from_names($city_name, $country_name);
 
-$id = intval($result['Id']);
-$cid = intval($result['CountryId']);
+$id = intval(trim(strip_tags($result['Id'])));
+$cid = intval(trim(strip_tags($result['CountryId'])));
 
 if ($start_date == "" && $end_date == "") {
     header("Location: ../pages/search.php?city_id=$id&country_id=$cid&gn=$guest_no");

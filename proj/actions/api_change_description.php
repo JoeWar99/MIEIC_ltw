@@ -4,7 +4,7 @@ include_once('../includes/session.php');
 ?>
 
 <?php
-    $description = $_POST['new_description'];
+    $description = trim(strip_tags($_POST['new_description']));
     $username = $_SESSION['username'];
 
     $ret = new_description($username, $description);
