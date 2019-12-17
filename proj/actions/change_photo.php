@@ -20,4 +20,4 @@ if ($name != null) {
     new_photo($username, $file_name);
 }
 
-header('Location: ../pages/editprofile.php#');
+header('Location: ../pages/editprofile.php');

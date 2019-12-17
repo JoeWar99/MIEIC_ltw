@@ -91,11 +91,11 @@ function cancel_reservation() {
 function pressed_review_Button(rent_id) {
 
     // getting the div that represent the popup for the review of a reservation
-    let popup = document.getElementById("popup");
+    var popup = document.getElementById("popup_review");
 
     // configuring the review pop up inner html
-    let return_html_in_string_form = '<div id="popup_content"><span id="close">&times;</span><form action="#">Rating: <br><input type="number" id="new_rating" name="new_rating" placeholder="Rating"><br>';
-    return_html_in_string_form += '<span id=\"error_rating\" >  Rating between 0 and 5</span>Review: <br><input type="text" id="new_review" name="new_review" placeholder="Review"><br>';
+    let return_html_in_string_form = '<div id="popup_content_review"><span id="close">&times;</span><form><span id=\"rating_text\">Rating: </span><br><input type="text" id="new_rating" name="new_rating" placeholder="Rating"><br>';
+    return_html_in_string_form += '<span id=\"error_rating\" >  Rating between 1 and 5</span><span id=\"review_text\">Review: </span><br><textarea type="text" id="new_review" name="new_review" placeholder="Review"></textarea><br>';
     return_html_in_string_form += '<button id="create_review" type="button" onclick="pressed_create_review(' + rent_id + ')">Submit</button><br>';
     return_html_in_string_form += '</form></div>';
     popup.innerHTML = return_html_in_string_form;
@@ -196,7 +196,6 @@ function reloadHtml() {
 
     } else {
 
-        div_to_hold_houses.setAttribute("style", " display: grid; grid-template-columns: 0.5 fr 2 fr 2 fr 2 fr 0.5 fr;");
         let article = document.createElement('houses')
         article.setAttribute('class', 'post')
 
@@ -219,6 +218,8 @@ function reloadHtml() {
             buttonsReservations_2[i].setAttribute("style", "font-size: 1.3em; margin-left: 0.3em; padding: 0.4em;");
         }
 
+
+
         for (let i = 0; i < my_properties1.length; i++) {
             my_properties1[i].setAttribute("style", "text-align: center; margin-top: 3em; grid-column: 2; margin-left: 10%; margin-right: 10%;");
         }
@@ -228,6 +229,28 @@ function reloadHtml() {
         for (let i = 0; i < my_properties3.length; i++) {
             my_properties3[i].setAttribute("style", "text-align: center; margin-top: 3em; grid-column: 4; margin-left: 10%; margin-right: 10%;");
         }
+
+
+        // for (let i = 0; i < my_properties1.length; i++) {
+        //     if (i == 0)
+        //         my_properties1[i].setAttribute("style", "text-align: center; padding: 1em;  grid-column: 2; margin-left: 10%; margin-right: 10%; background-color: turquoise; border-radius: 2em");
+        //     else
+        //         my_properties1[i].setAttribute("style", "text-align: center; padding: 1em; margin-top: 3em; grid-column: 2; margin-left: 10%; margin-right: 10%; background-color: turquoise; border-radius: 2em");
+
+        // }
+        // for (let i = 0; i < my_properties2.length; i++) {
+        //     if (i == 0)
+        //         my_properties2[i].setAttribute("style", "text-align: center; padding: 1em; grid-column: 3; margin-left: 10%; margin-right: 10%;");
+        //     else
+        //         my_properties2[i].setAttribute("style", "text-align: center; padding: 1em; margin-top: 3em; grid-column: 3; margin-left: 10%; margin-right: 10%;");
+        // }
+        // for (let i = 0; i < my_properties3.length; i++) {
+        //     if (i == 0)
+        //         my_properties3[i].setAttribute("style", "text-align: center; padding: 1em;  grid-column: 4; margin-left: 10%; margin-right: 10%;");
+        //     else
+        //         my_properties3[i].setAttribute("style", "text-align: center; padding: 1em; margin-top: 3em; grid-column: 4; margin-left: 10%; margin-right: 10%;");
+
+        // }
     }
 
 }
@@ -313,10 +336,10 @@ function draw_house_in_organized_fashion(house_data) {
         pic = '../assets/imagesHouses/noHouseImage.png';
     }
     return_html_in_string_form = '<img src=' + pic + ' width="330" height="230" />';
-    return_html_in_string_form += '<section name="information">';
+    return_html_in_string_form += '<section id="my_reservation" name="information">';
     let name = house_data["Name"];
     let id = house_data['Id'];
-    return_html_in_string_form += '<p> <a href="housepage.php?house_id=' + id + '">' + name + '</a></p>';
+    return_html_in_string_form += '<p> <a id="see_house" href="housepage.php?house_id=' + id + '">' + name + '</a></p>';
     let addr = house_data["Address"];
     return_html_in_string_form += '<p>' + addr + '</p>';
     let price = house_data["PricePerDay"];

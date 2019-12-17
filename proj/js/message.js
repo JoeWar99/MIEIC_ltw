@@ -1,6 +1,6 @@
 "use strict";
 
-let msg_button = document.getElementById("message_button");
+let msg_button = document.getElementById("owner_message_button");
 
 msg_button.addEventListener("click", message_popup);
 

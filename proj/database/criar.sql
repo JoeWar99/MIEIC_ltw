@@ -14,7 +14,7 @@ CREATE TABLE User(
   Photo TEXT DEFAULT(NULL),
   CHECK (date('now')-DateOfBirth > 18),
   UNIQUE(Email),
-  UNIQU(Username),
+  UNIQUE(Username),
   PRIMARY KEY(Id)
 );
 
