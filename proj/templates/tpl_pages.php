@@ -17,17 +17,17 @@ function draw_searchbox(){
             echo "<form  method=\"POST\" action=\"../actions/action_search.php\" autocomplete=\"off\" name=\"search_form\" onsubmit=\"return Validate()\">";
                 
                 echo "<div class=\"autocomplete\">";
-                    echo "<input id=\"location_input\" name=\"location\" type=\"text\" placeholder=\"Location\">";
+                    echo "<span id=\"inputs\">Location: </span><input id=\"location_input\" name=\"location\" type=\"text\" placeholder=\"Location\">";
                     echo "<div id=\"location_error\" class=\"valError_search\"> </div>";
                 echo "</div>";
                 
                 echo "<div>";
-                    echo "<input id=\"start_input\" name=\"start\" type=\"date\">";
+                    echo "<span id=\"inputs\">Start Date: </span> <input id=\"start_input\" name=\"start\" type=\"date\">";
                     echo "<div id=\"start_error\" class=\"valError_search\"> </div>";
                 echo "</div>";
 
                 echo "<div>";
-                    echo "<input id=\"end_input\" name=\"end\" type=\"date\"> <br>";
+                    echo "<span id=\"inputs\">End Date: </span> <input id=\"end_input\" name=\"end\" type=\"date\"> <br>";
                     echo "<div id=\"end_error\" class=\"valError_search\"> </div>";
                 echo "</div>";
 
@@ -743,7 +743,7 @@ function draw_editpage($usr){
         echo "<div id=\"image_div\">";
         echo "<img id=\"profile_img\" src=$photo alt=\"profile_picture\" height=\"400\" width=\"400\"><br>"; 
         echo "<form action=\"../actions/change_photo.php\" method=\"post\" enctype=\"multipart/form-data\">";
-        echo "<label <input type=\"file\" id=\"choose_photo\" name=\"choose_photo\"></input> Choose Image</label>";
+        echo "<label id=\"choose_photo\"> <input type=\"file\" id=\"choose_photo\" name=\"choose_photo\"></input> Choose Image</label>";
         echo "<input type=\"submit\" id=\"change_photo\" value=\"Change\"></input> <br>";
         echo "</form>";
         echo "</div>"; 

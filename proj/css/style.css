@@ -8,6 +8,7 @@ html {
 * {
     font-family: 'Poppins', sans-serif;
 }
+
 #overlay {
     height: 100%;
     width: 100%;
@@ -356,14 +357,12 @@ pre {
     margin-left: 10em;
     flex-basis: 20%;
     margin-top: 2em;
-
 }
 
 .sample_house2 {
     margin-left: 10em;
     flex-basis: 20%;
     margin-top: 2em;
-
 }
 
 .sample_house3 {
@@ -419,7 +418,9 @@ pre {
     height: 2em;
 }
 
-#input_location, #start_time, #end_time {
+#location_input,
+#start_input,
+#end_input {
     width: 50%;
 }
 
@@ -500,15 +501,15 @@ pre {
     margin-left: 5em;
 }
 
-.buttonsReservations_1, .buttonsReservations_2 {
+.buttonsReservations_1,
+.buttonsReservations_2 {
     background-color: white;
     border: 3px solid;
     border-color: turquoise;
     margin: 0.5em;
-    
 }
 
-#my_reservation{
+#my_reservation {
     text-align: left;
 }
 
@@ -629,7 +630,8 @@ pre {
     width: 40%;
 }
 
-#change_username, #change_password {
+#change_username,
+#change_password {
     margin-left: 5%;
     margin-top: 2%;
     padding: 1%;
@@ -645,7 +647,9 @@ pre {
     width: 40%;
 }
 
-#edit_text, #username_text, #password_text {
+#edit_text,
+#username_text,
+#password_text {
     font-size: 1.5em;
     color: white;
     font-family: 'Poppins', sans-serif;
@@ -819,11 +823,11 @@ footer {
 }
 
 #housepage1 {
-  width: 45%;
+    width: 45%;
 }
 
 #housepage2 {
-  width: 50%;
+    width: 50%;
 }
 
 #housepage>img {
@@ -867,7 +871,8 @@ footer {
     width: 25%;
 }
 
-#checkout_error, #checkin_error {
+#checkout_error,
+#checkin_error {
     color: red;
     opacity: 0.8;
     margin-left: 1em;
@@ -891,13 +896,15 @@ footer {
     margin-bottom: 1em;
 }
 
-#check_in_text, #check_out_text {
+#check_in_text,
+#check_out_text {
     font-size: 1.5em;
     color: white;
     margin: 0.5em;
 }
 
-#start_date, #end_date {
+#start_date,
+#end_date {
     margin-left: 1em;
 }
 
@@ -919,7 +926,8 @@ footer {
     width: 40em;
 }
 
-#button_right, #button_left {
+#button_right,
+#button_left {
     opacity: 0.8;
     border: 0.1em solid;
     border-color: gray;
@@ -1055,12 +1063,14 @@ input[type="file"] {
     background-color: turquoise;
 }
 
-#review_text, #rating_text {
+#review_text,
+#rating_text {
     font-size: 1.5em;
     color: white;
 }
 
-#new_rating, #new_review {
+#new_rating,
+#new_review {
     padding: 1%;
     width: 40%;
 }
@@ -1138,7 +1148,9 @@ input[type="file"] {
     height: 10em;
 }
 
-#des_text, #new_commodity_text, #title_text{
+#des_text,
+#new_commodity_text,
+#title_text {
     color: white;
 }
 

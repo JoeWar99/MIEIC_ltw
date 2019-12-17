@@ -220,16 +220,6 @@ function reloadHtml() {
 
 
 
-        for (let i = 0; i < my_properties1.length; i++) {
-            my_properties1[i].setAttribute("style", "text-align: center; margin-top: 3em; grid-column: 2; margin-left: 10%; margin-right: 10%;");
-        }
-        for (let i = 0; i < my_properties2.length; i++) {
-            my_properties2[i].setAttribute("style", "text-align: center; margin-top: 3em; grid-column: 3; margin-left: 10%; margin-right: 10%;");
-        }
-        for (let i = 0; i < my_properties3.length; i++) {
-            my_properties3[i].setAttribute("style", "text-align: center; margin-top: 3em; grid-column: 4; margin-left: 10%; margin-right: 10%;");
-        }
-
 
         // for (let i = 0; i < my_properties1.length; i++) {
         //     if (i == 0)
