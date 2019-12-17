@@ -206,7 +206,7 @@ $register_sl = [["../js/register.js", true]];
 $search_sl = [["../js/search.js", true]];
 
 $edit_sl = [["../js/edit.js", true]];
-$logged_house_sl = [["../js/rent.js", true], ["../js/message.js", true], ["../js/slide.js", true]];
+$logged_house_sl = [["../js/rent.js", true], ["../js/slide.js", true]];
 
 $not_logged_house_sl = [["../js/not_logged_buttons.js", true], ["../js/slide.js", true]];
 
