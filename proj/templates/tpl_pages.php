@@ -50,6 +50,7 @@ function draw_searchbox(){
 
 
 function draw_house_list($house_list){
+    echo "<div id=\"search_flex\">";
     foreach($house_list as $house){ 
         echo "<div class=\"house_preview\">";
             $pic = get_house_top_pic($house['Id']);
@@ -57,19 +58,21 @@ function draw_house_list($house_list){
             echo "<section name=\"information\">";
             $name = $house["Name"];
             $id = $house['Id'];
-            echo "<p><a href=\"housepage.php?house_id=$id\"> $name </a></p>";
+            echo "<p><a id=\"see_house\" href=\"housepage.php?house_id=$id\"> $name </a></p>";
             $city = get_city_by_id($house["CityId"]);
             $country = get_country_by_id($city["CountryId"]);
             echo "<p>". $city["Name"] . ", " . $country["Name"]. "</p>";
             $price = $house["PricePerDay"];
-            echo "<p> Price: $price /night </p>";
+            echo "<p> Price: $price € /night </p>";
             $rating = $house["Rating"];
-            echo "<p> $rating </p>";
+            echo "<p> $rating";
+            draw_rating_star(); 
             $cnt = count_comments($house['Id']);
-            echo "<p> $cnt comments</p>";
+            echo "   $cnt comments</p>";
             echo "</section>";
         echo "</div>";  
     }
+    echo "</div>";
 }
 
 function draw_rating_star(){
@@ -312,7 +315,6 @@ function draw_housepage($house_info, $city_info, $country_info, $commodities, $o
     echo "</div>";
     echo "<div id=\"housepage2\">";
     draw_rent_button($house_info['Id'], $house_info['PricePerDay'], $house_info['Capacity']);
-    draw_house_comments($comments);
     draw_msg_button();
     echo "<button id=\"button_left\" onclick=\"mudar(-1)\">&#10094;</button>";
     echo "<button id=\"button_right\" onclick=\"mudar(1)\">&#10095;</button>";

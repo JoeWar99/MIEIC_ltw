@@ -775,7 +775,7 @@ insert into Photo (Id, HouseId, Description, Path) values (48, 48, 'Foto Princip
 insert into Photo (Id, HouseId, Description, Path) values (49, 49, 'Foto Principal da casa', '../assets/imagesHouses/casa1.jpg');
 insert into Photo (Id, HouseId, Description, Path) values (50, 50, 'Foto Principal da casa', '../assets/imagesHouses/casa2.webp');
 
-
+insert into Message (Id, SenderId, ReceiverId, Content, SentDate) values (1, 3, 2, 'Hey', '2018-05-12');
 
 
 

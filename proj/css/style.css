@@ -422,6 +422,7 @@ pre {
 #start_input,
 #end_input {
     width: 50%;
+    margin-bottom: 2em;
 }
 
 #inputs {
@@ -859,9 +860,12 @@ footer {
 }
 
 #message_button {
-    position: fixed;
-    top: 35%;
-    left: 70%;
+    width: 10em;
+    height: 5em;
+    background: turquoise;
+    border-radius: 50px;
+    border-style: none;
+    margin-bottom: 1em;
 }
 
 #rent_form {
@@ -1201,13 +1205,13 @@ input[type="file"] {
     border-top: none;
     z-index: 99;
     /*position the autocomplete items to be the same width as the container:*/
-    top: 100%;
-    left: 0;
+    top: 55%;
+    left: 40%;
     right: 0;
 }
 
 .autocomplete-items div {
-    padding: 1em;
+    padding: 0.5em;
     cursor: pointer;
     background-color: #fff;
     border-bottom: 1px solid #d4d4d4;
@@ -1226,4 +1230,16 @@ input[type="file"] {
 
 .valError_search {
     display: none;
+}
+
+/*Search Page*/
+#search_flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+.house_preview {
+    margin-left: 10em;
+    flex-basis: 20%;
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
