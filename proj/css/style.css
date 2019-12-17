@@ -322,6 +322,23 @@ body {
     text-align: center;
 }
 
+#reservations {
+    float: left;
+    overflow: hidden;
+    font-size: 1.5em;
+    border: none;
+    outline: none;
+    color: black;
+    padding: 0.5em;
+    background-color: white;
+    margin: 0;
+}
+
+#messagesMenu:hover #reservations:hover {
+    display: block;
+    background-color: teal;
+}
+
 p,
 pre {
     font-family: 'Poppins', sans-serif;
@@ -724,6 +741,7 @@ pre {
 }
 
 #profile_img {
+    margin-right: 0.5em;
     border-radius: 50%;
     border: 0.1em solid;
     border-color: turquoise;
@@ -1242,4 +1260,49 @@ input[type="file"] {
     flex-basis: 20%;
     margin-top: 1em;
     margin-bottom: 1em;
+}
+
+/*Messages Menu*/
+#sender {
+    font-weight: bold;
+    font-size: 1.3em;
+}
+
+#messages_area {
+    margin-left: 6.5em;
+    margin-top: 0.5em;
+}
+
+#foobar {
+    margin-left: 6.5em;
+    width: 40em;
+    height: 10em;
+    resize: none;
+}
+
+#select_user {
+    margin: 1em;
+}
+
+#content {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 1em;
+    overflow-wrap: break-word;
+}
+
+#send_message {
+    width: 7em;
+    height: 2em;
+    text-align: center;
+    background-color: white;
+    border: 3px solid;
+    border-color: turquoise;
+    margin-top: 1em;
+    margin-left: 22em;
+    margin-bottom: 1em  ;
+}
+
+#timestamp {
+    font-weight: bold;
 }

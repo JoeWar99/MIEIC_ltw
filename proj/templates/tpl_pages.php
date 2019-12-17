@@ -65,7 +65,8 @@ function draw_house_list($house_list){
             $price = $house["PricePerDay"];
             echo "<p> Price: $price € /night </p>";
             $rating = $house["Rating"];
-            echo "<p> $rating";
+            echo "<p>";
+            echo round($rating, 2);
             draw_rating_star(); 
             $cnt = count_comments($house['Id']);
             echo "   $cnt comments</p>";
@@ -316,11 +317,16 @@ function draw_housepage($house_info, $city_info, $country_info, $commodities, $o
     echo "<div id=\"housepage2\">";
     draw_rent_button($house_info['Id'], $house_info['PricePerDay'], $house_info['Capacity']);
     draw_msg_button();
-    echo "<button id=\"button_left\" onclick=\"mudar(-1)\">&#10094;</button>";
-    echo "<button id=\"button_right\" onclick=\"mudar(1)\">&#10095;</button>";
+    if($photos != null){
+        echo "<button id=\"button_left\" onclick=\"mudar(-1)\">&#10094;</button>";
+        echo "<button id=\"button_right\" onclick=\"mudar(1)\">&#10095;</button>";
+    }
     echo "<div>";
     foreach($photos as $photo){
         draw_image_slide($photo["path"]);
+    }
+    if($photos == null){
+        echo "<b>No Pictures</b>";
     }
     echo "</div>";
     echo "</div>";
@@ -392,10 +398,10 @@ function draw_my_messages($contacts, $usrid){
     </div>
 
     <form id="message_form">
-    <textarea id="foobar" rows="2" cols="50" name="message" required></textarea>
+    <textarea id="foobar" rows="2" cols="50" name="message" required></textarea><br>
+    <input id="send_message" type="submit" value="Send">
     <input id="my_id" name="my_id" value= <?=$usrid?> readonly style="visibility:hidden">
     <input id="their_id" name="their_id" value= <?=intval($contacts[0])?> style="visibility:hidden">
-    <input type="submit" value="Send">
     </form>
 <?php
     $last_msgs = get_last_recv_msgs($usrid); 
