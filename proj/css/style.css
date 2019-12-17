@@ -354,7 +354,7 @@ pre {
     top: 7em;
     left: 0;
     z-index: 0;
-    width: 100em;
+    width: 150em;
     height: 50em;
 }
 
@@ -489,7 +489,9 @@ pre {
     padding: 0;
 }
 
+
 /*403*/
+
 #error403page {
     font-family: 'Poppins', sans-serif;
     color: white;
@@ -1250,11 +1252,14 @@ input[type="file"] {
     display: none;
 }
 
+
 /*Search Page*/
+
 #search_flex {
     display: flex;
     flex-wrap: wrap;
 }
+
 .house_preview {
     margin-left: 8em;
     flex-basis: 20%;
@@ -1262,7 +1267,9 @@ input[type="file"] {
     margin-bottom: 1em;
 }
 
+
 /*Messages Menu*/
+
 #sender {
     font-weight: bold;
     font-size: 1.3em;
@@ -1300,7 +1307,7 @@ input[type="file"] {
     border-color: turquoise;
     margin-top: 1em;
     margin-left: 22em;
-    margin-bottom: 1em  ;
+    margin-bottom: 1em;
 }
 
 #timestamp {
