@@ -7,18 +7,20 @@ let form = document.getElementById("message_form");
 
 form.addEventListener('submit', sendMessage);
 
+function htmlEntities(str) {
+    return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '\'');
+}
+
 function sendMessage(event) {
     event.preventDefault();
     let my_id = document.querySelector('input[name=my_id]').value;
     let their_id = document.querySelector('input[name=their_id]').value;
     let message = document.getElementById("foobar");
-  
-    // Delete sent message
     
   
     // Send message
     let request = new XMLHttpRequest();
-    request.open('get', '../actions/action_send_message.php?' + encodeForAjax({mid: my_id, tid: their_id, content: message.value}), true);
+    request.open('get', '../actions/action_send_message.php?' + encodeForAjax({mid: my_id, tid: their_id, content: htmlEntities(message.value)}), true);
     message.value='';
     request.onload = function (){
         if(request.status >= 200 && request.status < 400){ // Se o SRV retornar bem
@@ -34,9 +36,7 @@ function encodeForAjax(data) {
     }).join('&');
 }
 
-function htmlEntities(str) {
-    return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '\'');
-}
+
 
 function fetch(){
     //console.log(select_user.value);
