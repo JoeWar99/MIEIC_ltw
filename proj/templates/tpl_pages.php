@@ -277,7 +277,7 @@ function draw_rent_form($hid, $tid, $ppd){?>
     <input id="hid" name="hid" value= <?=$hid?> readonly style="visibility:hidden">
     <input id="tid" name="tid" value= <?=$tid?> readonly style="visibility:hidden">
     <br>
-    <button type="submit" id="rent_but" formaction="../actions/action_rent.php" formmethod="post"> RENT </button>
+    <button  id="rent_but" formaction="../actions/action_rent.php" formmethod="post"> RENT </button>
     </form>
     </div>
 <?php   

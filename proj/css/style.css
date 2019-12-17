@@ -867,6 +867,12 @@ footer {
     width: 25%;
 }
 
+#checkout_error, #checkin_error {
+    color: red;
+    opacity: 0.8;
+    margin-left: 1em;
+}
+
 #owner_message_button {
     width: 10em;
     height: 5em;
