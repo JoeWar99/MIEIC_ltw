@@ -2,7 +2,7 @@
 
 > **2019/2020** - 3rd Year, 1st Semester
 >
-> **Course:** Linguagens e Tecnologias Web: [LTW page in sigarra](https://sigarra.up.pt/feup/en/ucurr_geral.ficha_uc_view?pv_ocorrencia_id=436452) | 
+> **Course:** Linguagens e Tecnologias Web: [LTW page in sigarra](https://sigarra.up.pt/feup/pt/ucurr_geral.ficha_uc_view?pv_ocorrencia_id=436447) | 
 Web Languages and Technologies 
 >
 > **Project developed by:**\
