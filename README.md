@@ -6,9 +6,9 @@
 Web Languages and Technologies 
 >
 > **Project developed by:**\
-> Carlos Soeiro ([luispvramos](https://github.com/luispvramos)) up201706253 \
-> José Guerra ([LockDownPT](https://github.com/LockDownPT)) up201706421 \
-> Pedro Pereira ([motapinto](https://github.com/motapinto)) up201705205 \
+> Carlos Soeiro ([](https://github.com/))\
+> José Guerra ([LockDownPT](https://github.com/LockDownPT)) \
+> Pedro Pereira ([PedroCarmoPereira](https://github.com/PedroCarmoPereira))\
 >
 >
 > Project final grade : 14,9/20
