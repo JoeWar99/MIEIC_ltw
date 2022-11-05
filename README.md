@@ -7,7 +7,7 @@ Web Languages and Technologies
 >
 > **Project developed by:**\
 > Carlos Soeiro ([](https://github.com/))\
-> José Guerra ([LockDownPT](https://github.com/LockDownPT)) \
+> José Guerra ([JoeWar99](https://github.com/joewar99)) \
 > Pedro Pereira ([PedroCarmoPereira](https://github.com/PedroCarmoPereira))\
 >
 >
